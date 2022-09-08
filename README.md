@@ -7,7 +7,7 @@
 
 # Important notes and thank ❤️
 First of all, thanks for using this Source Code, it was and is a ton of work to create and maintain it!
-That's why I'm asking everyone to [**donate a little bit of money**](https://donate.milrato.dev) or if that's not possible, then join my [Discord Server](https://discord.gg/milrato)!
+If you find any errors please create a issue from <a href="https://github.com/BestGamersH/Aquana-Source-Code/issues">Here</a>
 
 # Installation Guide 🔥
 
@@ -19,8 +19,6 @@ That's why I'm asking everyone to [**donate a little bit of money**](https://don
   * [nodejs](https://nodejs.org) version 16.6 or higher, i recommend the latest STABLE version
   * [python](https://python.org) version 3.8 or higher, to install the database `enmap` (better-sqlite3)
   * a VPS would be adviced, so you don't need to keep your pc/laptop/raspi 24/7 online! [click here for a debian setup](https://github.com/Tomato6966/Debian-Cheat-Sheet-Setup/wiki/)
-  * Check out my Recommended Host: [BERO-HOST](https://bero.milrato.dev) and use code `milrato` for cheap OP VPS (kvm)
-  * [Click here for a Direct Order Link](https://bero-host.de/server/prepaid-kvm-rootserver-paket-mieten)
 
 </details>
 
@@ -30,7 +28,7 @@ That's why I'm asking everyone to [**donate a little bit of money**](https://don
   <summary>Click to expand</summary>
 
    1. Download the [Source Code]()
-     * either by: `git clone https://github.com/Tomato6966/Multipurpose-discord-bot`
+     * either by: `git clone https://github.com/BestGamersH/Aquana-Source-Code`
      * or by downloading it as a zip from the releases or a branch
   
 </details>
@@ -133,14 +131,14 @@ That's why I'm asking everyone to [**donate a little bit of money**](https://don
 </details>
 
 
-## SUPPORT ME AND MILRATO DEVELOPMENT
+## SUPPORT me AND MILRATO DEVELOPMENT
 
-> You can always Support me by inviting one of my **own Discord Bots**
+> You can always Support me by inviting one of me **own Discord Bots**
 
-[![2021's best Music Bot | Lava Music](https://cdn.discordapp.com/attachments/748533465972080670/817088638780440579/test3.png)](https://lava.milrato.dev)
-[![Musicium Music Bot](https://cdn.discordapp.com/attachments/742446682381221938/770055673965707264/test1.png)](https://musicium.musicium.dev)
-[![Milrato Multi Bot](https://cdn.discordapp.com/attachments/742446682381221938/770056826724679680/test1.png)](https://milrato.milrato.dev)
+[![2022's best Music Bot | Aquana Music](https://ibb.co/gmp5Rp4)](https://discord.com/api/oauth2/authorize?client_id=1016375106806743041&permissions=8&scope=applications.commands%20bot)
+[![Aquana](https://ibb.co/Vx4HV6X)](https://discord.com/api/oauth2/authorize?client_id=1016438776005935144&permissions=8&scope=bot%20applications.commands)
 
 # Credits
 
-> If consider using this Bot, make sure to credit me!
+> If consider using this Bot, make sure to credit me
+> This bot was made by https://github/com/Tomato6966 All credits to him, I just fixed the errors in it didn't code it fully.
