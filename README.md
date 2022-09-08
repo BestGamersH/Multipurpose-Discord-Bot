@@ -135,7 +135,7 @@ If you find any errors please create a issue from <a href="https://github.com/Be
 
 > You can always Support me by inviting one of me **own Discord Bots**
 
-[![2022's best Music Bot | Aquana Music]([https://ibb.co/gmp5Rp4](https://cdn.discordapp.com/attachments/1017354675575599104/1017354736686604338/standard_3.gif))](https://discord.com/api/oauth2/authorize?client_id=1016375106806743041&permissions=8&scope=applications.commands%20bot)
+[![2022's best Music Bot | Aquana Music](https://cdn.discordapp.com/attachments/1017354675575599104/1017354736686604338/standard_3.gif)](https://discord.com/api/oauth2/authorize?client_id=1016375106806743041&permissions=8&scope=applications.commands%20bot)
 [![Aquana](https://cdn.discordapp.com/attachments/1017354675575599104/1017354750758498324/standard_2.gif)](https://discord.com/api/oauth2/authorize?client_id=1016438776005935144&permissions=8&scope=bot%20applications.commands)
 
 # Credits
