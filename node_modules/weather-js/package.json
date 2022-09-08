@@ -1,0 +1,40 @@
+{
+  "name": "weather-js",
+  "version": "2.0.0",
+  "description": "A module for obtaining weather information",
+  "main": "index.js",
+  "scripts": {
+    "lint": "jshint --reporter node_modules/jshint-stylish *.js test/*.js",
+    "lint:build": "jshint --reporter checkstyle *.js test/*.js > reports/jshint-checkstyle.xml",
+    "depcheck": "dependency-check . *.js",
+    "depcheck:unused": "dependency-check ./package.json --unused --no-dev *.js",
+    "test:unit": "mkdir -p reports/ && NODE_ENV=test multi='spec=- xunit=reports/mocha-xunit.xml' istanbul cover _mocha -- --timeout 10000 -R mocha-multi && istanbul check-coverage",
+    "test:coveralls": "cat reports/coverage/lcov.info | node_modules/coveralls/bin/coveralls.js",
+    "test": "npm run lint && npm run test:unit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/devfacet/weather.git"
+  },
+  "keywords": [
+    "weather",
+    "forecast"
+  ],
+  "author": "devfacet",
+  "license": "MIT",
+  "homepage": "http://github.com/devfacet/weather",
+  "dependencies": {
+    "request": "2.x.x",
+    "xml2js": "0.4.x"
+  },
+  "devDependencies": {
+    "chai": "3.5.x",
+    "jshint": "2.9.x",
+    "jshint-stylish": "2.2.x",
+    "mocha": "3.2.x",
+    "mocha-multi": "0.10.x",
+    "dependency-check": "2.8.x",
+    "istanbul": "0.4.x",
+    "coveralls": "^2.11.16"
+  }
+}

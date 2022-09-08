@@ -1,0 +1,45 @@
+{
+  "name": "discord-backup",
+  "version": "3.2.1",
+  "description": "A complete framework to facilitate server backup using discord.js v12",
+  "main": "lib/index.js",
+  "files": [
+    "lib/**/*"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "lint": "tslint -p tsconfig.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Androz2091/discord-backup.git"
+  },
+  "keywords": [
+    "discord",
+    "discord.js",
+    "backup",
+    "clone",
+    "bot",
+    "discord-backup"
+  ],
+  "author": "Androz2091",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Androz2091/discord-backup/issues"
+  },
+  "homepage": "https://github.com/Androz2091/discord-backup#readme",
+  "dependencies": {
+    "discord.js": "^13.6.0"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.30",
+    "@types/node-fetch": "^2.5.7",
+    "@types/ws": "^7.2.4",
+    "prettier": "^2.0.4",
+    "tslint": "^6.1.1",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^4.6.4"
+  }
+}

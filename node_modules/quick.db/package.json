@@ -1,0 +1,33 @@
+{
+    "name": "quick.db",
+    "version": "7.1.3",
+    "description": "An easy, non-locking, persistent better-sqlite3 wrapper designed to be easy to setup & utilize",
+    "main": "index.js",
+    "dependencies": {
+        "better-sqlite3": "^7.1.1",
+        "lodash": "^4.17.20"
+    },
+    "scripts": {
+        "test": "node spec/test.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/TrueXPixels/quick.db.git"
+    },
+    "keywords": [
+        "database",
+        "storing",
+        "values",
+        "easy",
+        "quick",
+        "sqlite",
+        "sqlite3",
+        "db"
+    ],
+    "author": "TrueXPixels",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/TrueXPixels/quick.db/issues"
+    },
+    "homepage": "https://quickdb.js.org"
+}

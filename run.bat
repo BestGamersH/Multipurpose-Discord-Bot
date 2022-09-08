@@ -1,0 +1,2 @@
+@Echo off
+node .

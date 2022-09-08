@@ -1,0 +1,15 @@
+.DS_Store
+Thumbs.db
+
+*.log
+*.exe
+*.prof
+*.out
+
+tmp/
+logs/
+reports/
+releases/
+vendor/
+node_modules/
+source/

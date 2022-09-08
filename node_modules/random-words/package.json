@@ -1,0 +1,28 @@
+{
+  "name": "random-words",
+  "version": "1.2.0",
+  "description": "Generate one or more common English words",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "scripts": {
+    "test": "mocha tests/test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:apostrophecms/random-words.git"
+  },
+  "keywords": [
+    "random",
+    "words",
+    "words",
+    "word",
+    "generator",
+    "sample",
+    "text"
+  ],
+  "author": "Apostrophe Technologies",
+  "license": "MIT",
+  "devDependencies": {
+    "mocha": "^9.1.3"
+  }
+}

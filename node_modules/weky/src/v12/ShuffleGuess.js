@@ -1,0 +1,305 @@
+const data = new Set();
+const Discord = require('discord.js');
+const { MessageButton, MessageActionRow } = require('discord-buttons');
+const {
+	convertTime,
+	shuffleString,
+	randomHexColor,
+	checkForUpdates,
+	getRandomString,
+	getRandomSentence,
+} = require('../../functions/function');
+
+module.exports = async (options) => {
+	checkForUpdates();
+	if (!options.message) {
+		throw new Error('Weky Error: message argument was not specified.');
+	}
+	if (typeof options.message !== 'object') {
+		throw new TypeError('Weky Error: Invalid Discord Message was provided.');
+	}
+
+	if (!options.word) options.word = getRandomSentence(1);
+
+	if (!options.button) options.button = {};
+	if (typeof options.button !== 'object') {
+		throw new TypeError('Weky Error: button must be an object.');
+	}
+
+	if (!options.button.cancel) options.button.cancel = 'Cancel';
+	if (typeof options.button.cancel !== 'string') {
+		throw new TypeError('Weky Error: cancel button text must be a string.');
+	}
+
+	if (!options.button.reshuffle) options.button.reshuffle = 'Reshuffle';
+	if (typeof options.button.reshuffle !== 'string') {
+		throw new TypeError('Weky Error: reshuffle button text must be a string.');
+	}
+
+	if (!options.embed) options.embed = {};
+	if (typeof options.embed !== 'object') {
+		throw new TypeError('Weky Error: embed must be an object.');
+	}
+
+	if (!options.embed.title) {
+		options.embed.title = 'Shuffle Guess | Weky Development';
+	}
+	if (typeof options.embed.title !== 'string') {
+		throw new TypeError('Weky Error: embed title must be a string.');
+	}
+
+	if (!options.embed.color) options.embed.color = randomHexColor();
+	if (typeof options.embed.color !== 'string') {
+		throw new TypeError('Weky Error: embed color must be a string.');
+	}
+
+	if (!options.embed.footer) {
+		options.embed.footer = '©️ Weky Development';
+	}
+	if (typeof options.embed.footer !== 'string') {
+		throw new TypeError('Weky Error: embed footer must be a string.');
+	}
+
+	if (!options.embed.timestamp) options.embed.timestamp = true;
+	if (typeof options.embed.timestamp !== 'boolean') {
+		throw new TypeError('Weky Error: timestamp must be a boolean.');
+	}
+
+	if (!options.startMessage) {
+		options.startMessage =
+			'I shuffled a word it is **`{{word}}`**. You have **{{time}}** to find the correct word!';
+	}
+	if (typeof options.startMessage !== 'string') {
+		throw new TypeError('Weky Error: startMessage must be a string.');
+	}
+
+	if (!options.winMessage) {
+		options.winMessage =
+			'GG, It was **{{word}}**! You gave the correct answer in **{{time}}.**';
+	}
+	if (typeof options.winMessage !== 'string') {
+		throw new TypeError('Weky Error: winMessage must be a string.');
+	}
+
+	if (!options.loseMessage) {
+		options.loseMessage =
+			'Better luck next time! The correct answer was **{{answer}}**.';
+	}
+	if (typeof options.loseMessage !== 'string') {
+		throw new TypeError('Weky Error: loseMessage must be a string.');
+	}
+
+	if (!options.incorrectMessage) {
+		options.incorrectMessage = 'No {{author}}! The word isn\'t `{{answer}}`';
+	}
+	if (typeof options.incorrectMessage !== 'string') {
+		throw new TypeError('Weky Error: loseMessage must be a string.');
+	}
+
+	if (!options.othersMessage) {
+		options.othersMessage = 'Only <@{{author}}> can use the buttons!';
+	}
+	if (typeof options.othersMessage !== 'string') {
+		throw new TypeError('Weky Error: othersMessage must be a string.');
+	}
+
+	if (!options.time) options.time = 60000;
+	if (parseInt(options.time) < 10000) {
+		throw new Error(
+			'Weky Error: time argument must be greater than 10 Seconds (in ms i.e. 10000).',
+		);
+	}
+	if (typeof options.time !== 'number') {
+		throw new TypeError('Weky Error: time must be a number.');
+	}
+
+	if (data.has(options.message.author.id)) return;
+	data.add(options.message.author.id);
+
+	const id1 =
+		getRandomString(20) +
+		'-' +
+		getRandomString(20) +
+		'-' +
+		getRandomString(20) +
+		'-' +
+		getRandomString(20);
+
+	const id2 =
+		getRandomString(20) +
+		'-' +
+		getRandomString(20) +
+		'-' +
+		getRandomString(20) +
+		'-' +
+		getRandomString(20);
+
+	const word = shuffleString(options.word.toString());
+	let disbut = new MessageButton()
+		.setLabel(options.button.reshuffle)
+		.setID(id1)
+		.setStyle('green');
+	let cancel = new MessageButton()
+		.setLabel(options.button.cancel)
+		.setID(id2)
+		.setStyle('red');
+	let row = new MessageActionRow().addComponent(disbut).addComponent(cancel);
+	const emd = new Discord.MessageEmbed()
+		.setColor(options.embed.color)
+		.setTitle(options.embed.title)
+		.setFooter(options.embed.footer)
+		.setDescription(
+			options.startMessage
+				.replace('{{word}}', word)
+				.replace('{{time}}', convertTime(options.time)),
+		);
+	if (options.embed.timestamp) {
+		emd.setTimestamp();
+	}
+	const embed = await options.message.inlineReply({
+		embed: emd,
+	});
+	const gameCreatedAt = Date.now();
+	embed.edit({
+		embed: emd,
+		component: row,
+	});
+	const filter = (m) => m.author.id === options.message.author.id;
+	const gameCollector = options.message.channel.createMessageCollector(filter, {
+		time: options.time,
+		errors: ['time'],
+	});
+	gameCollector.on('collect', async (msg) => {
+		if (msg.content.toLowerCase() === options.word.toString()) {
+			gameCollector.stop();
+			data.delete(options.message.author.id);
+			disbut = new MessageButton()
+				.setLabel(options.button.reshuffle)
+				.setID(id1)
+				.setStyle('green')
+				.setDisabled();
+			cancel = new MessageButton()
+				.setLabel(options.button.cancel)
+				.setID(id2)
+				.setStyle('red')
+				.setDisabled();
+			row = new MessageActionRow().addComponent(disbut).addComponent(cancel);
+			const time = convertTime(Date.now() - gameCreatedAt);
+			const _embed = new Discord.MessageEmbed()
+				.setColor(options.embed.color)
+				.setFooter(options.embed.footer)
+				.setDescription(
+					options.winMessage
+						.replace('{{word}}', options.word.toString())
+						.replace('{{time}}', time),
+				);
+			if (options.embed.timestamp) {
+				_embed.setTimestamp();
+			}
+			msg.inlineReply(_embed);
+			embed.edit({
+				embed: emd,
+				component: row,
+			});
+		} else {
+			const _embed = new Discord.MessageEmbed()
+				.setDescription(
+					options.incorrectMessage
+						.replace('{{author}}', msg.author.toString())
+						.replace('{{answer}}', msg.content.toLowerCase()),
+				)
+				.setColor(options.embed.color)
+				.setFooter(options.embed.footer);
+			if (options.embed.timestamp) {
+				_embed.setTimestamp();
+			}
+			msg.inlineReply(_embed).then((m) => m.delete({ timeout: 2000 }));
+		}
+	});
+	const GameCollector = embed.createButtonCollector((fn) => fn);
+	GameCollector.on('collect', (btn) => {
+		if (btn.clicker.user.id !== options.message.author.id) {
+			return btn.reply.send(
+				options.othersMessage.replace('{{author}}', options.message.author.id),
+				true,
+			);
+		}
+		btn.reply.defer();
+		if (btn.id === id1) {
+			const _embed = new Discord.MessageEmbed()
+				.setColor(options.embed.color)
+				.setTitle(options.embed.title)
+				.setFooter(options.embed.footer)
+				.setDescription(
+					options.startMessage
+						.replace('{{word}}', shuffleString(options.word.toString()))
+						.replace('{{time}}', convertTime(options.time)),
+				);
+			if (options.embed.timestamp) {
+				_embed.setTimestamp();
+			}
+			return embed.edit({
+				embed: _embed,
+				component: row,
+			});
+		} else if (btn.id === id2) {
+			gameCollector.stop();
+			data.delete(options.message.author.id);
+			disbut = new MessageButton()
+				.setLabel(options.button.reshuffle)
+				.setID(id1)
+				.setStyle('green')
+				.setDisabled();
+			cancel = new MessageButton()
+				.setLabel(options.button.cancel)
+				.setID(id2)
+				.setStyle('red')
+				.setDisabled();
+			row = new MessageActionRow().addComponent(disbut).addComponent(cancel);
+			const _embed = new Discord.MessageEmbed()
+				.setColor(options.embed.color)
+				.setTitle(options.embed.title)
+				.setFooter(options.embed.footer)
+				.setDescription(
+					options.loseMessage.replace('{{answer}}', options.word.toString()),
+				);
+			if (options.embed.timestamp) {
+				_embed.setTimestamp();
+			}
+			return embed.edit({
+				embed: _embed,
+				component: row,
+			});
+		}
+	});
+	gameCollector.on('end', async (_collected, reason) => {
+		if (reason === 'time') {
+			disbut = new MessageButton()
+				.setLabel(options.button.reshuffle)
+				.setID(id1)
+				.setStyle('green')
+				.setDisabled();
+			cancel = new MessageButton()
+				.setLabel(options.button.cancel)
+				.setID(id2)
+				.setStyle('red')
+				.setDisabled();
+			row = new MessageActionRow().addComponent(disbut).addComponent(cancel);
+			const _embed = new Discord.MessageEmbed()
+				.setColor(options.embed.color)
+				.setFooter(options.embed.footer)
+				.setDescription(
+					options.loseMessage.replace('{{answer}}', options.word.toString()),
+				);
+			if (options.embed.timestamp) {
+				_embed.setTimestamp();
+			}
+			options.message.inlineReply(_embed);
+			data.delete(options.message.author.id);
+			return embed.edit({
+				embed: emd,
+				component: row,
+			});
+		}
+	});
+};

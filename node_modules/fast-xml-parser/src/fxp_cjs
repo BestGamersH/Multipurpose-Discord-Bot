@@ -1,0 +1,8 @@
+
+
+const XMLValidator = require('./validator.js');
+const XMLParser = require('./xmlparser/XMLParser.js');
+const XMLBuilder = require('./xmlbuilder/json2xml.js');
+
+module.exports = {XMLParser,XMLValidator, XMLBuilder};
+
