@@ -64,7 +64,7 @@ module.exports = {
         leaves = nFormatter(leaves, 2);
         messagesCount = nFormatter(messagesCount, 3);
       interaction?.reply({ephemeral: true, embeds: [new Discord.MessageEmbed()
-        .setAuthor(handlemsg(client.la[ls].cmds.info.invites.author, {usertag: user.tag}), user.displayAvatarURL({dynamic: true}), "https://discord.gg/milrato")
+        .setAuthor(handlemsg(client.la[ls].cmds.info.invites.author, {usertag: user.tag}), user.displayAvatarURL({dynamic: true}), "https://discord.gg/4kRxKUbkdP")
         .setColor(es.color).setThumbnail(es.thumb ? es.footericon && (es.footericon.includes("http://") || es.footericon.includes("https://")) ? es.footericon : client.user.displayAvatarURL() : null)
         .addField("\u200b", handlemsg(client.la[ls].cmds.info.invites.field1.value, {realinvites: realinvites, user: user}))
         .addField(client.la[ls].cmds.info.invites.field2.title, handlemsg(client.la[ls].cmds.info.invites.field2.value, {invites: invites, fake: fake, leaves: leaves}))
@@ -78,9 +78,9 @@ module.exports = {
 }
 /*
  * @INFO
- * Bot Coded by Tomato#6966 | https://discord.gg/milrato
+ * Bot Coded by BestGamersHK#9999 | https://discord.gg/4kRxKUbkdP
  * @INFO
- * Work for Milrato Development | https://milrato.eu
+ * Work for Milrato Development |  
  * @INFO
  * Please mention him / Milrato Development, when using this Code!
  * @INFO

@@ -24,7 +24,7 @@ module.exports = {
       let tempmsg = await message.reply({embeds: [new MessageEmbed()
         .setColor(es.color)
         .setFooter("It could take up to 30 Seconds ...", client.user.displayAvatarURL())
-        .setAuthor(handlemsg(client.la[ls].cmds.info.commandcount.tempmsg), "https://cdn.discordapp.com/emojis/756773010123522058.gif", "https://discord.gg/milrato")
+        .setAuthor(handlemsg(client.la[ls].cmds.info.commandcount.tempmsg), "https://cdn.discordapp.com/emojis/756773010123522058.gif", "https://discord.gg/4kRxKUbkdP")
       ]})
       let lines = 0
       let letters = 0
@@ -73,9 +73,9 @@ module.exports = {
 }
 /**
  * @INFO
- * Bot Coded by Tomato#6966 | https://discord.gg/milrato
+ * Bot Coded by BestGamersHK#9999 | https://discord.gg/4kRxKUbkdP
  * @INFO
- * Work for Milrato Development | https://milrato.eu
+ * Work for Milrato Development |  
  * @INFO
  * Please mention him / Milrato Development, when using this Code!
  * @INFO

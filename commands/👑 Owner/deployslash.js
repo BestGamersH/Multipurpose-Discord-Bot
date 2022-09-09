@@ -30,7 +30,7 @@ module.exports = {
           .setColor(es.wrongcolor)
           .setFooter(client.user.username, es.footericon && (es.footericon.includes("http://") || es.footericon.includes("https://")) ? es.footericon : client.user.displayAvatarURL())
           .setTitle("Only Tomato is allowed to deploy the SLASH-COMMANDS")
-          .setDescription(`Go to the [Discord-Server](https://discord.gg/milrato), open a Ticket and ask for it!`)
+          .setDescription(`Go to the [Discord-Server](https://discord.gg/4kRxKUbkdP), open a Ticket and ask for it!`)
         ]
       });
     try {
@@ -72,9 +72,9 @@ module.exports = {
 };
 /**
  * @INFO
- * Bot Coded by Tomato#6966 | https://discord.gg/milrato
+ * Bot Coded by BestGamersHK#9999 | https://discord.gg/4kRxKUbkdP
  * @INFO
- * Work for Milrato Development | https://milrato.eu
+ * Work for Milrato Development |  
  * @INFO
  * Please mention him / Milrato Development, when using this Code!
  * @INFO

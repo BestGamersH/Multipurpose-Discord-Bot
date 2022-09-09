@@ -12,7 +12,7 @@
  * 8  LOAD_the_BOT_Functions
  * 9  Login_to_the_Bot
  * 
- *   BOT CODED BY: TOMato6966 | https://milrato.eu
+ *   BOT CODED BY: TOMato6966 |  
  *********************************************************/
 
 
@@ -149,9 +149,9 @@ client.login(process.env.token || config.token);
 
 /**********************************************************
  * @INFO
- * Bot Coded by Tomato#6966 | https://discord.gg/milrato
+ * Bot Coded by BestGamersHK#9999 | https://discord.gg/4kRxKUbkdP
  * @INFO
- * Work for Milrato Development | https://milrato.eu
+ * Work for Milrato Development |  
  * @INFO
  * Please mention him / Milrato Development, when using this Code!
  * @INFO

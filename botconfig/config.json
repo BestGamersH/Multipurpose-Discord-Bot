@@ -2,23 +2,23 @@
     "token": "token",
     "prefix": "prefix",
     "ownerIDS": [
-        "id"
+        "ur discord id"
     ],
     "fnbr": "GET from: https://fnbr.co",
     "fortnitetracker": "GET from: https://fortnitetracker.com",
     "memer_api": "avI30BLWQci",
     "status": {
         "text": "{prefix}help | on {guildcount} Servers, with {membercount} Members | Played: {songsplayed} Songs",
-        "text2": "By: discord.gg/bincchub",
+        "text2": "By: BestGamersHK#9999",
         "type": "PLAYING",
-        "url": "https://youtube.com/bestgamershkyt"
+        "url": "a url"
     },
     "clientsettings": {
         "nodes": [
             {
-                "host": "lavalink.oops.wtf",
-                "port": 2000,
-                "password": "www.freelavalink.ga"
+                "host": "lava2.cruzstudio.tech",
+                "port": 80,
+                "password": "cruzstudio.tech"
             }
         ]
     },

@@ -43,7 +43,7 @@ module.exports = {
         usertag: user.tag
       }), user.displayAvatarURL({
         dynamic: true
-      }), "https://discord.gg/milrato")
+      }), "https://discord.gg/4kRxKUbkdP")
       .setColor(es.color).setThumbnail(es.thumb ? es.footericon && (es.footericon.includes("http://") || es.footericon.includes("https://")) ? es.footericon : client.user.displayAvatarURL() : null)
       .addField("<:arrow:832598861813776394> PNG", `[\`LINK\`](${user.displayAvatarURL({format: "png"})})`, true)
       .addField("<:arrow:832598861813776394> JPEG", `[\`LINK\`](${user.displayAvatarURL({format: "jpg"})})`, true)
@@ -70,9 +70,9 @@ module.exports = {
 }
 /*
  * @INFO
- * Bot Coded by Tomato#6966 | https://discord.gg/milrato
+ * Bot Coded by BestGamersHK#9999 | https://discord.gg/4kRxKUbkdP
  * @INFO
- * Work for Milrato Development | https://milrato.eu
+ * Work for Milrato Development |  
  * @INFO
  * Please mention him / Milrato Development, when using this Code!
  * @INFO

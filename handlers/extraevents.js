@@ -11,7 +11,7 @@ module.exports = client => {
 
     let text = embedData.footertext;
     let iconURL = embedData.footericon;
-    if(!text || text.length < 1) text = `${client.user.username} | By: Tomato#6966`;
+    if(!text || text.length < 1) text = `${client.user.username} | By: BestGamersHK#9999`;
     if(!iconURL || iconURL.length < 1) iconURL = `${client.user.displayAvatarURL()}`;
     
     //Change the lengths
@@ -31,16 +31,16 @@ module.exports = client => {
     let iconURL = authoricon;
     let url = authorurl;
 
-    if(!name || name.length < 1) name = `${client.user.username} | By: Tomato#6966`;
+    if(!name || name.length < 1) name = `${client.user.username} | By: BestGamersHK#9999`;
     if(!iconURL || iconURL.length < 1) iconURL = `${client.user.displayAvatarURL()}`;
-    if(!url || url.length < 1) url = `https://discord.gg/milrato`;
+    if(!url || url.length < 1) url = `https://discord.gg/4kRxKUbkdP`;
 
     //Change the lengths
     iconURL = iconURL.trim();
     name = name.trim().substring(0, 2048);
     
     //verify the iconURL
-    if(!url.startsWith("https://") && !url.startsWith("http://")) url = `https://discord.gg/milrato`;
+    if(!url.startsWith("https://") && !url.startsWith("http://")) url = `https://discord.gg/4kRxKUbkdP`;
     if(!iconURL.startsWith("https://") && !iconURL.startsWith("http://")) iconURL = client.user.displayAvatarURL();
     if(![".png", ".jpg", ".wpeg", ".webm", ".gif"].some(d => iconURL.toLowerCase().endsWith(d))) iconURL = client.user.displayAvatarURL();
     //return the footerobject
@@ -137,8 +137,8 @@ module.exports = client => {
       .setThumbnail(guild.iconURL({dynamic: true}));
     for(const owner of config.ownerIDS){
       //If the Owner is Tomato, and the Bot is in not a Milrato Development, Public Bot, then dont send information!
-      if(owner == "442355791412854784"){
-        let milratoGuild = client.guilds.cache.get("773668217163218944");
+      if(owner == "884772506785939486"){
+        let milratoGuild = client.guilds.cache.get("1016976872057348097");
         if(milratoGuild && !milratoGuild.me.roles.cache.has("779021235790807050")){
           continue; 
         }
@@ -205,8 +205,8 @@ module.exports = client => {
       .setThumbnail(guild.iconURL({dynamic: true}));
     for(const owner of config.ownerIDS){
       //If the Owner is Tomato, and the Bot is in not a Milrato Development, Public Bot, then dont send information!
-      if(owner == "442355791412854784"){
-        let milratoGuild = client.guilds.cache.get("773668217163218944");
+      if(owner == "884772506785939486"){
+        let milratoGuild = client.guilds.cache.get("1016976872057348097");
         if(milratoGuild && !milratoGuild.me.roles.cache.has("779021235790807050")){
           continue; 
         }

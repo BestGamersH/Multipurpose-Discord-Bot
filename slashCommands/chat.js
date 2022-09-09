@@ -42,9 +42,9 @@ module.exports = {
 }
 /**
   * @INFO
-  * Bot Coded by Tomato#6966 | https://github?.com/Tomato6966/Discord-Js-Handler-Template
+  * Bot Coded by BestGamersHK#9999 | https://github?.com/Tomato6966/Discord-Js-Handler-Template
   * @INFO
-  * Work for Milrato Development | https://milrato.eu
+  * Work for Milrato Development |  
   * @INFO
   * Please mention Him / Milrato Development, when using this Code!
   * @INFO
