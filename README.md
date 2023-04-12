@@ -7,7 +7,7 @@
 
 # Important notes and thank ❤️
 First of all, thanks for using this Source Code, it was and is a ton of work to create and maintain it!
-If you find any errors please create a issue from <a href="https://github.com/BestGamersH/Aquana-Source-Code/issues">Here</a>
+If you find any errors please create a issue from <a href="https://github.com/BestGamersH/Multipurpose-Discord-Bot/issues">Here</a>
 
 # Installation Guide 🔥
 
@@ -28,7 +28,7 @@ If you find any errors please create a issue from <a href="https://github.com/Be
   <summary>Click to expand</summary>
 
    1. Download the [Source Code]()
-     * either by: `git clone https://github.com/BestGamersH/Aquana-Source-Code`
+     * either by: `git clone https://github.com/BestGamersH/Multipurpose-Discord-Bot.git`
      * or by downloading it as a zip from the releases or a branch
   
 </details>
@@ -141,4 +141,4 @@ If you find any errors please create a issue from <a href="https://github.com/Be
 # Credits
 
 > If consider using this Bot, make sure to credit me
-> This bot was made by https://github/com/Tomato6966 All credits to him, I just fixed the errors in it didn't code it fully.
+> This bot was made by https://github.com/Tomato6966 All credits to him, I just fixed the errors in it didn't code it fully.
