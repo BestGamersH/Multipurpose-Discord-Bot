@@ -111,10 +111,10 @@ module.exports = {
           .setFooter(client.getFooter(es))
           .setTitle(`Searching: ${emoji?.msg.search}` + song.title)
           try{embed.setURL(song.url)}catch{}
-        //send the message of the searching <a:Playing_Audio:1016978071296946247> <a:Playing_Audio:1016978071296946247> 
+        //send the message of the searching <a:Playing_Audio:1026785324795441172> <a:Playing_Audio:1026785324795441172> 
         message.reply(
             new Discord.MessageEmbed()
-                .setTitle("<a:Playing_Audio:1016978071296946247> Setup Complete for Radio Station:  " + song.title)
+                .setTitle("<a:Playing_Audio:1026785324795441172> Setup Complete for Radio Station:  " + song.title)
                 .setColor("#7fafe3")
                 .setDescription(eval(client.la[ls]["cmds"]["setup"]["setup-radio"]["variable8"]))
                 .setURL(song.url)
@@ -139,10 +139,10 @@ module.exports = {
 };
 /**
   * @INFO
-  * Bot Coded by BestGamersHK#9999 | https://discord.gg/4kRxKUbkdP
+  * Bot Coded by BestGamersHK#1213 | https://discord.gg/friendsmp
   * @INFO
-  * Work for Milrato Development |  
+  * Work for Indocraft Network | https://indocraft.club
   * @INFO
-  * Please mention him / Milrato Development, when using this Code!
+  * Please mention him / Indocraft Network, when using this Code!
   * @INFO
 */

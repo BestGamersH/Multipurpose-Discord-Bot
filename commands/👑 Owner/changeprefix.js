@@ -48,14 +48,14 @@ module.exports = {
         return message.channel.send({embeds: [new MessageEmbed()
           .setFooter(client.getFooter(es))
           .setColor(es.wrongcolor)
-          .setTitle(`<:no:1016981253997735987> Something went wrong`)
+          .setTitle(`<:no:1026787028710465577> Something went wrong`)
           .setDescription(`\`\`\`${String(e.message ? e.message : e).substring(0, 2000)}\`\`\``)
         ]})
       }
       return message.channel.send({embeds: [new MessageEmbed()
         .setFooter(client.getFooter(es))
         .setColor(es.color)
-        .setTitle(`<a:yes:1016992526504300544> Successfully changed the Prefix`)
+        .setTitle(`<:yes:1026785792292569138> Successfully changed the Prefix`)
         .setDescription(`**To change it in this Server use the: \`${prefix}prefix <newprefix>\` Command!**`)
         ]})
     });
@@ -72,10 +72,10 @@ module.exports = {
 };
 /**
   * @INFO
-  * Bot Coded by BestGamersHK#9999 | https://discord.gg/4kRxKUbkdP
+  * Bot Coded by BestGamersHK#1213 | https://discord.gg/friendsmp
   * @INFO
-  * Work for Milrato Development |  
+  * Work for Indocraft Network | https://indocraft.club
   * @INFO
-  * Please mention him / Milrato Development, when using this Code!
+  * Please mention him / Indocraft Network, when using this Code!
   * @INFO
 */

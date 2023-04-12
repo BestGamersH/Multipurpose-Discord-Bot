@@ -64,7 +64,7 @@ module.exports = {
         leaves = nFormatter(leaves, 2);
         messagesCount = nFormatter(messagesCount, 3);
       interaction?.reply({ephemeral: true, embeds: [new Discord.MessageEmbed()
-        .setAuthor(handlemsg(client.la[ls].cmds.info.invites.author, {usertag: user.tag}), user.displayAvatarURL({dynamic: true}), "https://discord.gg/4kRxKUbkdP")
+        .setAuthor(handlemsg(client.la[ls].cmds.info.invites.author, {usertag: user.tag}), user.displayAvatarURL({dynamic: true}), "https://discord.gg/friendsmp")
         .setColor(es.color).setThumbnail(es.thumb ? es.footericon && (es.footericon.includes("http://") || es.footericon.includes("https://")) ? es.footericon : client.user.displayAvatarURL() : null)
         .addField("\u200b", handlemsg(client.la[ls].cmds.info.invites.field1.value, {realinvites: realinvites, user: user}))
         .addField(client.la[ls].cmds.info.invites.field2.title, handlemsg(client.la[ls].cmds.info.invites.field2.value, {invites: invites, fake: fake, leaves: leaves}))
@@ -78,10 +78,10 @@ module.exports = {
 }
 /*
  * @INFO
- * Bot Coded by BestGamersHK#9999 | https://discord.gg/4kRxKUbkdP
+ * Bot Coded by BestGamersHK#1213 | https://discord.gg/friendsmp
  * @INFO
- * Work for Milrato Development |  
+ * Work for Indocraft Network | https://indocraft.club
  * @INFO
- * Please mention him / Milrato Development, when using this Code!
+ * Please mention him / Indocraft Network, when using this Code!
  * @INFO
  */

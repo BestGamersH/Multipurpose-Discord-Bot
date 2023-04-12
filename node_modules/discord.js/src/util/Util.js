@@ -12,6 +12,7 @@ const isObject = d => typeof d === 'object' && d !== null;
 
 let deprecationEmittedForSplitMessage = false;
 let deprecationEmittedForRemoveMentions = false;
+let deprecationEmittedForResolveAutoArchiveMaxLimit = false;
 
 /**
  * Contains various general-purpose utility methods.
@@ -41,15 +42,20 @@ class Util extends null {
       const element = obj[prop];
       const elemIsObj = isObject(element);
       const valueOf = elemIsObj && typeof element.valueOf === 'function' ? element.valueOf() : null;
+      const hasToJSON = elemIsObj && typeof element.toJSON === 'function';
 
       // If it's a Collection, make the array of keys
       if (element instanceof Collection) out[newProp] = Array.from(element.keys());
       // If the valueOf is a Collection, use its array of keys
       else if (valueOf instanceof Collection) out[newProp] = Array.from(valueOf.keys());
-      // If it's an array, flatten each element
-      else if (Array.isArray(element)) out[newProp] = element.map(e => Util.flatten(e));
+      // If it's an array, call toJSON function on each element if present, otherwise flatten each element
+      else if (Array.isArray(element)) out[newProp] = element.map(e => e.toJSON?.() ?? Util.flatten(e));
       // If it's an object with a primitive `valueOf`, use that value
       else if (typeof valueOf !== 'object') out[newProp] = valueOf;
+      // If it's an object with a toJSON function, use the return value of it
+      else if (hasToJSON) out[newProp] = element.toJSON();
+      // If element is an object, use the flattened version of it
+      else if (typeof element === 'object') out[newProp] = Util.flatten(element);
       // If it's a primitive
       else if (!elemIsObj) out[newProp] = element;
     }
@@ -115,15 +121,20 @@ class Util extends null {
   /**
    * Options used to escape markdown.
    * @typedef {Object} EscapeMarkdownOptions
-   * @property {boolean} [codeBlock=true] Whether to escape code blocks or not
-   * @property {boolean} [inlineCode=true] Whether to escape inline code or not
-   * @property {boolean} [bold=true] Whether to escape bolds or not
-   * @property {boolean} [italic=true] Whether to escape italics or not
-   * @property {boolean} [underline=true] Whether to escape underlines or not
-   * @property {boolean} [strikethrough=true] Whether to escape strikethroughs or not
-   * @property {boolean} [spoiler=true] Whether to escape spoilers or not
-   * @property {boolean} [codeBlockContent=true] Whether to escape text inside code blocks or not
-   * @property {boolean} [inlineCodeContent=true] Whether to escape text inside inline code or not
+   * @property {boolean} [codeBlock=true] Whether to escape code blocks
+   * @property {boolean} [inlineCode=true] Whether to escape inline code
+   * @property {boolean} [bold=true] Whether to escape bolds
+   * @property {boolean} [italic=true] Whether to escape italics
+   * @property {boolean} [underline=true] Whether to escape underlines
+   * @property {boolean} [strikethrough=true] Whether to escape strikethroughs
+   * @property {boolean} [spoiler=true] Whether to escape spoilers
+   * @property {boolean} [codeBlockContent=true] Whether to escape text inside code blocks
+   * @property {boolean} [inlineCodeContent=true] Whether to escape text inside inline code
+   * @property {boolean} [escape=true] Whether to escape escape characters
+   * @property {boolean} [heading=false] Whether to escape headings
+   * @property {boolean} [bulletedList=false] Whether to escape bulleted lists
+   * @property {boolean} [numberedList=false] Whether to escape numbered lists
+   * @property {boolean} [maskedLink=false] Whether to escape masked links
    */
 
   /**
@@ -144,6 +155,11 @@ class Util extends null {
       spoiler = true,
       codeBlockContent = true,
       inlineCodeContent = true,
+      escape = true,
+      heading = false,
+      bulletedList = false,
+      numberedList = false,
+      maskedLink = false,
     } = {},
   ) {
     if (!codeBlockContent) {
@@ -159,6 +175,11 @@ class Util extends null {
             strikethrough,
             spoiler,
             inlineCodeContent,
+            escape,
+            heading,
+            bulletedList,
+            numberedList,
+            maskedLink,
           });
         })
         .join(codeBlock ? '\\`\\`\\`' : '```');
@@ -175,10 +196,16 @@ class Util extends null {
             underline,
             strikethrough,
             spoiler,
+            escape,
+            heading,
+            bulletedList,
+            numberedList,
+            maskedLink,
           });
         })
         .join(inlineCode ? '\\`' : '`');
     }
+    if (escape) text = Util.escapeEscape(text);
     if (inlineCode) text = Util.escapeInlineCode(text);
     if (codeBlock) text = Util.escapeCodeBlock(text);
     if (italic) text = Util.escapeItalic(text);
@@ -186,6 +213,10 @@ class Util extends null {
     if (underline) text = Util.escapeUnderline(text);
     if (strikethrough) text = Util.escapeStrikethrough(text);
     if (spoiler) text = Util.escapeSpoiler(text);
+    if (heading) text = Util.escapeHeading(text);
+    if (bulletedList) text = Util.escapeBulletedList(text);
+    if (numberedList) text = Util.escapeNumberedList(text);
+    if (maskedLink) text = Util.escapeMaskedLink(text);
     return text;
   }
 
@@ -204,7 +235,7 @@ class Util extends null {
    * @returns {string}
    */
   static escapeInlineCode(text) {
-    return text.replace(/(?<=^|[^`])`(?=[^`]|$)/g, '\\`');
+    return text.replace(/(?<=^|[^`])``?(?=[^`]|$)/g, match => (match.length === 2 ? '\\`\\`' : '\\`'));
   }
 
   /**
@@ -267,6 +298,51 @@ class Util extends null {
    */
   static escapeSpoiler(text) {
     return text.replaceAll('||', '\\|\\|');
+  }
+
+  /**
+   * Escapes escape characters in a string.
+   * @param {string} text Content to escape
+   * @returns {string}
+   */
+  static escapeEscape(text) {
+    return text.replaceAll('\\', '\\\\');
+  }
+
+  /**
+   * Escapes heading characters in a string.
+   * @param {string} text Content to escape
+   * @returns {string}
+   */
+  static escapeHeading(text) {
+    return text.replaceAll(/^( {0,2}[*-] +)?(#{1,3} )/gm, '$1\\$2');
+  }
+
+  /**
+   * Escapes bulleted list characters in a string.
+   * @param {string} text Content to escape
+   * @returns {string}
+   */
+  static escapeBulletedList(text) {
+    return text.replaceAll(/^( *)[*-]( +)/gm, '$1\\-$2');
+  }
+
+  /**
+   * Escapes numbered list characters in a string.
+   * @param {string} text Content to escape
+   * @returns {string}
+   */
+  static escapeNumberedList(text) {
+    return text.replaceAll(/^( *\d+)\./gm, '$1\\.');
+  }
+
+  /**
+   * Escapes masked link characters in a string.
+   * @param {string} text Content to escape
+   * @returns {string}
+   */
+  static escapeMaskedLink(text) {
+    return text.replaceAll(/\[.+\]\(.+\)/gm, '\\$&');
   }
 
   /**
@@ -584,14 +660,86 @@ class Util extends null {
   }
 
   /**
-   * Resolves the maximum time a guild's thread channels should automatcally archive in case of no recent activity.
+   * Resolves the maximum time a guild's thread channels should automatically archive in case of no recent activity.
    * @param {Guild} guild The guild to resolve this limit from.
+   * @deprecated This will be removed in the next major version.
    * @returns {number}
    */
-  static resolveAutoArchiveMaxLimit({ features }) {
-    if (features.includes('SEVEN_DAY_THREAD_ARCHIVE')) return 10080;
-    if (features.includes('THREE_DAY_THREAD_ARCHIVE')) return 4320;
-    return 1440;
+  static resolveAutoArchiveMaxLimit() {
+    if (!deprecationEmittedForResolveAutoArchiveMaxLimit) {
+      process.emitWarning(
+        // eslint-disable-next-line max-len
+        "The Util.resolveAutoArchiveMaxLimit method and the 'MAX' option are deprecated and will be removed in the next major version.",
+        'DeprecationWarning',
+      );
+      deprecationEmittedForResolveAutoArchiveMaxLimit = true;
+    }
+    return 10080;
+  }
+
+  /**
+   * Transforms an API guild forum tag to camel-cased guild forum tag.
+   * @param {APIGuildForumTag} tag The tag to transform
+   * @returns {GuildForumTag}
+   * @ignore
+   */
+  static transformAPIGuildForumTag(tag) {
+    return {
+      id: tag.id,
+      name: tag.name,
+      moderated: tag.moderated,
+      emoji:
+        tag.emoji_id ?? tag.emoji_name
+          ? {
+              id: tag.emoji_id,
+              name: tag.emoji_name,
+            }
+          : null,
+    };
+  }
+
+  /**
+   * Transforms a camel-cased guild forum tag to an API guild forum tag.
+   * @param {GuildForumTag} tag The tag to transform
+   * @returns {APIGuildForumTag}
+   * @ignore
+   */
+  static transformGuildForumTag(tag) {
+    return {
+      id: tag.id,
+      name: tag.name,
+      moderated: tag.moderated,
+      emoji_id: tag.emoji?.id ?? null,
+      emoji_name: tag.emoji?.name ?? null,
+    };
+  }
+
+  /**
+   * Transforms an API guild forum default reaction object to a
+   * camel-cased guild forum default reaction object.
+   * @param {APIGuildForumDefaultReactionEmoji} defaultReaction The default reaction to transform
+   * @returns {DefaultReactionEmoji}
+   * @ignore
+   */
+  static transformAPIGuildDefaultReaction(defaultReaction) {
+    return {
+      id: defaultReaction.emoji_id,
+      name: defaultReaction.emoji_name,
+    };
+  }
+
+  /**
+   * Transforms a camel-cased guild forum default reaction object to an
+   * API guild forum default reaction object.
+   * @param {DefaultReactionEmoji} defaultReaction The default reaction to transform
+   * @returns {APIGuildForumDefaultReactionEmoji}
+   * @ignore
+   */
+  static transformGuildDefaultReaction(defaultReaction) {
+    return {
+      emoji_id: defaultReaction.id,
+      emoji_name: defaultReaction.name,
+    };
   }
 }
 

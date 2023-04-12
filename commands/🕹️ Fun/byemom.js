@@ -73,10 +73,10 @@ module.exports = {
 }
 /**
  * @INFO
- * Bot Coded by BestGamersHK#9999 | https://discord.gg/4kRxKUbkdP
+ * Bot Coded by BestGamersHK#1213 | https://discord.gg/friendsmp
  * @INFO
- * Work for Milrato Development |  
+ * Work for Indocraft Network | https://indocraft.club
  * @INFO
- * Please mention him / Milrato Development, when using this Code!
+ * Please mention him / Indocraft Network, when using this Code!
  * @INFO
  */

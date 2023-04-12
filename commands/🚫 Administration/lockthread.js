@@ -47,13 +47,13 @@ module.exports = {
         return message.reply({embeds :[new MessageEmbed()
           .setColor(es.wrongcolor)
           .setFooter(client.getFooter(es))
-          .setTitle(`<:no:1016981253997735987> **This Channel is not a Thread**`)
+          .setTitle(`<:no:1026787028710465577> **This Channel is not a Thread**`)
         ]});
       await channel.setLocked(true);
       message.reply({embeds :[new MessageEmbed()
         .setColor(es.color)
         .setFooter(client.getFooter(es))
-        .setTitle(`<a:yes:1016992526504300544> **Successfully locked \`${channel.name}\`**`)
+        .setTitle(`<:yes:1026785792292569138> **Successfully locked \`${channel.name}\`**`)
       ]});
       if (client.settings.get(message.guild.id, `adminlog`) != "no") {
         try {
@@ -85,10 +85,10 @@ module.exports = {
 };
 /**
  * @INFO
- * Bot Coded by BestGamersHK#9999 | https://discord.gg/4kRxKUbkdP
+ * Bot Coded by BestGamersHK#1213 | https://discord.gg/friendsmp
  * @INFO
- * Work for Milrato Development |  
+ * Work for Indocraft Network | https://indocraft.club
  * @INFO
- * Please mention him / Milrato Development, when using this Code!
+ * Please mention him / Indocraft Network, when using this Code!
  * @INFO
  */

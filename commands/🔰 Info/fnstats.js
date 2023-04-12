@@ -58,7 +58,7 @@ module.exports = {
       }
       try{
         if (platform !== "pc" && platform !== "xbl" && platform !== "psn") platform = "pc";
-        let themsg = await message.reply(`<a:Loading:833101350623117342> Getting the Fortnite Stats of ${Epic}`)
+        let themsg = await message.reply(`<a:loading:1086988887383093298> Getting the Fortnite Stats of ${Epic}`)
         const stats = new Canvas.FortniteStats()
         const image = await stats.setToken(
           process.env.fortnitetracker || config.fortnitetracker)
@@ -85,10 +85,10 @@ module.exports = {
 }
 /*
  * @INFO
- * Bot Coded by BestGamersHK#9999 | https://discord.gg/4kRxKUbkdP
+ * Bot Coded by BestGamersHK#1213 | https://discord.gg/friendsmp
  * @INFO
- * Work for Milrato Development |  
+ * Work for Indocraft Network | https://indocraft.club
  * @INFO
- * Please mention him / Milrato Development, when using this Code!
+ * Please mention him / Indocraft Network, when using this Code!
  * @INFO
  */

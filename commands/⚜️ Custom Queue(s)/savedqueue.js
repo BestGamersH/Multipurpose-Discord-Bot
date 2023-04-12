@@ -138,7 +138,7 @@ module.exports = {
         client.queuesaves.set(message.author.id, oldtracks, `${Name}`);
         //return susccess message
         return message.reply({embeds : [new MessageEmbed()
-          .setTitle(`<a:yes:1016992526504300544> Added ${track.title} onto the Queue \`${Name}\``.substring(0, 256))
+          .setTitle(`<a:yes:833101995723194437> Added ${track.title} onto the Queue \`${Name}\``.substring(0, 256))
           .setDescription(eval(client.la[ls]["cmds"]["customqueues"]["savedqueue"]["variable19"]))
           .setColor(es.color).setThumbnail(es.thumb ? es.footericon && (es.footericon.includes("http://") || es.footericon.includes("https://")) ? es.footericon : client.user.displayAvatarURL() : null)
           .setFooter(client.getFooter(es))]})  }
@@ -262,7 +262,7 @@ module.exports = {
         client.queuesaves.set(message.author.id, tracks, `${Name}`)
         //return susccess message
         return message.reply({embeds :[new MessageEmbed()
-          .setTitle(`<a:yes:1016992526504300544> Deleted ${deletetrack.title} of the Queue \`${Name}\``.substring(0, 256))
+          .setTitle(`<a:yes:833101995723194437> Deleted ${deletetrack.title} of the Queue \`${Name}\``.substring(0, 256))
           .setDescription(eval(client.la[ls]["cmds"]["customqueues"]["savedqueue"]["variable40"]))
           .setColor(es.color).setThumbnail(es.thumb ? es.footericon && (es.footericon.includes("http://") || es.footericon.includes("https://")) ? es.footericon : client.user.displayAvatarURL() : null)
           .setFooter(client.getFooter(es))
@@ -306,7 +306,7 @@ module.exports = {
         client.queuesaves.set(message.author.id, newtracks, `${Name}`);
         //return susccess message
         return message.reply({embeds : [new MessageEmbed()
-          .setTitle(`<a:yes:1016992526504300544> Shuffled ${newtracks.length} Tracks of the Queue \`${Name}\``.substring(0, 256))
+          .setTitle(`<a:yes:833101995723194437> Shuffled ${newtracks.length} Tracks of the Queue \`${Name}\``.substring(0, 256))
           .setDescription(eval(client.la[ls]["cmds"]["customqueues"]["savedqueue"]["variable49"]))
           .setColor(es.color).setThumbnail(es.thumb ? es.footericon && (es.footericon.includes("http://") || es.footericon.includes("https://")) ? es.footericon : client.user.displayAvatarURL() : null)
           .setFooter(client.getFooter(es))]})
@@ -364,7 +364,7 @@ module.exports = {
         client.queuesaves.set(message.author.id, newtracks, `${Name}`);
         //return susccess message
         return message.reply({embeds : [new MessageEmbed()
-          .setTitle(`<a:yes:1016992526504300544> Removed ${counter} Tracks from the Queue \`${Name}\``.substring(0, 256))
+          .setTitle(`<a:yes:833101995723194437> Removed ${counter} Tracks from the Queue \`${Name}\``.substring(0, 256))
           .setDescription(eval(client.la[ls]["cmds"]["customqueues"]["savedqueue"]["variable58"]))
           .setColor(es.color).setThumbnail(es.thumb ? es.footericon && (es.footericon.includes("http://") || es.footericon.includes("https://")) ? es.footericon : client.user.displayAvatarURL() : null)
           .setFooter(client.getFooter(es))]})
@@ -687,9 +687,9 @@ Object.size = function (obj) {
 };
 /**
  * @INFO
- * Bot Coded by BestGamersHK#9999 | https://discord.gg/4kRxKUbkdP
+ * Bot Coded by Tomato#6966 | https://discord.gg/milrato
  * @INFO
- * Work for Milrato Development |  
+ * Work for Milrato Development | https://milrato.eu
  * @INFO
  * Please mention him / Milrato Development, when using this Code!
  * @INFO

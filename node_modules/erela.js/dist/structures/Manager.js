@@ -1,23 +1,11 @@
 "use strict";
-var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
-    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Manager = void 0;
 /* eslint-disable no-async-promise-executor */
-const collection_1 = __importDefault(require("@discordjs/collection"));
+const collection_1 = require("@discordjs/collection");
 const events_1 = require("events");
 const Utils_1 = require("./Utils");
-const TEMPLATE = JSON.stringify(["event", "guildId", "op", "sessionId"]);
+const REQUIRED_KEYS = ["event", "guildId", "op", "sessionId"];
 function check(options) {
     if (!options)
         throw new TypeError("ManagerOptions must not be empty.");
@@ -44,44 +32,27 @@ function check(options) {
     if (typeof options.clientName !== "undefined" &&
         typeof options.clientName !== "string")
         throw new TypeError('Manager option "clientName" must be a string.');
+    if (typeof options.defaultSearchPlatform !== "undefined" &&
+        typeof options.defaultSearchPlatform !== "string")
+        throw new TypeError('Manager option "defaultSearchPlatform" must be a string.');
 }
 /**
  * The main hub for interacting with Lavalink and using Erela.JS,
  * @noInheritDoc
  */
 class Manager extends events_1.EventEmitter {
-    /**
-     * Initiates the Manager class.
-     * @param options
-     */
-    constructor(options) {
-        super();
-        /** The map of players. */
-        this.players = new collection_1.default();
-        /** The map of nodes. */
-        this.nodes = new collection_1.default();
-        this.initiated = false;
-        check(options);
-        Utils_1.Structure.get("Player").init(this);
-        Utils_1.Structure.get("Node").init(this);
-        Utils_1.TrackUtils.init(this);
-        if (options.trackPartial) {
-            Utils_1.TrackUtils.setTrackPartial(options.trackPartial);
-            delete options.trackPartial;
-        }
-        this.options = Object.assign({ plugins: [], nodes: [{ identifier: "default", host: "localhost" }], shards: 1, autoPlay: true, clientName: "erela.js" }, options);
-        if (this.options.plugins) {
-            for (const [index, plugin] of this.options.plugins.entries()) {
-                if (!(plugin instanceof Utils_1.Plugin))
-                    throw new RangeError(`Plugin at index ${index} does not extend Plugin.`);
-                plugin.load(this);
-            }
-        }
-        if (this.options.nodes) {
-            for (const nodeOptions of this.options.nodes)
-                new (Utils_1.Structure.get("Node"))(nodeOptions);
-        }
-    }
+    static DEFAULT_SOURCES = {
+        "youtube music": "ytmsearch",
+        "youtube": "ytsearch",
+        "soundcloud": "scsearch"
+    };
+    /** The map of players. */
+    players = new collection_1.Collection();
+    /** The map of nodes. */
+    nodes = new collection_1.Collection();
+    /** The options that were set. */
+    options;
+    initiated = false;
     /** Returns the least used Nodes. */
     get leastUsedNodes() {
         return this.nodes
@@ -103,6 +74,41 @@ class Manager extends events_1.EventEmitter {
         });
     }
     /**
+     * Initiates the Manager class.
+     * @param options
+     */
+    constructor(options) {
+        super();
+        check(options);
+        Utils_1.Structure.get("Player").init(this);
+        Utils_1.Structure.get("Node").init(this);
+        Utils_1.TrackUtils.init(this);
+        if (options.trackPartial) {
+            Utils_1.TrackUtils.setTrackPartial(options.trackPartial);
+            delete options.trackPartial;
+        }
+        this.options = {
+            plugins: [],
+            nodes: [{ identifier: "default", host: "localhost" }],
+            shards: 1,
+            autoPlay: true,
+            clientName: "erela.js",
+            defaultSearchPlatform: "youtube",
+            ...options,
+        };
+        if (this.options.plugins) {
+            for (const [index, plugin] of this.options.plugins.entries()) {
+                if (!(plugin instanceof Utils_1.Plugin))
+                    throw new RangeError(`Plugin at index ${index} does not extend Plugin.`);
+                plugin.load(this);
+            }
+        }
+        if (this.options.nodes) {
+            for (const nodeOptions of this.options.nodes)
+                new (Utils_1.Structure.get("Node"))(nodeOptions);
+        }
+    }
+    /**
      * Initiates the Manager.
      * @param clientId
      */
@@ -115,8 +121,14 @@ class Manager extends events_1.EventEmitter {
             throw new Error('"clientId" set is not type of "string"');
         if (!this.options.clientId)
             throw new Error('"clientId" is not set. Pass it in Manager#init() or as a option in the constructor.');
-        for (const node of this.nodes.values())
-            node.connect();
+        for (const node of this.nodes.values()) {
+            try {
+                node.connect();
+            }
+            catch (err) {
+                this.emit("nodeError", node, err);
+            }
+        }
         this.initiated = true;
         return this;
     }
@@ -127,31 +139,25 @@ class Manager extends events_1.EventEmitter {
      * @returns The search result.
      */
     search(query, requester) {
-        return new Promise((resolve, reject) => __awaiter(this, void 0, void 0, function* () {
-            var _a, _b;
+        return new Promise(async (resolve, reject) => {
             const node = this.leastUsedNodes.first();
             if (!node)
                 throw new Error("No available nodes.");
-            const sources = {
-                soundcloud: "sc",
-                youtube: "yt",
-            };
-            const source = sources[(_a = query.source) !== null && _a !== void 0 ? _a : "youtube"];
-            let search = query.query || query;
+            const _query = typeof query === "string" ? { query } : query;
+            const _source = Manager.DEFAULT_SOURCES[_query.source ?? this.options.defaultSearchPlatform] ?? _query.source;
+            let search = _query.query;
             if (!/^https?:\/\//.test(search)) {
-                search = `${source}search:${search}`;
+                search = `${_source}:${search}`;
             }
-            const res = yield node.makeRequest(`/loadtracks?identifier=${encodeURIComponent(search)}`, r => {
-                if (node.options.requestTimeout) {
-                    r.timeout(node.options.requestTimeout);
-                }
-            }).catch(err => reject(err));
+            const res = await node
+                .makeRequest(`/loadtracks?identifier=${encodeURIComponent(search)}`)
+                .catch(err => reject(err));
             if (!res) {
                 return reject(new Error("Query not found."));
             }
             const result = {
                 loadType: res.loadType,
-                exception: (_b = res.exception) !== null && _b !== void 0 ? _b : null,
+                exception: res.exception ?? null,
                 tracks: res.tracks.map((track) => Utils_1.TrackUtils.build(track, requester)),
             };
             if (result.loadType === "PLAYLIST_LOADED") {
@@ -164,35 +170,37 @@ class Manager extends events_1.EventEmitter {
                 };
             }
             return resolve(result);
-        }));
+        });
     }
     /**
      * Decodes the base64 encoded tracks and returns a TrackData array.
      * @param tracks
      */
     decodeTracks(tracks) {
-        return new Promise((resolve, reject) => __awaiter(this, void 0, void 0, function* () {
+        return new Promise(async (resolve, reject) => {
             const node = this.nodes.first();
             if (!node)
                 throw new Error("No available nodes.");
-            const res = yield node.makeRequest(`/decodetracks`, r => r
-                .body(tracks, "json"))
+            const res = await node.makeRequest(`/decodetracks`, r => {
+                r.method = "POST";
+                r.body = JSON.stringify(tracks);
+                // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+                r.headers["Content-Type"] = "application/json";
+            })
                 .catch(err => reject(err));
             if (!res) {
                 return reject(new Error("No data returned from query."));
             }
             return resolve(res);
-        }));
+        });
     }
     /**
      * Decodes the base64 encoded track and returns a TrackData.
      * @param track
      */
-    decodeTrack(track) {
-        return __awaiter(this, void 0, void 0, function* () {
-            const res = yield this.decodeTracks([track]);
-            return res[0];
-        });
+    async decodeTrack(track) {
+        const res = await this.decodeTracks([track]);
+        return res[0];
     }
     /**
      * Creates a player or returns one if it already exists.
@@ -244,31 +252,42 @@ class Manager extends events_1.EventEmitter {
      * @param data
      */
     updateVoiceState(data) {
-        if (!data ||
-            !["VOICE_SERVER_UPDATE", "VOICE_STATE_UPDATE"].includes(data.t || ""))
+        if ("t" in data && !["VOICE_STATE_UPDATE", "VOICE_SERVER_UPDATE"].includes(data.t))
             return;
-        const player = this.players.get(data.d.guild_id);
+        const update = "d" in data ? data.d : data;
+        if (!update || !("token" in update) && !("session_id" in update))
+            return;
+        const player = this.players.get(update.guild_id);
         if (!player)
             return;
-        const state = player.voiceState;
-        if (data.t === "VOICE_SERVER_UPDATE") {
-            state.op = "voiceUpdate";
-            state.guildId = data.d.guild_id;
-            state.event = data.d;
+        if ("token" in update) {
+            /* voice server update */
+            player.voiceState.event = update;
         }
         else {
-            if (data.d.user_id !== this.options.clientId)
+            /* voice state update */
+            if (update.user_id !== this.options.clientId) {
                 return;
-            state.sessionId = data.d.session_id;
-            if (player.voiceChannel !== data.d.channel_id) {
-                this.emit("playerMove", player, player.voiceChannel, data.d.channel_id);
-                data.d.channel_id = player.voiceChannel;
+            }
+            if (update.channel_id) {
+                if (player.voiceChannel !== update.channel_id) {
+                    /* we moved voice channels. */
+                    this.emit("playerMove", player, player.voiceChannel, update.channel_id);
+                }
+                player.voiceState.sessionId = update.session_id;
+                player.voiceChannel = update.channel_id;
+            }
+            else {
+                /* player got disconnected. */
+                this.emit("playerDisconnect", player, player.voiceChannel);
+                player.voiceChannel = null;
+                player.voiceState = Object.assign({});
                 player.pause(true);
             }
         }
-        player.voiceState = state;
-        if (JSON.stringify(Object.keys(state).sort()) === TEMPLATE)
-            player.node.send(state);
+        if (REQUIRED_KEYS.every(key => key in player.voiceState)) {
+            player.node.send(player.voiceState);
+        }
     }
 }
 exports.Manager = Manager;

@@ -37,7 +37,7 @@ module.exports = {
       if(player.get(`autoplay`)){
         try{
           message.react("♾").catch(()=>{})
-          message.react("833101995723194437").catch(()=>{})
+          message.react("1026761151570264125").catch(()=>{})
         }catch{ }
       }else {
         try{
@@ -64,10 +64,10 @@ module.exports = {
 };
 /**
  * @INFO
- * Bot Coded by BestGamersHK#9999 | https://github?.com/Tomato6966/discord-js-lavalink-Music-Bot-erela-js
+ * Bot Coded by BestGamersHK#1213 | https://github?.com/BestGamersHK/discord-js-lavalink-Music-Bot-erela-js
  * @INFO
- * Work for Milrato Development |  
+ * Work for Indocraft Network | https://indocraft.club
  * @INFO
- * Please mention Him / Milrato Development, when using this Code!
+ * Please mention Him / Indocraft Network, when using this Code!
  * @INFO
  */

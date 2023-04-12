@@ -38,7 +38,7 @@ module.exports = {
           {
             value: `Enable & Set Anti Spam`,
             description: "Enable and limit the allowed Messages / 10 Seconds",
-            emoji: "833101995723194437"
+            emoji: "1026761151570264125"
           },
           {
             value: `Disable Anti Spam`,
@@ -89,7 +89,7 @@ module.exports = {
           .setColor(es.color)
           .setAuthor("Anti-Spam System Setup", 
           "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/twitter/282/a-button-blood-type_1f170-fe0f.png",
-          "https://discord.gg/4kRxKUbkdP")
+          "https://discord.gg/friendsmp")
           .setDescription(eval(client.la[ls]["cmds"]["setup"]["setup-anticaps"]["variable1"]))
         //send the menu msg
         let menumsg = await message.reply({embeds: [MenuEmbed], components: [new MessageActionRow().addComponents(Selection)]})
@@ -109,11 +109,11 @@ module.exports = {
             let SetupNumber = menu?.values[0].split(" ")[0]
             handle_the_picks(menuoptiondataIndex, SetupNumber, menuoptiondata)
           }
-          else menu?.reply({content: `<:no:1016981253997735987> You are not allowed to do that! Only: <@${cmduser.id}>`, ephemeral: true});
+          else menu?.reply({content: `<:no:1026787028710465577> You are not allowed to do that! Only: <@${cmduser.id}>`, ephemeral: true});
         });
         //Once the Collections ended edit the menu message
         collector.on('end', collected => {
-          menumsg.edit({embeds: [menumsg.embeds[0].setDescription(`~~${menumsg.embeds[0].description}~~`)], components: [], content: `${collected && collected.first() && collected.first().values ? `<a:yes:1016992526504300544> **Selected: \`${collected ? collected.first().values[0] : "Nothing"}\`**` : "❌ **NOTHING SELECTED - CANCELLED**" }`})
+          menumsg.edit({embeds: [menumsg.embeds[0].setDescription(`~~${menumsg.embeds[0].description}~~`)], components: [], content: `${collected && collected.first() && collected.first().values ? `<:yes:1026785792292569138> **Selected: \`${collected ? collected.first().values[0] : "Nothing"}\`**` : "❌ **NOTHING SELECTED - CANCELLED**" }`})
         });
       }
 
@@ -188,7 +188,7 @@ module.exports = {
             return message.reply({embeds: [new Discord.MessageEmbed()
               .setTitle("The Settings of the Anti Spam System")
               .setColor(es.color)
-              .setDescription(`**Enabled:** ${thesettings.enabled ? "<a:yes:1016992526504300544>" : "<:no:1016981253997735987>"}\n\n**Allowed Messages / 10 Seconds:** \`${thesettings.limit} Messages\``.substring(0, 2048))
+              .setDescription(`**Enabled:** ${thesettings.enabled ? "<:yes:1026785792292569138>" : "<:no:1026787028710465577>"}\n\n**Allowed Messages / 10 Seconds:** \`${thesettings.limit} Messages\``.substring(0, 2048))
               .setFooter(client.getFooter(es))]}
             );
           } break;
@@ -363,10 +363,10 @@ module.exports = {
 };
 /**
  * @INFO
- * Bot Coded by BestGamersHK#9999 | https://discord.gg/4kRxKUbkdP
+ * Bot Coded by BestGamersHK#1213 | https://discord.gg/friendsmp
  * @INFO
- * Work for Milrato Development |  
+ * Work for Indocraft Network | https://indocraft.club
  * @INFO
- * Please mention him / Milrato Development, when using this Code!
+ * Please mention him / Indocraft Network, when using this Code!
  * @INFO
  */

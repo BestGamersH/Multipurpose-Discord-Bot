@@ -18,11 +18,11 @@ module.exports = (client) => {
         suggest: {
           channel: "",
           approvemsg: `<a:yes:833101995723194437> Accepted Idea! Expect this soon.`,
-          denymsg: `<:no:833101993668771842> Thank you for the feedback, but we are not interested in this idea at this time.`,
+          denymsg: `<:no:1026787028710465577> Thank you for the feedback, but we are not interested in this idea at this time.`,
           maybemsg: `💡 We are thinking about this idea!`,
           duplicatemsg: `💢 This is a duplicated Suggestion`,
           soonmsg: `👌 Expect this Feature Soon!`,
-          statustext: `<a:Loading:833101350623117342> Waiting for Community Feedback, please vote!`,
+          statustext: `<a:loading:1086988887383093298> Waiting for Community Feedback, please vote!`,
           footertext: `Want to suggest / Feedback something? Simply type in this channel!`,
           approveemoji: `833101995723194437`,
           denyemoji: `833101993668771842`,

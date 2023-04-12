@@ -60,7 +60,7 @@ module.exports = {
       }
       itemsvalue += prize * data.items[`${itemarray}`];
     }
-    const p2b = (costs) => (Number(costs) > Number(data.balance)) ? "<:no:1016981253997735987>" : "<a:yes:1016992526504300544>";
+    const p2b = (costs) => (Number(costs) > Number(data.balance)) ? "<:no:1026787028710465577>" : "<:yes:1026785792292569138>";
     //return some message!
     return message.reply({embeds: [new MessageEmbed()
       .setColor(es.color).setThumbnail(es.thumb ? es.footericon && (es.footericon.includes("http://") || es.footericon.includes("https://")) ? es.footericon : client.user.displayAvatarURL() : null)
@@ -109,10 +109,10 @@ module.exports = {
 };
 /**
 * @INFO
-* Bot Coded by BestGamersHK#9999 | https://discord.gg/4kRxKUbkdP
+* Bot Coded by BestGamersHK#1213 | https://discord.gg/friendsmp
 * @INFO
-* Work for Milrato Development |  
+* Work for Indocraft Network | https://indocraft.club
 * @INFO
-* Please mention him / Milrato Development, when using this Code!
+* Please mention him / Indocraft Network, when using this Code!
 * @INFO
 */

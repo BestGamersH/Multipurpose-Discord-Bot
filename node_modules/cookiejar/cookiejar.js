@@ -65,6 +65,11 @@
     var cookie_str_splitter = /[:](?=\s*[a-zA-Z0-9_\-]+\s*[=])/g;
     Cookie.prototype.parse = function parse(str, request_domain, request_path) {
         if (this instanceof Cookie) {
+            if ( str.length > 32768 ) {
+                console.warn("Cookie too long for parsing (>32768 characters)");
+                return;
+            }
+    
             var parts = str.split(";").filter(function (value) {
                     return !!value;
                 });

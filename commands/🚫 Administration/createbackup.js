@@ -16,13 +16,13 @@ module.exports = {
     run: async (client, message, args, cmduser, text, prefix) => {
     
         if(!message.guild.me.permissions.has(Discord.Permissions.FLAGS.ADMINISTRATOR)){
-            return message.reply("<:no:1016981253997735987> **I am missing the ADMINISTRATOR Permission!**")
+            return message.reply("<:no:1026787028710465577> **I am missing the ADMINISTRATOR Permission!**")
         }
         let owner = await message.guild.fetchOwner().catch(e=>{
             return message.reply("Could not get owner of target guild")
         })
         if(owner.id != cmduser.id) {
-            return message.reply(`<:no:1016981253997735987> **You need to be the Owner of this Server!**`)
+            return message.reply(`<:no:1026787028710465577> **You need to be the Owner of this Server!**`)
         }
         let es = client.settings.get(message.guild.id, "embed");let ls = client.settings.get(message.guild.id, "language")
         let adminroles = client.settings.get(message.guild.id, "adminroles")
@@ -64,7 +64,7 @@ module.exports = {
             collector.on('collect', button => {
                 if (button?.user.id === cmduser.id) {
                     collector.stop();
-                    button?.reply({content: `<a:Loading:833101350623117342> **Now saving the Backup!**\nThis could take up to 2 Minutes (belongs to your data amount)`}).catch(() => {})
+                    button?.reply({content: `<a:loading:1086988887383093298> **Now saving the Backup!**\nThis could take up to 2 Minutes (belongs to your data amount)`}).catch(() => {})
                     // Create the backup
                     backup.create(message.guild, {
                         maxMessagesPerChannel: 10,
@@ -78,10 +78,10 @@ module.exports = {
                         if(backups.length > 5) backups = backups.slice(0, 5);
                         client.backupDB.set(message.guild.id, backups, "backups")
                         // And send informations to the backup owner
-                        message.author.send(`<a:yes:1016992526504300544> **Backup successfully created.**\n\n**To Load it type:**\n> \`${prefix}loadbackup ${message.guild.id} 1\` ... note 1 is the latest backup, the higher the number the older (5 is the highest) \`${prefix}listbackups ${message.guild.id}\`!\n\n> *Have you tried: \`${prefix}setup-autobackup\`, to enable auto backups?*`).catch(e=>{
-                            message.channel.send(`<a:yes:1016992526504300544> **Backup successfully created.**\n\n**To Load it type:**\n> \`${prefix}loadbackup ${message.guild.id} 1\` ... note 1is the latest backup, the higher the number the older (5 is the highest) \`${prefix}listbackups ${message.guild.id}\`!\n\n> *Have you tried: \`${prefix}setup-autobackup\`, to enable auto backups?*`);
+                        message.author.send(`<:yes:1026785792292569138> **Backup successfully created.**\n\n**To Load it type:**\n> \`${prefix}loadbackup ${message.guild.id} 1\` ... note 1 is the latest backup, the higher the number the older (5 is the highest) \`${prefix}listbackups ${message.guild.id}\`!\n\n> *Have you tried: \`${prefix}setup-autobackup\`, to enable auto backups?*`).catch(e=>{
+                            message.channel.send(`<:yes:1026785792292569138> **Backup successfully created.**\n\n**To Load it type:**\n> \`${prefix}loadbackup ${message.guild.id} 1\` ... note 1is the latest backup, the higher the number the older (5 is the highest) \`${prefix}listbackups ${message.guild.id}\`!\n\n> *Have you tried: \`${prefix}setup-autobackup\`, to enable auto backups?*`);
                         }).then(()=>{
-                            message.channel.send(`<a:yes:1016992526504300544> **Backup successfully created.** The backup ID was sent in dm!\n\n> *Have you tried: \`${prefix}setup-autobackup\`, to enable auto backups?*`);
+                            message.channel.send(`<:yes:1026785792292569138> **Backup successfully created.** The backup ID was sent in dm!\n\n> *Have you tried: \`${prefix}setup-autobackup\`, to enable auto backups?*`);
                         })
                     }).catch(e=>{
                         console.log(e.stack ? String(e.stack).grey : String(e).grey)

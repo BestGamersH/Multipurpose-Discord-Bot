@@ -64,7 +64,7 @@ module.exports = {
         })
         message.reply({ embeds: [new MessageEmbed()
           .setColor(es.color).setThumbnail(es.thumb ? es.footericon && (es.footericon.includes("http://") || es.footericon.includes("https://")) ? es.footericon : client.user.displayAvatarURL() : null).setFooter(client.getFooter(es))
-          .setTitle(`<a:yes:1016992526504300544> Banned ${ban.tag || user}`)
+          .setTitle(`<:yes:1026785792292569138> Banned ${ban.tag || user}`)
           .setDescription(`**Reason**: ${reason}`)]
         });
       } catch (e) {
@@ -106,10 +106,10 @@ module.exports = {
 };
 /**
  * @INFO
- * Bot Coded by BestGamersHK#9999 | https://discord.gg/4kRxKUbkdP
+ * Bot Coded by BestGamersHK#1213 | https://discord.gg/friendsmp
  * @INFO
- * Work for Milrato Development |  
+ * Work for Indocraft Network | https://indocraft.club
  * @INFO
- * Please mention him / Milrato Development, when using this Code!
+ * Please mention him / Indocraft Network, when using this Code!
  * @INFO
  */

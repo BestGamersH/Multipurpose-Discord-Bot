@@ -28,13 +28,13 @@ module.exports = {
       
       
       if(!message.guild.me.permissions.has(Discord.Permissions.FLAGS.ADMINISTRATOR)){
-        return message.reply("<:no:1016981253997735987> **I am missing the ADMINISTRATOR Permission!**")
+        return message.reply("<:no:1026787028710465577> **I am missing the ADMINISTRATOR Permission!**")
       }
       let owner = await message.guild.fetchOwner().catch(e=>{
           return message.reply("Could not get owner of target guild")
       })
       if(owner.id != cmduser.id) {
-          return message.reply(`<:no:1016981253997735987> **You need to be the Owner of this Server!**`)
+          return message.reply(`<:no:1026787028710465577> **You need to be the Owner of this Server!**`)
       }
       //function to handle true/false
       const d2p = (bool) => bool ? "`✔️ Enabled`" : "`❌ Disabled`"; 
@@ -47,7 +47,7 @@ module.exports = {
           {
             value: !client.settings.get(message.guild.id, "autobackup") ? "Enable Auto-Backups" : "Disable Auto-Backups",
             description: !client.settings.get(message.guild.id, "autobackup") ? "Make a Backup every 2nd Day" : "Don't make automated Server Backups anymore",
-            emoji: !client.settings.get(message.guild.id, "autobackup") ? "833101995723194437" : "833101993668771842"
+            emoji: !client.settings.get(message.guild.id, "autobackup") ? "1026761151570264125" : "833101993668771842"
           },
           {
             value: "Cancel",
@@ -73,7 +73,7 @@ module.exports = {
           .setColor(es.color)
           .setAuthor("Auto-Backup System Setup", 
           "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/285/floppy-disk_1f4be.png",
-          "https://discord.gg/4kRxKUbkdP")
+          "https://discord.gg/friendsmp")
           .setDescription(eval(client.la[ls]["cmds"]["setup"]["setup-anticaps"]["variable1"]))
         //send the menu msg
         let menumsg = await message.reply({embeds: [MenuEmbed], components: [new MessageActionRow().addComponents(Selection)]})
@@ -95,11 +95,11 @@ module.exports = {
               .setFooter(client.getFooter(es))]
             });
           }
-          else menu?.reply({content: `<:no:1016981253997735987> You are not allowed to do that! Only: <@${cmduser.id}>`, ephemeral: true});
+          else menu?.reply({content: `<:no:1026787028710465577> You are not allowed to do that! Only: <@${cmduser.id}>`, ephemeral: true});
         });
         //Once the Collections ended edit the menu message
         collector.on('end', collected => {
-          menumsg.edit({embeds: [menumsg.embeds[0].setDescription(`~~${menumsg.embeds[0].description}~~`)], components: [], content: `${collected && collected.first() && collected.first().values ? `<a:yes:1016992526504300544> **Selected: \`${collected ? collected.first().values[0] : "Nothing"}\`**` : "❌ **NOTHING SELECTED - CANCELLED**" }`})
+          menumsg.edit({embeds: [menumsg.embeds[0].setDescription(`~~${menumsg.embeds[0].description}~~`)], components: [], content: `${collected && collected.first() && collected.first().values ? `<:yes:1026785792292569138> **Selected: \`${collected ? collected.first().values[0] : "Nothing"}\`**` : "❌ **NOTHING SELECTED - CANCELLED**" }`})
         });
       }
 
@@ -119,10 +119,10 @@ module.exports = {
 };
 /**
  * @INFO
- * Bot Coded by BestGamersHK#9999 | https://discord.gg/4kRxKUbkdP
+ * Bot Coded by BestGamersHK#1213 | https://discord.gg/friendsmp
  * @INFO
- * Work for Milrato Development |  
+ * Work for Indocraft Network | https://indocraft.club
  * @INFO
- * Please mention him / Milrato Development, when using this Code!
+ * Please mention him / Indocraft Network, when using this Code!
  * @INFO
  */

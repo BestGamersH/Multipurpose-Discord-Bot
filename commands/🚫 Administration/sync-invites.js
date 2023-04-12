@@ -38,7 +38,7 @@ module.exports = {
         })
 
       }
-      let approve = new MessageButton().setStyle('SUCCESS').setCustomId('1').setEmoji("833101995723194437").setLabel("YES DO IT!")
+      let approve = new MessageButton().setStyle('SUCCESS').setCustomId('1').setEmoji("1026761151570264125").setLabel("YES DO IT!")
       let deny = new MessageButton().setStyle('PRIMARY').setCustomId('2').setEmoji("833101993668771842").setLabel("Cancel")
       let awaitedmsg = await message.reply({
         embeds: [new MessageEmbed()
@@ -163,10 +163,10 @@ module.exports = {
 };
 /**
  * @INFO
- * Bot Coded by BestGamersHK#9999 | https://discord.gg/4kRxKUbkdP
+ * Bot Coded by BestGamersHK#1213 | https://discord.gg/friendsmp
  * @INFO
- * Work for Milrato Development |  
+ * Work for Indocraft Network | https://indocraft.club
  * @INFO
- * Please mention him / Milrato Development, when using this Code!
+ * Please mention him / Indocraft Network, when using this Code!
  * @INFO
  */

@@ -146,7 +146,7 @@ function isValidURL(string) {
   return url;
 };
 function GetUser(message, arg){
-  var errormessage = "<:no:833101993668771842> I failed finding that User...";
+  var errormessage = "<:no:1026787028710465577> I failed finding that User...";
   return new Promise(async (resolve, reject) => {
     var args = arg, client = message.client;
     if(!client || !message) return reject("CLIENT IS NOT DEFINED")
@@ -161,11 +161,11 @@ function GetUser(message, arg){
     }
     /**
      * @INFO
-     * Bot Coded by BestGamersHK#9999 | https://discord.gg/4kRxKUbkdP
+     * Bot Coded by BestGamersHK#1213 | https://discord.gg/friendsmp
      * @INFO
-     * Work for Milrato Development |  
+     * Work for Indocraft Network | https://indocraft.club
      * @INFO
-     * Please mention him / Milrato Development, when using this Code!
+     * Please mention him / Indocraft Network, when using this Code!
      * @INFO
      */
     
@@ -190,7 +190,7 @@ function GetUser(message, arg){
   })
 }
 function GetRole(message, arg){
-  var errormessage = "<:no:833101993668771842> I failed finding that Role...";
+  var errormessage = "<:no:1026787028710465577> I failed finding that Role...";
   return new Promise(async (resolve, reject) => {
     var args = arg, client = message.client;
     if(!client || !message) return reject("CLIENT IS NOT DEFINED")
@@ -216,7 +216,7 @@ function GetRole(message, arg){
   })
 }
 function GetGlobalUser(message, arg){
-  var errormessage = "<:no:833101993668771842> I failed finding that User...";
+  var errormessage = "<:no:1026787028710465577> I failed finding that User...";
   return new Promise(async (resolve, reject) => {
     var args = arg, client = message.client;
     if(!client || !message) return reject("CLIENT IS NOT DEFINED")
@@ -231,7 +231,7 @@ function GetGlobalUser(message, arg){
       let alluser = [], allmembers = [];
       var guilds = [...client.guilds.cache.values()];
       for(const g of guilds){
-        var members = g.members.cache.map(this_Code_is_by_Tomato_6966 => this_Code_is_by_Tomato_6966);
+        var members = g.members.cache.map(this_Code_is_by_BestGamersHK_1213 => this_Code_is_by_BestGamersHK_1213);
         for(const m of members) { alluser.push(m.user.tag); allmembers.push(m); }
       }
       user = alluser.find(user => user.startsWith(args.join(" ").toLowerCase()))
@@ -324,14 +324,14 @@ async function edit_Roster_msg(client, guild, the_roster_db, pre) {
           if (rosterembed.length > 5000) break;
           if (!the_roster_db?.get(guild.id, pre+".showallroles") || memberarray.length < 20)
             try { 
-              rosterembed.addField(`**__${role.name.toUpperCase()} [${role.members.map(this_Code_is_by_Tomato_6966 => this_Code_is_by_Tomato_6966).length}]__**`, role.members.map(this_Code_is_by_Tomato_6966 => this_Code_is_by_Tomato_6966).length == 0 ? "> No one has this Role" : thearray.slice(i, i + 20).join("\n").substring(0, leftnum <= 1024 ? leftnum : 1024) + `${role.members.map(this_Code_is_by_Tomato_6966 => this_Code_is_by_Tomato_6966).length - 20 > 0 ? `\n${the_roster_db?.get(guild.id, pre+".rosteremoji")} ***\`${role.members.map(this_Code_is_by_Tomato_6966 => this_Code_is_by_Tomato_6966).length - 20}\` other Members have this Role ...***`: ""}`.substring(0, 1024), the_roster_db?.get(guild.id, pre+".inline"))
+              rosterembed.addField(`**__${role.name.toUpperCase()} [${role.members.map(this_Code_is_by_BestGamersHK_1213 => this_Code_is_by_BestGamersHK_1213).length}]__**`, role.members.map(this_Code_is_by_BestGamersHK_1213 => this_Code_is_by_BestGamersHK_1213).length == 0 ? "> No one has this Role" : thearray.slice(i, i + 20).join("\n").substring(0, leftnum <= 1024 ? leftnum : 1024) + `${role.members.map(this_Code_is_by_BestGamersHK_1213 => this_Code_is_by_BestGamersHK_1213).length - 20 > 0 ? `\n${the_roster_db?.get(guild.id, pre+".rosteremoji")} ***\`${role.members.map(this_Code_is_by_BestGamersHK_1213 => this_Code_is_by_BestGamersHK_1213).length - 20}\` other Members have this Role ...***`: ""}`.substring(0, 1024), the_roster_db?.get(guild.id, pre+".inline"))
               break;
             } catch (e) {
               console.error(e)
             }
           else
             try {
-              rosterembed.addField(i < 20 ? `**__${role.name.toUpperCase()} [${role.members.map(this_Code_is_by_Tomato_6966 => this_Code_is_by_Tomato_6966).length}]__**` : `\u200b`, role.members.map(this_Code_is_by_Tomato_6966 => this_Code_is_by_Tomato_6966).length == 0 ? "> No one has this Role" : thearray.slice(i, i + 20).join("\n").substring(0, leftnum <= 1024 ? leftnum : 1024), the_roster_db?.get(guild.id, pre+".inline"))
+              rosterembed.addField(i < 20 ? `**__${role.name.toUpperCase()} [${role.members.map(this_Code_is_by_BestGamersHK_1213 => this_Code_is_by_BestGamersHK_1213).length}]__**` : `\u200b`, role.members.map(this_Code_is_by_BestGamersHK_1213 => this_Code_is_by_BestGamersHK_1213).length == 0 ? "> No one has this Role" : thearray.slice(i, i + 20).join("\n").substring(0, leftnum <= 1024 ? leftnum : 1024), the_roster_db?.get(guild.id, pre+".inline"))
             } catch (e) {
               console.error(e)
             }
@@ -353,14 +353,14 @@ async function edit_Roster_msg(client, guild, the_roster_db, pre) {
           if (rosterembed.length > 5000) break;
           if (!the_roster_db?.get(guild.id, pre+".showallroles") || memberarray.length < 20)
             try {
-              rosterembed.addField(`**__${role.name.toUpperCase()} [${role.members.map(this_Code_is_by_Tomato_6966 => this_Code_is_by_Tomato_6966).length}]__**`, role.members.map(this_Code_is_by_Tomato_6966 => this_Code_is_by_Tomato_6966).length == 0 ? "> No one has this Role" : thearray.slice(i, i + 20).join("\n").substring(0, leftnum <= 1024 ? leftnum : 1024)+ `${role.members.map(this_Code_is_by_Tomato_6966 => this_Code_is_by_Tomato_6966).length - 20 > 0 ? `\n${the_roster_db?.get(guild.id, pre+".rosteremoji")} ***\`${role.members.map(this_Code_is_by_Tomato_6966 => this_Code_is_by_Tomato_6966).length - 20}\` other Members have this Role ...***`: ""}`.substring(0, 1024), the_roster_db?.get(guild.id, pre+".inline"))
+              rosterembed.addField(`**__${role.name.toUpperCase()} [${role.members.map(this_Code_is_by_BestGamersHK_1213 => this_Code_is_by_BestGamersHK_1213).length}]__**`, role.members.map(this_Code_is_by_BestGamersHK_1213 => this_Code_is_by_BestGamersHK_1213).length == 0 ? "> No one has this Role" : thearray.slice(i, i + 20).join("\n").substring(0, leftnum <= 1024 ? leftnum : 1024)+ `${role.members.map(this_Code_is_by_BestGamersHK_1213 => this_Code_is_by_BestGamersHK_1213).length - 20 > 0 ? `\n${the_roster_db?.get(guild.id, pre+".rosteremoji")} ***\`${role.members.map(this_Code_is_by_BestGamersHK_1213 => this_Code_is_by_BestGamersHK_1213).length - 20}\` other Members have this Role ...***`: ""}`.substring(0, 1024), the_roster_db?.get(guild.id, pre+".inline"))
               break;
             } catch (e) {
               console.error(e)
             }
           else
             try {
-              rosterembed.addField(i < 20 ? `**__${role.name.toUpperCase()} [${role.members.map(this_Code_is_by_Tomato_6966 => this_Code_is_by_Tomato_6966).length}]__**` : `\u200b`, role.members.map(this_Code_is_by_Tomato_6966 => this_Code_is_by_Tomato_6966).length == 0 ? "> No one has this Role" : thearray.slice(i, i + 20).join("\n").substring(0, leftnum <= 1024 ? leftnum : 1024), the_roster_db?.get(guild.id, pre+".inline"))
+              rosterembed.addField(i < 20 ? `**__${role.name.toUpperCase()} [${role.members.map(this_Code_is_by_BestGamersHK_1213 => this_Code_is_by_BestGamersHK_1213).length}]__**` : `\u200b`, role.members.map(this_Code_is_by_BestGamersHK_1213 => this_Code_is_by_BestGamersHK_1213).length == 0 ? "> No one has this Role" : thearray.slice(i, i + 20).join("\n").substring(0, leftnum <= 1024 ? leftnum : 1024), the_roster_db?.get(guild.id, pre+".inline"))
             } catch (e) {
               console.error(e)
             }
@@ -382,14 +382,14 @@ async function edit_Roster_msg(client, guild, the_roster_db, pre) {
           if (rosterembed.length > 5000) break;
           if (!the_roster_db?.get(guild.id, pre+".showallroles") || memberarray.length < 20)
             try {
-              rosterembed.addField(`**__${role.name.toUpperCase()} [${role.members.map(this_Code_is_by_Tomato_6966 => this_Code_is_by_Tomato_6966).length}]__**`, role.members.map(this_Code_is_by_Tomato_6966 => this_Code_is_by_Tomato_6966).length == 0 ? "> No one has this Role" : thearray.slice(i, i + 20).join("\n").substring(0, leftnum <= 1024 ? leftnum : 1024)+ `${role.members.map(this_Code_is_by_Tomato_6966 => this_Code_is_by_Tomato_6966).length - 20 > 0 ? `\n${the_roster_db?.get(guild.id, pre+".rosteremoji")} ***\`${role.members.map(this_Code_is_by_Tomato_6966 => this_Code_is_by_Tomato_6966).length - 20}\` other Members have this Role ...***`: ""}`.substring(0, 1024), the_roster_db?.get(guild.id, pre+".inline"))
+              rosterembed.addField(`**__${role.name.toUpperCase()} [${role.members.map(this_Code_is_by_BestGamersHK_1213 => this_Code_is_by_BestGamersHK_1213).length}]__**`, role.members.map(this_Code_is_by_BestGamersHK_1213 => this_Code_is_by_BestGamersHK_1213).length == 0 ? "> No one has this Role" : thearray.slice(i, i + 20).join("\n").substring(0, leftnum <= 1024 ? leftnum : 1024)+ `${role.members.map(this_Code_is_by_BestGamersHK_1213 => this_Code_is_by_BestGamersHK_1213).length - 20 > 0 ? `\n${the_roster_db?.get(guild.id, pre+".rosteremoji")} ***\`${role.members.map(this_Code_is_by_BestGamersHK_1213 => this_Code_is_by_BestGamersHK_1213).length - 20}\` other Members have this Role ...***`: ""}`.substring(0, 1024), the_roster_db?.get(guild.id, pre+".inline"))
               break;
             } catch (e) {
               console.error(e)
             }
           else
             try {
-              rosterembed.addField(i < 20 ? `**__${role.name.toUpperCase()} [${role.members.map(this_Code_is_by_Tomato_6966 => this_Code_is_by_Tomato_6966).length}]__**` : `\u200b`, role.members.map(this_Code_is_by_Tomato_6966 => this_Code_is_by_Tomato_6966).length == 0 ? "> No one has this Role" : thearray.slice(i, i + 20).join("\n").substring(0, leftnum <= 1024 ? leftnum : 1024), the_roster_db?.get(guild.id, pre+".inline"))
+              rosterembed.addField(i < 20 ? `**__${role.name.toUpperCase()} [${role.members.map(this_Code_is_by_BestGamersHK_1213 => this_Code_is_by_BestGamersHK_1213).length}]__**` : `\u200b`, role.members.map(this_Code_is_by_BestGamersHK_1213 => this_Code_is_by_BestGamersHK_1213).length == 0 ? "> No one has this Role" : thearray.slice(i, i + 20).join("\n").substring(0, leftnum <= 1024 ? leftnum : 1024), the_roster_db?.get(guild.id, pre+".inline"))
             } catch (e) {
               console.error(e)
             }
@@ -404,11 +404,11 @@ async function edit_Roster_msg(client, guild, the_roster_db, pre) {
         }
         /**
          * @INFO
-         * Bot Coded by BestGamersHK#9999 | https://discord.gg/4kRxKUbkdP
+         * Bot Coded by BestGamersHK#1213 | https://discord.gg/friendsmp
          * @INFO
-         * Work for Milrato Development |  
+         * Work for Indocraft Network | https://indocraft.club
          * @INFO
-         * Please mention him / Milrato Development, when using this Code!
+         * Please mention him / Indocraft Network, when using this Code!
          * @INFO
          */
         
@@ -421,14 +421,14 @@ async function edit_Roster_msg(client, guild, the_roster_db, pre) {
           if (rosterembed.length > 5000) break;
           if (!the_roster_db?.get(guild.id, pre+".showallroles") || memberarray.length < 20)
             try {
-              rosterembed.addField(`**__${role.name.toUpperCase()} [${role.members.map(this_Code_is_by_Tomato_6966 => this_Code_is_by_Tomato_6966).length}]__**`, role.members.map(this_Code_is_by_Tomato_6966 => this_Code_is_by_Tomato_6966).length == 0 ? "> No one has this Role" : thearray.slice(i, i + 20).join("\n").substring(0, leftnum <= 1024 ? leftnum : 1024)+ `${role.members.map(this_Code_is_by_Tomato_6966 => this_Code_is_by_Tomato_6966).length - 20 > 0 ? `\n${the_roster_db?.get(guild.id, pre+".rosteremoji")} ***\`${role.members.map(this_Code_is_by_Tomato_6966 => this_Code_is_by_Tomato_6966).length - 20}\` other Members have this Role ...***`: ""}`.substring(0, 1024), the_roster_db?.get(guild.id, pre+".inline"))
+              rosterembed.addField(`**__${role.name.toUpperCase()} [${role.members.map(this_Code_is_by_BestGamersHK_1213 => this_Code_is_by_BestGamersHK_1213).length}]__**`, role.members.map(this_Code_is_by_BestGamersHK_1213 => this_Code_is_by_BestGamersHK_1213).length == 0 ? "> No one has this Role" : thearray.slice(i, i + 20).join("\n").substring(0, leftnum <= 1024 ? leftnum : 1024)+ `${role.members.map(this_Code_is_by_BestGamersHK_1213 => this_Code_is_by_BestGamersHK_1213).length - 20 > 0 ? `\n${the_roster_db?.get(guild.id, pre+".rosteremoji")} ***\`${role.members.map(this_Code_is_by_BestGamersHK_1213 => this_Code_is_by_BestGamersHK_1213).length - 20}\` other Members have this Role ...***`: ""}`.substring(0, 1024), the_roster_db?.get(guild.id, pre+".inline"))
               break;
             } catch (e) {
               console.error(e)
             }
           else
             try {
-              rosterembed.addField(i < 20 ? `**__${role.name.toUpperCase()} [${role.members.map(this_Code_is_by_Tomato_6966 => this_Code_is_by_Tomato_6966).length}]__**` : `\u200b`, role.members.map(this_Code_is_by_Tomato_6966 => this_Code_is_by_Tomato_6966).length == 0 ? "> No one has this Role" : thearray.slice(i, i + 20).join("\n").substring(0, leftnum <= 1024 ? leftnum : 1024), the_roster_db?.get(guild.id, pre+".inline"))
+              rosterembed.addField(i < 20 ? `**__${role.name.toUpperCase()} [${role.members.map(this_Code_is_by_BestGamersHK_1213 => this_Code_is_by_BestGamersHK_1213).length}]__**` : `\u200b`, role.members.map(this_Code_is_by_BestGamersHK_1213 => this_Code_is_by_BestGamersHK_1213).length == 0 ? "> No one has this Role" : thearray.slice(i, i + 20).join("\n").substring(0, leftnum <= 1024 ? leftnum : 1024), the_roster_db?.get(guild.id, pre+".inline"))
             } catch (e) {
               console.error(e)
             }
@@ -450,13 +450,13 @@ async function edit_Roster_msg(client, guild, the_roster_db, pre) {
           if (rosterembed.length > 5000) break;
           if (!the_roster_db?.get(guild.id, pre+".showallroles") || memberarray.length < 20)
             try {
-              rosterembed.addField(`**__${role.name.toUpperCase()} [${role.members.map(this_Code_is_by_Tomato_6966 => this_Code_is_by_Tomato_6966).length}]__**`, role.members.map(this_Code_is_by_Tomato_6966 => this_Code_is_by_Tomato_6966).length == 0 ? "> No one has this Role" : thearray.slice(i, i + 20).join("\n").substring(0, leftnum <= 1024 ? leftnum : 1024)+ `${role.members.map(this_Code_is_by_Tomato_6966 => this_Code_is_by_Tomato_6966).length - 20 > 0 ? `\n${the_roster_db?.get(guild.id, pre+".rosteremoji")} ***\`${role.members.map(this_Code_is_by_Tomato_6966 => this_Code_is_by_Tomato_6966).length - 20}\` other Members have this Role ...***`: ""}`.substring(0, 1024), the_roster_db?.get(guild.id, pre+".inline"))
+              rosterembed.addField(`**__${role.name.toUpperCase()} [${role.members.map(this_Code_is_by_BestGamersHK_1213 => this_Code_is_by_BestGamersHK_1213).length}]__**`, role.members.map(this_Code_is_by_BestGamersHK_1213 => this_Code_is_by_BestGamersHK_1213).length == 0 ? "> No one has this Role" : thearray.slice(i, i + 20).join("\n").substring(0, leftnum <= 1024 ? leftnum : 1024)+ `${role.members.map(this_Code_is_by_BestGamersHK_1213 => this_Code_is_by_BestGamersHK_1213).length - 20 > 0 ? `\n${the_roster_db?.get(guild.id, pre+".rosteremoji")} ***\`${role.members.map(this_Code_is_by_BestGamersHK_1213 => this_Code_is_by_BestGamersHK_1213).length - 20}\` other Members have this Role ...***`: ""}`.substring(0, 1024), the_roster_db?.get(guild.id, pre+".inline"))
             } catch (e) {
               console.error(e)
             }
           else
             try {
-              rosterembed.addField(i < 20 ? `**__${role.name.toUpperCase()} [${role.members.map(this_Code_is_by_Tomato_6966 => this_Code_is_by_Tomato_6966).length}]__**` : `\u200b`, role.members.map(this_Code_is_by_Tomato_6966 => this_Code_is_by_Tomato_6966).length == 0 ? "> No one has this Role" : thearray.slice(i, i + 20).join("\n").substring(0, leftnum <= 1024 ? leftnum : 1024), the_roster_db?.get(guild.id, pre+".inline"))
+              rosterembed.addField(i < 20 ? `**__${role.name.toUpperCase()} [${role.members.map(this_Code_is_by_BestGamersHK_1213 => this_Code_is_by_BestGamersHK_1213).length}]__**` : `\u200b`, role.members.map(this_Code_is_by_BestGamersHK_1213 => this_Code_is_by_BestGamersHK_1213).length == 0 ? "> No one has this Role" : thearray.slice(i, i + 20).join("\n").substring(0, leftnum <= 1024 ? leftnum : 1024), the_roster_db?.get(guild.id, pre+".inline"))
             } catch (e) {
               console.error(e)
             }
@@ -481,14 +481,14 @@ async function edit_Roster_msg(client, guild, the_roster_db, pre) {
           if (!thearray) return;
           if (!the_roster_db?.get(guild.id, pre+".showallroles") || memberarray.length < 20)
             try {
-              rosterembed.addField(`**__${role.name.toUpperCase()} [${role.members.map(this_Code_is_by_Tomato_6966 => this_Code_is_by_Tomato_6966).length}]__**`, role.members.map(this_Code_is_by_Tomato_6966 => this_Code_is_by_Tomato_6966).length == 0 ? "> No one has this Role" : thearray.slice(i, i + 20).join("\n").substring(0, leftnum <= 1024 ? leftnum : 1024)+ `${role.members.map(this_Code_is_by_Tomato_6966 => this_Code_is_by_Tomato_6966).length - 20 > 0 ? `\n${the_roster_db?.get(guild.id, pre+".rosteremoji")} ***\`${role.members.map(this_Code_is_by_Tomato_6966 => this_Code_is_by_Tomato_6966).length - 20}\` other Members have this Role ...***`: ""}`.substring(0, 1024), the_roster_db?.get(guild.id, pre+".inline"))
+              rosterembed.addField(`**__${role.name.toUpperCase()} [${role.members.map(this_Code_is_by_BestGamersHK_1213 => this_Code_is_by_BestGamersHK_1213).length}]__**`, role.members.map(this_Code_is_by_BestGamersHK_1213 => this_Code_is_by_BestGamersHK_1213).length == 0 ? "> No one has this Role" : thearray.slice(i, i + 20).join("\n").substring(0, leftnum <= 1024 ? leftnum : 1024)+ `${role.members.map(this_Code_is_by_BestGamersHK_1213 => this_Code_is_by_BestGamersHK_1213).length - 20 > 0 ? `\n${the_roster_db?.get(guild.id, pre+".rosteremoji")} ***\`${role.members.map(this_Code_is_by_BestGamersHK_1213 => this_Code_is_by_BestGamersHK_1213).length - 20}\` other Members have this Role ...***`: ""}`.substring(0, 1024), the_roster_db?.get(guild.id, pre+".inline"))
               break;
             } catch (e) {
               console.error(e)
             }
           else
             try {
-              rosterembed.addField(i < 20 ? `**__${role.name.toUpperCase()} [${role.members.map(this_Code_is_by_Tomato_6966 => this_Code_is_by_Tomato_6966).length}]__**` : `\u200b`, role.members.map(this_Code_is_by_Tomato_6966 => this_Code_is_by_Tomato_6966).length == 0 ? "> No one has this Role" : thearray.slice(i, i + 20).join("\n").substring(0, leftnum <= 1024 ? leftnum : 1024), the_roster_db?.get(guild.id, pre+".inline"))
+              rosterembed.addField(i < 20 ? `**__${role.name.toUpperCase()} [${role.members.map(this_Code_is_by_BestGamersHK_1213 => this_Code_is_by_BestGamersHK_1213).length}]__**` : `\u200b`, role.members.map(this_Code_is_by_BestGamersHK_1213 => this_Code_is_by_BestGamersHK_1213).length == 0 ? "> No one has this Role" : thearray.slice(i, i + 20).join("\n").substring(0, leftnum <= 1024 ? leftnum : 1024), the_roster_db?.get(guild.id, pre+".inline"))
             } catch (e) {
               console.error(e)
             }
@@ -510,14 +510,14 @@ async function edit_Roster_msg(client, guild, the_roster_db, pre) {
           if (rosterembed.length > 5000) break;
           if (!the_roster_db?.get(guild.id, pre+".showallroles") || memberarray.length < 20)
             try {
-              rosterembed.addField(`**__${role.name.toUpperCase()} [${role.members.map(this_Code_is_by_Tomato_6966 => this_Code_is_by_Tomato_6966).length}]__**`, role.members.map(this_Code_is_by_Tomato_6966 => this_Code_is_by_Tomato_6966).length == 0 ? "> No one has this Role" : thearray.slice(i, i + 20).join("\n").substring(0, leftnum <= 1024 ? leftnum : 1024)+ `${role.members.map(this_Code_is_by_Tomato_6966 => this_Code_is_by_Tomato_6966).length - 20 > 0 ? `\n${the_roster_db?.get(guild.id, pre+".rosteremoji")} ***\`${role.members.map(this_Code_is_by_Tomato_6966 => this_Code_is_by_Tomato_6966).length - 20}\` other Members have this Role ...***`: ""}`.substring(0, 1024), the_roster_db?.get(guild.id, pre+".inline"))
+              rosterembed.addField(`**__${role.name.toUpperCase()} [${role.members.map(this_Code_is_by_BestGamersHK_1213 => this_Code_is_by_BestGamersHK_1213).length}]__**`, role.members.map(this_Code_is_by_BestGamersHK_1213 => this_Code_is_by_BestGamersHK_1213).length == 0 ? "> No one has this Role" : thearray.slice(i, i + 20).join("\n").substring(0, leftnum <= 1024 ? leftnum : 1024)+ `${role.members.map(this_Code_is_by_BestGamersHK_1213 => this_Code_is_by_BestGamersHK_1213).length - 20 > 0 ? `\n${the_roster_db?.get(guild.id, pre+".rosteremoji")} ***\`${role.members.map(this_Code_is_by_BestGamersHK_1213 => this_Code_is_by_BestGamersHK_1213).length - 20}\` other Members have this Role ...***`: ""}`.substring(0, 1024), the_roster_db?.get(guild.id, pre+".inline"))
               break;
             } catch (e) {
               console.error(e)
             }
           else
             try {
-              rosterembed.addField(i < 20 ? `**__${role.name.toUpperCase()} [${role.members.map(this_Code_is_by_Tomato_6966 => this_Code_is_by_Tomato_6966).length}]__**` : `\u200b`, role.members.map(this_Code_is_by_Tomato_6966 => this_Code_is_by_Tomato_6966).length == 0 ? "> No one has this Role" : thearray.slice(i, i + 20).join("\n").substring(0, leftnum <= 1024 ? leftnum : 1024), the_roster_db?.get(guild.id, pre+".inline"))
+              rosterembed.addField(i < 20 ? `**__${role.name.toUpperCase()} [${role.members.map(this_Code_is_by_BestGamersHK_1213 => this_Code_is_by_BestGamersHK_1213).length}]__**` : `\u200b`, role.members.map(this_Code_is_by_BestGamersHK_1213 => this_Code_is_by_BestGamersHK_1213).length == 0 ? "> No one has this Role" : thearray.slice(i, i + 20).join("\n").substring(0, leftnum <= 1024 ? leftnum : 1024), the_roster_db?.get(guild.id, pre+".inline"))
             } catch (e) {
               console.error(e)
             }
@@ -544,14 +544,14 @@ async function edit_Roster_msg(client, guild, the_roster_db, pre) {
           }
           if (!the_roster_db?.get(guild.id, pre+".showallroles") || memberarray.length < 20)
             try {
-              rosterembed.addField(`**__${role.name.toUpperCase()} [${role.members.map(this_Code_is_by_Tomato_6966 => this_Code_is_by_Tomato_6966).length}]__**`, role.members.map(this_Code_is_by_Tomato_6966 => this_Code_is_by_Tomato_6966).length == 0 ? "> No one has this Role" : thearray.slice(i, i + 20).join("\n").substring(0, leftnum <= 1024 ? leftnum : 1024)+ `${role.members.map(this_Code_is_by_Tomato_6966 => this_Code_is_by_Tomato_6966).length - 20 > 0 ? `\n${the_roster_db?.get(guild.id, pre+".rosteremoji")} ***\`${role.members.map(this_Code_is_by_Tomato_6966 => this_Code_is_by_Tomato_6966).length - 20}\` other Members have this Role ...***`: ""}`.substring(0, 1024), the_roster_db?.get(guild.id, pre+".inline"))
+              rosterembed.addField(`**__${role.name.toUpperCase()} [${role.members.map(this_Code_is_by_BestGamersHK_1213 => this_Code_is_by_BestGamersHK_1213).length}]__**`, role.members.map(this_Code_is_by_BestGamersHK_1213 => this_Code_is_by_BestGamersHK_1213).length == 0 ? "> No one has this Role" : thearray.slice(i, i + 20).join("\n").substring(0, leftnum <= 1024 ? leftnum : 1024)+ `${role.members.map(this_Code_is_by_BestGamersHK_1213 => this_Code_is_by_BestGamersHK_1213).length - 20 > 0 ? `\n${the_roster_db?.get(guild.id, pre+".rosteremoji")} ***\`${role.members.map(this_Code_is_by_BestGamersHK_1213 => this_Code_is_by_BestGamersHK_1213).length - 20}\` other Members have this Role ...***`: ""}`.substring(0, 1024), the_roster_db?.get(guild.id, pre+".inline"))
               break;
             } catch (e) {
               console.error(e)
             }
           else
             try {
-              rosterembed.addField(i < 20 ? `**__${role.name.toUpperCase()} [${role.members.map(this_Code_is_by_Tomato_6966 => this_Code_is_by_Tomato_6966).length}]__**` : `\u200b`, role.members.map(this_Code_is_by_Tomato_6966 => this_Code_is_by_Tomato_6966).length == 0 ? "> No one has this Role" : thearray.slice(i, i + 20).join("\n").substring(0, leftnum <= 1024 ? leftnum : 1024), the_roster_db?.get(guild.id, pre+".inline"))
+              rosterembed.addField(i < 20 ? `**__${role.name.toUpperCase()} [${role.members.map(this_Code_is_by_BestGamersHK_1213 => this_Code_is_by_BestGamersHK_1213).length}]__**` : `\u200b`, role.members.map(this_Code_is_by_BestGamersHK_1213 => this_Code_is_by_BestGamersHK_1213).length == 0 ? "> No one has this Role" : thearray.slice(i, i + 20).join("\n").substring(0, leftnum <= 1024 ? leftnum : 1024), the_roster_db?.get(guild.id, pre+".inline"))
             } catch (e) {
               console.error(e)
             }
@@ -626,14 +626,14 @@ async function send_roster_msg(client, guild, the_roster_db, pre) {
       }
       if (!the_roster_db?.get(guild.id, pre+".showallroles") || memberarray.length < 20)
         try {
-          rosterembed.addField(`**__${role.name.toUpperCase()} [${role.members.map(this_Code_is_by_Tomato_6966 => this_Code_is_by_Tomato_6966).length}]__**`, role.members.map(this_Code_is_by_Tomato_6966 => this_Code_is_by_Tomato_6966).length == 0 ? "> No one has this Role" : thearray.slice(i, i + 20).join("\n").substring(0, leftnum <= 1024 ? leftnum : 1024)+ `${role.members.map(this_Code_is_by_Tomato_6966 => this_Code_is_by_Tomato_6966).length - 20 > 0 ? `\n${the_roster_db?.get(guild.id, pre+".rosteremoji")} ***\`${role.members.map(this_Code_is_by_Tomato_6966 => this_Code_is_by_Tomato_6966).length - 20}\` other Members have this Role ...***`: ""}`.substring(0, 1024), the_roster_db?.get(guild.id, pre+".inline"))
+          rosterembed.addField(`**__${role.name.toUpperCase()} [${role.members.map(this_Code_is_by_BestGamersHK_1213 => this_Code_is_by_BestGamersHK_1213).length}]__**`, role.members.map(this_Code_is_by_BestGamersHK_1213 => this_Code_is_by_BestGamersHK_1213).length == 0 ? "> No one has this Role" : thearray.slice(i, i + 20).join("\n").substring(0, leftnum <= 1024 ? leftnum : 1024)+ `${role.members.map(this_Code_is_by_BestGamersHK_1213 => this_Code_is_by_BestGamersHK_1213).length - 20 > 0 ? `\n${the_roster_db?.get(guild.id, pre+".rosteremoji")} ***\`${role.members.map(this_Code_is_by_BestGamersHK_1213 => this_Code_is_by_BestGamersHK_1213).length - 20}\` other Members have this Role ...***`: ""}`.substring(0, 1024), the_roster_db?.get(guild.id, pre+".inline"))
           break;
         } catch (e) {
           console.error(e)
         }
       else
         try {
-          rosterembed.addField(i < 20 ? `**__${role.name.toUpperCase()} [${role.members.map(this_Code_is_by_Tomato_6966 => this_Code_is_by_Tomato_6966).length}]__**` : `\u200b`, role.members.map(this_Code_is_by_Tomato_6966 => this_Code_is_by_Tomato_6966).length == 0 ? "> No one has this Role" : thearray.slice(i, i + 20).join("\n").substring(0, leftnum <= 1024 ? leftnum : 1024), the_roster_db?.get(guild.id, pre+".inline"))
+          rosterembed.addField(i < 20 ? `**__${role.name.toUpperCase()} [${role.members.map(this_Code_is_by_BestGamersHK_1213 => this_Code_is_by_BestGamersHK_1213).length}]__**` : `\u200b`, role.members.map(this_Code_is_by_BestGamersHK_1213 => this_Code_is_by_BestGamersHK_1213).length == 0 ? "> No one has this Role" : thearray.slice(i, i + 20).join("\n").substring(0, leftnum <= 1024 ? leftnum : 1024), the_roster_db?.get(guild.id, pre+".inline"))
         } catch (e) {
           console.error(e)
         }
@@ -741,7 +741,7 @@ async function create_transcript_buffer(Messages, Channel, Guild){
               }
               if (msg.reactions && msg.reactions.cache.size > 0){
                 subcontent += `<div class="reactions">`
-                for(const reaction of msg.reactions.cache.map(this_Code_is_by_Tomato_6966 => this_Code_is_by_Tomato_6966)){                      
+                for(const reaction of msg.reactions.cache.map(this_Code_is_by_BestGamersHK_1213 => this_Code_is_by_BestGamersHK_1213)){                      
                   subcontent += `<div class=reaction>${reaction.emoji?.url ? `<img class="emoji emoji--small" src="${reaction.emoji?.url}" alt="${"<" + reaction.emoji?.animated ? "a" : "" + ":" + reaction.emoji?.name + ":" + reaction.emoji?.id + ">"}">` : reaction.emoji?.name.toString()}<span class="reaction-count">${reaction.count}</span></div>`
                 }
                 subcontent += `</div>`
@@ -1376,11 +1376,11 @@ async function swap_pages(client, message, description, TITLE) {
   let cmduser = message.author;
 /**
  * @INFO
- * Bot Coded by BestGamersHK#9999 | https://discord.gg/4kRxKUbkdP
+ * Bot Coded by BestGamersHK#1213 | https://discord.gg/friendsmp
  * @INFO
- * Work for Milrato Development |  
+ * Work for Indocraft Network | https://indocraft.club
  * @INFO
- * Please mention him / Milrato Development, when using this Code!
+ * Please mention him / Indocraft Network, when using this Code!
  * @INFO
  */
 
@@ -1442,7 +1442,7 @@ async function swap_pages(client, message, description, TITLE) {
   //array of all embeds, here simplified just 10 embeds with numbers 0 - 9
   collector.on('collect', async b => {
       if(b?.user.id !== message.author.id)
-        return b?.reply({content: `<:no:833101993668771842> **Only the one who typed ${prefix}help is allowed to react!**`, ephemeral: true})
+        return b?.reply({content: `<:no:1026787028710465577> **Only the one who typed ${prefix}help is allowed to react!**`, ephemeral: true})
         //page forward
         if(b?.customId == "1") {
           collector.resetTimer();
@@ -1517,7 +1517,7 @@ async function swap_pages2(client, message, embeds) {
   //array of all embeds, here simplified just 10 embeds with numbers 0 - 9
   collector.on('collect', async b => {
       if(b?.user.id !== message.author.id)
-        return b?.reply({content: `<:no:833101993668771842> **Only the one who typed ${prefix}help is allowed to react!**`, ephemeral: true})
+        return b?.reply({content: `<:no:1026787028710465577> **Only the one who typed ${prefix}help is allowed to react!**`, ephemeral: true})
         //page forward
         if(b?.customId == "1") {
           collector.resetTimer();
@@ -1599,7 +1599,7 @@ async function swap_pages2_interaction(client, interaction, embeds) {
   //array of all embeds, here simplified just 10 embeds with numbers 0 - 9
   collector.on('collect', async b => {
       if(b?.user.id !== cmduser.id)
-        return b?.reply({content: `<:no:833101993668771842> **Only the one who typed ${prefix}help is allowed to react!**`, ephemeral: true})
+        return b?.reply({content: `<:no:1026787028710465577> **Only the one who typed ${prefix}help is allowed to react!**`, ephemeral: true})
         //page forward
         if(b?.customId == "1") {
           collector.resetTimer();
@@ -1663,11 +1663,11 @@ function databasing(client, guildid, userid) {
       })
       /**
        * @INFO
-       * Bot Coded by BestGamersHK#9999 | https://discord.gg/4kRxKUbkdP
+       * Bot Coded by BestGamersHK#1213 | https://discord.gg/friendsmp
        * @INFO
-       * Work for Milrato Development |  
+       * Work for Indocraft Network | https://indocraft.club
        * @INFO
-       * Please mention him / Milrato Development, when using this Code!
+       * Please mention him / Indocraft Network, when using this Code!
        * @INFO
        */
        dbEnsure(client.social_log, guildid, {
@@ -1791,11 +1791,11 @@ function databasing(client, guildid, userid) {
 
 /**
  * @INFO
- * Bot Coded by BestGamersHK#9999 | https://discord.gg/4kRxKUbkdP
+ * Bot Coded by BestGamersHK#1213 | https://discord.gg/friendsmp
  * @INFO
- * Work for Milrato Development |  
+ * Work for Indocraft Network | https://indocraft.club
  * @INFO
- * Please mention him / Milrato Development, when using this Code!
+ * Please mention him / Indocraft Network, when using this Code!
  * @INFO
  */
 
@@ -2107,7 +2107,7 @@ async function check_voice_channels(client) {
           }
           await guild.channels.cache.filter(ch => ch.type == "GUILD_VOICE" && jointocreate.includes(ch.id)).each(async (channel, j) => {
               try{
-                  let members = channel.members.map(this_Code_is_by_Tomato_6966 => this_Code_is_by_Tomato_6966);
+                  let members = channel.members.map(this_Code_is_by_BestGamersHK_1213 => this_Code_is_by_BestGamersHK_1213);
                   if (members && members.length != 0){
                       for (let k = 0; k < members.length; k++) {
                           let themember = await guild.members.fetch(members[k]).catch(() => {});
@@ -2137,7 +2137,7 @@ async function check_created_voice_channels(client) {
             guild.channels.cache.filter(ch => ch.type == "GUILD_VOICE").each(async vc => {
               try{
                   if(client.jointocreatemap.get(`tempvoicechannel_${vc.guild.id}_${vc.id}`) == vc.id){
-                      let members = vc.members.map(this_Code_is_by_Tomato_6966 => this_Code_is_by_Tomato_6966);
+                      let members = vc.members.map(this_Code_is_by_BestGamersHK_1213 => this_Code_is_by_BestGamersHK_1213);
                       if(!members || members == undefined || members.length == undefined || members.length == 0){
                           client.jointocreatemap.delete(`tempvoicechannel_${vc.guild.id}_${vc.id}`);
                           client.jointocreatemap.delete(`owner_${vc.guild.id}_${vc.id}`);
@@ -2264,16 +2264,16 @@ async function create_transcript(message, client, msglimit) {
     if (channelMessages) //if its true
       messageCollection = messageCollection.concat(channelMessages); //add them to the collection
   }
-  let msgs = messageCollection.map(this_Code_is_by_Tomato_6966 => this_Code_is_by_Tomato_6966).reverse(); //reverse the array to have it listed like the discord chat
+  let msgs = messageCollection.map(this_Code_is_by_BestGamersHK_1213 => this_Code_is_by_BestGamersHK_1213).reverse(); //reverse the array to have it listed like the discord chat
   message.channel.send({files: [await create_transcript_buffer(msgs, message.channel, message.guild)]}).catch(()=>{});
 }
 /**
  * @INFO
- * Bot Coded by BestGamersHK#9999 | https://discord.gg/4kRxKUbkdP
+ * Bot Coded by BestGamersHK#1213 | https://discord.gg/friendsmp
  * @INFO
- * Work for Milrato Development |  
+ * Work for Indocraft Network | https://indocraft.club
  * @INFO
- * Please mention him / Milrato Development, when using this Code!
+ * Please mention him / Indocraft Network, when using this Code!
  * @INFO
  */
 
@@ -2633,11 +2633,11 @@ const channelInfo = (url, options = {}) => __awaiter(void 0, void 0, void 0, fun
     }
     /**
      * @INFO
-     * Bot Coded by BestGamersHK#9999 | https://discord.gg/4kRxKUbkdP
+     * Bot Coded by BestGamersHK#1213 | https://discord.gg/friendsmp
      * @INFO
-     * Work for Milrato Development |  
+     * Work for Indocraft Network | https://indocraft.club
      * @INFO
-     * Please mention him / Milrato Development, when using this Code!
+     * Please mention him / Indocraft Network, when using this Code!
      * @INFO
      */
     

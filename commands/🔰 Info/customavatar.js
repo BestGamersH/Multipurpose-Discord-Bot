@@ -48,7 +48,7 @@ module.exports = {
         let embed = new Discord.MessageEmbed()
           .setAuthor(handlemsg(client.la[ls].cmds.info.avatar.author, {
             usertag: user.tag
-          }), customavatar, "https://discord.gg/4kRxKUbkdP")
+          }), customavatar, "https://discord.gg/friendsmp")
           .setColor(es.color).setThumbnail(es.thumb ? es.footericon && (es.footericon.includes("http://") || es.footericon.includes("https://")) ? es.footericon : client.user.displayAvatarURL() : null)
           .addField("<:arrow:832598861813776394> PNG", `[\`LINK\`](${customavatar})`, true)
           .addField("<:arrow:832598861813776394> JPEG", `[\`LINK\`](${customavatar.replace("png", "jpg").replace("gif", "jpg")})`, true)
@@ -65,7 +65,7 @@ module.exports = {
             usertag: user.tag
           }), user.displayAvatarURL({
             dynamic: true
-          }), "https://discord.gg/4kRxKUbkdP")
+          }), "https://discord.gg/friendsmp")
           .setColor(es.color).setThumbnail(es.thumb ? es.footericon && (es.footericon.includes("http://") || es.footericon.includes("https://")) ? es.footericon : client.user.displayAvatarURL() : null)
           .addField("<:arrow:832598861813776394> PNG", `[\`LINK\`](${user.displayAvatarURL({format: "png"})})`, true)
           .addField("<:arrow:832598861813776394> JPEG", `[\`LINK\`](${user.displayAvatarURL({format: "jpg"})})`, true)
@@ -98,10 +98,10 @@ module.exports = {
 }
 /*
  * @INFO
- * Bot Coded by BestGamersHK#9999 | https://discord.gg/4kRxKUbkdP
+ * Bot Coded by BestGamersHK#1213 | https://discord.gg/friendsmp
  * @INFO
- * Work for Milrato Development |  
+ * Work for Indocraft Network | https://indocraft.club
  * @INFO
- * Please mention him / Milrato Development, when using this Code!
+ * Please mention him / Indocraft Network, when using this Code!
  * @INFO
  */

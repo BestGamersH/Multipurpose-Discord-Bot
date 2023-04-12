@@ -35,6 +35,12 @@
   "with at least a family (string) and optionally weight (string/number) " \
   "and style (string)."
 
+#define CHECK_RECEIVER(prop) \
+  if (!Canvas::constructor.Get(info.GetIsolate())->HasInstance(info.This())) { \
+    Nan::ThrowTypeError("Method " #prop " called on incompatible receiver"); \
+    return; \
+  }
+
 using namespace v8;
 using namespace std;
 
@@ -64,10 +70,10 @@ Canvas::Initialize(Nan::ADDON_REGISTER_FUNCTION_ARGS_TYPE target) {
 #ifdef HAVE_JPEG
   Nan::SetPrototypeMethod(ctor, "streamJPEGSync", StreamJPEGSync);
 #endif
-  SetProtoAccessor(proto, Nan::New("type").ToLocalChecked(), GetType, NULL, ctor);
-  SetProtoAccessor(proto, Nan::New("stride").ToLocalChecked(), GetStride, NULL, ctor);
-  SetProtoAccessor(proto, Nan::New("width").ToLocalChecked(), GetWidth, SetWidth, ctor);
-  SetProtoAccessor(proto, Nan::New("height").ToLocalChecked(), GetHeight, SetHeight, ctor);
+  Nan::SetAccessor(proto, Nan::New("type").ToLocalChecked(), GetType);
+  Nan::SetAccessor(proto, Nan::New("stride").ToLocalChecked(), GetStride);
+  Nan::SetAccessor(proto, Nan::New("width").ToLocalChecked(), GetWidth, SetWidth);
+  Nan::SetAccessor(proto, Nan::New("height").ToLocalChecked(), GetHeight, SetHeight);
 
   Nan::SetTemplate(proto, "PNG_NO_FILTERS", Nan::New<Uint32>(PNG_NO_FILTERS));
   Nan::SetTemplate(proto, "PNG_FILTER_NONE", Nan::New<Uint32>(PNG_FILTER_NONE));
@@ -144,6 +150,7 @@ NAN_METHOD(Canvas::New) {
  */
 
 NAN_GETTER(Canvas::GetType) {
+  CHECK_RECEIVER(Canvas.GetType);
   Canvas *canvas = Nan::ObjectWrap::Unwrap<Canvas>(info.This());
   info.GetReturnValue().Set(Nan::New<String>(canvas->backend()->getName()).ToLocalChecked());
 }
@@ -152,6 +159,7 @@ NAN_GETTER(Canvas::GetType) {
  * Get stride.
  */
 NAN_GETTER(Canvas::GetStride) {
+  CHECK_RECEIVER(Canvas.GetStride);
   Canvas *canvas = Nan::ObjectWrap::Unwrap<Canvas>(info.This());
   info.GetReturnValue().Set(Nan::New<Number>(canvas->stride()));
 }
@@ -161,6 +169,7 @@ NAN_GETTER(Canvas::GetStride) {
  */
 
 NAN_GETTER(Canvas::GetWidth) {
+  CHECK_RECEIVER(Canvas.GetWidth);
   Canvas *canvas = Nan::ObjectWrap::Unwrap<Canvas>(info.This());
   info.GetReturnValue().Set(Nan::New<Number>(canvas->getWidth()));
 }
@@ -170,6 +179,7 @@ NAN_GETTER(Canvas::GetWidth) {
  */
 
 NAN_SETTER(Canvas::SetWidth) {
+  CHECK_RECEIVER(Canvas.SetWidth);
   if (value->IsNumber()) {
     Canvas *canvas = Nan::ObjectWrap::Unwrap<Canvas>(info.This());
     canvas->backend()->setWidth(Nan::To<uint32_t>(value).FromMaybe(0));
@@ -182,6 +192,7 @@ NAN_SETTER(Canvas::SetWidth) {
  */
 
 NAN_GETTER(Canvas::GetHeight) {
+  CHECK_RECEIVER(Canvas.GetHeight);
   Canvas *canvas = Nan::ObjectWrap::Unwrap<Canvas>(info.This());
   info.GetReturnValue().Set(Nan::New<Number>(canvas->getHeight()));
 }
@@ -191,6 +202,7 @@ NAN_GETTER(Canvas::GetHeight) {
  */
 
 NAN_SETTER(Canvas::SetHeight) {
+  CHECK_RECEIVER(Canvas.SetHeight);
   if (value->IsNumber()) {
     Canvas *canvas = Nan::ObjectWrap::Unwrap<Canvas>(info.This());
     canvas->backend()->setHeight(Nan::To<uint32_t>(value).FromMaybe(0));
@@ -773,13 +785,13 @@ NAN_METHOD(Canvas::RegisterFont) {
 NAN_METHOD(Canvas::DeregisterAllFonts) {
   // Unload all fonts from pango to free up memory
   bool success = true;
-  
+
   std::for_each(font_face_list.begin(), font_face_list.end(), [&](FontFace& f) {
     if (!deregister_font( (unsigned char *)f.file_path )) success = false;
     pango_font_description_free(f.user_desc);
     pango_font_description_free(f.sys_desc);
   });
-  
+
   font_face_list.clear();
   if (!success) Nan::ThrowError("Could not deregister one or more fonts");
 }
@@ -949,3 +961,5 @@ Local<Value>
 Canvas::Error(cairo_status_t status) {
   return Exception::Error(Nan::New<String>(cairo_status_to_string(status)).ToLocalChecked());
 }
+
+#undef CHECK_RECEIVER

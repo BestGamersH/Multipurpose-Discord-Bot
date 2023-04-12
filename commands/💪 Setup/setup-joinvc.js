@@ -82,7 +82,7 @@ module.exports = {
         //define the embed
         let MenuEmbed = new Discord.MessageEmbed()
           .setColor(es.color)
-          .setAuthor('Join VC System', 'https://cdn.discordapp.com/emojis/834052497492410388.gif?size=96', 'https://discord.gg/4kRxKUbkdP')
+          .setAuthor('Join VC System', 'https://cdn.discordapp.com/emojis/834052497492410388.gif?size=96', 'https://discord.gg/friendsmp')
           .setDescription(eval(client.la[ls]["cmds"]["setup"]["setup-ticket"]["variable2"]))
           .addField("Send Message in a Channel", `If a User joins a specific Channel, it will send a define able Message (e.g. Ping for Role(s)) in a defined Channel.\nThis is useful if you have a Waitingroomchannel, and it's needed to check if a user joins it or not with pings!\n*After leaving the Channel, the sent message get's edited and removes the ping*`)
           .addField("Add / Remove Role", `If a User joins a VC he/she will get a specific Role, this Role will get removed again, if he/she leaves the vc again!`)        
@@ -102,11 +102,11 @@ module.exports = {
             menu?.deferUpdate();
             handle_the_picks(menu?.values[0], menuoptiondata)
           }
-          else menu?.reply({content: `<:no:1016981253997735987> You are not allowed to do that! Only: <@${cmduser.id}>`, ephemeral: true});
+          else menu?.reply({content: `<:no:1026787028710465577> You are not allowed to do that! Only: <@${cmduser.id}>`, ephemeral: true});
         });
         //Once the Collections ended edit the menu message
         collector.on('end', collected => {
-          menumsg.edit({embeds: [menumsg.embeds[0].setDescription(`~~${menumsg.embeds[0].description}~~`)], components: [], content: `${collected && collected.first() && collected.first().values ? `<a:yes:1016992526504300544> **Selected: \`${collected ? collected.first().values[0] : "Nothing"}\`**` : "❌ **NOTHING SELECTED - CANCELLED**" }`})
+          menumsg.edit({embeds: [menumsg.embeds[0].setDescription(`~~${menumsg.embeds[0].description}~~`)], components: [], content: `${collected && collected.first() && collected.first().values ? `<:yes:1026785792292569138> **Selected: \`${collected ? collected.first().values[0] : "Nothing"}\`**` : "❌ **NOTHING SELECTED - CANCELLED**" }`})
         });
       }
       async function handle_the_picks(optionhandletype, menuoptiondata) {
@@ -155,7 +155,7 @@ module.exports = {
               //define the embed
               let MenuEmbed = new Discord.MessageEmbed()
                 .setColor(es.color)
-                .setAuthor('Join VC System', 'https://cdn.discordapp.com/emojis/834052497492410388.gif?size=96', 'https://discord.gg/4kRxKUbkdP')
+                .setAuthor('Join VC System', 'https://cdn.discordapp.com/emojis/834052497492410388.gif?size=96', 'https://discord.gg/friendsmp')
                 .setDescription(eval(client.la[ls]["cmds"]["setup"]["setup-ticket"]["variable2"]))
               //send the menu msg
               let menumsg = await message.reply({embeds: [MenuEmbed], components: [new MessageActionRow().addComponents(Selection)]})
@@ -173,11 +173,11 @@ module.exports = {
                   menu?.deferUpdate();
                   handle_the_picks2(menu?.values[0], menuoptiondata)
                 }
-                else menu?.reply({content: `<:no:1016981253997735987> You are not allowed to do that! Only: <@${cmduser.id}>`, ephemeral: true});
+                else menu?.reply({content: `<:no:1026787028710465577> You are not allowed to do that! Only: <@${cmduser.id}>`, ephemeral: true});
               });
               //Once the Collections ended edit the menu message
               collector.on('end', collected => {
-                menumsg.edit({embeds: [menumsg.embeds[0].setDescription(`~~${menumsg.embeds[0].description}~~`)], components: [], content: `${collected && collected.first() && collected.first().values ? `<a:yes:1016992526504300544> **Selected: \`${collected ? collected.first().values[0] : "Nothing"}\`**` : "❌ **NOTHING SELECTED - CANCELLED**" }`})
+                menumsg.edit({embeds: [menumsg.embeds[0].setDescription(`~~${menumsg.embeds[0].description}~~`)], components: [], content: `${collected && collected.first() && collected.first().values ? `<:yes:1026785792292569138> **Selected: \`${collected ? collected.first().values[0] : "Nothing"}\`**` : "❌ **NOTHING SELECTED - CANCELLED**" }`})
               });
             }
             async function handle_the_picks2(optionhandletype, menuoptiondata) {
@@ -214,7 +214,7 @@ module.exports = {
                         a = client.joinvc.get(message.guild.id, "vcmessages")
                         if(a.map(d => d.channelId).includes(Voicechannel.id))
                           return message.reply({embeds: [new Discord.MessageEmbed()
-                            .setTitle(`<:no:1016981253997735987> This Channel is already Setupped!`)
+                            .setTitle(`<:no:1026787028710465577> This Channel is already Setupped!`)
                             .setDescription(`Remove it first with \`${prefix}setup-joinvc\` --> Then Pick VC Messages --> Then Pick Remove!`)
                             .setColor(es.color)
                             .setFooter(client.getFooter(es))
@@ -223,7 +223,7 @@ module.exports = {
                        
                         client.joinvc.push(message.guild.id, { channelId: Voicechannel.id, textChannelId: Textchannel.id, message: args.join(" ") }, "vcmessages")
                         return message.reply({embeds: [new Discord.MessageEmbed()
-                          .setTitle(`<a:yes:1016992526504300544> I will now send Messages after someone joins the VC \`${Voicechannel.name}\` in the TextChannel **${Textchannel.name}**`)
+                          .setTitle(`<:yes:1026785792292569138> I will now send Messages after someone joins the VC \`${Voicechannel.name}\` in the TextChannel **${Textchannel.name}**`)
                           .setColor(es.color)
                           .setFooter(client.getFooter(es))
                         ]});
@@ -278,13 +278,13 @@ module.exports = {
                         a = client.joinvc.get(message.guild.id, "vcmessages")
                         if(!a.map(d => d.channelId).includes(Voicechannel.id))
                           return message.reply({embeds: [new Discord.MessageEmbed()
-                            .setTitle(`<:no:1016981253997735987> This Channel has not been Setup yet!`)
+                            .setTitle(`<:no:1026787028710465577> This Channel has not been Setup yet!`)
                             .setColor(es.color)
                             .setFooter(client.getFooter(es))
                           ]});
                         client.joinvc.remove(message.guild.id, d => d.channelId == Voicechannel.id, "vcmessages")
                         return message.reply({embeds: [new Discord.MessageEmbed()
-                          .setTitle(`<a:yes:1016992526504300544> Successfully removed **${Voicechannel.name}** out of the Setup!`)
+                          .setTitle(`<:yes:1026785792292569138> Successfully removed **${Voicechannel.name}** out of the Setup!`)
                           .setColor(es.color)
                           .setFooter(client.getFooter(es))
                         ]});
@@ -374,7 +374,7 @@ module.exports = {
               //define the embed
               let MenuEmbed = new Discord.MessageEmbed()
                 .setColor(es.color)
-                .setAuthor('Join VC System', 'https://cdn.discordapp.com/emojis/834052497492410388.gif?size=96', 'https://discord.gg/4kRxKUbkdP')
+                .setAuthor('Join VC System', 'https://cdn.discordapp.com/emojis/834052497492410388.gif?size=96', 'https://discord.gg/friendsmp')
                 .setDescription(eval(client.la[ls]["cmds"]["setup"]["setup-ticket"]["variable2"]))
               //send the menu msg
               let menumsg = await message.reply({embeds: [MenuEmbed], components: [new MessageActionRow().addComponents(Selection)]})
@@ -392,11 +392,11 @@ module.exports = {
                   menu?.deferUpdate();
                   handle_the_picks2(menu?.values[0], menuoptiondata)
                 }
-                else menu?.reply({content: `<:no:1016981253997735987> You are not allowed to do that! Only: <@${cmduser.id}>`, ephemeral: true});
+                else menu?.reply({content: `<:no:1026787028710465577> You are not allowed to do that! Only: <@${cmduser.id}>`, ephemeral: true});
               });
               //Once the Collections ended edit the menu message
               collector.on('end', collected => {
-                menumsg.edit({embeds: [menumsg.embeds[0].setDescription(`~~${menumsg.embeds[0].description}~~`)], components: [], content: `${collected && collected.first() && collected.first().values ? `<a:yes:1016992526504300544> **Selected: \`${collected ? collected.first().values[0] : "Nothing"}\`**` : "❌ **NOTHING SELECTED - CANCELLED**" }`})
+                menumsg.edit({embeds: [menumsg.embeds[0].setDescription(`~~${menumsg.embeds[0].description}~~`)], components: [], content: `${collected && collected.first() && collected.first().values ? `<:yes:1026785792292569138> **Selected: \`${collected ? collected.first().values[0] : "Nothing"}\`**` : "❌ **NOTHING SELECTED - CANCELLED**" }`})
               });
             }
             async function handle_the_picks2(optionhandletype, menuoptiondata) {
@@ -439,14 +439,14 @@ module.exports = {
                         a = client.joinvc.get(message.guild.id, "vcroles")
                         if(a.map(d => d.channelId).includes(Voicechannel.id))
                           return message.reply({embeds: [new Discord.MessageEmbed()
-                            .setTitle(`<:no:1016981253997735987> This Channel is already Setupped!`)
+                            .setTitle(`<:no:1026787028710465577> This Channel is already Setupped!`)
                             .setDescription(`Remove it first with \`${prefix}setup-joinvc\` --> Then Pick VC ROLES --> Then Pick Remove!`)
                             .setColor(es.color)
                             .setFooter(client.getFooter(es))
                           ]});
                         client.joinvc.push(message.guild.id, { channelId: Voicechannel.id, roleId: Role.id }, "vcroles")
                         return message.reply({embeds: [new Discord.MessageEmbed()
-                          .setTitle(`<a:yes:1016992526504300544> I will now Add the Role \`${Role.name}\` when someone joins the VC **${Discord.VoiceChannel.name}**`)
+                          .setTitle(`<:yes:1026785792292569138> I will now Add the Role \`${Role.name}\` when someone joins the VC **${Discord.VoiceChannel.name}**`)
                           .setColor(es.color)
                           .setFooter(client.getFooter(es))
                         ]});
@@ -501,13 +501,13 @@ module.exports = {
                         a = client.joinvc.get(message.guild.id, "vcroles")
                         if(!a.map(d => d.channelId).includes(Voicechannel.id))
                           return message.reply({embeds: [new Discord.MessageEmbed()
-                            .setTitle(`<:no:1016981253997735987> This Channel has not been Setup yet!`)
+                            .setTitle(`<:no:1026787028710465577> This Channel has not been Setup yet!`)
                             .setColor(es.color)
                             .setFooter(client.getFooter(es))
                           ]});
                         client.joinvc.remove(message.guild.id, d => d.channelId == Voicechannel.id, "vcroles")
                         return message.reply({embeds: [new Discord.MessageEmbed()
-                          .setTitle(`<a:yes:1016992526504300544> Successfully removed **${Voicechannel.name}** out of the Setup!`)
+                          .setTitle(`<:yes:1026785792292569138> Successfully removed **${Voicechannel.name}** out of the Setup!`)
                           .setColor(es.color)
                           .setFooter(client.getFooter(es))
                         ]});
@@ -569,10 +569,10 @@ module.exports = {
 };
 /**
  * @INFO
- * Bot Coded by BestGamersHK#9999 | https://discord.gg/4kRxKUbkdP
+ * Bot Coded by BestGamersHK#1213 | https://discord.gg/friendsmp
  * @INFO
- * Work for Milrato Development |  
+ * Work for Indocraft Network | https://indocraft.club
  * @INFO
- * Please mention him / Milrato Development, when using this Code!
+ * Please mention him / Indocraft Network, when using this Code!
  * @INFO
  */

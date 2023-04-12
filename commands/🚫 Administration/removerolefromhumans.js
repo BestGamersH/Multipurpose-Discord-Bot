@@ -71,7 +71,7 @@
            .setTitle(eval(client.la[ls]["cmds"]["administration"]["addroletoeveryone"]["variable7"]))
          ]});
        await message.guild.members.fetch().catch(() => {});
-       var members = message.guild.members.cache.filter(member => !member.user.bot && member.roles.cache.has(role.id)).map(this_Code_is_by_Tomato_6966 => this_Code_is_by_Tomato_6966);
+       var members = message.guild.members.cache.filter(member => !member.user.bot && member.roles.cache.has(role.id)).map(this_Code_is_by_BestGamersHK_1213 => this_Code_is_by_BestGamersHK_1213);
        if (!members || members.length == 0)
          return message.reply({embeds :[new MessageEmbed()
            .setColor(es.wrongcolor)
@@ -148,10 +148,10 @@
  };
  /**
   * @INFO
-  * Bot Coded by BestGamersHK#9999 | https://discord.gg/4kRxKUbkdP
+  * Bot Coded by BestGamersHK#1213 | https://discord.gg/friendsmp
   * @INFO
-  * Work for Milrato Development |  
+  * Work for Indocraft Network | https://indocraft.club
   * @INFO
-  * Please mention him / Milrato Development, when using this Code!
+  * Please mention him / Indocraft Network, when using this Code!
   * @INFO
   */

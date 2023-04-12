@@ -2,29 +2,29 @@
     "token": "token",
     "prefix": "prefix",
     "ownerIDS": [
-        "ur discord id"
+        "ur id"
     ],
-    "fnbr": "GET from: https://fnbr.co",
-    "fortnitetracker": "GET from: https://fortnitetracker.com",
-    "memer_api": "avI30BLWQci",
+    "fnbr": "c2838e00ed0e79724166cbaa4e1b540b180aa8976f18f381ada54d50b24b64da6e01e7703d6bdabd704366e66659c31fa2025eeaab46c2ccecd64010c8f2baa2",
+    "fortnitetracker": "d54f8936-5737-42ee-a362-143ad2d78169",
+    "memer_api": "api",
     "status": {
-        "text": "{prefix}help | on {guildcount} Servers, with {membercount} Members | Played: {songsplayed} Songs",
-        "text2": "By: BestGamersHK#9999",
+        "text": "Watching {guildcount} Servers, with {membercount} Members | Invite Me!",
+        "text2": "{prefix}help",
         "type": "PLAYING",
-        "url": "a url"
+        "url": "https://indocraft.club"
     },
     "clientsettings": {
         "nodes": [
             {
-                "host": "lava2.cruzstudio.tech",
-                "port": 80,
-                "password": "cruzstudio.tech"
+				"host": "id",
+                "port": port,
+                "password": "pass"
             }
         ]
     },
     "spotify": {
-        "clientSecret": "83526b564f1f422a82a4c2b31f6ec93d",
-        "clientID": "f288cfcad520499584a479bfd9a3b8f1"
+        "clientSecret": "",
+        "clientID": ""
     },
     "settings": {
         "COMMENT": "time_delay 0 === insta leave",
@@ -42,7 +42,7 @@
         "lyrics_finder": true,
         "ksoft_api": {
             "use_this_instead": true,
-            "api_key": "DISABLED"
+            "api_key": "AIzaSyAAg3GHxipuyDz7KsCAv434yoFT56TR9LQ"
         }
     }
 }

@@ -35,6 +35,29 @@ export const enum ApplicationCommandPermissionTypes {
   USER = 2,
 }
 
+export const enum AutoModerationRuleTriggerTypes {
+  KEYWORD = 1,
+  SPAM = 2,
+  KEYWORD_PRESET = 3,
+  MENTION_SPAM = 4,
+}
+
+export const enum AutoModerationRuleKeywordPresetTypes {
+  PROFANITY = 1,
+  SEXUAL_CONTENT = 2,
+  SLURS = 3,
+}
+
+export const enum AutoModerationActionTypes {
+  BLOCK_MESSAGE = 1,
+  SEND_ALERT_MESSAGE = 2,
+  TIMEOUT = 3,
+}
+
+export const enum AutoModerationRuleEventTypes {
+  MESSAGE_SEND = 1,
+}
+
 export const enum ChannelTypes {
   GUILD_TEXT = 0,
   DM = 1,
@@ -49,6 +72,18 @@ export const enum ChannelTypes {
   GUILD_PRIVATE_THREAD = 12,
   GUILD_STAGE_VOICE = 13,
   GUILD_DIRECTORY = 14,
+  GUILD_FORUM = 15,
+}
+
+export const enum SortOrderType {
+  LATEST_ACTIVITY = 1,
+  CREATION_DATE = 2,
+}
+
+export const enum ForumLayoutType {
+  NOT_SET = 0,
+  LIST_VIEW = 1,
+  GALLERY_VIEW = 2,
 }
 
 export const enum MessageTypes {
@@ -75,6 +110,8 @@ export const enum MessageTypes {
   THREAD_STARTER_MESSAGE,
   GUILD_INVITE_REMINDER,
   CONTEXT_MENU_COMMAND,
+  AUTO_MODERATION_ACTION,
+  ROLE_SUBSCRIPTION_PURCHASE,
 }
 
 export const enum DefaultMessageNotificationLevels {
@@ -186,6 +223,7 @@ export const enum StickerFormatTypes {
   PNG = 1,
   APNG = 2,
   LOTTIE = 3,
+  GIF = 4,
 }
 
 export const enum StickerTypes {
@@ -215,4 +253,15 @@ export const enum WebhookTypes {
   Incoming = 1,
   'Channel Follower' = 2,
   Application = 3,
+}
+
+export enum ApplicationRoleConnectionMetadataTypes {
+  INTEGER_LESS_THAN_OR_EQUAL = 1,
+  INTEGER_GREATER_THAN_OR_EQUAL,
+  INTEGER_EQUAL,
+  INTEGER_NOT_EQUAL,
+  DATATIME_LESS_THAN_OR_EQUAL,
+  DATATIME_GREATER_THAN_OR_EQUAL,
+  BOOLEAN_EQUAL,
+  BOOLEAN_NOT_EQUAL,
 }

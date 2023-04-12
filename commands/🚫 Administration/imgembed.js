@@ -106,10 +106,10 @@ module.exports = {
 }
 /**
  * @INFO
- * Bot Coded by BestGamersHK#9999 | https://github?.com/Tomato6966/Discord-Js-Handler-Template
+ * Bot Coded by BestGamersHK#1213 | https://github?.com/BestGamersHK/Discord-Js-Handler-Template
  * @INFO
- * Work for Milrato Development |  
+ * Work for Indocraft Network | https://indocraft.club
  * @INFO
- * Please mention him / Milrato Development, when using this Code!
+ * Please mention him / Indocraft Network, when using this Code!
  * @INFO
  */

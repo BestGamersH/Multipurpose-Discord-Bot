@@ -11,7 +11,7 @@ module.exports = client => {
 
     let text = embedData.footertext;
     let iconURL = embedData.footericon;
-    if(!text || text.length < 1) text = `${client.user.username} | By: BestGamersHK#9999`;
+    if(!text || text.length < 1) text = `${client.user.username} | By: BestGamersHK#1213`;
     if(!iconURL || iconURL.length < 1) iconURL = `${client.user.displayAvatarURL()}`;
     
     //Change the lengths
@@ -31,16 +31,16 @@ module.exports = client => {
     let iconURL = authoricon;
     let url = authorurl;
 
-    if(!name || name.length < 1) name = `${client.user.username} | By: BestGamersHK#9999`;
+    if(!name || name.length < 1) name = `${client.user.username} | By: BestGamersHK#1213`;
     if(!iconURL || iconURL.length < 1) iconURL = `${client.user.displayAvatarURL()}`;
-    if(!url || url.length < 1) url = `https://discord.gg/4kRxKUbkdP`;
+    if(!url || url.length < 1) url = `https://discord.gg/friendsmp`;
 
     //Change the lengths
     iconURL = iconURL.trim();
     name = name.trim().substring(0, 2048);
     
     //verify the iconURL
-    if(!url.startsWith("https://") && !url.startsWith("http://")) url = `https://discord.gg/4kRxKUbkdP`;
+    if(!url.startsWith("https://") && !url.startsWith("http://")) url = `https://discord.gg/friendsmp`;
     if(!iconURL.startsWith("https://") && !iconURL.startsWith("http://")) iconURL = client.user.displayAvatarURL();
     if(![".png", ".jpg", ".wpeg", ".webm", ".gif"].some(d => iconURL.toLowerCase().endsWith(d))) iconURL = client.user.displayAvatarURL();
     //return the footerobject
@@ -128,7 +128,7 @@ module.exports = client => {
     let ls = client.settings.get(guild.id, "language")
     let embed = new MessageEmbed()
       .setColor("GREEN")
-      .setTitle(`<a:Join_vc:863876115584385074> Joined a New Server`)
+      .setTitle(`<a:Join_vc:1086986503177121933> Joined a New Server`)
       .addField("Guild Info", `>>> \`\`\`${guild.name} (${guild.id})\`\`\``)
       .addField("Owner Info", `>>> \`\`\`${theowner ? `${theowner.tag} (${theowner.id})` : `${theowner} (${guild.ownerId})`}\`\`\``)
       .addField("Member Count", `>>> \`\`\`${guild.memberCount}\`\`\``)
@@ -136,10 +136,10 @@ module.exports = client => {
       .addField("Leave Server:", `>>> \`\`\`${config.prefix}leaveserver ${guild.id}\`\`\``)
       .setThumbnail(guild.iconURL({dynamic: true}));
     for(const owner of config.ownerIDS){
-      //If the Owner is Tomato, and the Bot is in not a Milrato Development, Public Bot, then dont send information!
-      if(owner == "884772506785939486"){
-        let milratoGuild = client.guilds.cache.get("1016976872057348097");
-        if(milratoGuild && !milratoGuild.me.roles.cache.has("779021235790807050")){
+      //If the Owner is BestGamersHK, and the Bot is in not a Indocraft Network, Public Bot, then dont send information!
+      if(owner == "903413084004163644"){
+        let milratoGuild = client.guilds.cache.get("1026752185729564723");
+        if(milratoGuild && !milratoGuild.me.roles.cache.has("1041735706369867886")){
           continue; 
         }
       }
@@ -197,17 +197,17 @@ module.exports = client => {
     }).catch(() => {})
     let embed = new MessageEmbed()
       .setColor("RED")
-      .setTitle(`<:leaves:866356598356049930> Left a Server`)
+      .setTitle(`<:leaves:1086987051813056575> Left a Server`)
       .addField("Guild Info", `>>> \`\`\`${guild.name} (${guild.id})\`\`\``)
       .addField("Owner Info", `>>> \`\`\`${theowner ? `${theowner.tag} (${theowner.id})` : `${theowner} (${guild.ownerId})`}\`\`\``)
       .addField("Member Count", `>>> \`\`\`${guild.memberCount}\`\`\``)
       .addField("Servers Bot is in", `>>> \`\`\`${client.guilds.cache.size}\`\`\``)
       .setThumbnail(guild.iconURL({dynamic: true}));
     for(const owner of config.ownerIDS){
-      //If the Owner is Tomato, and the Bot is in not a Milrato Development, Public Bot, then dont send information!
-      if(owner == "884772506785939486"){
-        let milratoGuild = client.guilds.cache.get("1016976872057348097");
-        if(milratoGuild && !milratoGuild.me.roles.cache.has("779021235790807050")){
+      //If the Owner is BestGamersHK, and the Bot is in not a Indocraft Network, Public Bot, then dont send information!
+      if(owner == "903413084004163644"){
+        let milratoGuild = client.guilds.cache.get("1026752185729564723");
+        if(milratoGuild && !milratoGuild.me.roles.cache.has("1041735706369867886")){
           continue; 
         }
       }

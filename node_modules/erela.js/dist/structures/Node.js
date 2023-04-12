@@ -1,21 +1,10 @@
 "use strict";
-var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
-    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Node = void 0;
+const tslib_1 = require("tslib");
 /* eslint-disable no-case-declarations */
-const ws_1 = __importDefault(require("ws"));
-const petitio_1 = __importDefault(require("petitio"));
+const ws_1 = tslib_1.__importDefault(require("ws"));
+const undici_1 = require("undici");
 const Utils_1 = require("./Utils");
 function check(options) {
     if (!options)
@@ -47,17 +36,39 @@ function check(options) {
         throw new TypeError('Node option "requestTimeout" must be a number.');
 }
 class Node {
+    options;
+    /** The socket for the node. */
+    socket = null;
+    /** The HTTP pool used for rest calls. */
+    http;
+    /** The amount of rest calls the node has made. */
+    calls = 0;
+    /** The stats for the node. */
+    stats;
+    manager;
+    static _manager;
+    reconnectTimeout;
+    reconnectAttempts = 1;
+    /** Returns if connected to the Node. */
+    get connected() {
+        if (!this.socket)
+            return false;
+        return this.socket.readyState === ws_1.default.OPEN;
+    }
+    /** Returns the address for this node. */
+    get address() {
+        return `${this.options.host}:${this.options.port}`;
+    }
+    /** @hidden */
+    static init(manager) {
+        this._manager = manager;
+    }
     /**
      * Creates an instance of Node.
      * @param options
      */
     constructor(options) {
         this.options = options;
-        /** The socket for the node. */
-        this.socket = null;
-        /** The amount of rest calls the node has made. */
-        this.calls = 0;
-        this.reconnectAttempts = 1;
         if (!this.manager)
             this.manager = Utils_1.Structure.get("Node")._manager;
         if (!this.manager)
@@ -66,7 +77,18 @@ class Node {
             return this.manager.nodes.get(options.identifier || options.host);
         }
         check(options);
-        this.options = Object.assign({ port: 2333, password: "youshallnotpass", secure: false, retryAmount: 5, retryDelay: 30e3 }, options);
+        this.options = {
+            port: 2333,
+            password: "youshallnotpass",
+            secure: false,
+            retryAmount: 5,
+            retryDelay: 30e3,
+            ...options,
+        };
+        if (this.options.secure) {
+            this.options.port = 443;
+        }
+        this.http = new undici_1.Pool(`http${this.options.secure ? "s" : ""}://${this.address}`, this.options.poolOptions);
         this.options.identifier = options.identifier || options.host;
         this.stats = {
             players: 0,
@@ -92,16 +114,6 @@ class Node {
         this.manager.nodes.set(this.options.identifier, this);
         this.manager.emit("nodeCreate", this);
     }
-    /** Returns if connected to the Node. */
-    get connected() {
-        if (!this.socket)
-            return false;
-        return this.socket.readyState === ws_1.default.OPEN;
-    }
-    /** @hidden */
-    static init(manager) {
-        this._manager = manager;
-    }
     /** Connects to the Node. */
     connect() {
         if (this.connected)
@@ -112,7 +124,7 @@ class Node {
             "User-Id": this.manager.options.clientId,
             "Client-Name": this.manager.options.clientName,
         };
-        this.socket = new ws_1.default(`ws${this.options.secure ? "s" : ""}://${this.options.host}:${this.options.port}/`, { headers });
+        this.socket = new ws_1.default(`ws${this.options.secure ? "s" : ""}://${this.address}`, { headers });
         this.socket.on("open", this.open.bind(this));
         this.socket.on("close", this.close.bind(this));
         this.socket.on("message", this.message.bind(this));
@@ -139,17 +151,19 @@ class Node {
      * @param modify Used to modify the request before being sent
      * @returns The returned data
      */
-    makeRequest(endpoint, modify) {
-        return __awaiter(this, void 0, void 0, function* () {
-            endpoint = endpoint.replace(/^\//gm, "");
-            const request = petitio_1.default(`http${this.options.secure ? "s" : ""}://${this.options.host}:${this.options.port}/${endpoint}`)
-                .header("Authorization", this.options.password);
-            if (modify) {
-                yield modify(request);
-            }
-            this.calls++;
-            return yield request.json();
-        });
+    async makeRequest(endpoint, modify) {
+        const options = {
+            path: `/${endpoint.replace(/^\//gm, "")}`,
+            method: "GET",
+            headers: {
+                Authorization: this.options.password
+            },
+            headersTimeout: this.options.requestTimeout,
+        };
+        modify?.(options);
+        const request = await this.http.request(options);
+        this.calls++;
+        return await request.body.json();
     }
     /**
      * Sends data to the Node.
@@ -211,7 +225,7 @@ class Node {
         switch (payload.op) {
             case "stats":
                 delete payload.op;
-                this.stats = Object.assign({}, payload);
+                this.stats = { ...payload };
                 break;
             case "playerUpdate":
                 const player = this.manager.players.get(payload.guildId);

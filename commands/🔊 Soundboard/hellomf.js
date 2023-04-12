@@ -1,5 +1,4 @@
 const Discord = require('discord.js');
-
 const {MessageEmbed} = require('discord.js');
 const path = require('path');
 const fs = require("fs")
@@ -17,11 +16,11 @@ module.exports = {
 		if (!client.settings.get(message.guild.id, "SOUNDBOARD")) {return message.reply({embeds: [new MessageEmbed().setColor(es.wrongcolor).setFooter(client.getFooter(es)).setTitle(client.la[ls].common.disabled.title).setDescription(require(`${process.cwd()}/handlers/functions`).handlemsg(client.la[ls].common.disabled.description, {prefix: prefix}))]});}
 		const { channel } = message.member.voice;
 		const botchannel = message.guild.me.voice.channel;
-		if (!channel) {return message.reply({embeds: [new MessageEmbed().setTitle('<a:no:1016977541640228984> You need to join a voice channel').setColor(es.wrongcolor).setFooter(client.getFooter(es))]});}
+		if (!channel) {return message.reply({embeds: [new MessageEmbed().setTitle('<:no:1026787028710465577> You need to join a voice channel').setColor(es.wrongcolor).setFooter(client.getFooter(es))]});}
 		if(!channel.permissionsFor(message.guild.me).has("CONNECT")){return message.reply({embeds: [new MessageEmbed().setTitle(":x: I'm missing the Permission to join your Voice Channel").setColor(es.wrongcolor).setFooter(client.getFooter(es))]});}
 		if(!channel.permissionsFor(message.guild.me).has("SPEAK")){return message.reply({embeds: [new MessageEmbed().setTitle(":x: I'm missing the Permission to speak in your Voice Channel").setColor(es.wrongcolor).setFooter(client.getFooter(es))]});}
 		if(channel.userLimit != 0 && channel.full){return message.reply({embeds: [new MessageEmbed().setTitle(":x: Your Voice Channel is full!").setColor(es.wrongcolor).setFooter(client.getFooter(es))]});}
-		if (botchannel) {return message.reply({embeds: [new MessageEmbed().setTitle(`<a:no:1016977541640228984> I am already connected in: \`${botchannel.name}\``).setFooter(client.getFooter(es))]});}
+		if (botchannel) {return message.reply({embeds: [new MessageEmbed().setTitle(`<:no:1026787028710465577> I am already connected in: \`${botchannel.name}\``).setFooter(client.getFooter(es))]});}
 		const e = await message.react('🎙️').catch(e => console.log(String(e).grey))
 		let VoiceConnection = joinVoiceChannel({channelId: channel.id,guildId: channel.guild.id,adapterCreator: channel.guild.voiceAdapterCreator}); 
 		let file = path.join(__dirname + `/audio/${CmdName}.mp3`);
@@ -46,10 +45,10 @@ module.exports = {
 }
 /**
  * @INFO
- * Bot Coded by BestGamersHK#9999 | https://discord.gg/4kRxKUbkdP
+ * Bot Coded by BestGamersHK#1213 | https://discord.gg/friendsmp
  * @INFO
- * Work for Milrato Development |  
+ * Work for Indocraft Network | https://indocraft.club
  * @INFO
- * Please mention him / Milrato Development, when using this Code!
+ * Please mention him / Indocraft Network, when using this Code!
  * @INFO
  */

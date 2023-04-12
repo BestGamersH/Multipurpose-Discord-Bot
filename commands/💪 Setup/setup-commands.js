@@ -138,7 +138,7 @@ module.exports = {
           else disabled++;
           client.settings.set(message.guild.id, !oldstate, `${value.toUpperCase()}`)
         }
-        b?.reply(`<a:yes:1016992526504300544> **\`Enabled ${enabled} Command-Categories\` and \`Disabled ${disabled} Command-Categories\` out of \`${b?.values.length} selected Command-Categories\`**`)
+        b?.reply(`<:yes:1026785792292569138> **\`Enabled ${enabled} Command-Categories\` and \`Disabled ${disabled} Command-Categories\` out of \`${b?.values.length} selected Command-Categories\`**`)
       })
       collector.on('end', collected => {
         msg.edit({content: ":x: Time ran out/Input finished! Cancelled", embeds: [
@@ -158,11 +158,11 @@ module.exports = {
 };
 /**
  * @INFO
- * Bot Coded by BestGamersHK#9999 | https://discord.gg/4kRxKUbkdP
+ * Bot Coded by BestGamersHK#1213 | https://discord.gg/friendsmp
  * @INFO
- * Work for Milrato Development |  
+ * Work for Indocraft Network | https://indocraft.club
  * @INFO
- * Please mention him / Milrato Development, when using this Code!
+ * Please mention him / Indocraft Network, when using this Code!
  * @INFO
  */
 function getNumberEmojis() {

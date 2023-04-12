@@ -17,18 +17,18 @@ module.exports = {
 		let es = client.settings.get(message.guild.id, "embed");let ls = client.settings.get(message.guild.id, "language")
 		
 		try {	
-			let button_public_invite = new MessageButton().setStyle('LINK').setLabel(client.la[ls].cmds.info.github?.buttons.invite).setURL("https://discord.com/api/oauth2/authorize?client_id=734513783338434591&permissions=8&scope=bot%20applications.commands")
-			let button_support_dc = new MessageButton().setStyle('LINK').setLabel(client.la[ls].cmds.info.github?.buttons.dc).setURL("https://discord.gg/4kRxKUbkdP")
-			let button_invite = new MessageButton().setStyle('LINK').setLabel(client.la[ls].cmds.info.github?.buttons.botlist).setURL(`https://botlist.milrato.eu`)
+			let button_public_invite = new MessageButton().setStyle('LINK').setLabel(client.la[ls].cmds.info.github?.buttons.invite).setURL("https://discord.com/api/oauth2/authorize?client_id=1086909752644218940&permissions=8&scope=bot%20applications.commands")
+			let button_support_dc = new MessageButton().setStyle('LINK').setLabel(client.la[ls].cmds.info.github?.buttons.dc).setURL("https://discord.gg/friendsmp")
+			let button_invite = new MessageButton().setStyle('LINK').setLabel(client.la[ls].cmds.info.github?.buttons.botlist).setURL(`https://botlist.indocraft.club`)
 			const allbuttons = [new MessageActionRow().addComponents([button_public_invite, button_support_dc, button_invite])]
 			message.reply({embeds: [new MessageEmbed()
 				.setColor(es.color)
 				.setFooter(client.getFooter(es))
 				.setTimestamp()
-				.setThumbnail("https://cdn.discordapp.com/avatars/884772506785939486/df7b527a701d9a1ab6d73213576fe295.webp?size=1024")
+				.setThumbnail("https://cdn.discordapp.com/avatars/903413084004163644/df7b527a701d9a1ab6d73213576fe295.webp?size=1024")
 				.setTitle(client.la[ls].cmds.info.github?.title)
-				.setURL(" ")
-				.addField("🆕 NEW GITHUB", `> There is now an **open Source** Version of this Bot on [\`BestGamersHK#9999\`'s Github](https://github.com/Tomato6966)\n> [Link](https://github.com/Tomato6966/Multipurpose-discord-bot) but please make sure to **give __Credits__** if you use it!\n> Make sure to read the [README](https://github.com/Tomato6966/Multipurpose-discord-bot#readme) and the [WIKI / FAQ](https://github.com/Tomato6966/Multipurpose-discord-bot/wiki) carefully before opening an [ISSUE](https://github.com/Tomato6966/Multipurpose-discord-bot/issues/new/choose)`)
+				.setURL("https://indocraft.club")
+				.addField("🆕 NEW GITHUB", `> There is now an **open Source** Version of this Bot on [\`BestGamersHK#1213\`'s Github](https://github.com/BestGamersHK)\n> [Link](https://github.com/BestGamersHK/Multipurpose-discord-bot) but please make sure to **give __Credits__** if you use it!\n> Make sure to read the [README](https://github.com/BestGamersHK/Multipurpose-discord-bot#readme) and the [WIKI / FAQ](https://github.com/BestGamersHK/Multipurpose-discord-bot/wiki) carefully before opening an [ISSUE](https://github.com/BestGamersHK/Multipurpose-discord-bot/issues/new/choose)`)
 			.setDescription(client.la[ls].cmds.info.github?.description)],
 components: allbuttons
 			}).catch(error => console.log(error));
@@ -45,10 +45,10 @@ components: allbuttons
 }
 /**
  * @INFO
- * Bot Coded by BestGamersHK#9999 | https://discord.gg/4kRxKUbkdP
+ * Bot Coded by BestGamersHK#1213 | https://discord.gg/friendsmp
  * @INFO
- * Work for Milrato Development |  
+ * Work for Indocraft Network | https://indocraft.club
  * @INFO
- * Please mention him / Milrato Development, when using this Code!
+ * Please mention him / Indocraft Network, when using this Code!
  * @INFO
  */

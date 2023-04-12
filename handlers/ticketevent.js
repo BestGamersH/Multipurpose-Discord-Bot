@@ -127,7 +127,7 @@ module.exports = client => {
                 }); //collector for 5 seconds
                 collector.on('collect', async b => {
                     if (b?.user.id !== user.id)
-                        return b?.reply(`<:no:833101993668771842> **Only the one who typed ${prefix}help is allowed to react!**`, true)
+                        return b?.reply(`<:no:1026787028710465577> **Only the one who typed ${prefix}help is allowed to react!**`, true)
 
                     //page forward
                     if (b?.customId == "ticket_verify") {
@@ -262,7 +262,7 @@ module.exports = client => {
                     embeds: [new MessageEmbed()
                         .setColor(es.wrongcolor)
                         .setFooter(client.getFooter(es))
-                        .setTitle("<:no:833101993668771842> You are not allowed to delete this Ticket")
+                        .setTitle("<:no:1026787028710465577> You are not allowed to delete this Ticket")
                         .setDescription(`${adminroles.length > 0 ? "You need one of those Roles: " + adminroles.map(role => `<@&${role}>`).join(" | ") + cmdrole.join(" | ") + theadminroles.join(" | ")  : `No Admin Roles Setupped yet! Do it with: \`${prefix}setup-admin\` You can also add Ticket only Roles with \`${prefix}setup-ticket\``}`)
                         .addField("Ticket Specific Role(s)/User(s):", `${ticketspecific.join(", ")}`.substring(0, 1024))
                     ]
@@ -282,7 +282,7 @@ module.exports = client => {
             }); //collector for 5 seconds
             collector.on('collect', async b => {
                 if (b?.user.id !== user.id)
-                    return b?.reply(`<:no:833101993668771842> **Only the one who typed ${prefix}help is allowed to react!**`, true)
+                    return b?.reply(`<:no:1026787028710465577> **Only the one who typed ${prefix}help is allowed to react!**`, true)
 
                 //page forward
                 if (b?.customId == "ticket_verify") {
@@ -536,7 +536,7 @@ module.exports = client => {
                     embeds: [new MessageEmbed()
                         .setColor(es.wrongcolor)
                         .setFooter(client.getFooter(es))
-                        .setTitle("<:no:833101993668771842> You are not allowed to add/remove Users to/from this Ticket")
+                        .setTitle("<:no:1026787028710465577> You are not allowed to add/remove Users to/from this Ticket")
                         .setDescription(`${adminroles.length > 0 ? "You need one of those Roles: " + adminroles.map(role => `<@&${role}>`).join(" | ") + cmdrole.join(" | ") + theadminroles.join(" | ")  : `No Admin Roles Setupped yet! Do it with: \`${prefix}setup-admin\` You can also add Ticket only Roles with \`${prefix}setup-ticket\``}`)
                     ]
                 });
@@ -729,7 +729,7 @@ module.exports = client => {
                     embeds: [new MessageEmbed()
                         .setColor(es.wrongcolor)
                         .setFooter(client.getFooter(es))
-                        .setTitle("<:no:833101993668771842> You are not allowed to add/remove Roles to/from this Ticket")
+                        .setTitle("<:no:1026787028710465577> You are not allowed to add/remove Roles to/from this Ticket")
                         .setDescription(`${adminroles.length > 0 ? "You need one of those Roles: " + adminroles.map(role => `<@&${role}>`).join(" | ") + cmdrole.join(" | ") + theadminroles.join(" | ")  : `No Admin Roles Setupped yet! Do it with: \`${prefix}setup-admin\` You can also add Ticket only Roles with \`${prefix}setup-ticket\``}`)
                     ]
                 });
@@ -918,7 +918,7 @@ module.exports = client => {
                     embeds: [new MessageEmbed()
                         .setColor(es.wrongcolor)
                         .setFooter(client.getFooter(es))
-                        .setTitle("<:no:833101993668771842> You are not allowed to claim this Ticket")
+                        .setTitle("<:no:1026787028710465577> You are not allowed to claim this Ticket")
                         .setDescription(`${adminroles.length > 0 ? "You need one of those Roles: " + adminroles.map(role => `<@&${role}>`).join(" | ") + cmdrole.join(" | ") + theadminroles.join(" | ")  : `No Admin Roles Setupped yet! Do it with: \`${prefix}setup-admin\` You can also add Ticket only Roles with \`${prefix}setup-ticket\``}`)
                     ]
                 });
@@ -1026,7 +1026,7 @@ module.exports = client => {
                       {
                         let data = client.setups.get(ticketchannel.id, "ticketdata");
                         if(data.state != "closed" && data.menutickettype == 3){
-                          return interaction?.reply({content: `<:no:833101993668771842> **You already have an Ticket!** <#${ticketchannel.id}>`, ephemeral: true});
+                          return interaction?.reply({content: `<:no:1026787028710465577> **You already have an Ticket!** <#${ticketchannel.id}>`, ephemeral: true});
                         }
                       }
                     } catch {
@@ -1049,7 +1049,7 @@ module.exports = client => {
                     reason: `Menu Ticket System for: ${user.tag}`,
                 }
                 guild.channels.create(channelname.substring(0, 31), optionsData).then(async ch => {
-                await interaction?.reply({content: `<a:Loading:833101350623117342> **Creating your ticket?...** (Usually takes 0-2 Seconds)`, ephemeral: true});
+                await interaction?.reply({content: `<a:loading:1086988887383093298> **Creating your ticket?...** (Usually takes 0-2 Seconds)`, ephemeral: true});
                 try {
                     var cat = guild.channels.cache.get(settings.data[index].category)
                     if(cat){
@@ -1165,14 +1165,14 @@ module.exports = client => {
                     .setFooter(client.getFooter(`To close/manage this ticket react with the buttons\nYou can also type: ${client.settings.get(guild.id, "prefix")}ticket`, es.footericon))
                     .setAuthor(client.getAuthor(`Ticket for: ${user.tag}`, user.displayAvatarURL({
                     dynamic: true
-                    }), "https://discord.gg/4kRxKUbkdP"))
+                    }), "https://discord.gg/friendsmp"))
                     .setDescription(replyMsg.replace(/\{user\}/igu, `${user}`).substring(0, 2000))
                 var ticketembeds = [ticketembed]
                 if(settings.claim.enabled){
                     var claimEmbed = new MessageEmbed()
                     .setColor("ORANGE").setThumbnail(es.thumb ? es.footericon && (es.footericon.includes("http://") || es.footericon.includes("https://")) ? es.footericon : client.user.displayAvatarURL() : null)
                     .setFooter(client.getFooter(es))
-                    .setAuthor(client.getAuthor(`A Staff Member will claim the Ticket soon!`, "https://cdn.discordapp.com/emojis/833101350623117342.gif?size=44", "https://discord.gg/4kRxKUbkdP"))
+                    .setAuthor(client.getAuthor(`A Staff Member will claim the Ticket soon!`, "https://cdn.discordapp.com/emojis/833101350623117342.gif?size=44", "https://discord.gg/friendsmp"))
                     .setDescription(settings.claim.messageOpen.replace(/\{user\}/igu, `${user}`).substring(0, 2000))
                     ticketembeds.push(claimEmbed)
                 }

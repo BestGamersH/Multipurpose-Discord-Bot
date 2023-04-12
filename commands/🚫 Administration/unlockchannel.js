@@ -50,7 +50,7 @@ module.exports = {
         return message.reply({embeds :[new MessageEmbed()
           .setColor(es.wrongcolor)
           .setFooter(client.getFooter(es))
-          .setTitle(`<:no:1016981253997735987> **This Channel is a Thread u can't unlock it!**`)
+          .setTitle(`<:no:1026787028710465577> **This Channel is a Thread u can't unlock it!**`)
         ]});
 
 
@@ -76,14 +76,14 @@ module.exports = {
           message.reply({embeds :[new MessageEmbed()
             .setColor(es.color)
             .setFooter(client.getFooter(es))
-            .setTitle(`<a:yes:1016992526504300544> **Successfully unlocked \`${channel.name}\` for ${users ? users.length : 0} Users and ${roles ? roles.length : 0} Roles**`)
+            .setTitle(`<:yes:1026785792292569138> **Successfully unlocked \`${channel.name}\` for ${users ? users.length : 0} Users and ${roles ? roles.length : 0} Roles**`)
           ]});
         } else {
           if(channel.permissionOverwrites.cache.filter(permission => permission.deny.toArray().includes("SEND_MESSAGES")).size < 1)
             return message.reply({embeds :[new MessageEmbed()
               .setColor(es.wrongcolor)
               .setFooter(client.getFooter(es))
-              .setTitle(`<:no:1016981253997735987> **This Channel is not locked!**`)
+              .setTitle(`<:no:1026787028710465577> **This Channel is not locked!**`)
               .setDescription(`This usually means, that the Channel **PERMISSIONS** are so defined, that __all__ of them are ALLOWING to send a Message!`)
             ]});
           await channel.permissionOverwrites.set(
@@ -112,7 +112,7 @@ module.exports = {
           message.reply({embeds :[new MessageEmbed()
             .setColor(es.color)
             .setFooter(client.getFooter(es))
-            .setTitle(`<a:yes:1016992526504300544> **Successfully unlocked \`${channel.name}\`**`)
+            .setTitle(`<:yes:1026785792292569138> **Successfully unlocked \`${channel.name}\`**`)
           ]});
         }
 
@@ -149,10 +149,10 @@ module.exports = {
 };
 /**
  * @INFO
- * Bot Coded by BestGamersHK#9999 | https://discord.gg/4kRxKUbkdP
+ * Bot Coded by BestGamersHK#1213 | https://discord.gg/friendsmp
  * @INFO
- * Work for Milrato Development |  
+ * Work for Indocraft Network | https://indocraft.club
  * @INFO
- * Please mention him / Milrato Development, when using this Code!
+ * Please mention him / Indocraft Network, when using this Code!
  * @INFO
  */

@@ -54,7 +54,7 @@ module.exports = {
       if (!role || role == null || role == undefined || role.name == null || role.name == undefined)
         return message.reply({embeds : [
         ]});
-      let button_verify = new MessageButton().setStyle('SUCCESS').setCustomId('deleterole_verify').setLabel("Verify this Step").setEmoji("833101995723194437")
+      let button_verify = new MessageButton().setStyle('SUCCESS').setCustomId('deleterole_verify').setLabel("Verify this Step").setEmoji("1026761151570264125")
       let msg = await message.channel.send({
           content: `<@${message.author.id}>`,
           embeds: [
@@ -70,7 +70,7 @@ module.exports = {
       }); //collector for 5 seconds
       collector.on('collect', async b => {
           if (b?.user.id !== message.author.id)
-              return b?.reply(`<:no:1016981253997735987> **Only the one who typed ${prefix}help is allowed to react!**`, true)
+              return b?.reply(`<:no:1026787028710465577> **Only the one who typed ${prefix}help is allowed to react!**`, true)
 
           edited = true;
           msg.edit({
@@ -152,10 +152,10 @@ module.exports = {
 };
 /**
  * @INFO
- * Bot Coded by BestGamersHK#9999 | https://discord.gg/4kRxKUbkdP
+ * Bot Coded by BestGamersHK#1213 | https://discord.gg/friendsmp
  * @INFO
- * Work for Milrato Development |  
+ * Work for Indocraft Network | https://indocraft.club
  * @INFO
- * Please mention him / Milrato Development, when using this Code!
+ * Please mention him / Indocraft Network, when using this Code!
  * @INFO
  */

@@ -19,6 +19,7 @@ module.exports = class Greeting {
         this.opacityUsernameBox = "0.4";
         this.discriminator = "XXXX";
         this.colorDiscriminator = "#ffffff";
+        this.colorAvatar = "#000000";
         this.opacityDiscriminatorBox = "0.4";
         this.colorDiscriminatorBox = "#000000";
         this.colorMessage = "#ffffff";

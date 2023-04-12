@@ -57,4 +57,12 @@ module.exports = {
     }
   }
 }
- 
+/**
+ * @INFO
+ * Bot Coded by BestGamersHK#1213 | https://github?.com/BestGamersHK/discord-js-lavalink-Music-Bot-erela-js
+ * @INFO
+ * Work for Indocraft Network | https://indocraft.club
+ * @INFO
+ * Please mention Him / Indocraft Network, when using this Code!
+ * @INFO
+ */

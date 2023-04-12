@@ -77,7 +77,7 @@ module.exports = (client, preindex) => {
         if (client.setups.has(ticketchannel.id) && client.setups.has(ticketchannel.id, "ticketdata")) {
           let data = client.setups.get(ticketchannel.id, "ticketdata");
           if (data.state != "closed") {
-            return interaction?.reply({ content: `<:no:833101993668771842> **You already have an Ticket!** <#${ticketchannel.id}>`, ephemeral: true });
+            return interaction?.reply({ content: `<:no:1026787028710465577> **You already have an Ticket!** <#${ticketchannel.id}>`, ephemeral: true });
           }
         }
       } catch {
@@ -195,7 +195,7 @@ module.exports = (client, preindex) => {
     /**
      * CREATE THE CHANNEL
      */
-    await interaction?.reply({ content: `<a:Loading:833101350623117342> **Creating your Ticket...** (Usually takes 0-2 Seconds)`, ephemeral: true });
+    await interaction?.reply({ content: `<a:loading:1086988887383093298> **Creating your Ticket...** (Usually takes 0-2 Seconds)`, ephemeral: true });
     guild.channels.create(channelname.substring(0, 31), optionsData).then(async ch => {
       let es = client.settings.get(guild.id, "embed")
       client.setups.push("TICKETS", user.id, ticketspath);
@@ -215,14 +215,14 @@ module.exports = (client, preindex) => {
         .setFooter(client.getFooter(`To close/manage this ticket react with the buttons\nYou can also type: ${client.settings.get(guild.id, "prefix")}ticket`, es.footericon))
         .setAuthor(client.getAuthor(`Ticket for: ${user.tag}`, user.displayAvatarURL({
           dynamic: true
-        }), "https://discord.gg/4kRxKUbkdP"))
+        }), "https://discord.gg/friendsmp"))
         .setDescription(ticket.message.replace(/\{user\}/igu, `${user}`).substring(0, 2000))
       var ticketembeds = [ticketembed]
       if (ticket.claim.enabled) {
         var claimEmbed = new MessageEmbed()
           .setColor("ORANGE").setThumbnail(es.thumb ? es.footericon && (es.footericon.includes("http://") || es.footericon.includes("https://")) ? es.footericon : client.user.displayAvatarURL() : null)
           .setFooter(client.getFooter(es))
-          .setAuthor(client.getAuthor(`A Staff Member will claim the Ticket soon!`, "https://cdn.discordapp.com/emojis/833101350623117342.gif?size=44", "https://discord.gg/4kRxKUbkdP"))
+          .setAuthor(client.getAuthor(`A Staff Member will claim the Ticket soon!`, "https://cdn.discordapp.com/emojis/833101350623117342.gif?size=44", "https://discord.gg/friendsmp"))
           .setDescription(ticket.claim.messageOpen.replace(/\{user\}/igu, `${user}`).substring(0, 2000))
         ticketembeds.push(claimEmbed)
       }

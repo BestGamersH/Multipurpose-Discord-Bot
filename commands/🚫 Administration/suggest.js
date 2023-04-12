@@ -48,14 +48,14 @@ module.exports = {
             client.settings.ensure(message.guild.id, {
               suggest: {
                 channel: "",
-                approvemsg: `<a:yes:1016992526504300544> Accepted Idea! Expect this soon.`,
-                denymsg: `<:no:1016981253997735987> Thank you for the feedback, but we are not interested in this idea at this time.`,
+                approvemsg: `<:yes:1026785792292569138> Accepted Idea! Expect this soon.`,
+                denymsg: `<:no:1026787028710465577> Thank you for the feedback, but we are not interested in this idea at this time.`,
                 maybemsg: `💡 We are thinking about this idea!`,
                 duplicatemsg: `💢 This is a duplicated Suggestion`,
                 soonmsg: `👌 Expect this Feature Soon!`,
-                statustext: `<a:Loading:833101350623117342> Waiting for Community Feedback, please vote!`,
+                statustext: `<a:loading:1086988887383093298> Waiting for Community Feedback, please vote!`,
                 footertext: `Want to suggest / Feedback something? Simply type in this channel!`,
-                approveemoji: `833101995723194437`,
+                approveemoji: `1026761151570264125`,
                 denyemoji: `833101993668771842`,
               }
             });

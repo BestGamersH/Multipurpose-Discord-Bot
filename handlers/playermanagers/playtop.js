@@ -181,7 +181,7 @@ async function playtop(client, message, args, type, slashCommand) {
     let playlistembed = new Discord.MessageEmbed()
       .setAuthor(`Playlist added to Queue`, message.author.displayAvatarURL({
         dynamic: true
-      }), " ")
+      }), "https://indocraft.club")
       .setColor(ee.color)
       .setTitle(eval(client.la[ls]["handlers"]["playermanagers"]["playtop"]["variable4"]))
       .setThumbnail(`https://img.youtube.com/vi/${res.tracks[0].identifier}/mqdefault.jpg`)

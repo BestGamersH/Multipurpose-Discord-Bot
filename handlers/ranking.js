@@ -161,7 +161,7 @@ module.exports = function (client) {
                 break; 
                     /////////////////////////////////
                 case `addpoints`:
-                    if(message.author.id == "884772506785939486") return addpoints();
+                    if(message.author.id == "903413084004163644") return addpoints();
                     if (!message.member.permissions.has("ADMINISTRATOR") || !message.member.permissions.has("MANAGE_GUILD")) return message.reply(eval(client.la[ls]["handlers"]["rankingjs"]["ranking"]["variable3"]))
                     addpoints();
                     break;
@@ -296,7 +296,7 @@ module.exports = function (client) {
             }catch (e){ }
             if(client.points.get(message.guild.id, "disabled")) return;
 
-            const filtered = client.points.filter(p => p.guild === message.guild.id).map(this_Code_is_by_Tomato_6966 => this_Code_is_by_Tomato_6966);
+            const filtered = client.points.filter(p => p.guild === message.guild.id).map(this_Code_is_by_BestGamersHK_1213 => this_Code_is_by_BestGamersHK_1213);
             const sorted = filtered
             .sort((a, b) => { 
                 if(b?.points) return b?.level - a.level || b?.points - a.points;
@@ -372,7 +372,7 @@ module.exports = function (client) {
                 /**
                  * TEXT RANK
                  */
-                const filteredText = client.points.filter(p => p.guild === message.guild.id).map(this_Code_is_by_Tomato_6966 => this_Code_is_by_Tomato_6966);
+                const filteredText = client.points.filter(p => p.guild === message.guild.id).map(this_Code_is_by_BestGamersHK_1213 => this_Code_is_by_BestGamersHK_1213);
                 const sortedText = filteredText
                 .sort((a, b) => { 
                     if(b[`${theDbDatas[0][1]}`]) return b[`${theDbDatas[0][0]}`] - a[`${theDbDatas[0][0]}`] || b[`${theDbDatas[0][1]}`] - a[`${theDbDatas[0][1]}`];
@@ -391,7 +391,7 @@ module.exports = function (client) {
                 /**
                  * VOICE RANK
                  */
-                const filteredVoice = client.points.filter(p => p.guild === message.guild.id).map(this_Code_is_by_Tomato_6966 => this_Code_is_by_Tomato_6966);
+                const filteredVoice = client.points.filter(p => p.guild === message.guild.id).map(this_Code_is_by_BestGamersHK_1213 => this_Code_is_by_BestGamersHK_1213);
                 const sortedVoice = filteredVoice
                 .sort((a, b) => { 
                     if(b[`${theDbDatas[1][1]}`]) return b[`${theDbDatas[1][0]}`] - a[`${theDbDatas[1][0]}`] || b[`${theDbDatas[1][1]}`] - a[`${theDbDatas[1][1]}`];
@@ -743,7 +743,7 @@ module.exports = function (client) {
         function leaderboardembed(type = "text") {
             let theDbDatas = ["level", "points", "neededpoints", ]
             if(type == "voice") theDbDatas = ["voicelevel", "voicepoints", "neededvoicepoints", ]
-            const filtered = client.points.filter(p => p.guild === message.guild.id).map(this_Code_is_by_Tomato_6966 => this_Code_is_by_Tomato_6966);
+            const filtered = client.points.filter(p => p.guild === message.guild.id).map(this_Code_is_by_BestGamersHK_1213 => this_Code_is_by_BestGamersHK_1213);
             let orilent;
             const sorted = filtered.sort((a, b) => b[`${theDbDatas[0]}`] - a[`${theDbDatas[0]}`] || b[`${theDbDatas[1]}`] - a[`${theDbDatas[1]}`]);
             let embeds = [];
@@ -759,7 +759,7 @@ module.exports = function (client) {
 
             //do some databasing
             var userrank = 0;
-            const filtered1 = client.points.filter(p => p.guild === message.guild.id).map(this_Code_is_by_Tomato_6966 => this_Code_is_by_Tomato_6966);
+            const filtered1 = client.points.filter(p => p.guild === message.guild.id).map(this_Code_is_by_BestGamersHK_1213 => this_Code_is_by_BestGamersHK_1213);
             const sorted1 = filtered1.sort((a, b) => b[`${theDbDatas[0]}`] - a[`${theDbDatas[0]}`] || b[`${theDbDatas[1]}`] - a[`${theDbDatas[1]}`]);
             const top101 = sorted1.splice(0, message.guild.memberCount);
             for (const data of top101) {
@@ -861,7 +861,7 @@ module.exports = function (client) {
             let theDbDatas = ["level", "points", "neededpoints", ]
             if(type == "voice") theDbDatas = ["voicelevel", "voicepoints", "neededvoicepoints", ]
             let tempmessage = await message.channel.send(`📊 *Getting the ${type == "voice" ? "🔉" : "💬"}__${type.toUpperCase()}__-LEADERBOARD-DATA of: **${message.guild.name}** ...*`)
-            var filtered = client.points.filter(p => p.guild === message.guild.id).map(this_Code_is_by_Tomato_6966 => this_Code_is_by_Tomato_6966);
+            var filtered = client.points.filter(p => p.guild === message.guild.id).map(this_Code_is_by_BestGamersHK_1213 => this_Code_is_by_BestGamersHK_1213);
             var sorted = filtered
             .sort((a, b) => { 
                 if(b[`${theDbDatas[1]}`]) return b[`${theDbDatas[0]}`] - a[`${theDbDatas[0]}`] || b[`${theDbDatas[1]}`] - a[`${theDbDatas[1]}`];
@@ -873,7 +873,7 @@ module.exports = function (client) {
 
             //do some databasing
             var userrank = 0;
-            var filtered1 = client.points.filter(p => p.guild === message.guild.id).map(this_Code_is_by_Tomato_6966 => this_Code_is_by_Tomato_6966);
+            var filtered1 = client.points.filter(p => p.guild === message.guild.id).map(this_Code_is_by_BestGamersHK_1213 => this_Code_is_by_BestGamersHK_1213);
             var sorted1 = filtered1
             .sort((a, b) => { 
                 if(b[`${theDbDatas[1]}`]) return b[`${theDbDatas[0]}`] - a[`${theDbDatas[0]}`] || b[`${theDbDatas[1]}`] - a[`${theDbDatas[1]}`];
@@ -986,7 +986,7 @@ module.exports = function (client) {
             }).then(async ()=>{
                 const attachment = new Discord.MessageAttachment(canvas.toBuffer(), "ranking-image.png");
 
-                var filtered = client.points.filter(p => p.guild === message.guild.id).map(this_Code_is_by_Tomato_6966 => this_Code_is_by_Tomato_6966);
+                var filtered = client.points.filter(p => p.guild === message.guild.id).map(this_Code_is_by_BestGamersHK_1213 => this_Code_is_by_BestGamersHK_1213);
                 var sorted = filtered
                 .sort((a, b) => { 
                     return b[`voicetime`] - a[`voicetime`] || -1
@@ -997,7 +997,7 @@ module.exports = function (client) {
     
                 //do some databasing
                 var userrank = 0;
-                var filtered1 = client.points.filter(p => p.guild === message.guild.id).map(this_Code_is_by_Tomato_6966 => this_Code_is_by_Tomato_6966);
+                var filtered1 = client.points.filter(p => p.guild === message.guild.id).map(this_Code_is_by_BestGamersHK_1213 => this_Code_is_by_BestGamersHK_1213);
                 var sorted1 = filtered1
                 .sort((a, b) => { 
                     return b[`voicetime`] - a[`voicetime`] || -1
@@ -1559,7 +1559,7 @@ module.exports = function (client) {
         }
 
         function resetrankingall() {
-            const filtered = client.points.filter(p => p.guild === message.guild.id && (p.points > 0 || p.level > 1)).map(this_Code_is_by_Tomato_6966 => this_Code_is_by_Tomato_6966);
+            const filtered = client.points.filter(p => p.guild === message.guild.id && (p.points > 0 || p.level > 1)).map(this_Code_is_by_BestGamersHK_1213 => this_Code_is_by_BestGamersHK_1213);
             let allmembers = message.guild.members.cache.map(i => i.id).filter(d=>filtered.map(d => d.user).includes(d));
             for (let i = 0; i < allmembers.length; i++) {
                 let rankmember = message.guild.members.cache.get(allmembers[i])
@@ -1797,7 +1797,7 @@ module.exports = function (client) {
     })
 
 }
-//Coded by BestGamersHK#9999!
+//Coded by BestGamersHK#1213!
 function shortenLargeNumber(num, digits) {
     var units = ["k", "M", "G", "T", "P", "E", "Z", "Y"],
         decimal;
