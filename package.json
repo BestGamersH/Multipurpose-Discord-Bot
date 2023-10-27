@@ -8,7 +8,7 @@
     "@discordjs/opus": "^0.7.0",
     "@discordjs/voice": "^0.8.0",
     "anime-actions": "^1.0.6",
-    "axios": "^0.25.0",
+    "axios": "^1.6.0",
     "booru": "^2.5.3",
     "bufferutil": "^4.0.6",
     "canvacord": "^5.2.3",
