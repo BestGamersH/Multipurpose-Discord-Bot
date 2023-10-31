@@ -1,7 +1,7 @@
 'use strict';
 
 const { deprecate } = require('node:util');
-const { isJSONEncodable } = require('@discordjs/builders');
+const { isJSONEncodable } = require('@discordjs/util');
 const Component = require('./Component');
 const { createComponent } = require('../util/Components');
 
@@ -25,7 +25,7 @@ class ActionRow extends Component {
    * Creates a new action row builder from JSON data
    * @method from
    * @memberof ActionRow
-   * @param {JSONEncodable<APIActionRowComponent>|APIActionRowComponent} other The other data
+   * @param {ActionRowBuilder|ActionRow|APIActionRowComponent} other The other data
    * @returns {ActionRowBuilder}
    * @deprecated Use {@link ActionRowBuilder.from} instead.
    */

@@ -171,6 +171,13 @@ Context2d::Context2d(Canvas *canvas) {
   _canvas = canvas;
   _context = canvas->createCairoContext();
   _layout = pango_cairo_create_layout(_context);
+
+  // As of January 2023, Pango rounds glyph positions which renders text wider
+  // or narrower than the browser. See #2184 for more information
+#if PANGO_VERSION_CHECK(1, 44, 0)
+  pango_context_set_round_glyph_positions(pango_layout_get_context(_layout), FALSE);
+#endif
+
   states.emplace();
   state = &states.top();
   pango_layout_set_font_description(_layout, state->fontDescription);
@@ -200,7 +207,6 @@ void Context2d::resetState() {
 void Context2d::_resetPersistentHandles() {
   _fillStyle.Reset();
   _strokeStyle.Reset();
-  _font.Reset();
 }
 
 /*
@@ -2546,15 +2552,8 @@ NAN_METHOD(Context2d::MoveTo) {
 NAN_GETTER(Context2d::GetFont) {
   CHECK_RECEIVER(Context2d.GetFont);
   Context2d *context = Nan::ObjectWrap::Unwrap<Context2d>(info.This());
-  Isolate *iso = Isolate::GetCurrent();
-  Local<Value> font;
 
-  if (context->_font.IsEmpty())
-    font = Nan::New("10px sans-serif").ToLocalChecked();
-  else
-    font = context->_font.Get(iso);
-
-  info.GetReturnValue().Set(font);
+  info.GetReturnValue().Set(Nan::New(context->state->font).ToLocalChecked());
 }
 
 /*
@@ -2617,7 +2616,7 @@ NAN_SETTER(Context2d::SetFont) {
   context->state->fontDescription = sys_desc;
   pango_layout_set_font_description(context->_layout, sys_desc);
 
-  context->_font.Reset(value);
+  context->state->font = *Nan::Utf8String(value);
 }
 
 /*

@@ -1,6 +1,5 @@
 'use strict'
 
-const { randomBytes, createHash } = require('crypto')
 const diagnosticsChannel = require('diagnostics_channel')
 const { uid, states } = require('./constants')
 const {
@@ -13,12 +12,22 @@ const { fireEvent, failWebsocketConnection } = require('./util')
 const { CloseEvent } = require('./events')
 const { makeRequest } = require('../fetch/request')
 const { fetching } = require('../fetch/index')
+const { Headers } = require('../fetch/headers')
 const { getGlobalDispatcher } = require('../global')
+const { kHeadersList } = require('../core/symbols')
 
 const channels = {}
 channels.open = diagnosticsChannel.channel('undici:websocket:open')
 channels.close = diagnosticsChannel.channel('undici:websocket:close')
 channels.socketError = diagnosticsChannel.channel('undici:websocket:socket_error')
+
+/** @type {import('crypto')} */
+let crypto
+try {
+  crypto = require('crypto')
+} catch {
+
+}
 
 /**
  * @see https://websockets.spec.whatwg.org/#concept-websocket-establish
@@ -26,8 +35,9 @@ channels.socketError = diagnosticsChannel.channel('undici:websocket:socket_error
  * @param {string|string[]} protocols
  * @param {import('./websocket').WebSocket} ws
  * @param {(response: any) => void} onEstablish
+ * @param {Partial<import('../../types/websocket').WebSocketInit>} options
  */
-function establishWebSocketConnection (url, protocols, ws, onEstablish) {
+function establishWebSocketConnection (url, protocols, ws, onEstablish, options) {
   // 1. Let requestURL be a copy of url, with its scheme set to "http", if url’s
   //    scheme is "ws", and to "https" otherwise.
   const requestURL = url
@@ -48,6 +58,13 @@ function establishWebSocketConnection (url, protocols, ws, onEstablish) {
     redirect: 'error'
   })
 
+  // Note: undici extension, allow setting custom headers.
+  if (options.headers) {
+    const headersList = new Headers(options.headers)[kHeadersList]
+
+    request.headersList = headersList
+  }
+
   // 3. Append (`Upgrade`, `websocket`) to request’s header list.
   // 4. Append (`Connection`, `Upgrade`) to request’s header list.
   // Note: both of these are handled by undici currently.
@@ -56,7 +73,7 @@ function establishWebSocketConnection (url, protocols, ws, onEstablish) {
   // 5. Let keyValue be a nonce consisting of a randomly selected
   //    16-byte value that has been forgiving-base64-encoded and
   //    isomorphic encoded.
-  const keyValue = randomBytes(16).toString('base64')
+  const keyValue = crypto.randomBytes(16).toString('base64')
 
   // 6. Append (`Sec-WebSocket-Key`, keyValue) to request’s
   //    header list.
@@ -88,7 +105,7 @@ function establishWebSocketConnection (url, protocols, ws, onEstablish) {
   const controller = fetching({
     request,
     useParallelQueue: true,
-    dispatcher: getGlobalDispatcher(),
+    dispatcher: options.dispatcher ?? getGlobalDispatcher(),
     processResponse (response) {
       // 1. If response is a network error or its status is not 101,
       //    fail the WebSocket connection.
@@ -138,7 +155,7 @@ function establishWebSocketConnection (url, protocols, ws, onEstablish) {
       //    trailing whitespace, the client MUST _Fail the WebSocket
       //    Connection_.
       const secWSAccept = response.headersList.get('Sec-WebSocket-Accept')
-      const digest = createHash('sha1').update(keyValue + uid).digest('base64')
+      const digest = crypto.createHash('sha1').update(keyValue + uid).digest('base64')
       if (secWSAccept !== digest) {
         failWebsocketConnection(ws, 'Incorrect hash received in Sec-WebSocket-Accept header.')
         return

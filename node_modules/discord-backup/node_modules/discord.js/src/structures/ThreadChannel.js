@@ -4,7 +4,7 @@ const { ChannelType, PermissionFlagsBits, Routes, ChannelFlags } = require('disc
 const { BaseChannel } = require('./BaseChannel');
 const TextBasedChannel = require('./interfaces/TextBasedChannel');
 const { DiscordjsRangeError, ErrorCodes } = require('../errors');
-const MessageManager = require('../managers/MessageManager');
+const GuildMessageManager = require('../managers/GuildMessageManager');
 const ThreadMemberManager = require('../managers/ThreadMemberManager');
 const ChannelFlagsBitField = require('../util/ChannelFlagsBitField');
 
@@ -14,7 +14,7 @@ const ChannelFlagsBitField = require('../util/ChannelFlagsBitField');
  * @implements {TextBasedChannel}
  */
 class ThreadChannel extends BaseChannel {
-  constructor(guild, data, client, fromInteraction = false) {
+  constructor(guild, data, client) {
     super(guild?.client ?? client, data, false);
 
     /**
@@ -31,19 +31,19 @@ class ThreadChannel extends BaseChannel {
 
     /**
      * A manager of the messages sent to this thread
-     * @type {MessageManager}
+     * @type {GuildMessageManager}
      */
-    this.messages = new MessageManager(this);
+    this.messages = new GuildMessageManager(this);
 
     /**
      * A manager of the members that are part of this thread
      * @type {ThreadMemberManager}
      */
     this.members = new ThreadMemberManager(this);
-    if (data) this._patch(data, fromInteraction);
+    if (data) this._patch(data);
   }
 
-  _patch(data, partial = false) {
+  _patch(data) {
     super._patch(data);
 
     if ('message' in data) this.messages._add(data.message);
@@ -149,7 +149,7 @@ class ThreadChannel extends BaseChannel {
       this.lastPinTimestamp ??= null;
     }
 
-    if ('rate_limit_per_user' in data || !partial) {
+    if ('rate_limit_per_user' in data) {
       /**
        * The rate limit per user (slowmode) for this thread in seconds
        * @type {?number}

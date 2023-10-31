@@ -602,11 +602,17 @@ class Message extends Base {
    */
   get editable() {
     const precheck = Boolean(this.author.id === this.client.user.id && (!this.guild || this.channel?.viewable));
+
     // Regardless of permissions thread messages cannot be edited if
-    // the thread is locked.
+    // the thread is archived or the thread is locked and the bot does not have permission to manage threads.
     if (this.channel?.isThread()) {
-      return precheck && !this.channel.locked;
+      if (this.channel.archived) return false;
+      if (this.channel.locked) {
+        const permissions = this.channel.permissionsFor(this.client.user);
+        if (!permissions?.has(PermissionFlagsBits.ManageThreads, true)) return false;
+      }
     }
+
     return precheck;
   }
 
@@ -816,7 +822,6 @@ class Message extends Base {
    * @typedef {BaseMessageCreateOptions} MessageReplyOptions
    * @property {boolean} [failIfNotExists=this.client.options.failIfNotExists] Whether to error if the referenced
    * message does not exist (creates a standard message in this case when false)
-   * @property {StickerResolvable[]} [stickers=[]] Stickers to send in the message
    */
 
   /**

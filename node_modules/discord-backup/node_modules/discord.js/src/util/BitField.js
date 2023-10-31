@@ -117,7 +117,9 @@ class BitField {
    */
   serialize(...hasParams) {
     const serialized = {};
-    for (const [flag, bit] of Object.entries(this.constructor.Flags)) serialized[flag] = this.has(bit, ...hasParams);
+    for (const [flag, bit] of Object.entries(this.constructor.Flags)) {
+      if (isNaN(flag)) serialized[flag] = this.has(bit, ...hasParams);
+    }
     return serialized;
   }
 
@@ -140,7 +142,7 @@ class BitField {
 
   *[Symbol.iterator](...hasParams) {
     for (const bitName of Object.keys(this.constructor.Flags)) {
-      if (this.has(bitName, ...hasParams)) yield bitName;
+      if (isNaN(bitName) && this.has(bitName, ...hasParams)) yield bitName;
     }
   }
 
@@ -164,8 +166,8 @@ class BitField {
     if (bit instanceof BitField) return bit.bitfield;
     if (Array.isArray(bit)) return bit.map(p => this.resolve(p)).reduce((prev, p) => prev | p, DefaultBit);
     if (typeof bit === 'string') {
-      if (this.Flags[bit] !== undefined) return this.Flags[bit];
       if (!isNaN(bit)) return typeof DefaultBit === 'bigint' ? BigInt(bit) : Number(bit);
+      if (this.Flags[bit] !== undefined) return this.Flags[bit];
     }
     throw new DiscordjsRangeError(ErrorCodes.BitFieldInvalid, bit);
   }

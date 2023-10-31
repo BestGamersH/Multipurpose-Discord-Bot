@@ -1,0 +1,4 @@
+#!/usr/bin/env node
+
+console.error('This is not the package you are looking for: please go to http://nvm.sh');
+process.exit(1);

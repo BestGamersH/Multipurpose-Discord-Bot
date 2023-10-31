@@ -1,8 +1,7 @@
 'use strict';
 
 const { Buffer } = require('node:buffer');
-const { isJSONEncodable } = require('@discordjs/builders');
-const { lazy } = require('@discordjs/util');
+const { lazy, isJSONEncodable } = require('@discordjs/util');
 const { MessageFlags } = require('discord-api-types/v10');
 const ActionRowBuilder = require('./ActionRowBuilder');
 const { DiscordjsRangeError, ErrorCodes } = require('../errors');
@@ -227,8 +226,7 @@ class MessagePayload {
 
   /**
    * Resolves a single file into an object sendable to the API.
-   * @param {BufferResolvable|Stream|JSONEncodable<AttachmentPayload>} fileLike Something that could
-   * be resolved to a file
+   * @param {AttachmentPayload|BufferResolvable|Stream} fileLike Something that could be resolved to a file
    * @returns {Promise<RawFile>}
    */
   static async resolveFile(fileLike) {
@@ -297,5 +295,5 @@ module.exports = MessagePayload;
 
 /**
  * @external RawFile
- * @see {@link https://discord.js.org/#/docs/rest/main/typedef/RawFile}
+ * @see {@link https://discord.js.org/docs/packages/rest/stable/RawFile:Interface}
  */

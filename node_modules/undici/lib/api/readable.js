@@ -17,11 +17,16 @@ const kAbort = Symbol('abort')
 const kContentType = Symbol('kContentType')
 
 module.exports = class BodyReadable extends Readable {
-  constructor (resume, abort, contentType = '') {
+  constructor ({
+    resume,
+    abort,
+    contentType = '',
+    highWaterMark = 64 * 1024 // Same as nodejs fs streams.
+  }) {
     super({
       autoDestroy: true,
       read: resume,
-      highWaterMark: 64 * 1024 // Same as nodejs fs streams.
+      highWaterMark
     })
 
     this._readableState.dataEmitted = false
@@ -150,12 +155,13 @@ module.exports = class BodyReadable extends Readable {
     const abortFn = () => {
       this.destroy()
     }
+    let signalListenerCleanup
     if (signal) {
       if (typeof signal !== 'object' || !('aborted' in signal)) {
         throw new InvalidArgumentError('signal must be an AbortSignal')
       }
       util.throwIfAborted(signal)
-      signal.addEventListener('abort', abortFn, { once: true })
+      signalListenerCleanup = util.addAbortListener(signal, abortFn)
     }
     try {
       for await (const chunk of this) {
@@ -168,8 +174,10 @@ module.exports = class BodyReadable extends Readable {
     } catch {
       util.throwIfAborted(signal)
     } finally {
-      if (signal) {
-        signal.removeEventListener('abort', abortFn)
+      if (typeof signalListenerCleanup === 'function') {
+        signalListenerCleanup()
+      } else if (signalListenerCleanup) {
+        signalListenerCleanup[Symbol.dispose]()
       }
     }
   }
@@ -260,7 +268,7 @@ function consumeEnd (consume) {
         pos += buf.byteLength
       }
 
-      resolve(dst)
+      resolve(dst.buffer)
     } else if (type === 'blob') {
       if (!Blob) {
         Blob = require('buffer').Blob

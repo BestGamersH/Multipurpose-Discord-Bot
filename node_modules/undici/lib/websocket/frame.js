@@ -1,7 +1,14 @@
 'use strict'
 
-const { randomBytes } = require('crypto')
 const { maxUnsigned16Bit } = require('./constants')
+
+/** @type {import('crypto')} */
+let crypto
+try {
+  crypto = require('crypto')
+} catch {
+
+}
 
 class WebsocketFrameSend {
   /**
@@ -9,7 +16,7 @@ class WebsocketFrameSend {
    */
   constructor (data) {
     this.frameData = data
-    this.maskKey = randomBytes(4)
+    this.maskKey = crypto.randomBytes(4)
   }
 
   createFrame (opcode) {
@@ -43,7 +50,7 @@ class WebsocketFrameSend {
     buffer[1] = payloadLength
 
     if (payloadLength === 126) {
-      new DataView(buffer.buffer).setUint16(2, bodyLength)
+      buffer.writeUInt16BE(bodyLength, 2)
     } else if (payloadLength === 127) {
       // Clear extended payload length
       buffer[2] = buffer[3] = 0

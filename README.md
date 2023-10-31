@@ -1,9 +1,7 @@
-# Public Bot and Support Server!
+﻿# Public Bot and Support Server!
 
-<a href="https://discord.gg/milrato"><img src="https://discord.com/api/guilds/773668217163218944/widget.png?style=banner2"></a>
+<a href="https://discord.gg/hsmU2c7mVa"><img src="https://discord.com/api/guilds/773668217163218944/widget.png?style=banner2"></a>
  
-[**Invite the Public Version of this Bot**](https://milrato.milrato.dev) So you don't need to host it by yourself or [join my discord Server](https://discord.gg/milrato) to get a custom hosted Bot for you!
-
 
 # Important notes and thank ❤️
 First of all, thanks for using this Source Code, it was and is a ton of work to create and maintain it!
@@ -16,9 +14,10 @@ If you find any errors please create a issue from <a href="https://github.com/Be
 <details>
   <summary>Click to expand</summary>
 
-  * [nodejs](https://nodejs.org) version 16.6 or higher, i recommend the latest STABLE version
-  * [python](https://python.org) version 3.8 or higher, to install the database `enmap` (better-sqlite3)
+  * [nodejs](https://nodejs.org) version 18
+  * [python](https://python.org) version 3.10 or higher, to install the database `enmap` (better-sqlite3)
   * a VPS would be adviced, so you don't need to keep your pc/laptop/raspi 24/7 online! [click here for a debian setup](https://github.com/Tomato6966/Debian-Cheat-Sheet-Setup/wiki/)
+  * [visual studio code](https://visualstudio.microsoft.com/downloads/) latest version, Make sure to select "Desktop development with C++" which should install the necessary components for Node.js native modules.
 
 </details>
 
@@ -135,8 +134,7 @@ If you find any errors please create a issue from <a href="https://github.com/Be
 
 > You can always Support me by inviting one of me **own Discord Bots**
 
-[![2022's best Music Bot | Aquana Music](https://cdn.discordapp.com/attachments/1017354675575599104/1017354736686604338/standard_3.gif)](https://discord.com/api/oauth2/authorize?client_id=1016375106806743041&permissions=8&scope=applications.commands%20bot)
-[![Aquana](https://cdn.discordapp.com/attachments/1017354675575599104/1017354750758498324/standard_2.gif)](https://discord.com/api/oauth2/authorize?client_id=1016438776005935144&permissions=8&scope=bot%20applications.commands)
+
 
 # Credits
 

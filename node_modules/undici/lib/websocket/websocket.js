@@ -3,6 +3,7 @@
 const { webidl } = require('../fetch/webidl')
 const { DOMException } = require('../fetch/constants')
 const { URLSerializer } = require('../fetch/dataURL')
+const { getGlobalOrigin } = require('../fetch/global')
 const { staticPropertyDescriptors, states, opcodes, emptyBuffer } = require('./constants')
 const {
   kWebSocketURL,
@@ -18,6 +19,7 @@ const { establishWebSocketConnection } = require('./connection')
 const { WebsocketFrameSend } = require('./frame')
 const { ByteParser } = require('./receiver')
 const { kEnumerableProperty, isBlobLike } = require('../core/util')
+const { getGlobalDispatcher } = require('../global')
 const { types } = require('util')
 
 let experimentalWarned = false
@@ -51,21 +53,33 @@ class WebSocket extends EventTarget {
       })
     }
 
-    url = webidl.converters.USVString(url)
-    protocols = webidl.converters['DOMString or sequence<DOMString>'](protocols)
+    const options = webidl.converters['DOMString or sequence<DOMString> or WebSocketInit'](protocols)
 
-    // 1. Let urlRecord be the result of applying the URL parser to url.
+    url = webidl.converters.USVString(url)
+    protocols = options.protocols
+
+    // 1. Let baseURL be this's relevant settings object's API base URL.
+    const baseURL = getGlobalOrigin()
+
+    // 1. Let urlRecord be the result of applying the URL parser to url with baseURL.
     let urlRecord
 
     try {
-      urlRecord = new URL(url)
+      urlRecord = new URL(url, baseURL)
     } catch (e) {
-      // 2. If urlRecord is failure, then throw a "SyntaxError" DOMException.
+      // 3. If urlRecord is failure, then throw a "SyntaxError" DOMException.
       throw new DOMException(e, 'SyntaxError')
     }
 
-    // 3. If urlRecord’s scheme is not "ws" or "wss", then throw a
-    //    "SyntaxError" DOMException.
+    // 4. If urlRecord’s scheme is "http", then set urlRecord’s scheme to "ws".
+    if (urlRecord.protocol === 'http:') {
+      urlRecord.protocol = 'ws:'
+    } else if (urlRecord.protocol === 'https:') {
+      // 5. Otherwise, if urlRecord’s scheme is "https", set urlRecord’s scheme to "wss".
+      urlRecord.protocol = 'wss:'
+    }
+
+    // 6. If urlRecord’s scheme is not "ws" or "wss", then throw a "SyntaxError" DOMException.
     if (urlRecord.protocol !== 'ws:' && urlRecord.protocol !== 'wss:') {
       throw new DOMException(
         `Expected a ws: or wss: protocol, got ${urlRecord.protocol}`,
@@ -73,19 +87,19 @@ class WebSocket extends EventTarget {
       )
     }
 
-    // 4. If urlRecord’s fragment is non-null, then throw a "SyntaxError"
+    // 7. If urlRecord’s fragment is non-null, then throw a "SyntaxError"
     //    DOMException.
-    if (urlRecord.hash) {
+    if (urlRecord.hash || urlRecord.href.endsWith('#')) {
       throw new DOMException('Got fragment', 'SyntaxError')
     }
 
-    // 5. If protocols is a string, set protocols to a sequence consisting
+    // 8. If protocols is a string, set protocols to a sequence consisting
     //    of just that string.
     if (typeof protocols === 'string') {
       protocols = [protocols]
     }
 
-    // 6. If any of the values in protocols occur more than once or otherwise
+    // 9. If any of the values in protocols occur more than once or otherwise
     //    fail to match the requirements for elements that comprise the value
     //    of `Sec-WebSocket-Protocol` fields as defined by The WebSocket
     //    protocol, then throw a "SyntaxError" DOMException.
@@ -97,12 +111,12 @@ class WebSocket extends EventTarget {
       throw new DOMException('Invalid Sec-WebSocket-Protocol value', 'SyntaxError')
     }
 
-    // 7. Set this's url to urlRecord.
-    this[kWebSocketURL] = urlRecord
+    // 10. Set this's url to urlRecord.
+    this[kWebSocketURL] = new URL(urlRecord.href)
 
-    // 8. Let client be this's relevant settings object.
+    // 11. Let client be this's relevant settings object.
 
-    // 9. Run this step in parallel:
+    // 12. Run this step in parallel:
 
     //    1. Establish a WebSocket connection given urlRecord, protocols,
     //       and client.
@@ -110,7 +124,8 @@ class WebSocket extends EventTarget {
       urlRecord,
       protocols,
       this,
-      (response) => this.#onConnectionEstablished(response)
+      (response) => this.#onConnectionEstablished(response),
+      options
     )
 
     // Each WebSocket object has an associated ready state, which is a
@@ -575,6 +590,36 @@ webidl.converters['DOMString or sequence<DOMString>'] = function (V) {
   }
 
   return webidl.converters.DOMString(V)
+}
+
+// This implements the propsal made in https://github.com/whatwg/websockets/issues/42
+webidl.converters.WebSocketInit = webidl.dictionaryConverter([
+  {
+    key: 'protocols',
+    converter: webidl.converters['DOMString or sequence<DOMString>'],
+    get defaultValue () {
+      return []
+    }
+  },
+  {
+    key: 'dispatcher',
+    converter: (V) => V,
+    get defaultValue () {
+      return getGlobalDispatcher()
+    }
+  },
+  {
+    key: 'headers',
+    converter: webidl.nullableConverter(webidl.converters.HeadersInit)
+  }
+])
+
+webidl.converters['DOMString or sequence<DOMString> or WebSocketInit'] = function (V) {
+  if (webidl.util.Type(V) === 'Object' && !(Symbol.iterator in V)) {
+    return webidl.converters.WebSocketInit(V)
+  }
+
+  return { protocols: webidl.converters['DOMString or sequence<DOMString>'](V) }
 }
 
 webidl.converters.WebSocketSendData = function (V) {
