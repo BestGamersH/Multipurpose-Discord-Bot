@@ -37,7 +37,7 @@
   ],
   "main": "./lib/CSSStyleDeclaration.js",
   "dependencies": {
-    "cssom": "~0.3.6"
+    "cssom": "~0.5.0"
   },
   "devDependencies": {
     "babel-generator": "~6.26.1",
