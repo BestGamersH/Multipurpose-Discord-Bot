@@ -139,7 +139,7 @@ module.exports = {
         if(menu?.values[0] == "Cancel") return menu?.reply({content : eval(client.la[ls]["cmds"]["administration"]["manageinvites"]["variable4"])})
         await menu?.reply({embeds : [new MessageEmbed()
           .setColor(es.color)
-          .setAuthor(client.la[ls].cmds.info.botfaq.menuembed.title, client.user.displayAvatarURL(), "https://discord.gg/friendsmp")
+          .setAuthor(client.la[ls].cmds.info.botfaq.menuembed.title, client.user.displayAvatarURL(), "https://discord.gg/bestgamershk")
           .setDescription(menuoptiondata.replymsg)]})
           await message.channel.awaitMessages({filter: m=>m.author.id == cmduser.id, max: 1, time: 60e3, errors: ["time"]}).then(collected=>{
           let AddNumber = collected.first().content;
@@ -181,7 +181,7 @@ module.exports = {
           } = memberData;
           realinvites = invites - fake - leaves;
           message.reply({embeds : [new MessageEmbed()
-            .setAuthor(`New Invites of: ${user.tag}`, user.displayAvatarURL({dynamic: true}), "https://discord.gg/friendsmp")
+            .setAuthor(`New Invites of: ${user.tag}`, user.displayAvatarURL({dynamic: true}), "https://discord.gg/bestgamershk")
             .setColor(es.color).setThumbnail(es.thumb ? es.footericon && (es.footericon.includes("http://") || es.footericon.includes("https://")) ? es.footericon : client.user.displayAvatarURL() : null)
             .addField("\u200b", `<:Like:857334024087011378> ${user} _**has invited __${realinvites} Member${realinvites != 1 ? "s": ""}__**_!`)
             .addField(eval(client.la[ls]["cmds"]["administration"]["manageinvites"]["variablex_6"]),eval(client.la[ls]["cmds"]["administration"]["manageinvites"]["variable6"]))
@@ -230,10 +230,10 @@ module.exports = {
 };
 /**
  * @INFO
- * Bot Coded by BestGamersHK#1213 | https://discord.gg/friendsmp
+ * Bot Coded by bestgamershk_ | https://discord.gg/bestgamershk
  * @INFO
- * Work for Indocraft Network | https://indocraft.club
+ * Work for BestGamersHK | discord.gg/bestgamershk
  * @INFO
- * Please mention him / Indocraft Network, when using this Code!
+ * Please mention him, when using this Code!
  * @INFO
  */

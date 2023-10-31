@@ -82,7 +82,7 @@ module.exports = {
           .setColor(es.color)
           .setAuthor("Language System Setup", 
           "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/twitter/282/flag-united-kingdom_1f1ec-1f1e7.png",
-          "https://discord.gg/friendsmp")
+          "https://discord.gg/bestgamershk")
           .setDescription(eval(client.la[ls]["cmds"]["setup"]["setup-language"]["variable1"]))
         let used1 = false;
         //send the menu msg
@@ -223,10 +223,10 @@ module.exports = {
 };
 /**
  * @INFO
- * Bot Coded by BestGamersHK#1213 | https://discord.gg/friendsmp
+ * Bot Coded by bestgamershk_ | https://discord.gg/bestgamershk
  * @INFO
- * Work for Indocraft Network | https://indocraft.club
+ * Work for BestGamersHK | discord.gg/bestgamershk
  * @INFO
- * Please mention him / Indocraft Network, when using this Code!
+ * Please mention him, when using this Code!
  * @INFO
  */

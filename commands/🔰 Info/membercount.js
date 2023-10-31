@@ -21,7 +21,7 @@ module.exports = {
         message.reply({embeds: [new Discord.MessageEmbed()
         .setAuthor(client.la[ls].cmds.info.membercount.title + " " +message.guild.name, message.guild.iconURL({
           dynamic: true
-        }), "https://discord.com/api/oauth2/authorize?client_id=1086909752644218940&permissions=8&scope=bot%20applications.commands")
+        }), "https://discord.com/api/oauth2/authorize?client_id=1168734693492006973&permissions=8&scope=bot%20applications.commands")
         .setColor(es.color)
         .addField(client.la[ls].cmds.info.membercount.field1, "😀 \`" + message.guild.memberCount + "\`", true)
         .addField(client.la[ls].cmds.info.membercount.field2, "👤 \`" + message.guild.members.cache.filter(member => !member.user.bot).size + "\`", true)
@@ -57,10 +57,10 @@ module.exports = {
 }
 /**
  * @INFO
- * Bot Coded by BestGamersHK#1213 | https://discord.gg/friendsmp
+ * Bot Coded by bestgamershk_ | https://discord.gg/bestgamershk
  * @INFO
- * Work for Indocraft Network | https://indocraft.club
+ * Work for BestGamersHK | discord.gg/bestgamershk
  * @INFO
- * Please mention him / Indocraft Network, when using this Code!
+ * Please mention him, when using this Code!
  * @INFO
  */

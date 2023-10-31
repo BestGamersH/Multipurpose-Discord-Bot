@@ -66,7 +66,7 @@ module.exports = {
         //define the embed
         let MenuEmbed = new MessageEmbed()
           .setColor(es.color)
-          .setAuthor('Epic Games Verify Setup', 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Epic_Games_logo.svg/882px-Epic_Games_logo.svg.png', 'https://discord.gg/friendsmp')
+          .setAuthor('Epic Games Verify Setup', 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Epic_Games_logo.svg/882px-Epic_Games_logo.svg.png', 'https://discord.gg/bestgamershk')
           .setDescription(eval(client.la[ls]["cmds"]["setup"]["setup-ticket"]["variable2"]))
         //send the menu msg
         let menumsg = await message.reply({embeds: [MenuEmbed], components: [new MessageActionRow().addComponents(Selection)]})
@@ -120,7 +120,7 @@ module.exports = {
                 
                 channel.send({
                   embeds: [
-                    new MessageEmbed().setColor(es.color).setFooter(message.guild.name + " | Powered by: discord.gg/friendsmp", message.guild.iconURL({dynamic: true})).setThumbnail(es.thumb ? message.guild.iconURL({dynamic: true}) : null)
+                    new MessageEmbed().setColor(es.color).setFooter(message.guild.name + " | Powered by: discord.gg/bestgamershk", message.guild.iconURL({dynamic: true})).setThumbnail(es.thumb ? message.guild.iconURL({dynamic: true}) : null)
                     .setTitle(`Click the Button to Verify and Link your Epic Games Account`)
                     .setDescription(`If you click the Button you can verify your Epic Games account to this Server!\nYou can click it again to change your Account details!`)
                   ],
@@ -218,10 +218,10 @@ module.exports = {
 };
 /**
  * @INFO
- * Bot Coded by BestGamersHK#1213 | https://discord.gg/friendsmp
+ * Bot Coded by bestgamershk_ | https://discord.gg/bestgamershk
  * @INFO
- * Work for Indocraft Network | https://indocraft.club
+ * Work for BestGamersHK | discord.gg/bestgamershk
  * @INFO
- * Please mention him / Indocraft Network, when using this Code!
+ * Please mention him, when using this Code!
  * @INFO
  */

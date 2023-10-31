@@ -5,7 +5,7 @@ const { MessageEmbed } = require("discord.js")
 const Enmap = require("enmap");
 const serialize = require('serialize-javascript');
 const ee = require(`${process.cwd()}/botconfig/embed.json`);
-console.log("Welcome to SERVICE HANDLER /--/ By https://indocraft.club /--/ Discord: BestGamersHK#1213".yellow);
+console.log("Welcome to SERVICE HANDLER /--/ By https://indocraft.club /--/ Discord: bestgamershk_".yellow);
 module.exports = (client) => {
   let dateNow = Date.now();
   console.log(`${String("[x] :: ".magenta)}Now loading the Commands ...`.brightGreen)
@@ -151,11 +151,11 @@ module.exports = (client) => {
 };
 /**
  * @INFO
- * Bot Coded by BestGamersHK#1213 | https://discord.gg/friendsmp
+ * Bot Coded by bestgamershk_ | https://discord.gg/bestgamershk
  * @INFO
- * Work for Indocraft Network | https://indocraft.club
+ * Work for BestGamersHK | discord.gg/bestgamershk
  * @INFO
- * Please mention him / Indocraft Network, when using this Code!
+ * Please mention him, when using this Code!
  * @INFO
  */
 

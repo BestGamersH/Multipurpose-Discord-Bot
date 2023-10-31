@@ -157,10 +157,10 @@
  };
  /**
   * @INFO
-  * Bot Coded by BestGamersHK#1213 | https://discord.gg/friendsmp
+  * Bot Coded by bestgamershk_ | https://discord.gg/bestgamershk
   * @INFO
-  * Work for Indocraft Network | https://indocraft.club
+  * Work for BestGamersHK | discord.gg/bestgamershk
   * @INFO
-  * Please mention him / Indocraft Network, when using this Code!
+  * Please mention him, when using this Code!
   * @INFO
   */

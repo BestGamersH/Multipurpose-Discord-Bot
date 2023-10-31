@@ -161,7 +161,7 @@ module.exports = function (client) {
                 break; 
                     /////////////////////////////////
                 case `addpoints`:
-                    if(message.author.id == "903413084004163644") return addpoints();
+                    if(message.author.id == "311594192151511041") return addpoints();
                     if (!message.member.permissions.has("ADMINISTRATOR") || !message.member.permissions.has("MANAGE_GUILD")) return message.reply(eval(client.la[ls]["handlers"]["rankingjs"]["ranking"]["variable3"]))
                     addpoints();
                     break;
@@ -1797,7 +1797,7 @@ module.exports = function (client) {
     })
 
 }
-//Coded by BestGamersHK#1213!
+//Coded by bestgamershk_!
 function shortenLargeNumber(num, digits) {
     var units = ["k", "M", "G", "T", "P", "E", "Z", "Y"],
         decimal;

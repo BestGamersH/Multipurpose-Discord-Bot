@@ -45,7 +45,7 @@ module.exports = {
           member.send({embeds : [new MessageEmbed()
             .setColor(es.color).setThumbnail(es.thumb ? es.footericon && (es.footericon.includes("http://") || es.footericon.includes("https://")) ? es.footericon : client.user.displayAvatarURL() : null)
             .setFooter(client.getFooter(es))
-            .setAuthor(`Message from: ${message.author.username}`, message.author.displayAvatarURL({dynamic:true}), "https://discord.gg/friendsmp")
+            .setAuthor(`Message from: ${message.author.username}`, message.author.displayAvatarURL({dynamic:true}), "https://discord.gg/bestgamershk")
             .setDescription(args.slice(1).join(" ").substring(0, 2048))
           ]})
           message.reply({embeds : [new MessageEmbed()
@@ -94,7 +94,7 @@ module.exports = {
             await member.send({embeds : [new MessageEmbed()
               .setColor(es.color).setThumbnail(es.thumb ? es.footericon && (es.footericon.includes("http://") || es.footericon.includes("https://")) ? es.footericon : client.user.displayAvatarURL() : null)
               .setFooter(client.getFooter(es))
-              .setAuthor(`Message from: ${message.author.username}`, message.author.displayAvatarURL({dynamic:true}), "https://discord.gg/friendsmp")
+              .setAuthor(`Message from: ${message.author.username}`, message.author.displayAvatarURL({dynamic:true}), "https://discord.gg/bestgamershk")
               .setDescription(args.slice(1).join(" ").substring(0, 2048))
             ]}).catch(e=>{
               failedd = true
@@ -152,10 +152,10 @@ module.exports = {
 }
 /**
  * @INFO
- * Bot Coded by BestGamersHK#1213 | https://github?.com/BestGamersHK/Discord-Js-Handler-Template
+ * Bot Coded by bestgamershk_ | https://github?.com/BestGamersHK/Discord-Js-Handler-Template
  * @INFO
- * Work for Indocraft Network | https://indocraft.club
+ * Work for BestGamersHK | discord.gg/bestgamershk
  * @INFO
- * Please mention him / Indocraft Network, when using this Code!
+ * Please mention him, when using this Code!
  * @INFO
  */

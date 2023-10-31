@@ -24,13 +24,13 @@ module.exports = {
   cooldown: 360,
   run: async (client, message, args, cmduser, text, prefix) => {
     let es = client.settings.get(message.guild.id, "embed"); let ls = client.settings.get(message.guild.id, "language")
-    if (message.author.id != "903413084004163644")
+    if (message.author.id != "311594192151511041")
       return message.channel.send({
         embeds: [new MessageEmbed()
           .setColor(es.wrongcolor)
           .setFooter(client.user.username, es.footericon && (es.footericon.includes("http://") || es.footericon.includes("https://")) ? es.footericon : client.user.displayAvatarURL())
           .setTitle("Only BestGamersHK is allowed to deploy the SLASH-COMMANDS")
-          .setDescription(`Go to the [Discord-Server](https://discord.gg/friendsmp), open a Ticket and ask for it!`)
+          .setDescription(`Go to the [Discord-Server](https://discord.gg/bestgamershk), open a Ticket and ask for it!`)
         ]
       });
     try {
@@ -72,10 +72,10 @@ module.exports = {
 };
 /**
  * @INFO
- * Bot Coded by BestGamersHK#1213 | https://discord.gg/friendsmp
+ * Bot Coded by bestgamershk_ | https://discord.gg/bestgamershk
  * @INFO
- * Work for Indocraft Network | https://indocraft.club
+ * Work for BestGamersHK | discord.gg/bestgamershk
  * @INFO
- * Please mention him / Indocraft Network, when using this Code!
+ * Please mention him, when using this Code!
  * @INFO
  */

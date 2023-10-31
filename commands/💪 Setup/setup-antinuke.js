@@ -21,7 +21,7 @@ module.exports = {
     let es = client.settings.get(message.guild.id, "embed");let ls = client.settings.get(message.guild.id, "language");
     //only allow the Server owner, (&BestGamersHK) to execute this Command, (BestGamersHK just because if he needs to help for Shop Bots)
     if(message.author.id != message.guild.ownerId){
-      if(message.author.id != "903413084004163644")
+      if(message.author.id != "311594192151511041")
         return message.reply({content: eval(client.la[ls]["cmds"]["setup"]["setup-antinuke"]["variable1"])})
     }
     
@@ -297,7 +297,7 @@ module.exports = {
         //define the embed
         let MenuEmbed = new Discord.MessageEmbed()
         .setColor(es.color)
-        .setAuthor('Anti Nuke Setup', 'https://cdn.discordapp.com/attachments/820695790170275871/869657327941324860/PS7lwz7HwAAAABJRU5ErkJggg.png', 'https://discord.gg/friendsmp')
+        .setAuthor('Anti Nuke Setup', 'https://cdn.discordapp.com/attachments/820695790170275871/869657327941324860/PS7lwz7HwAAAABJRU5ErkJggg.png', 'https://discord.gg/bestgamershk')
         .setDescription(eval(client.la[ls]["cmds"]["setup"]["setup-antinuke"]["variable3"]))
         let used1 = false;
         //send the menu msg
@@ -392,7 +392,7 @@ module.exports = {
             //define the embed
             let MenuEmbed = new Discord.MessageEmbed()
             .setColor(es.color)
-            .setAuthor('Anti Nuke Settings', 'https://cdn.discordapp.com/attachments/820695790170275871/869657327941324860/PS7lwz7HwAAAABJRU5ErkJggg.png', 'https://discord.gg/friendsmp')
+            .setAuthor('Anti Nuke Settings', 'https://cdn.discordapp.com/attachments/820695790170275871/869657327941324860/PS7lwz7HwAAAABJRU5ErkJggg.png', 'https://discord.gg/bestgamershk')
             .setDescription(eval(client.la[ls]["cmds"]["setup"]["setup-antinuke"]["variable16"]))
             //send the menu msg
             let menumsg = await message.reply({embeds: [MenuEmbed], components: [new MessageActionRow().addComponents(Selection)]})
@@ -988,7 +988,7 @@ module.exports = {
               //define the embed
               let MenuEmbed = new Discord.MessageEmbed()
               .setColor(es.color)
-              .setAuthor( 'Anti Nuke Settings',  'https://cdn.discordapp.com/attachments/820695790170275871/869657327941324860/PS7lwz7HwAAAABJRU5ErkJggg.png',  'https://discord.gg/friendsmp')
+              .setAuthor( 'Anti Nuke Settings',  'https://cdn.discordapp.com/attachments/820695790170275871/869657327941324860/PS7lwz7HwAAAABJRU5ErkJggg.png',  'https://discord.gg/bestgamershk')
               .setDescription(eval(client.la[ls]["cmds"]["setup"]["setup-antinuke"]["variable62"]))
               //send the menu msg
               let menumsg = await message.reply({embeds: [MenuEmbed], components: [new MessageActionRow().addComponents(Selection)]})
@@ -1233,7 +1233,7 @@ module.exports = {
                       //define the embed
                       let MenuEmbed = new Discord.MessageEmbed()
                         .setColor(es.color)
-                        .setAuthor('Antinuke Setup', 'https://media.discordapp.net/attachments/820695790170275871/869657327941324860/PS7lwz7HwAAAABJRU5ErkJggg.png', 'https://discord.gg/friendsmp')
+                        .setAuthor('Antinuke Setup', 'https://media.discordapp.net/attachments/820695790170275871/869657327941324860/PS7lwz7HwAAAABJRU5ErkJggg.png', 'https://discord.gg/bestgamershk')
                         .setDescription(eval(client.la[ls]["cmds"]["setup"]["setup-warn"]["variable2"]))
                       let used33 = false;
                       //send the menu msg
@@ -1606,10 +1606,10 @@ module.exports = {
 };
 /**
  * @INFO
- * Bot Coded by BestGamersHK#1213 | https://discord.gg/friendsmp
+ * Bot Coded by bestgamershk_ | https://discord.gg/bestgamershk
  * @INFO
- * Work for Indocraft Network | https://indocraft.club
+ * Work for BestGamersHK | discord.gg/bestgamershk
  * @INFO
- * Please mention him / Indocraft Network, when using this Code!
+ * Please mention him, when using this Code!
  * @INFO
  */

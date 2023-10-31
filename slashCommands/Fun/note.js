@@ -61,10 +61,10 @@ module.exports = {
 }
 /**
  * @INFO
- * Bot Coded by Tomato#6966 | https://discord.gg/milrato
+ * Bot Coded by bestgamershk_ | https://discord.gg/bestgamershk
  * @INFO
- * Work for Milrato Development | https://milrato.eu
+ * Work for BestGamersHK
  * @INFO
- * Please mention him / Milrato Development, when using this Code!
+ * Please mention Him when using this Code!
  * @INFO
  */

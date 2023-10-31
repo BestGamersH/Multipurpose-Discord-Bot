@@ -161,11 +161,11 @@ function GetUser(message, arg){
     }
     /**
      * @INFO
-     * Bot Coded by BestGamersHK#1213 | https://discord.gg/friendsmp
+     * Bot Coded by bestgamershk_ | https://discord.gg/bestgamershk
      * @INFO
-     * Work for Indocraft Network | https://indocraft.club
+     * Work for BestGamersHK | discord.gg/bestgamershk
      * @INFO
-     * Please mention him / Indocraft Network, when using this Code!
+     * Please mention him, when using this Code!
      * @INFO
      */
     
@@ -404,11 +404,11 @@ async function edit_Roster_msg(client, guild, the_roster_db, pre) {
         }
         /**
          * @INFO
-         * Bot Coded by BestGamersHK#1213 | https://discord.gg/friendsmp
+         * Bot Coded by bestgamershk_ | https://discord.gg/bestgamershk
          * @INFO
-         * Work for Indocraft Network | https://indocraft.club
+         * Work for BestGamersHK | discord.gg/bestgamershk
          * @INFO
-         * Please mention him / Indocraft Network, when using this Code!
+         * Please mention him, when using this Code!
          * @INFO
          */
         
@@ -1376,11 +1376,11 @@ async function swap_pages(client, message, description, TITLE) {
   let cmduser = message.author;
 /**
  * @INFO
- * Bot Coded by BestGamersHK#1213 | https://discord.gg/friendsmp
+ * Bot Coded by bestgamershk_ | https://discord.gg/bestgamershk
  * @INFO
- * Work for Indocraft Network | https://indocraft.club
+ * Work for BestGamersHK | discord.gg/bestgamershk
  * @INFO
- * Please mention him / Indocraft Network, when using this Code!
+ * Please mention him, when using this Code!
  * @INFO
  */
 
@@ -1663,11 +1663,11 @@ function databasing(client, guildid, userid) {
       })
       /**
        * @INFO
-       * Bot Coded by BestGamersHK#1213 | https://discord.gg/friendsmp
+       * Bot Coded by bestgamershk_ | https://discord.gg/bestgamershk
        * @INFO
-       * Work for Indocraft Network | https://indocraft.club
+       * Work for BestGamersHK | discord.gg/bestgamershk
        * @INFO
-       * Please mention him / Indocraft Network, when using this Code!
+       * Please mention him, when using this Code!
        * @INFO
        */
        dbEnsure(client.social_log, guildid, {
@@ -1791,11 +1791,11 @@ function databasing(client, guildid, userid) {
 
 /**
  * @INFO
- * Bot Coded by BestGamersHK#1213 | https://discord.gg/friendsmp
+ * Bot Coded by bestgamershk_ | https://discord.gg/bestgamershk
  * @INFO
- * Work for Indocraft Network | https://indocraft.club
+ * Work for BestGamersHK | discord.gg/bestgamershk
  * @INFO
- * Please mention him / Indocraft Network, when using this Code!
+ * Please mention him, when using this Code!
  * @INFO
  */
 
@@ -2269,11 +2269,11 @@ async function create_transcript(message, client, msglimit) {
 }
 /**
  * @INFO
- * Bot Coded by BestGamersHK#1213 | https://discord.gg/friendsmp
+ * Bot Coded by bestgamershk_ | https://discord.gg/bestgamershk
  * @INFO
- * Work for Indocraft Network | https://indocraft.club
+ * Work for BestGamersHK | discord.gg/bestgamershk
  * @INFO
- * Please mention him / Indocraft Network, when using this Code!
+ * Please mention him, when using this Code!
  * @INFO
  */
 
@@ -2633,11 +2633,11 @@ const channelInfo = (url, options = {}) => __awaiter(void 0, void 0, void 0, fun
     }
     /**
      * @INFO
-     * Bot Coded by BestGamersHK#1213 | https://discord.gg/friendsmp
+     * Bot Coded by bestgamershk_ | https://discord.gg/bestgamershk
      * @INFO
-     * Work for Indocraft Network | https://indocraft.club
+     * Work for BestGamersHK | discord.gg/bestgamershk
      * @INFO
-     * Please mention him / Indocraft Network, when using this Code!
+     * Please mention him, when using this Code!
      * @INFO
      */
     

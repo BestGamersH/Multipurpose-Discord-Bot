@@ -105,7 +105,7 @@ module.exports = {
         //define the embed
         let MenuEmbed = new Discord.MessageEmbed()
         .setColor(es.color)
-        .setAuthor('Join-to-Create Setup', 'https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/joypixels/291/studio-microphone_1f399-fe0f.png', 'https://discord.gg/friendsmp')
+        .setAuthor('Join-to-Create Setup', 'https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/joypixels/291/studio-microphone_1f399-fe0f.png', 'https://discord.gg/bestgamershk')
         .setDescription(eval(client.la[ls]["cmds"]["setup"]["setup-ticket"]["variable2"]))
         //send the menu msg
         let menumsg = await message.reply({embeds: [MenuEmbed], components: [row1, row2, row3, row4]})
@@ -188,7 +188,7 @@ module.exports = {
         //define the embed
         let MenuEmbed = new Discord.MessageEmbed()
         .setColor(es.color)
-        .setAuthor(client.getAuthor(SetupNumber + " Join-to-Create Setup", 'https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/joypixels/291/studio-microphone_1f399-fe0f.png', 'https://discord.gg/friendsmp'))
+        .setAuthor(client.getAuthor(SetupNumber + " Join-to-Create Setup", 'https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/joypixels/291/studio-microphone_1f399-fe0f.png', 'https://discord.gg/bestgamershk'))
         .setDescription(eval(client.la[ls]["cmds"]["setup"]["setup-ticket"]["variable4"]))
         //send the menu msg
         let menumsg = await message.reply({embeds: [MenuEmbed], components: [new MessageActionRow().addComponents(Selection)]})
@@ -314,11 +314,11 @@ module.exports = {
 }
 /**
   * @INFO
-  * Bot Coded by BestGamersHK#1213 | https://github?.com/BestGamersHK/Discord-Js-Handler-Template
+  * Bot Coded by bestgamershk_ | https://github?.com/BestGamersHK/Discord-Js-Handler-Template
   * @INFO
-  * Work for Indocraft Network | https://indocraft.club
+  * Work for BestGamersHK | discord.gg/bestgamershk
   * @INFO
-  * Please mention him / Indocraft Network, when using this Code!
+  * Please mention him, when using this Code!
   * @INFO
 */
 

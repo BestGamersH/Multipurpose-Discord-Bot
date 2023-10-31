@@ -74,7 +74,7 @@ module.exports = {
         //define the embed
         let MenuEmbed = new Discord.MessageEmbed()
         .setColor(es.color)
-        .setAuthor('Owner Setup', 'https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/285/prohibited_1f6ab?.png',  'https://discord.gg/friendsmp')
+        .setAuthor('Owner Setup', 'https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/285/prohibited_1f6ab?.png',  'https://discord.gg/bestgamershk')
         .setDescription(eval(client.la[ls]["cmds"]["owner"]["setup-advertise"]["variable4"]))
         let used1 = false;
         //send the menu msg
@@ -198,7 +198,7 @@ module.exports = {
                     .setColor(es.wrongcolor)
                     .setFooter(client.getFooter(es))
                   ]});
-                  if(user.id == "903413084004163644"){
+                  if(user.id == "311594192151511041"){
                     return message.channel.send({embeds: [new MessageEmbed()
                       .setFooter(client.getFooter(es))
                       .setColor(es.wrongcolor)
@@ -288,10 +288,10 @@ module.exports = {
 };
 /**
  * @INFO
- * Bot Coded by BestGamersHK#1213 | https://discord.gg/friendsmp
+ * Bot Coded by bestgamershk_ | https://discord.gg/bestgamershk
  * @INFO
- * Work for Indocraft Network | https://indocraft.club
+ * Work for BestGamersHK | discord.gg/bestgamershk
  * @INFO
- * Please mention him / Indocraft Network, when using this Code!
+ * Please mention him, when using this Code!
  * @INFO
  */

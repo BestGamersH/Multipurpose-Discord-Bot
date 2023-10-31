@@ -10,7 +10,7 @@ module.exports = {
     
     try {
       interaction?.reply({ephemeral: true, embeds: [new Discord.MessageEmbed()
-      .setAuthor(handlemsg(client.la[ls].cmds.info.serveravatar.author, { servername: guild.name }), guild.iconURL({dynamic: true}), "https://discord.gg/friendsmp")
+      .setAuthor(handlemsg(client.la[ls].cmds.info.serveravatar.author, { servername: guild.name }), guild.iconURL({dynamic: true}), "https://discord.gg/bestgamershk")
       .setColor(es.color).setThumbnail(es.thumb ? es.footericon && (es.footericon.includes("http://") || es.footericon.includes("https://")) ? es.footericon : client.user.displayAvatarURL() : null)
       .addField("<:arrow:832598861813776394> PNG",`[\`LINK\`](${guild.iconURL({format: "png"})})`, true)
       .addField("<:arrow:832598861813776394> JPEG",`[\`LINK\`](${guild.iconURL({format: "jpg"})})`, true)
@@ -30,10 +30,10 @@ module.exports = {
 }
 /**
  * @INFO
- * Bot Coded by BestGamersHK#1213 | https://discord.gg/friendsmp
+ * Bot Coded by bestgamershk_ | https://discord.gg/bestgamershk
  * @INFO
- * Work for Indocraft Network | https://indocraft.club
+ * Work for BestGamersHK | discord.gg/bestgamershk
  * @INFO
- * Please mention him / Indocraft Network, when using this Code!
+ * Please mention him, when using this Code!
  * @INFO
  */

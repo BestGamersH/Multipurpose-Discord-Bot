@@ -94,7 +94,7 @@ module.exports = {
       //define the embed
       let MenuEmbed = new Discord.MessageEmbed()
       .setColor(es.color)
-      .setAuthor(client.la[ls].cmds.info.botfaq.menuembed.title, client.user.displayAvatarURL(), "https://discord.gg/friendsmp")
+      .setAuthor(client.la[ls].cmds.info.botfaq.menuembed.title, client.user.displayAvatarURL(), "https://discord.gg/bestgamershk")
       .setDescription(client.la[ls].cmds.info.botfaq.menuembed.description)
       //send the menu msg
       await interaction?.reply({embeds: [MenuEmbed], components: [Selection], ephemeral: true})
@@ -103,7 +103,7 @@ module.exports = {
         let menuoptiondata = menuoptions.find(v=>v.value.substring(0, 25) == interaction?.values[0])
         interaction?.reply({embeds: [new Discord.MessageEmbed()
         .setColor(es.color)
-        .setAuthor(client.la[ls].cmds.info.botfaq.menuembed.title, client.user.displayAvatarURL(), "https://discord.gg/friendsmp")
+        .setAuthor(client.la[ls].cmds.info.botfaq.menuembed.title, client.user.displayAvatarURL(), "https://discord.gg/bestgamershk")
         .setDescription(menuoptiondata.replymsg)], ephemeral: true});
       }
       //Event
@@ -120,10 +120,10 @@ module.exports = {
 };
 /**
   * @INFO
-  * Bot Coded by BestGamersHK#1213 | https://discord.gg/friendsmp
+  * Bot Coded by bestgamershk_ | https://discord.gg/bestgamershk
   * @INFO
-  * Work for Indocraft Network | https://indocraft.club
+  * Work for BestGamersHK | discord.gg/bestgamershk
   * @INFO
-  * Please mention him / Indocraft Network, when using this Code!
+  * Please mention him, when using this Code!
   * @INFO
 */

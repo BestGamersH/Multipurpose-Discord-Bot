@@ -47,7 +47,7 @@ module.exports = {
       let embed = new Discord.MessageEmbed()
       .setAuthor(client.getAuthor(client.la[ls].cmds.info.serverinfo.author + " " +  message.guild.name, message.guild.iconURL({
         dynamic: true
-      }), "https://discord.com/api/oauth2/authorize?client_id=1086909752644218940&permissions=8&scope=bot%20applications.commands"))
+      }), "https://discord.com/api/oauth2/authorize?client_id=1168734693492006973&permissions=8&scope=bot%20applications.commands"))
       .setThumbnail(es.thumb ? es.footericon && (es.footericon.includes("http://") || es.footericon.includes("https://")) ? es.footericon : client.user.displayAvatarURL() : null)
       embed.addField(client.la[ls].cmds.info.serverinfo.field1, `${message.guild.owner}\n\`${message.guild.owner.tag}\``, true)
       embed.addField(client.la[ls].cmds.info.serverinfo.field2, "\`" + moment(message.guild.createdTimestamp).format("DD/MM/YYYY") + "\`\n" + "`"+ moment(message.guild.createdTimestamp).format("hh:mm:ss") +"`", true)
@@ -139,10 +139,10 @@ module.exports = {
 }
 /**
  * @INFO
- * Bot Coded by BestGamersHK#1213 | https://discord.gg/friendsmp
+ * Bot Coded by bestgamershk_ | https://discord.gg/bestgamershk
  * @INFO
- * Work for Indocraft Network | https://indocraft.club
+ * Work for BestGamersHK | discord.gg/bestgamershk
  * @INFO
- * Please mention him / Indocraft Network, when using this Code!
+ * Please mention him, when using this Code!
  * @INFO
  */

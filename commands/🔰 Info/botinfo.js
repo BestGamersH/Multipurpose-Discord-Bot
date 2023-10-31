@@ -1,4 +1,4 @@
-const Discord = require("discord.js");
+﻿const Discord = require("discord.js");
 const moment = require("moment");
 let os = require("os");
 let cpuStat = require("cpu-stat");
@@ -19,7 +19,7 @@ module.exports = {
     
     try{
       let tempmsg = await message.reply({embeds: [new Discord.MessageEmbed().setColor(es.color)
-      .setAuthor(client.la[ls].cmds.info.botinfo.loading, "https://cdn.discordapp.com/emojis/756773010123522058.gif", "https://discord.gg/friendsmp")]})
+      .setAuthor(client.la[ls].cmds.info.botinfo.loading, "https://cdn.discordapp.com/emojis/756773010123522058.gif", "https://discord.gg/hsmU2c7mVa")]})
       cpuStat.usagePercent(function (e, percent, seconds) {
           if (e) {
               return console.log(e.stack ? String(e.stack).grey : String(e).grey);
@@ -39,7 +39,7 @@ module.exports = {
             .addField(client.la[ls].cmds.info.botinfo.field1.title, handlemsg(client.la[ls].cmds.info.botinfo.field1.value, {totalGuilds: totalGuilds, totalMembers: totalMembers, connections: connectedchannelsamount, connectedchannelsamount: connectedchannelsamount}), true)
             .addField(client.la[ls].cmds.info.botinfo.field2.title, `\`\`\`yml\nNode.js: ${process.version}\nDiscord.js: v${Discord.version}\nEnmap: v5.8.4\`\`\``, true)
             .addField(client.la[ls].cmds.info.botinfo.field3.title, handlemsg(client.la[ls].cmds.info.botinfo.field3.value, {cpu: percent.toFixed(2), ram: (process.memoryUsage().heapUsed/1024/1024).toFixed(2)}))
-            .addField(client.la[ls].cmds.info.botinfo.field4.title, `\`\`\`yml\nName: BestGamersHK#1213\nID: [903413084004163644]\`\`\``, true)
+            .addField(client.la[ls].cmds.info.botinfo.field4.title, `\`\`\`yml\nName: bestgamershk_\nID: [311594192151511041]\`\`\``, true)
             .addField(client.la[ls].cmds.info.botinfo.field5.title, handlemsg(client.la[ls].cmds.info.botinfo.field5.value, {invitelink: `https://discord.com/api/oauth2/authorize?client_id=${client.user.id}&permissions=8&scope=bot%20applications.commands`}))
             .setFooter(client.getFooter(es));
         tempmsg.edit({embeds: [botinfo]});
@@ -57,10 +57,10 @@ module.exports = {
 };
 /**
   * @INFO
-  * Bot Coded by BestGamersHK#1213 | https://discord.gg/friendsmp
+  * Bot Coded by bestgamershk_ | https://discord.gg/bestgamershk
   * @INFO
-  * Work for Indocraft Network | https://indocraft.club
+  * Work for BestGamersHK | discord.gg/bestgamershk
   * @INFO
-  * Please mention him / Indocraft Network, when using this Code!
+  * Please mention him, when using this Code!
   * @INFO
 */

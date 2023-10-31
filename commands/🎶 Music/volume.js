@@ -64,10 +64,10 @@ const { handlemsg } = require(`${process.cwd()}/handlers/functions`);
 };
 /**
  * @INFO
- * Bot Coded by BestGamersHK#1213 | https://github?.com/BestGamersHK/discord-js-lavalink-Music-Bot-erela-js
+ * Bot Coded by bestgamershk_ | https://github?.com/BestGamersHK/discord-js-lavalink-Music-Bot-erela-js
  * @INFO
- * Work for Indocraft Network | https://indocraft.club
+ * Work for BestGamersHK | discord.gg/bestgamershk
  * @INFO
- * Please mention Him / Indocraft Network, when using this Code!
+ * Please mention him, when using this Code!
  * @INFO
  */
