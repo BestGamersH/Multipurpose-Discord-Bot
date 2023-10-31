@@ -17,7 +17,7 @@
         "nodes": [
             {
 		"host": "host",
-                "port": port,
+                "port": "port",
                 "password": "pass"
             }
         ]
