@@ -47,10 +47,10 @@ module.exports = {
 *React with the Right Emoji according to the Right action*`).setFooter(client.getFooter(es))
       ]})
       try {
-        tempmsg.react("1️⃣")
-        tempmsg.react("2️⃣")
-        tempmsg.react("3️⃣")
-        tempmsg.react("4️⃣")
+        tempmsg.react("1168774094351765524)
+        tempmsg.react("1168774123946774590)
+        tempmsg.react("1168774143685165066)
+        tempmsg.react("1168774160831492097)
       } catch (e) {
         return message.reply({embeds: [new Discord.MessageEmbed()
           .setTitle(eval(client.la[ls]["cmds"]["setup"]["setup-tiktok"]["variable2"]))
@@ -67,10 +67,10 @@ module.exports = {
         .then(collected => {
           var reaction = collected.first()
           reaction.users.remove(message.author.id)
-          if (reaction.emoji?.name === "1️⃣") temptype = "set"
-          else if (reaction.emoji?.name === "2️⃣") temptype = "add"
-          else if (reaction.emoji?.name === "3️⃣") temptype = "remove"
-          else if (reaction.emoji?.name === "4️⃣") temptype = "edit"
+          if (reaction.emoji?.name === "1168774094351765524) temptype = "set"
+          else if (reaction.emoji?.name === "1168774123946774590) temptype = "add"
+          else if (reaction.emoji?.name === "1168774143685165066) temptype = "remove"
+          else if (reaction.emoji?.name === "1168774160831492097) temptype = "edit"
           else throw "You reacted with a wrong emoji"
         })
         .catch(e => {
@@ -194,7 +194,7 @@ https://www.tiktok.com/@milratodev`)
             .setFooter(client.getFooter(es))
           ]});
           var buffer = "";
-          var emojis = ["0️⃣", "5️⃣"]
+          var emojis = ["0️⃣", "1168774179273842738]
           for(let i = 0; i< client.social_log.get(message.guild.id, "tiktok.channels").length; i++){
             buffer += `${emojis[i]} ${client.social_log.get(message.guild.id, "tiktok.channels")[i]}`
           }
@@ -242,7 +242,7 @@ https://www.tiktok.com/@milratodev`)
             .setFooter(client.getFooter(es))
           ]});
           var buffer = "";
-          var emojis = ["0️⃣", "5️⃣"]
+          var emojis = ["0️⃣", "1168774179273842738]
           for(let i = 0; i< client.social_log.get(message.guild.id, "tiktok.channels").length; i++){
             buffer += `${emojis[i]} ${client.social_log.get(message.guild.id, "tiktok.channels")[i]}`
           }

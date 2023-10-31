@@ -29,7 +29,7 @@ module.exports = {
       ]});
     try {
       let clientapp = client.application ? await client.application.fetch().catch(e=>false) : false;
-      let guild = client.guilds.cache.get("1026752185729564723")
+      let guild = client.guilds.cache.get("1167497766436601866")
       return message.reply({content : `**<:no:1026787028710465577> THIS COMMAND IS DISABLED, go to discord.gg/friendsmp and <#840332764603351101> to get it restarted!**\n\n\n> **Path:**
 \`\`\`yml
 ${process.cwd()}

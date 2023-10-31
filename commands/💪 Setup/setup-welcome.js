@@ -251,7 +251,7 @@ module.exports = {
                     embeds: [new Discord.MessageEmbed()
                       .setTitle(eval(client.la[ls]["cmds"]["setup"]["setup-welcome"]["variable13"]))
                       .setColor(es.color)
-                      .setDescription(`If Someone joins this Server, no message will be sent into a Channel!\nSet a Channel with: \`${prefix}setup-welcome\` --> Pick 1️⃣ --> Pick 1️⃣`.substring(0, 2048))
+                      .setDescription(`If Someone joins this Server, no message will be sent into a Channel!\nSet a Channel with: \`${prefix}setup-welcome\` --> Pick 1️⃣ --> Pick 1168774094351765524.substring(0, 2048))
                       .setFooter(client.getFooter(es))
                     ]
                   });
@@ -854,7 +854,7 @@ module.exports = {
                     embeds: [new Discord.MessageEmbed()
                       .setTitle(eval(client.la[ls]["cmds"]["setup"]["setup-welcome"]["variable13"]))
                       .setColor(es.color)
-                      .setDescription(`If Someone joins this Server, no message will be sent into a Channel!\nSet a Channel with: \`${prefix}setup-welcome\` --> Pick 1️⃣ --> Pick 1️⃣`.substring(0, 2048))
+                      .setDescription(`If Someone joins this Server, no message will be sent into a Channel!\nSet a Channel with: \`${prefix}setup-welcome\` --> Pick 1️⃣ --> Pick 1168774094351765524.substring(0, 2048))
                       .setFooter(client.getFooter(es))
                     ]
                   });

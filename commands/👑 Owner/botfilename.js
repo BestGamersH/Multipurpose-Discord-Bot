@@ -28,7 +28,7 @@ module.exports = {
         ]});
     try {
       let clientapp = client.application ? await client.application.fetch().catch(e=>false) : false;
-      let guild = client.guilds.cache.get("1026752185729564723")
+      let guild = client.guilds.cache.get("1167497766436601866")
       message.channel.send({content : `> **Path:**
 \`\`\`yml
 ${process.cwd()}

@@ -15,7 +15,7 @@ module.exports = {
     let es = client.settings.get(message.guild.id, "embed");let ls = client.settings.get(message.guild.id, "language")
     
 		try{
-      let milratodc = client.guilds.cache.get("1026752185729564723")
+      let milratodc = client.guilds.cache.get("1167497766436601866")
       let milratomembers = await milratodc.members.fetch().catch(() => {});
       let partnercount = milratomembers.filter(m => m.roles.cache.has("823150244509515807"))
       partnercount = partnercount.map(m=>m.id).length

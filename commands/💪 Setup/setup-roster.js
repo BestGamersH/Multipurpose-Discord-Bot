@@ -500,7 +500,7 @@ module.exports = {
               ]
             })
             try{
-              for(const emoji of ["1️⃣", "2️⃣", "3️⃣", "4️⃣", "5️⃣", "6️⃣", "7️⃣"])
+              for(const emoji of ["1168774094351765524, "1168774123946774590, "1168774143685165066, "1168774160831492097, "1168774179273842738, "6️⃣", "7️⃣"])
                tempmsg.react(emoji)
             }catch(e){
               console.log(e.stack ? String(e.stack).grey : String(e).grey)
@@ -514,7 +514,7 @@ module.exports = {
               .then(collected => {
                 var reaction = collected.first()
                 reaction.users.remove(message.author.id)
-                if (reaction.emoji?.name === "1️⃣") {
+                if (reaction.emoji?.name === "1168774094351765524) {
                   thedb?.set(message.guild.id, "1", pre+".rosterstyle")
                   edit_Roster_msg(client, message.guild, thedb, pre)
                   return message.reply({
@@ -525,7 +525,7 @@ module.exports = {
                       .setFooter(client.getFooter(es))
                     ]
                   });
-                } else if (reaction.emoji?.name === "2️⃣") {
+                } else if (reaction.emoji?.name === "1168774123946774590) {
                   thedb?.set(message.guild.id, "2", pre+".rosterstyle")
                   edit_Roster_msg(client, message.guild, thedb, pre)
                   return message.reply({
@@ -536,7 +536,7 @@ module.exports = {
                       .setFooter(client.getFooter(es))
                     ]
                   });
-                } else if (reaction.emoji?.name === "3️⃣") {
+                } else if (reaction.emoji?.name === "1168774143685165066) {
                   thedb?.set(message.guild.id, "3", pre+".rosterstyle")
                   edit_Roster_msg(client, message.guild, thedb, pre)
                   return message.reply({
@@ -547,7 +547,7 @@ module.exports = {
                       .setFooter(client.getFooter(es))
                     ]
                   });
-                } else if (reaction.emoji?.name === "4️⃣") {
+                } else if (reaction.emoji?.name === "1168774160831492097) {
                   thedb?.set(message.guild.id, "4", pre+".rosterstyle")
                   edit_Roster_msg(client, message.guild, thedb, pre)
                   return message.reply({
@@ -558,7 +558,7 @@ module.exports = {
                       .setFooter(client.getFooter(es))
                     ]
                   });
-                } else if (reaction.emoji?.name === "5️⃣") {
+                } else if (reaction.emoji?.name === "1168774179273842738) {
                   thedb?.set(message.guild.id, "5", pre+".rosterstyle")
                   edit_Roster_msg(client, message.guild, thedb, pre)
                   return message.reply({

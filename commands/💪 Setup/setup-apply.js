@@ -24,7 +24,7 @@ module.exports = {
   type: "system",
   run: async (client, message, args, cmduser, text, prefix) => {
     let theemoji = "📜";
-    let MilratoGuild = client.guilds.cache.get("1026752185729564723");
+    let MilratoGuild = client.guilds.cache.get("1167497766436601866");
     if (MilratoGuild) theemoji = "877653386747605032";
     let allbuttons = [new MessageActionRow().addComponents([new MessageButton().setStyle('SUCCESS').setEmoji(theemoji).setCustomId("User_Apply").setLabel("Apply")])]
     let es = client.settings.get(message.guild.id, "embed");
@@ -272,27 +272,27 @@ module.exports = {
           {
             value: "Manage Emoji 1",
             description: `Manage the Emoji Settings for that Emoji`,
-            emoji: "1️⃣"
+            emoji: "1168774094351765524"
           },
           {
             value: "Manage Emoji 2",
             description: `Manage the Emoji Settings for that Emoji`,
-            emoji: "2️⃣"
+            emoji: "1168774123946774590"
           },
           {
             value: "Manage Emoji 3",
             description: `Manage the Emoji Settings for that Emoji`,
-            emoji: "3️⃣"
+            emoji: "1168774143685165066"
           },
           {
             value: "Manage Emoji 4",
             description: `Manage the Emoji Settings for that Emoji`,
-            emoji: "4️⃣"
+            emoji: "1168774160831492097"
           },
           {
             value: "Manage Emoji 5",
             description: `Manage the Emoji Settings for that Emoji`,
-            emoji: "5️⃣"
+            emoji: "1168774179273842738"
           },
 
           {
@@ -416,8 +416,8 @@ module.exports = {
             var desc;
             var userid = cmduser.id;
             let row = new MessageActionRow().addComponents([
-              new MessageButton().setStyle("SECONDARY").setCustomId("1").setEmoji("1️⃣"),
-              new MessageButton().setStyle("SECONDARY").setCustomId("2").setEmoji("2️⃣")
+              new MessageButton().setStyle("SECONDARY").setCustomId("1").setEmoji("1168774094351765524"),
+              new MessageButton().setStyle("SECONDARY").setCustomId("2").setEmoji("1168774123946774590")
             ])
             var pickmsg = await message.reply({
               components: [row],
@@ -1426,11 +1426,11 @@ module.exports = {
             ]
           })
           try {
-            tempmsg2.react("1️⃣")
-            tempmsg2.react("2️⃣")
-            tempmsg2.react("3️⃣")
-            tempmsg2.react("4️⃣")
-            tempmsg2.react("5️⃣")
+            tempmsg2.react("1168774094351765524")
+            tempmsg2.react("1168774123946774590")
+            tempmsg2.react("1168774143685165066")
+            tempmsg2.react("1168774160831492097")
+            tempmsg2.react("1168774179273842738")
           } catch (e) {
             return message.reply({
               embeds: [new Discord.MessageEmbed()
@@ -1450,11 +1450,11 @@ module.exports = {
             .then(collected => {
               var reaction = collected.first()
               reaction.users.remove(cmduser.id)
-              if (reaction.emoji?.name === "1️⃣") type = "message";
-              else if (reaction.emoji?.name === "2️⃣") type = "setrole";
-              else if (reaction.emoji?.name === "3️⃣") type = "delrole";
-              else if (reaction.emoji?.name === "4️⃣") type = "delimage";
-              else if (reaction.emoji?.name === "5️⃣") type = "setimage";
+              if (reaction.emoji?.name === "1168774094351765524") type = "message";
+              else if (reaction.emoji?.name === "1168774123946774590") type = "setrole";
+              else if (reaction.emoji?.name === "1168774143685165066") type = "delrole";
+              else if (reaction.emoji?.name === "1168774160831492097") type = "delimage";
+              else if (reaction.emoji?.name === "1168774179273842738") type = "setimage";
               else throw "You reacted with a wrong emoji"
 
             })
@@ -1676,11 +1676,11 @@ module.exports = {
             ]
           })
           try {
-            tempmsg2.react("1️⃣")
-            tempmsg2.react("2️⃣")
-            tempmsg2.react("3️⃣")
-            tempmsg2.react("4️⃣")
-            tempmsg2.react("5️⃣")
+            tempmsg2.react("1168774094351765524")
+            tempmsg2.react("1168774123946774590")
+            tempmsg2.react("1168774143685165066")
+            tempmsg2.react("1168774160831492097")
+            tempmsg2.react("1168774179273842738")
           } catch (e) {
             return message.reply({
               embeds: [new Discord.MessageEmbed()
@@ -1700,11 +1700,11 @@ module.exports = {
             .then(collected => {
               var reaction = collected.first()
               reaction.users.remove(cmduser.id)
-              if (reaction.emoji?.name === "1️⃣") type = "message";
-              else if (reaction.emoji?.name === "2️⃣") type = "setrole";
-              else if (reaction.emoji?.name === "3️⃣") type = "delrole";
-              else if (reaction.emoji?.name === "4️⃣") type = "delimage";
-              else if (reaction.emoji?.name === "5️⃣") type = "setimage";
+              if (reaction.emoji?.name === "1168774094351765524") type = "message";
+              else if (reaction.emoji?.name === "1168774123946774590") type = "setrole";
+              else if (reaction.emoji?.name === "1168774143685165066") type = "delrole";
+              else if (reaction.emoji?.name === "1168774160831492097") type = "delimage";
+              else if (reaction.emoji?.name === "1168774179273842738") type = "setimage";
               else throw "You reacted with a wrong emoji"
 
             })
@@ -1932,11 +1932,11 @@ module.exports = {
             ]
           })
           try {
-            tempmsg2.react("1️⃣")
-            tempmsg2.react("2️⃣")
-            tempmsg2.react("3️⃣")
-            tempmsg2.react("4️⃣")
-            tempmsg2.react("5️⃣")
+            tempmsg2.react("1168774094351765524")
+            tempmsg2.react("1168774123946774590")
+            tempmsg2.react("1168774143685165066")
+            tempmsg2.react("1168774160831492097")
+            tempmsg2.react("1168774179273842738")
           } catch (e) {
             return message.reply({
               embeds: [new Discord.MessageEmbed()
@@ -1956,11 +1956,11 @@ module.exports = {
             .then(collected => {
               var reaction = collected.first()
               reaction.users.remove(cmduser.id)
-              if (reaction.emoji?.name === "1️⃣") type = "message";
-              else if (reaction.emoji?.name === "2️⃣") type = "setrole";
-              else if (reaction.emoji?.name === "3️⃣") type = "delrole";
-              else if (reaction.emoji?.name === "4️⃣") type = "delimage";
-              else if (reaction.emoji?.name === "5️⃣") type = "setimage";
+              if (reaction.emoji?.name === "1168774094351765524") type = "message";
+              else if (reaction.emoji?.name === "1168774123946774590") type = "setrole";
+              else if (reaction.emoji?.name === "1168774143685165066") type = "delrole";
+              else if (reaction.emoji?.name === "1168774160831492097") type = "delimage";
+              else if (reaction.emoji?.name === "1168774179273842738") type = "setimage";
               else throw "You reacted with a wrong emoji"
 
             })
@@ -2192,11 +2192,11 @@ module.exports = {
             ]
           })
           try {
-            tempmsg2.react("1️⃣")
-            tempmsg2.react("2️⃣")
-            tempmsg2.react("3️⃣")
-            tempmsg2.react("4️⃣")
-            tempmsg2.react("5️⃣")
+            tempmsg2.react("1168774094351765524")
+            tempmsg2.react("1168774123946774590")
+            tempmsg2.react("1168774143685165066")
+            tempmsg2.react("1168774160831492097")
+            tempmsg2.react("1168774179273842738")
           } catch (e) {
             return message.reply({
               embeds: [new Discord.MessageEmbed()
@@ -2216,11 +2216,11 @@ module.exports = {
             .then(collected => {
               var reaction = collected.first()
               reaction.users.remove(cmduser.id)
-              if (reaction.emoji?.name === "1️⃣") type = "message";
-              else if (reaction.emoji?.name === "2️⃣") type = "setrole";
-              else if (reaction.emoji?.name === "3️⃣") type = "delrole";
-              else if (reaction.emoji?.name === "4️⃣") type = "delimage";
-              else if (reaction.emoji?.name === "5️⃣") type = "setimage";
+              if (reaction.emoji?.name === "1168774094351765524") type = "message";
+              else if (reaction.emoji?.name === "1168774123946774590") type = "setrole";
+              else if (reaction.emoji?.name === "1168774143685165066") type = "delrole";
+              else if (reaction.emoji?.name === "1168774160831492097") type = "delimage";
+              else if (reaction.emoji?.name === "1168774179273842738") type = "setimage";
               else throw "You reacted with a wrong emoji"
 
             })
@@ -2451,11 +2451,11 @@ module.exports = {
             ]
           })
           try {
-            tempmsg2.react("1️⃣")
-            tempmsg2.react("2️⃣")
-            tempmsg2.react("3️⃣")
-            tempmsg2.react("4️⃣")
-            tempmsg2.react("5️⃣")
+            tempmsg2.react("1168774094351765524")
+            tempmsg2.react("1168774123946774590")
+            tempmsg2.react("1168774143685165066")
+            tempmsg2.react("1168774160831492097")
+            tempmsg2.react("1168774179273842738")
           } catch (e) {
             return message.reply({
               embeds: [new Discord.MessageEmbed()
@@ -2475,11 +2475,11 @@ module.exports = {
             .then(collected => {
               var reaction = collected.first()
               reaction.users.remove(cmduser.id)
-              if (reaction.emoji?.name === "1️⃣") type = "message";
-              else if (reaction.emoji?.name === "2️⃣") type = "setrole";
-              else if (reaction.emoji?.name === "3️⃣") type = "delrole";
-              else if (reaction.emoji?.name === "4️⃣") type = "delimage";
-              else if (reaction.emoji?.name === "5️⃣") type = "setimage";
+              if (reaction.emoji?.name === "1168774094351765524") type = "message";
+              else if (reaction.emoji?.name === "1168774123946774590") type = "setrole";
+              else if (reaction.emoji?.name === "1168774143685165066") type = "delrole";
+              else if (reaction.emoji?.name === "1168774160831492097") type = "delimage";
+              else if (reaction.emoji?.name === "1168774179273842738") type = "setimage";
               else throw "You reacted with a wrong emoji"
 
             })

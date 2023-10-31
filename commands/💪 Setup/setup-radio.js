@@ -111,10 +111,10 @@ module.exports = {
           .setFooter(client.getFooter(es))
           .setTitle(`Searching: ${emoji?.msg.search}` + song.title)
           try{embed.setURL(song.url)}catch{}
-        //send the message of the searching <a:Playing_Audio:1026785324795441172> <a:Playing_Audio:1026785324795441172> 
+        //send the message of the searching <a:Playing_Audio:1168762153289920565> <a:Playing_Audio:1168762153289920565> 
         message.reply(
             new Discord.MessageEmbed()
-                .setTitle("<a:Playing_Audio:1026785324795441172> Setup Complete for Radio Station:  " + song.title)
+                .setTitle("<a:Playing_Audio:1168762153289920565> Setup Complete for Radio Station:  " + song.title)
                 .setColor("#7fafe3")
                 .setDescription(eval(client.la[ls]["cmds"]["setup"]["setup-radio"]["variable8"]))
                 .setURL(song.url)

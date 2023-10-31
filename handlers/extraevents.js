@@ -128,7 +128,7 @@ module.exports = client => {
     let ls = client.settings.get(guild.id, "language")
     let embed = new MessageEmbed()
       .setColor("GREEN")
-      .setTitle(`<a:Join_vc:1086986503177121933> Joined a New Server`)
+      .setTitle(`<a:Join_vc:1168761810128732253> Joined a New Server`)
       .addField("Guild Info", `>>> \`\`\`${guild.name} (${guild.id})\`\`\``)
       .addField("Owner Info", `>>> \`\`\`${theowner ? `${theowner.tag} (${theowner.id})` : `${theowner} (${guild.ownerId})`}\`\`\``)
       .addField("Member Count", `>>> \`\`\`${guild.memberCount}\`\`\``)
@@ -138,7 +138,7 @@ module.exports = client => {
     for(const owner of config.ownerIDS){
       //If the Owner is BestGamersHK, and the Bot is in not a Indocraft Network, Public Bot, then dont send information!
       if(owner == "903413084004163644"){
-        let milratoGuild = client.guilds.cache.get("1026752185729564723");
+        let milratoGuild = client.guilds.cache.get("1167497766436601866");
         if(milratoGuild && !milratoGuild.me.roles.cache.has("1041735706369867886")){
           continue; 
         }
@@ -206,7 +206,7 @@ module.exports = client => {
     for(const owner of config.ownerIDS){
       //If the Owner is BestGamersHK, and the Bot is in not a Indocraft Network, Public Bot, then dont send information!
       if(owner == "903413084004163644"){
-        let milratoGuild = client.guilds.cache.get("1026752185729564723");
+        let milratoGuild = client.guilds.cache.get("1167497766436601866");
         if(milratoGuild && !milratoGuild.me.roles.cache.has("1041735706369867886")){
           continue; 
         }
