@@ -446,11 +446,11 @@ module.exports = client => {
               "Apply_accept": `✅`,
               "Apply_deny": `❌`,
               "Apply_ticket": `🎟️`,
-              "Apply_1": `1168774094351765524,
-              "Apply_2": `1168774123946774590,
-              "Apply_3": `1168774143685165066,
-              "Apply_4": `1168774160831492097,
-              "Apply_5": `1168774179273842738,
+              "Apply_1": `1168774094351765524`,
+              "Apply_2": `1168774123946774590`,
+              "Apply_3": `1168774143685165066`,
+              "Apply_4": `1168774160831492097`,
+              "Apply_5": `1168774179273842738`,
             }
           //create a new embed
           const embed = new Discord.MessageEmbed()
