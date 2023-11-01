@@ -166,9 +166,9 @@ module.exports = {
           erros: ["time"]
         }).then(collected => {
           switch (collected.first().emoji?.name) {
-            case "1168774094351765524:
+            case "1168774094351765524":
               break;
-            case "1168774123946774590:
+            case "1168774123946774590":
               objet.remove_others = true;
               break;
             default:
