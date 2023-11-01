@@ -126,6 +126,8 @@ If you find any errors please create a issue from <a href="https://github.com/Be
      * `consumer_secret` you can get from: [twitter Developers](https://developer.twitter.com)
      * `access_token` you can get from: [twitter Developers](https://developer.twitter.com)
      * `access_token_secret` you can get from: [twitter Developers](https://developer.twitter.com)
+
+  4. Optionally, you can change the API key for AIChat by creating your own url at Brainshop.ai: https://brainshop.ai/. This lets you set the name and other details of your AI.
   
 </details>
 
@@ -133,8 +135,6 @@ If you find any errors please create a issue from <a href="https://github.com/Be
 ## SUPPORT me AND MILRATO DEVELOPMENT
 
 > You can always Support me by inviting one of me **own Discord Bots**
-
-
 
 # Credits
 
