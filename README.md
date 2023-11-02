@@ -16,7 +16,7 @@ If you find any errors please create a issue from <a href="https://github.com/Be
 
   * [Nodejs](https://nodejs.org) version 18
   * [Discord.js](https://discord.js.org/) version 13.6.0 or higher
-    *Latest version `npm install discord.js@latest`
+    * Latest version `npm install discord.js@latest`
     * Version 13 `npm install discord.js@13`
   * [Python](https://python.org) version 3.10 or higher, to install the database `enmap` (better-sqlite3)
   * A VPS would be adviced, so you don't need to keep your pc/laptop/raspi 24/7 online! [click here for a debian setup](https://github.com/Tomato6966/Debian-Cheat-Sheet-Setup/wiki/)
