@@ -145,3 +145,8 @@ If you find any errors please create a issue from <a href="https://github.com/Be
 
 > If consider using this Bot, make sure to credit me
 > This bot was made by https://github.com/Tomato6966 All credits to him, I just fixed the errors in it didn't code it fully.
+> Contributors
+  * Hotsuop - Edited code to make it work from small errors 
+  * BestGamersHK - Did like everthing you see here
+  * Tomato6966 For coding the whole thing
+
