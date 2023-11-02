@@ -85,11 +85,11 @@ module.exports = {
             let SetupNumber = menu?.values[0].split(" ")[0]
             handle_the_picks(menu?.values[0], SetupNumber, menuoptiondata)
           }
-          else menu?.reply({content: `<:no:1026787028710465577> You are not allowed to do that! Only: <@${cmduser.id}>`, ephemeral: true});
+          else menu?.reply({content: `<:NO:1169479454918180937> You are not allowed to do that! Only: <@${cmduser.id}>`, ephemeral: true});
         });
         //Once the Collections ended edit the menu message
         collector.on('end', collected => {
-          menumsg.edit({embeds: [menumsg.embeds[0].setDescription(`~~${menumsg.embeds[0].description}~~`)], components: [], content: `${collected && collected.first() && collected.first().values ? `<:yes:1026785792292569138> **Selected: \`${collected ? collected.first().values[0] : "Nothing"}\`**` : "❌ **NOTHING SELECTED - CANCELLED**" }`})
+          menumsg.edit({embeds: [menumsg.embeds[0].setDescription(`~~${menumsg.embeds[0].description}~~`)], components: [], content: `${collected && collected.first() && collected.first().values ? `<:yes:1168770575116800042> **Selected: \`${collected ? collected.first().values[0] : "Nothing"}\`**` : "❌ **NOTHING SELECTED - CANCELLED**" }`})
         });
       }
 
@@ -129,7 +129,7 @@ module.exports = {
                       }
                       client.settings.set(message.guild.id, maxtime, "ghost_ping_detector_max_time");
                       return message.reply({embeds: [new Discord.MessageEmbed()
-                        .setTitle(`<:yes:1026785792292569138> I will now send all detected Ghost Pings in \`${channel.name}\``)
+                        .setTitle(`<:yes:1168770575116800042> I will now send all detected Ghost Pings in \`${channel.name}\``)
                         .setColor(es.color)
                         .setDescription(`${!isnan ? `And set the Ghost-Ping-Detected-Deletion Message Maximum Time to \`${maxtime / 1000} Seconds\``: "You added an invalid time, so i set the Ghost-Ping-Detection Maximum Time to `10 Seconds`"}`)
                         .setFooter(client.getFooter(es))]}
@@ -196,7 +196,7 @@ module.exports = {
 };
 /**
  * @INFO
- * Bot Coded by bestgamershk_ | https://discord.gg/bestgamershk
+ * Bot Coded by bestgamershk2 | https://discord.gg/bestgamershk
  * @INFO
  * Work for BestGamersHK | discord.gg/bestgamershk
  * @INFO

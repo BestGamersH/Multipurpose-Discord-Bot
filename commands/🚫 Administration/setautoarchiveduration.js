@@ -48,13 +48,13 @@ module.exports = {
         return message.reply({embeds :[new MessageEmbed()
           .setColor(es.wrongcolor)
           .setFooter(client.getFooter(es))
-          .setTitle(`<:no:1026787028710465577> **This Channel is not a Thread**`)
+          .setTitle(`<:NO:1169479454918180937> **This Channel is not a Thread**`)
         ]});
       if(!args[0])
         return message.reply({embeds :[new MessageEmbed()
           .setColor(es.wrongcolor)
           .setFooter(client.getFooter(es))
-          .setTitle(`<:no:1026787028710465577> **You forgot to add a Cooldown amount**`)
+          .setTitle(`<:NO:1169479454918180937> **You forgot to add a Cooldown amount**`)
           .setDescription(`Usage: \`${prefix}setautoarchiveduration <Time in Minutes> [#Thread]\``)
         ]});
       let duration = parseInt(args[0]);
@@ -62,7 +62,7 @@ module.exports = {
       message.reply({embeds :[new MessageEmbed()
         .setColor(es.color)
         .setFooter(client.getFooter(es))
-        .setTitle(`<:yes:1026785792292569138> **Successfully changed the autoarchive Duration to \`${duration}\` of ${channel.name}**`)
+        .setTitle(`<:yes:1168770575116800042> **Successfully changed the autoarchive Duration to \`${duration}\` of ${channel.name}**`)
       ]});
       if (client.settings.get(message.guild.id, `adminlog`) != "no") {
         try {
@@ -94,7 +94,7 @@ module.exports = {
 };
 /**
  * @INFO
- * Bot Coded by bestgamershk_ | https://discord.gg/bestgamershk
+ * Bot Coded by bestgamershk2 | https://discord.gg/bestgamershk
  * @INFO
  * Work for BestGamersHK | discord.gg/bestgamershk
  * @INFO

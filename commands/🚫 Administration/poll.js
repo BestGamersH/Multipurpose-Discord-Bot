@@ -61,12 +61,12 @@ module.exports = {
                 .setTitle(eval(client.la[ls]["cmds"]["administration"]["poll"]["variable6"]))
                 .setDescription(eval(client.la[ls]["cmds"]["administration"]["poll"]["variable7"]))
               ]}).then(msg=>{
-                  msg.react("1168774094351765524)
-                  msg.react("1168774123946774590)
-                  msg.react("1168774143685165066)
+                  msg.react("1168774094351765524")
+                  msg.react("1168774123946774590")
+                  msg.react("1168774143685165066")
                   msg.awaitReactions({filter: (reaction, user) => user.id === message.author.id,max: 1, time: 30000, errors: ["time"]}).then(collected => {
                     let reaction = collected.first();
-                    if(reaction.emoji?.name == "1168774094351765524){
+                    if(reaction.emoji?.name == "1168774094351765524"){
                       message.reply({embeds :[new MessageEmbed().setColor(es.color).setThumbnail(es.thumb ? es.footericon && (es.footericon.includes("http://") || es.footericon.includes("https://")) ? es.footericon : client.user.displayAvatarURL() : null)
                       .setFooter(client.getFooter(es))
                       .setTitle(eval(client.la[ls]["cmds"]["administration"]["poll"]["variable8"]))
@@ -85,7 +85,7 @@ module.exports = {
                         })
                       })
                     }
-                    else if(reaction.emoji?.name == "1168774123946774590){
+                    else if(reaction.emoji?.name == "1168774123946774590"){
                       message.reply({embeds :[new MessageEmbed().setColor(es.color).setThumbnail(es.thumb ? es.footericon && (es.footericon.includes("http://") || es.footericon.includes("https://")) ? es.footericon : client.user.displayAvatarURL() : null)
                       .setFooter(client.getFooter(es))
                       .setTitle(eval(client.la[ls]["cmds"]["administration"]["poll"]["variable10"]))
@@ -104,11 +104,11 @@ module.exports = {
                         })
                       })
                     }
-                    else if(reaction.emoji?.name == "1168774143685165066){
+                    else if(reaction.emoji?.name == "1168774143685165066"){
                       var emojicounter = 0;
                       var emojicontent = [];
                       const emojis = [
-                        "0️⃣", "1168774094351765524, "1168774123946774590, "1168774143685165066, "1168774160831492097, "1168774179273842738, "6️⃣", "7️⃣", "8️⃣", "9️⃣", "🔟",
+                        "0️⃣", "1168774094351765524", "1168774123946774590", "1168774143685165066", "1168774160831492097", "1168774179273842738", "6️⃣", "7️⃣", "8️⃣", "9️⃣", "🔟",
                       ]
                       ask_emoji();
                       function ask_emoji(){
@@ -220,7 +220,7 @@ module.exports = {
 }
 /**
  * @INFO
- * Bot Coded by bestgamershk_ | https://github?.com/BestGamersHK/Discord-Js-Handler-Template
+ * Bot Coded by bestgamershk2 | https://github?.com/BestGamersHK/Discord-Js-Handler-Template
  * @INFO
  * Work for BestGamersHK | discord.gg/bestgamershk
  * @INFO

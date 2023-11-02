@@ -64,7 +64,7 @@ module.exports = {
         })
         message.reply({ embeds: [new MessageEmbed()
           .setColor(es.color).setThumbnail(es.thumb ? es.footericon && (es.footericon.includes("http://") || es.footericon.includes("https://")) ? es.footericon : client.user.displayAvatarURL() : null).setFooter(client.getFooter(es))
-          .setTitle(`<:yes:1026785792292569138> Banned ${ban.tag || user}`)
+          .setTitle(`<:yes:1168770575116800042> Banned ${ban.tag || user}`)
           .setDescription(`**Reason**: ${reason}`)]
         });
       } catch (e) {
@@ -106,7 +106,7 @@ module.exports = {
 };
 /**
  * @INFO
- * Bot Coded by bestgamershk_ | https://discord.gg/bestgamershk
+ * Bot Coded by bestgamershk2 | https://discord.gg/bestgamershk
  * @INFO
  * Work for BestGamersHK | discord.gg/bestgamershk
  * @INFO

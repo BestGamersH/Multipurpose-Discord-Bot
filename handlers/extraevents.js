@@ -11,7 +11,7 @@ module.exports = client => {
 
     let text = embedData.footertext;
     let iconURL = embedData.footericon;
-    if(!text || text.length < 1) text = `${client.user.username} | By: bestgamershk_`;
+    if(!text || text.length < 1) text = `${client.user.username} | By: bestgamershk2`;
     if(!iconURL || iconURL.length < 1) iconURL = `${client.user.displayAvatarURL()}`;
     
     //Change the lengths
@@ -31,7 +31,7 @@ module.exports = client => {
     let iconURL = authoricon;
     let url = authorurl;
 
-    if(!name || name.length < 1) name = `${client.user.username} | By: bestgamershk_`;
+    if(!name || name.length < 1) name = `${client.user.username} | By: bestgamershk2`;
     if(!iconURL || iconURL.length < 1) iconURL = `${client.user.displayAvatarURL()}`;
     if(!url || url.length < 1) url = `https://discord.gg/bestgamershk`;
 

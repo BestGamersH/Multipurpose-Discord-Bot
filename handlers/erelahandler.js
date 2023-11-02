@@ -8,7 +8,7 @@ module.exports = (client) => {
 
 /**
  * @INFO
- * Bot Coded by bestgamershk_ | https://github?.com/BestGamersHK/discord-js-lavalink-Music-Bot-erela-js
+ * Bot Coded by bestgamershk2 | https://github?.com/BestGamersHK/discord-js-lavalink-Music-Bot-erela-js
  * @INFO
  * Work for BestGamersHK | discord.gg/bestgamershk
  * @INFO

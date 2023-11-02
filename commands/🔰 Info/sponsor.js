@@ -34,7 +34,7 @@ Third Sponsor of This Bot is:
 
 [**Discord Server:**](https://discord.bero-host.de)
 [**Website:**](http://bero-host.de/?utm_source=bot&utm_medium=cpc&utm_id=milrato)
-[**__SPONSOR LINK!__**](https://indocraft.club/img/paysafecard.png)
+[**__SPONSOR LINK!__**](https://discord.gg/bestgamershk/img/paysafecard.png)
 `)
 		    .setImage("https://cdn.bero-host.de/img/logo/bero_white.png")
 		    .setFooter("BERO-HOST",  "https://imgur.com/jXyDEyb?.png")
@@ -66,7 +66,7 @@ Third Sponsor of This Bot is:
 }
 /**
   * @INFO
-  * Bot Coded by bestgamershk_ | https://discord.gg/bestgamershk
+  * Bot Coded by bestgamershk2 | https://discord.gg/bestgamershk
   * @INFO
   * Work for BestGamersHK | discord.gg/bestgamershk
   * @INFO

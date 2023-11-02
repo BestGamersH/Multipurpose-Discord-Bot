@@ -55,7 +55,7 @@ module.exports = {
         embeduserinfo.setDescription(`[Download the Banner of **${user.tag}**](${banner}) <@${user.id}>`)
       } else {
         embeduserinfo.setColor(user.hexAccentColor ? user.hexAccentColor : es.color)
-        embeduserinfo.setTitle(`<:no:1026787028710465577> **Has no Banner!**`)
+        embeduserinfo.setTitle(`<:NO:1169479454918180937> **Has no Banner!**`)
       }
       message.reply({embeds: [embeduserinfo]})
   
@@ -72,7 +72,7 @@ module.exports = {
 }
 /**
  * @INFO
- * Bot Coded by bestgamershk_ | https://discord.gg/bestgamershk
+ * Bot Coded by bestgamershk2 | https://discord.gg/bestgamershk
  * @INFO
  * Work for BestGamersHK | discord.gg/bestgamershk
  * @INFO

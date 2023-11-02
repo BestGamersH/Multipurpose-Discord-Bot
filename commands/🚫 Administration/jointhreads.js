@@ -48,14 +48,14 @@ module.exports = {
         return message.reply({embeds: [new MessageEmbed()
           .setColor(es.wrongcolor)
           .setFooter(client.getFooter(es))
-          .setTitle(`<:no:1026787028710465577> **There are no open Threads in this Server**`)
+          .setTitle(`<:NO:1169479454918180937> **There are no open Threads in this Server**`)
         ]}); 
       for(const channel of channels)
         await channel.join()
       message.reply({embeds :[new MessageEmbed()
         .setColor(es.color)
         .setFooter(client.getFooter(es))
-        .setTitle(`<:yes:1026785792292569138> **I joined \`${channels.size}\` Threads**`)
+        .setTitle(`<:yes:1168770575116800042> **I joined \`${channels.size}\` Threads**`)
       ]});
       if (client.settings.get(message.guild.id, `adminlog`) != "no") {
         try {
@@ -87,7 +87,7 @@ module.exports = {
 };
 /**
  * @INFO
- * Bot Coded by bestgamershk_ | https://discord.gg/bestgamershk
+ * Bot Coded by bestgamershk2 | https://discord.gg/bestgamershk
  * @INFO
  * Work for BestGamersHK | discord.gg/bestgamershk
  * @INFO

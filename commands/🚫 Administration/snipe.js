@@ -87,7 +87,7 @@ const {
   }
   /**
    * @INFO
-   * Bot Coded by bestgamershk_ | https://github?.com/BestGamersHK/Discord-Js-Handler-Template
+   * Bot Coded by bestgamershk2 | https://github?.com/BestGamersHK/Discord-Js-Handler-Template
    * @INFO
    * Work for BestGamersHK | discord.gg/bestgamershk
    * @INFO

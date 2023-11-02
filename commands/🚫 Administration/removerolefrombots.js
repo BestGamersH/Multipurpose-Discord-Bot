@@ -71,7 +71,7 @@
            .setTitle(eval(client.la[ls]["cmds"]["administration"]["addroletoeveryone"]["variable7"]))
          ]});
        await message.guild.members.fetch().catch(() => {});
-       var members = message.guild.members.cache.filter(member => member.user.bot && member.roles.cache.has(role.id)).map(this_Code_is_by_BestGamersHK_1213 => this_Code_is_by_BestGamersHK_1213);
+       var members = message.guild.members.cache.filter(member => member.user.bot && member.roles.cache.has(role.id)).map(this_Code_is_by_bestgamershk21213 => this_Code_is_by_bestgamershk21213);
        if (!members || members.length == 0)
          return message.reply({embeds :[new MessageEmbed()
            .setColor(es.wrongcolor)
@@ -148,7 +148,7 @@
  };
  /**
   * @INFO
-  * Bot Coded by bestgamershk_ | https://discord.gg/bestgamershk
+  * Bot Coded by bestgamershk2 | https://discord.gg/bestgamershk
   * @INFO
   * Work for BestGamersHK | discord.gg/bestgamershk
   * @INFO

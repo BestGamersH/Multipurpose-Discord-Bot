@@ -70,7 +70,7 @@ module.exports = {
       }); //collector for 5 seconds
       collector.on('collect', async b => {
           if (b?.user.id !== message.author.id)
-              return b?.reply(`<:no:1026787028710465577> **Only the one who typed ${prefix}help is allowed to react!**`, true)
+              return b?.reply(`<:NO:1169479454918180937> **Only the one who typed ${prefix}help is allowed to react!**`, true)
 
           edited = true;
           msg.edit({
@@ -152,7 +152,7 @@ module.exports = {
 };
 /**
  * @INFO
- * Bot Coded by bestgamershk_ | https://discord.gg/bestgamershk
+ * Bot Coded by bestgamershk2 | https://discord.gg/bestgamershk
  * @INFO
  * Work for BestGamersHK | discord.gg/bestgamershk
  * @INFO

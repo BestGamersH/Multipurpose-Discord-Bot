@@ -90,7 +90,7 @@ async function search(client, message, args, type, slashCommand) {
         dynamic: true
       }))))
     ]}).catch(() => {});
-    const emojiarray = ["❌", "1168774094351765524", "1168774123946774590", "1168774143685165066", "1168774160831492097", "1168774179273842738", "6️⃣", "7️⃣", "8️⃣", "9️⃣", "🔟"]
+    const emojiarray = ["❌", "1168774094351765524, "1168774123946774590, "1168774143685165066, "1168774160831492097, "1168774179273842738, "6️⃣", "7️⃣", "8️⃣", "9️⃣", "🔟"]
     for (let i = 0; i < emojiarray.length; i++) {
       try {
         if (i == max + 1) break;
@@ -221,7 +221,7 @@ async function search(client, message, args, type, slashCommand) {
 module.exports = search;
 /**
  * @INFO
- * Bot Coded by bestgamershk_ | https://github?.com/BestGamersHK/discord-js-lavalink-Music-Bot-erela-js
+ * Bot Coded by bestgamershk2 | https://github?.com/BestGamersHK/discord-js-lavalink-Music-Bot-erela-js
  * @INFO
  * Work for BestGamersHK | discord.gg/bestgamershk
  * @INFO

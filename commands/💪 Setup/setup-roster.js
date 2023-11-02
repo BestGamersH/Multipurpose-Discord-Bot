@@ -162,11 +162,11 @@ module.exports = {
             if(menu?.values[0] == "Cancel") return menu?.reply(eval(client.la[ls]["cmds"]["setup"]["setup-ticket"]["variable3"]))
             menuselection(menu)
           }
-          else menu?.reply({content: `<:no:1026787028710465577> You are not allowed to do that! Only: <@${cmduser.id}>`, ephemeral: true});
+          else menu?.reply({content: `<:NO:1169479454918180937> You are not allowed to do that! Only: <@${cmduser.id}>`, ephemeral: true});
         });
         //Once the Collections ended edit the menu message
         collector.on('end', collected => {
-          menumsg.edit({embeds: [menumsg.embeds[0].setDescription(`~~${menumsg.embeds[0].description}~~`)], components: [], content: `${collected && collected.first() && collected.first().values ? `<:yes:1026785792292569138> **Selected: \`${collected ? collected.first().values[0] : "Nothing"}\`**` : "❌ **NOTHING SELECTED - CANCELLED**" }`})
+          menumsg.edit({embeds: [menumsg.embeds[0].setDescription(`~~${menumsg.embeds[0].description}~~`)], components: [], content: `${collected && collected.first() && collected.first().values ? `<:yes:1168770575116800042> **Selected: \`${collected ? collected.first().values[0] : "Nothing"}\`**` : "❌ **NOTHING SELECTED - CANCELLED**" }`})
         });
       }
       async function second_layer(SetupNumber, menuoptiondata){
@@ -275,7 +275,7 @@ module.exports = {
             if (menu?.values[0] == "Cancel") return menu?.reply(eval(client.la[ls]["cmds"]["setup"]["setup-ticket"]["variable3"]))
             menuselection(menu)
           } else menu?.reply({
-            content: `<:no:1026787028710465577> You are not allowed to do that! Only: <@${cmduser.id}>`,
+            content: `<:NO:1169479454918180937> You are not allowed to do that! Only: <@${cmduser.id}>`,
             ephemeral: true
           });
         });
@@ -284,7 +284,7 @@ module.exports = {
           menumsg.edit({
             embeds: [menumsg.embeds[0].setDescription(`~~${menumsg.embeds[0].description}~~`)],
             components: [],
-            content: `${collected && collected.first() && collected.first().values ? `<:yes:1026785792292569138> **Selected: \`${collected ? collected.first().values[0] : "Nothing"}\`**` : "❌ **NOTHING SELECTED - CANCELLED**" }`
+            content: `${collected && collected.first() && collected.first().values ? `<:yes:1168770575116800042> **Selected: \`${collected ? collected.first().values[0] : "Nothing"}\`**` : "❌ **NOTHING SELECTED - CANCELLED**" }`
           })
         });
       }
@@ -500,7 +500,7 @@ module.exports = {
               ]
             })
             try{
-              for(const emoji of ["1168774094351765524, "1168774123946774590, "1168774143685165066, "1168774160831492097, "1168774179273842738, "6️⃣", "7️⃣"])
+              for(const emoji of ["1168774094351765524", "1168774123946774590", "1168774143685165066", "1168774160831492097", "1168774179273842738", "6️⃣", "7️⃣"])
                tempmsg.react(emoji)
             }catch(e){
               console.log(e.stack ? String(e.stack).grey : String(e).grey)
@@ -514,7 +514,7 @@ module.exports = {
               .then(collected => {
                 var reaction = collected.first()
                 reaction.users.remove(message.author.id)
-                if (reaction.emoji?.name === "1168774094351765524) {
+                if (reaction.emoji?.name === "1168774094351765524") {
                   thedb?.set(message.guild.id, "1", pre+".rosterstyle")
                   edit_Roster_msg(client, message.guild, thedb, pre)
                   return message.reply({
@@ -525,7 +525,7 @@ module.exports = {
                       .setFooter(client.getFooter(es))
                     ]
                   });
-                } else if (reaction.emoji?.name === "1168774123946774590) {
+                } else if (reaction.emoji?.name === "1168774123946774590") {
                   thedb?.set(message.guild.id, "2", pre+".rosterstyle")
                   edit_Roster_msg(client, message.guild, thedb, pre)
                   return message.reply({
@@ -536,7 +536,7 @@ module.exports = {
                       .setFooter(client.getFooter(es))
                     ]
                   });
-                } else if (reaction.emoji?.name === "1168774143685165066) {
+                } else if (reaction.emoji?.name === "1168774143685165066") {
                   thedb?.set(message.guild.id, "3", pre+".rosterstyle")
                   edit_Roster_msg(client, message.guild, thedb, pre)
                   return message.reply({
@@ -547,7 +547,7 @@ module.exports = {
                       .setFooter(client.getFooter(es))
                     ]
                   });
-                } else if (reaction.emoji?.name === "1168774160831492097) {
+                } else if (reaction.emoji?.name === "1168774160831492097") {
                   thedb?.set(message.guild.id, "4", pre+".rosterstyle")
                   edit_Roster_msg(client, message.guild, thedb, pre)
                   return message.reply({
@@ -558,7 +558,7 @@ module.exports = {
                       .setFooter(client.getFooter(es))
                     ]
                   });
-                } else if (reaction.emoji?.name === "1168774179273842738) {
+                } else if (reaction.emoji?.name === "1168774179273842738") {
                   thedb?.set(message.guild.id, "5", pre+".rosterstyle")
                   edit_Roster_msg(client, message.guild, thedb, pre)
                   return message.reply({
@@ -809,7 +809,7 @@ module.exports = {
 };
 /**
  * @INFO
- * Bot Coded by bestgamershk_ | https://discord.gg/bestgamershk
+ * Bot Coded by bestgamershk2 | https://discord.gg/bestgamershk
  * @INFO
  * Work for BestGamersHK | discord.gg/bestgamershk
  * @INFO

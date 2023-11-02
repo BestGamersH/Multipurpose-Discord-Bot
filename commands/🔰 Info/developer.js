@@ -27,8 +27,8 @@ module.exports = {
 				.setTimestamp()
 				.setThumbnail("https://cdn.discordapp.com/avatars/311594192151511041/df7b527a701d9a1ab6d73213576fe295.webp?size=1024")
 				.setTitle(client.la[ls].cmds.info.developer.title)
-				.setURL("https://indocraft.club")
-				.addField("🆕 NEW GITHUB", `> There is now an **open Source** Version of this Bot on [\`bestgamershk_\`'s Github](https://github.com/BestGamersHK)\n> [Link](https://github.com/BestGamersHK/Multipurpose-discord-bot) but please make sure to **give __Credits__** if you use it!\n> Make sure to read the [README](https://github.com/BestGamersHK/Multipurpose-discord-bot#readme) and the [WIKI / FAQ](https://github.com/BestGamersHK/Multipurpose-discord-bot/wiki) carefully before opening an [ISSUE](https://github.com/BestGamersHK/Multipurpose-discord-bot/issues/new/choose)`)
+				.setURL("https://discord.gg/bestgamershk")
+				.addField("🆕 NEW GITHUB", `> There is now an **open Source** Version of this Bot on [\`bestgamershk2\`'s Github](https://github.com/BestGamersHK)\n> [Link](https://github.com/BestGamersHK/Multipurpose-discord-bot) but please make sure to **give __Credits__** if you use it!\n> Make sure to read the [README](https://github.com/BestGamersHK/Multipurpose-discord-bot#readme) and the [WIKI / FAQ](https://github.com/BestGamersHK/Multipurpose-discord-bot/wiki) carefully before opening an [ISSUE](https://github.com/BestGamersHK/Multipurpose-discord-bot/issues/new/choose)`)
 					.setDescription(client.la[ls].cmds.info.developer.description)],
 components: allbuttons
 			}).catch(error => console.log(error));
@@ -45,7 +45,7 @@ components: allbuttons
 }
 /**
  * @INFO
- * Bot Coded by bestgamershk_ | https://discord.gg/bestgamershk
+ * Bot Coded by bestgamershk2 | https://discord.gg/bestgamershk
  * @INFO
  * Work for BestGamersHK | discord.gg/bestgamershk
  * @INFO
