@@ -151,6 +151,19 @@ If you have downloaded the source code and met the system requirements, you can 
   
 </details>
 
+<details>
+  <summary>Click to expand</summary> 
+## Commands
+
+This is a list of all the commands that you can use with the Multipurpose Discord Bot.
+
+| Command | Description | Image |
+|---|---|---|
+| `!help` | Displays a list of all the available commands. | [Image of the help command output] |
+| `!ping` | Pings the bot and returns its response time. | [Image of the ping command output] |
+| `!play` | Plays a song from YouTube or Spotify. | [Image of the play command output] |
+| `!pause` | Pauses the currently playing song. | [Image of the pause command output] |
+| `!stop` | Stops the currently playing song. | [Image of the stop command output] |
 
 ## SUPPORT me AND MILRATO DEVELOPMENT
 
