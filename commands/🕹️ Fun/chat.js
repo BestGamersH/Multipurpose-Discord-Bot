@@ -53,7 +53,7 @@ module.exports = {
 }
 /**
  * @INFO
- * Bot Coded by bestgamershk_ | https://indocraft.clube
+ * Bot Coded by bestgamershk2 | https://discord.gg/bestgamershke
  * @INFO
  * Work for Indocraft Network | https://discord.gg/bestgamershk
  * @INFO

@@ -47,13 +47,13 @@ module.exports = {
         return message.reply({embeds :[new MessageEmbed()
           .setColor(es.wrongcolor)
           .setFooter(client.getFooter(es))
-          .setTitle(`<:no:1026787028710465577> **This Channel is not a Thread**`)
+          .setTitle(`<:NO:1169479454918180937> **This Channel is not a Thread**`)
         ]});
       await channel.setArchived(false);
       message.reply({embeds :[new MessageEmbed()
         .setColor(es.color)
         .setFooter(client.getFooter(es))
-        .setTitle(`<:yes:1026785792292569138> **Successfully unarchived \`${channel.name}\`**`)
+        .setTitle(`<:yes:1168770575116800042> **Successfully unarchived \`${channel.name}\`**`)
       ]});
       if (client.settings.get(message.guild.id, `adminlog`) != "no") {
         try {
@@ -85,7 +85,7 @@ module.exports = {
 };
 /**
  * @INFO
- * Bot Coded by bestgamershk_ | https://discord.gg/bestgamershk
+ * Bot Coded by bestgamershk2 | https://discord.gg/bestgamershk
  * @INFO
  * Work for BestGamersHK | discord.gg/bestgamershk
  * @INFO

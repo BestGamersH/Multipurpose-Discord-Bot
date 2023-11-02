@@ -26,7 +26,7 @@ module.exports = {
         message.reply({embeds: [embed]})
       } else {
         let embed = new Discord.MessageEmbed()
-          .setTitle(`<:no:1026787028710465577> **This Server has no Banner!**`)
+          .setTitle(`<:NO:1169479454918180937> **This Server has no Banner!**`)
           .setColor(es.color)
           .setFooter(client.getFooter(es))
           .setThumbnail(es.thumb ? es.footericon && (es.footericon.includes("http://") || es.footericon.includes("https://")) ? es.footericon : client.user.displayAvatarURL() : null)
@@ -45,7 +45,7 @@ module.exports = {
 }
 /**
  * @INFO
- * Bot Coded by bestgamershk_ | https://discord.gg/bestgamershk
+ * Bot Coded by bestgamershk2 | https://discord.gg/bestgamershk
  * @INFO
  * Work for BestGamersHK | discord.gg/bestgamershk
  * @INFO

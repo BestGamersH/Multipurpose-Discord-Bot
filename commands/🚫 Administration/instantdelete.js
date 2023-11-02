@@ -71,7 +71,7 @@ module.exports = {
         }); //collector for 5 seconds
         collector.on('collect', async b => {
             if (b?.user.id !== buttonuser.id)
-                return b?.reply(`<:no:1026787028710465577> **Only the one who typed ${prefix}help is allowed to react!**`, true)
+                return b?.reply(`<:NO:1169479454918180937> **Only the one who typed ${prefix}help is allowed to react!**`, true)
 
 
             //page forward
@@ -248,7 +248,7 @@ module.exports = {
 
 /**
  * @INFO
- * Bot Coded by bestgamershk_ | https://github?.com/BestGamersHK/Discord-Js-Handler-Template
+ * Bot Coded by bestgamershk2 | https://github?.com/BestGamersHK/Discord-Js-Handler-Template
  * @INFO
  * Work for BestGamersHK | discord.gg/bestgamershk
  * @INFO

@@ -28,13 +28,13 @@ module.exports = {
       
       
       if(!message.guild.me.permissions.has(Discord.Permissions.FLAGS.ADMINISTRATOR)){
-        return message.reply("<:no:1026787028710465577> **I am missing the ADMINISTRATOR Permission!**")
+        return message.reply("<:NO:1169479454918180937> **I am missing the ADMINISTRATOR Permission!**")
       }
       let owner = await message.guild.fetchOwner().catch(e=>{
           return message.reply("Could not get owner of target guild")
       })
       if(owner.id != cmduser.id) {
-          return message.reply(`<:no:1026787028710465577> **You need to be the Owner of this Server!**`)
+          return message.reply(`<:NO:1169479454918180937> **You need to be the Owner of this Server!**`)
       }
       //function to handle true/false
       const d2p = (bool) => bool ? "`✔️ Enabled`" : "`❌ Disabled`"; 
@@ -95,11 +95,11 @@ module.exports = {
               .setFooter(client.getFooter(es))]
             });
           }
-          else menu?.reply({content: `<:no:1026787028710465577> You are not allowed to do that! Only: <@${cmduser.id}>`, ephemeral: true});
+          else menu?.reply({content: `<:NO:1169479454918180937> You are not allowed to do that! Only: <@${cmduser.id}>`, ephemeral: true});
         });
         //Once the Collections ended edit the menu message
         collector.on('end', collected => {
-          menumsg.edit({embeds: [menumsg.embeds[0].setDescription(`~~${menumsg.embeds[0].description}~~`)], components: [], content: `${collected && collected.first() && collected.first().values ? `<:yes:1026785792292569138> **Selected: \`${collected ? collected.first().values[0] : "Nothing"}\`**` : "❌ **NOTHING SELECTED - CANCELLED**" }`})
+          menumsg.edit({embeds: [menumsg.embeds[0].setDescription(`~~${menumsg.embeds[0].description}~~`)], components: [], content: `${collected && collected.first() && collected.first().values ? `<:yes:1168770575116800042> **Selected: \`${collected ? collected.first().values[0] : "Nothing"}\`**` : "❌ **NOTHING SELECTED - CANCELLED**" }`})
         });
       }
 
@@ -119,7 +119,7 @@ module.exports = {
 };
 /**
  * @INFO
- * Bot Coded by bestgamershk_ | https://discord.gg/bestgamershk
+ * Bot Coded by bestgamershk2 | https://discord.gg/bestgamershk
  * @INFO
  * Work for BestGamersHK | discord.gg/bestgamershk
  * @INFO

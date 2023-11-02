@@ -50,7 +50,7 @@ module.exports = {
         return message.reply({embeds :[new MessageEmbed()
           .setColor(es.wrongcolor)
           .setFooter(client.getFooter(es))
-          .setTitle(`<:no:1026787028710465577> **This Channel is a Thread u can't Lock it!**`)
+          .setTitle(`<:NO:1169479454918180937> **This Channel is a Thread u can't Lock it!**`)
         ]});
       if(channel.permissionOverwrites.cache.size < 1){
         await channel.permissionOverwrites.set(
@@ -64,7 +64,7 @@ module.exports = {
           return message.reply({embeds :[new MessageEmbed()
             .setColor(es.wrongcolor)
             .setFooter(client.getFooter(es))
-            .setTitle(`<:no:1026787028710465577> **This Channel is locked!**`)
+            .setTitle(`<:NO:1169479454918180937> **This Channel is locked!**`)
             .setDescription(`This usually means, that the Channel **PERMISSIONS** are so defined, that __none__ of them are NOT ALLOWING to send a Message!`)
           ]});
         await channel.permissionOverwrites.set(
@@ -94,7 +94,7 @@ module.exports = {
       message.reply({embeds :[new MessageEmbed()
         .setColor(es.color)
         .setFooter(client.getFooter(es))
-        .setTitle(`<:yes:1026785792292569138> **Successfully locked \`${channel.name}\`**`)
+        .setTitle(`<:yes:1168770575116800042> **Successfully locked \`${channel.name}\`**`)
       ]});
       if(client.settings.get(message.guild.id, `adminlog`) != "no"){
         try{
@@ -125,7 +125,7 @@ module.exports = {
 }
 /**
  * @INFO
- * Bot Coded by bestgamershk_ | https://github?.com/BestGamersHK/Discord-Js-Handler-Template
+ * Bot Coded by bestgamershk2 | https://github?.com/BestGamersHK/Discord-Js-Handler-Template
  * @INFO
  * Work for BestGamersHK | discord.gg/bestgamershk
  * @INFO

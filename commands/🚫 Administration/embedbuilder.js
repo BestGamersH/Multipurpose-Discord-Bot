@@ -119,7 +119,7 @@ let buttonEvent = async (interaction) => {
     if (interaction?.user.id === message.member.id) {
       embedEditing(interaction);
     } else {
-      await interaction?.reply({content : `<:no:1026787028710465577> You are not allowed to do that! Only: <@${message.author.id}>`, ephemeral : true}); //ephemeral message
+      await interaction?.reply({content : `<:NO:1169479454918180937> You are not allowed to do that! Only: <@${message.author.id}>`, ephemeral : true}); //ephemeral message
     }
   }
 }
@@ -258,7 +258,7 @@ let embedEditing = async(button) => {
 }
 /**
  * @INFO
- * Bot Coded by bestgamershk_ | https://github?.com/BestGamersHK/Discord-Js-Handler-Template
+ * Bot Coded by bestgamershk2 | https://github?.com/BestGamersHK/Discord-Js-Handler-Template
  * @INFO
  * Work for BestGamersHK | discord.gg/bestgamershk
  * @INFO

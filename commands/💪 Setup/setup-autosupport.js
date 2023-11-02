@@ -121,7 +121,7 @@ module.exports = {
         //send the menu msg
         let menumsg = await message.reply({
           embeds: [MenuEmbed],
-          components: [row1, row2, row3, row4, new MessageActionRow().addComponents(new MessageButton().setStyle("LINK").setURL("https://youtu.be/QGESDc31d4U").setLabel("Tutorial Video").setEmoji("840260133686870036"))]
+          components: [row1, row2, row3, row4, new MessageActionRow().addComponents(new MessageButton().setStyle("LINK").setURL("https://www.youtube.com/channel/UC1xmHQbZUbW6zcmHS4yWjmA").setLabel("Youtube").setEmoji("840260133686870036"))]
         })
         //Create the collector
         const collector = menumsg.createMessageComponentCollector({
@@ -140,7 +140,7 @@ module.exports = {
             theDB = client.autosupport; //change to the right database
             second_layer()
           } else menu?.reply({
-            content: `<:no:1026787028710465577> You are not allowed to do that! Only: <@${cmduser.id}>`,
+            content: `<:NO:1169479454918180937> You are not allowed to do that! Only: <@${cmduser.id}>`,
             ephemeral: true
           });
         });
@@ -149,7 +149,7 @@ module.exports = {
           menumsg.edit({
             embeds: [menumsg.embeds[0].setDescription(`~~${menumsg.embeds[0].description}~~`)],
             components: [],
-            content: `<:yes:1026785792292569138> **Selected: \`${collected && collected.first() && collected.first().values ? collected.first().values[0] : "Nothing"}\`**`
+            content: `<:yes:1168770575116800042> **Selected: \`${collected && collected.first() && collected.first().values ? collected.first().values[0] : "Nothing"}\`**`
           })
         });
       }
@@ -231,7 +231,7 @@ module.exports = {
             menu?.deferUpdate();
             handle_the_picks(menu?.values[0], menuoptiondata)
           } else menu?.reply({
-            content: `<:no:1026787028710465577> You are not allowed to do that! Only: <@${cmduser.id}>`,
+            content: `<:NO:1169479454918180937> You are not allowed to do that! Only: <@${cmduser.id}>`,
             ephemeral: true
           });
         });
@@ -240,7 +240,7 @@ module.exports = {
           menumsg.edit({
             embeds: [menumsg.embeds[0].setDescription(`~~${menumsg.embeds[0].description}~~`)],
             components: [],
-            content: `<:yes:1026785792292569138> **Selected: \`${collected && collected.first() && collected.first().values.length > 0 ? collected.first().values[0] : "Nothing"}\`**`
+            content: `<:yes:1168770575116800042> **Selected: \`${collected && collected.first() && collected.first().values.length > 0 ? collected.first().values[0] : "Nothing"}\`**`
           })
         });
       }
@@ -250,7 +250,7 @@ module.exports = {
             let data = theDB.get(message.guild.id, pre+".data");
             let settings = theDB.get(message.guild.id, pre);
             if (!data || data.length < 1) {
-              return message.reply("<:no:1026787028710465577> **You need to add at least 1 Auto-Support-Option**")
+              return message.reply("<:NO:1169479454918180937> **You need to add at least 1 Auto-Support-Option**")
             }
             let tempmsg = await message.reply({
               embeds: [
@@ -340,17 +340,17 @@ module.exports = {
                   message.reply(`Successfully Setupped the Auto-Support-System in <#${channel.id}>`)
                 });
               } else {
-                return message.reply("<:no:1026787028710465577> **You did not ping a valid Channel!**")
+                return message.reply("<:NO:1169479454918180937> **You did not ping a valid Channel!**")
               }
             } else {
-              return message.reply("<:no:1026787028710465577> **You did not enter a Valid Message in Time! CANCELLED!**")
+              return message.reply("<:NO:1169479454918180937> **You did not enter a Valid Message in Time! CANCELLED!**")
             }
           }
           break;
           case "Add AutoSup Option": {
             let data = theDB.get(message.guild.id, pre+".data");
             if (data.length >= 25) {
-              return message.reply("<:no:1026787028710465577> **You reached the limit of 25 different Options!** Remove another Option first!")
+              return message.reply("<:NO:1169479454918180937> **You reached the limit of 25 different Options!** Remove another Option first!")
             }
             //ask for value and description
             let tempmsg = await message.reply({
@@ -367,11 +367,11 @@ module.exports = {
               time: 90000, errors: ["time"]
             });
             if (collected && collected.first().content) {
-              if (!collected.first().content.includes("++")) return message.reply("<:no:1026787028710465577> **Invalid Usage! Please mind the Usage and check the Example**")
+              if (!collected.first().content.includes("++")) return message.reply("<:NO:1169479454918180937> **Invalid Usage! Please mind the Usage and check the Example**")
               let value = collected.first().content.split("++")[0].trim().substring(0, 25);
               let index2 = data.findIndex(v => v.value == value);
               if(index2 >= 0 && index != index2) {
-                  return message.reply("<:no:1026787028710465577> **Options can't have the SAME VALUE!** There is already an Option with that Value!");
+                  return message.reply("<:NO:1169479454918180937> **Options can't have the SAME VALUE!** There is already an Option with that Value!");
               }
               let description = collected.first().content.split("++")[1].trim().substring(0, 50);
               let tempmsg = await message.reply({
@@ -482,7 +482,7 @@ module.exports = {
                   }
                   
                 } else {
-                  return message.reply("<:no:1026787028710465577> **You did not enter a Valid Message in Time! CANCELLED!**")
+                  return message.reply("<:NO:1169479454918180937> **You did not enter a Valid Message in Time! CANCELLED!**")
                 }
               }
             })
@@ -491,18 +491,18 @@ module.exports = {
               tempmsg.edit({
                 embeds: [tempmsg.embeds[0].setDescription(`~~${tempmsg.embeds[0].description}~~`)],
                 components: [],
-                content: `<:yes:1026785792292569138> **Selected: \`${collected ? collected.customId : "Nothing | CANCELLED"}\`**`
+                content: `<:yes:1168770575116800042> **Selected: \`${collected ? collected.customId : "Nothing | CANCELLED"}\`**`
               })
             });
             } else {
-              return message.reply("<:no:1026787028710465577> **You did not enter a Valid Message in Time! CANCELLED!**")
+              return message.reply("<:NO:1169479454918180937> **You did not enter a Valid Message in Time! CANCELLED!**")
             }
           }
           break;
           case "Edit AutoSup Option": {
             let data = theDB.get(message.guild.id, pre+".data");
             if (!data || data.length < 1) {
-              return message.reply("<:no:1026787028710465577> **There are no Open-Ticket-Options to edit**")
+              return message.reply("<:NO:1169479454918180937> **There are no Open-Ticket-Options to edit**")
             }
             let embed = new MessageEmbed()
               .setColor(es.color)
@@ -578,11 +578,11 @@ module.exports = {
                   time: 90000, errors: ["time"]
                 });
                 if (collected && collected.first().content) {
-                  if (!collected.first().content.includes("++")) return message.reply("<:no:1026787028710465577> **Invalid Usage! Please mind the Usage and check the Example**")
+                  if (!collected.first().content.includes("++")) return message.reply("<:NO:1169479454918180937> **Invalid Usage! Please mind the Usage and check the Example**")
                   let value = collected.first().content.split("++")[0].trim().substring(0, 25);
                   let index2 = data.findIndex(v => v.value == value);
                   if(index2 >= 0 && index != index2) {
-                      return message.reply("<:no:1026787028710465577> **Options can't have the SAME VALUE!** There is already an Option with that Value!");
+                      return message.reply("<:NO:1169479454918180937> **Options can't have the SAME VALUE!** There is already an Option with that Value!");
                   }
                   let description = collected.first().content.split("++")[1].trim().substring(0, 50);
                   let tempmsg = await message.reply({
@@ -687,7 +687,7 @@ module.exports = {
                       }
                       
                     } else {
-                      return message.reply("<:no:1026787028710465577> **You did not enter a Valid Message in Time! CANCELLED!**")
+                      return message.reply("<:NO:1169479454918180937> **You did not enter a Valid Message in Time! CANCELLED!**")
                     }
                   }
                 })
@@ -696,14 +696,14 @@ module.exports = {
                   tempmsg.edit({
                     embeds: [tempmsg.embeds[0].setDescription(`~~${tempmsg.embeds[0].description}~~`)],
                     components: [],
-                    content: `<:yes:1026785792292569138> **Selected: \`${collected ? collected.customId : "Nothing | CANCELLED"}\`**`
+                    content: `<:yes:1168770575116800042> **Selected: \`${collected ? collected.customId : "Nothing | CANCELLED"}\`**`
                   })
                 });
                 } else {
-                  return message.reply("<:no:1026787028710465577> **You did not enter a Valid Message in Time! CANCELLED!**")
+                  return message.reply("<:NO:1169479454918180937> **You did not enter a Valid Message in Time! CANCELLED!**")
                 }
               } else menu?.reply({
-                content: `<:no:1026787028710465577> You are not allowed to do that! Only: <@${cmduser.id}>`,
+                content: `<:NO:1169479454918180937> You are not allowed to do that! Only: <@${cmduser.id}>`,
                 ephemeral: true
               });
             });
@@ -712,7 +712,7 @@ module.exports = {
               menumsg.edit({
                 embeds: [menumsg.embeds[0].setDescription(`~~${menumsg.embeds[0].description}~~`)],
                 components: [],
-                content: `<:yes:1026785792292569138> **Selected: \`${collected ? collected.first().values[0] : "Nothing"}\`**`
+                content: `<:yes:1168770575116800042> **Selected: \`${collected ? collected.first().values[0] : "Nothing"}\`**`
               })
             });
           }
@@ -720,7 +720,7 @@ module.exports = {
           case "Remove AutoSup Option": {
           let data = theDB.get(message.guild.id, pre+".data");
           if (!data || data.length < 1) {
-            return message.reply("<:no:1026787028710465577> **There are no Auto-Responding-Support-Options to remove**")
+            return message.reply("<:NO:1169479454918180937> **There are no Auto-Responding-Support-Options to remove**")
           }
           let embed = new MessageEmbed()
             .setColor(es.color)
@@ -786,7 +786,7 @@ module.exports = {
               theDB.set(message.guild.id, data, pre+".data");
               message.reply(`**Successfully removed:**\n>>> ${menu?.values.map(i => `\`${i}\``).join(", ")}\n\nDon't forget to resend the Auto Support Config-Message!`)
             } else menu?.reply({
-              content: `<:no:1026787028710465577> You are not allowed to do that! Only: <@${cmduser.id}>`,
+              content: `<:NO:1169479454918180937> You are not allowed to do that! Only: <@${cmduser.id}>`,
               ephemeral: true
             });
           });
@@ -795,7 +795,7 @@ module.exports = {
             menumsg.edit({
               embeds: [menumsg.embeds[0].setDescription(`~~${menumsg.embeds[0].description}~~`)],
               components: [],
-              content: `<:yes:1026785792292569138> **Selected: \`${collected ? collected.first().values[0] : "Nothing"}\`**`
+              content: `<:yes:1168770575116800042> **Selected: \`${collected ? collected.first().values[0] : "Nothing"}\`**`
             })
           });
         }
@@ -858,7 +858,7 @@ module.exports = {
 };
 /**
  * @INFO
- * Bot Coded by bestgamershk_ | https://discord.gg/bestgamershk
+ * Bot Coded by bestgamershk2 | https://discord.gg/bestgamershk
  * @INFO
  * Work for BestGamersHK | discord.gg/bestgamershk
  * @INFO

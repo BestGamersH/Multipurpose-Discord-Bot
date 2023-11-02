@@ -90,10 +90,10 @@ module.exports = {
         client.on('interactionCreate',  (menu) => {
           if (menu?.message.id === menumsg.id) {
             if (menu?.user.id === cmduser.id) {
-              if(used1) return menu?.reply({content : `<:no:1026787028710465577> You already selected something, this Selection is now disabled!`}, {ephermal : true});
+              if(used1) return menu?.reply({content : `<:NO:1169479454918180937> You already selected something, this Selection is now disabled!`}, {ephermal : true});
               menuselection(menu);
             }
-            else menu?.reply({content : `<:no:1026787028710465577> You are not allowed to do that! Only: <@${cmduser.id}>`}, {ephermal : true});
+            else menu?.reply({content : `<:NO:1169479454918180937> You are not allowed to do that! Only: <@${cmduser.id}>`}, {ephermal : true});
           }
         });
       }
@@ -156,7 +156,7 @@ module.exports = {
 };
 /**
  * @INFO
- * Bot Coded by bestgamershk_ | https://discord.gg/bestgamershk
+ * Bot Coded by bestgamershk2 | https://discord.gg/bestgamershk
  * @INFO
  * Work for BestGamersHK | discord.gg/bestgamershk
  * @INFO

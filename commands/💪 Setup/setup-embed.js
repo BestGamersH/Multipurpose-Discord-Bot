@@ -24,8 +24,8 @@ module.exports = {
     try {
         var timeouterror = false;
         let row = new MessageActionRow()
-          .addComponents(
-          new MessageButton().setStyle("SECONDARY").setCustomId("1").setEmoji("`1168774094351765524"),
+        .addComponents(
+          new MessageButton().setStyle("SECONDARY").setCustomId("1").setEmoji("1168774094351765524"),
           new MessageButton().setStyle("SECONDARY").setCustomId("2").setEmoji("1168774123946774590"),
           new MessageButton().setStyle("SECONDARY").setCustomId("3").setEmoji("1168774143685165066"),
           new MessageButton().setStyle("SECONDARY").setCustomId("4").setEmoji("1168774160831492097"),
@@ -223,7 +223,7 @@ module.exports = {
                     client.settings.set(message.guild.id, text, "embed.footertext")
                     es = client.settings.get(message.guild.id, "embed")
                     return message.reply({embeds: [new Discord.MessageEmbed()
-                      .setTitle(`<:yes:1026785792292569138> The new Embed Footer Text is:`.substring(0, 256))
+                      .setTitle(`<:yes:1168770575116800042> The new Embed Footer Text is:`.substring(0, 256))
                       .setColor(es.color).setThumbnail(es.thumb ? es.footericon && (es.footericon.includes("http://") || es.footericon.includes("https://")) ? es.footericon : client.user.displayAvatarURL() : null)
                       .setDescription(es.footertext)
                       .setFooter(client.getFooter(es))
@@ -267,11 +267,11 @@ module.exports = {
               }
             } 
           }
-          else button?.reply({content: `<:no:1026787028710465577> You are not allowed to do that! Only: <@${cmduser.id}>`, ephemeral: true});
+          else button?.reply({content: `<:NO:1169479454918180937> You are not allowed to do that! Only: <@${cmduser.id}>`, ephemeral: true});
         });
         //Once the Collections ended edit the menu message
         collector.on('end', collected => {
-          tempmsg.edit({embeds: [tempmsg.embeds[0].setDescription(`~~${tempmsg.embeds[0].description}~~`)], components: [], content: `${collected && collected.first() && collected.first().customId ? `<:yes:1026785792292569138> **Selected the \`${collected.first().customId}\`. Button**` : "❌ **NOTHING SELECTED - CANCELLED**" }`})
+          tempmsg.edit({embeds: [tempmsg.embeds[0].setDescription(`~~${tempmsg.embeds[0].description}~~`)], components: [], content: `${collected && collected.first() && collected.first().customId ? `<:yes:1168770575116800042> **Selected the \`${collected.first().customId}\`. Button**` : "❌ **NOTHING SELECTED - CANCELLED**" }`})
         });
   
     } catch (e) {
@@ -286,7 +286,7 @@ module.exports = {
 };
 /**
  * @INFO
- * Bot Coded by bestgamershk_ | https://discord.gg/bestgamershk
+ * Bot Coded by bestgamershk2 | https://discord.gg/bestgamershk
  * @INFO
  * Work for BestGamersHK | discord.gg/bestgamershk
  * @INFO

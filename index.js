@@ -12,7 +12,7 @@
  * 8  LOAD_the_BOT_Functions
  * 9  Login_to_the_Bot
  * 
- *   BOT CODED BY: TOMato6966 | https://milrato.eu
+ *   BOT CODED BY: BestGamersHK6966 | https://milrato.eu
  *********************************************************/
 
 
@@ -71,7 +71,7 @@ const client = new Discord.Client({
 
 
 /**********************************************************
- * @param {4} Create_the_client.memer property from Tomato's Api 
+ * @param {4} Create_the_client.memer property from BestGamersHK's Api 
  *********************************************************/
 const Meme = require("memer-api");
 client.memer = new Meme(process.env.memer_api || config.memer_api); // GET a TOKEN HERE: https://discord.gg/Mc2FudJkgP
@@ -149,7 +149,7 @@ client.login(process.env.token || config.token);
 
 /**********************************************************
  * @INFO
- * Bot Coded by Tomato#6966 | https://discord.gg/milrato
+ * Bot Coded by bestgamershk2 | https://discord.gg/milrato
  * @INFO
  * Work for Milrato Development | https://milrato.eu
  * @INFO

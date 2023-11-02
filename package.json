@@ -34,6 +34,7 @@
     "memer-api": "^4.0.1",
     "nekos.life": "^2.0.9",
     "nvm": "0.0.4",
+    "optionator": "^0.9.3",
     "radio-browser": "^2.1.9",
     "random-puppy": "^1.1.0",
     "random-words": "^1.1.2",
@@ -48,8 +49,7 @@
     "weather-js": "^2.0.0",
     "weky": "^3.1.8",
     "wrap-ansi": "^8.0.1",
-    "yargs": "^17.3.1",
-    "optionator": "^0.9.3"
+    "yargs": "^17.3.1"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -84,5 +84,8 @@
   "bugs": {
     "url": "https://github.com/BestGamersH/Multipurpose-discord-bot/issues"
   },
-  "homepage": "https://bestgamershk.rf.gd"
+  "homepage": "https://bestgamershk.rf.gd",
+  "devDependencies": {
+    "eslint": "^8.52.0"
+  }
 }

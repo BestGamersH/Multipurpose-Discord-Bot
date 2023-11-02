@@ -288,7 +288,7 @@ module.exports = {
                         message.reply(eval(client.la[ls]["cmds"]["administration"]["giveaway"]["variable36"]));
                     } else {
                         console.error(e);
-                        message.reply({content : '<:no:1026787028710465577> **An error occured...**```' + String(e.message).substring(0, 1900) + "```"});
+                        message.reply({content : '<:NO:1169479454918180937> **An error occured...**```' + String(e.message).substring(0, 1900) + "```"});
                     }
                 });
 
@@ -311,7 +311,7 @@ module.exports = {
                         message.reply(eval(client.la[ls]["cmds"]["administration"]["giveaway"]["variable36"]));
                     } else {
                         console.error(e);
-                        message.reply({content : '<:no:1026787028710465577> **An error occured...**```' + String(e.message).substring(0, 1900) + "```"});
+                        message.reply({content : '<:NO:1169479454918180937> **An error occured...**```' + String(e.message).substring(0, 1900) + "```"});
                     }
                 });
         } else if (args[0].toLowerCase() === "unpause" || args[0].toLowerCase() === "resume") {
@@ -334,7 +334,7 @@ module.exports = {
                         message.reply(eval(client.la[ls]["cmds"]["administration"]["giveaway"]["variable36"]));
                     } else {
                         console.error(e);
-                        message.reply({content : '<:no:1026787028710465577> **An error occured...**```' + String(e.message).substring(0, 1900) + "```"});
+                        message.reply({content : '<:NO:1169479454918180937> **An error occured...**```' + String(e.message).substring(0, 1900) + "```"});
                     }
                 });
         } else if (args[0].toLowerCase() === "edit") {

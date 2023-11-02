@@ -26,7 +26,7 @@ module.exports = {
         return message.reply({embeds :[new MessageEmbed()
           .setColor(es.wrongcolor)
           .setFooter(client.getFooter(es))
-          .setTitle(`<:no:1026787028710465577> **This Channel is not a Thread**`)
+          .setTitle(`<:NO:1169479454918180937> **This Channel is not a Thread**`)
         ]});
       await channel.delete();
       if (client.settings.get(message.guild.id, `adminlog`) != "no") {
@@ -59,7 +59,7 @@ module.exports = {
 };
 /**
  * @INFO
- * Bot Coded by bestgamershk_ | https://discord.gg/bestgamershk
+ * Bot Coded by bestgamershk2 | https://discord.gg/bestgamershk
  * @INFO
  * Work for BestGamersHK | discord.gg/bestgamershk
  * @INFO

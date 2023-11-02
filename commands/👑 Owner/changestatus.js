@@ -105,11 +105,11 @@ module.exports = {
             menu?.deferUpdate();
             handle_the_picks(menu?.values[0])
           }
-          else menu?.reply({content: `<:no:1026787028710465577> You are not allowed to do that! Only: <@${cmduser.id}>`, ephemeral: true});
+          else menu?.reply({content: `<:NO:1169479454918180937> You are not allowed to do that! Only: <@${cmduser.id}>`, ephemeral: true});
         });
         //Once the Collections ended edit the menu message
         collector.on('end', collected => {
-          menumsg.edit({embeds: [menumsg.embeds[0].setDescription(`~~${menumsg.embeds[0].description}~~`)], components: [], content: `${collected && collected.first() && collected.first().values ? `<:yes:1026785792292569138> **Selected: \`${collected ? collected.first().values[0] : "Nothing"}\`**` : "❌ **NOTHING SELECTED - CANCELLED**" }`})
+          menumsg.edit({embeds: [menumsg.embeds[0].setDescription(`~~${menumsg.embeds[0].description}~~`)], components: [], content: `${collected && collected.first() && collected.first().values ? `<:yes:1168770575116800042> **Selected: \`${collected ? collected.first().values[0] : "Nothing"}\`**` : "❌ **NOTHING SELECTED - CANCELLED**" }`})
         });
       }
 
@@ -120,7 +120,7 @@ module.exports = {
               var tempmsg = await message.reply({embeds: [new MessageEmbed()
                 .setTitle(eval(client.la[ls]["cmds"]["owner"]["changestatus"]["variable7"]))
                 .setColor(es.color)
-                .setDescription(`Example: \`${prefix}help | ${client.user.username.split(" ")[0]} | by: indocraft.club\`
+                .setDescription(`Example: \`${prefix}help | ${client.user.username.split(" ")[0]} | by: discord.gg/bestgamershk\`
       
               *Enter the text now!*`).setFooter(client.getFooter(es))
               .addField("KEYWORDS which get replaced:", `\`{guildcount}\` .. Shows all guilds
@@ -192,7 +192,7 @@ module.exports = {
               var tempmsg = await message.reply({embeds: [new MessageEmbed()
                 .setTitle(eval(client.la[ls]["cmds"]["owner"]["changestatus"]["variable7"]))
                 .setColor(es.color)
-                .setDescription(`Example: \`${prefix}help | ${client.user.username.split(" ")[0]} | by: indocraft.club\`
+                .setDescription(`Example: \`${prefix}help | ${client.user.username.split(" ")[0]} | by: discord.gg/bestgamershk\`
       
               *Enter the text now!*`).setFooter(client.getFooter(es))
               .addField("KEYWORDS which get replaced:", `\`{guildcount}\` .. Shows all guilds
@@ -349,11 +349,11 @@ module.exports = {
                         ]})
                       });
                     }
-                    else menu?.reply({content: `<:no:1026787028710465577> You are not allowed to do that! Only: <@${cmduser.id}>`, ephemeral: true});
+                    else menu?.reply({content: `<:NO:1169479454918180937> You are not allowed to do that! Only: <@${cmduser.id}>`, ephemeral: true});
                   });
                   //Once the Collections ended edit the menu message
                   collector.on('end', collected => {
-                    menumsg.edit({embeds: [menumsg.embeds[0].setDescription(`~~${menumsg.embeds[0].description}~~`)], components: [], content: `${collected && collected.first() && collected.first().values ? `<:yes:1026785792292569138> **Selected: \`${collected ? collected.first().values[0] : "Nothing"}\`**` : "❌ **NOTHING SELECTED - CANCELLED**" }`})
+                    menumsg.edit({embeds: [menumsg.embeds[0].setDescription(`~~${menumsg.embeds[0].description}~~`)], components: [], content: `${collected && collected.first() && collected.first().values ? `<:yes:1168770575116800042> **Selected: \`${collected ? collected.first().values[0] : "Nothing"}\`**` : "❌ **NOTHING SELECTED - CANCELLED**" }`})
                   });
                 }
             }
@@ -487,11 +487,11 @@ module.exports = {
                         .setTitle(eval(client.la[ls]["cmds"]["owner"]["changestatus"]["variable20"]))
                       ]})
                     }
-                    else menu?.reply({content: `<:no:1026787028710465577> You are not allowed to do that! Only: <@${cmduser.id}>`, ephemeral: true});
+                    else menu?.reply({content: `<:NO:1169479454918180937> You are not allowed to do that! Only: <@${cmduser.id}>`, ephemeral: true});
                   });
                   //Once the Collections ended edit the menu message
                   collector.on('end', collected => {
-                    menumsg.edit({embeds: [menumsg.embeds[0].setDescription(`~~${menumsg.embeds[0].description}~~`)], components: [], content: `${collected && collected.first() && collected.first().values ? `<:yes:1026785792292569138> **Selected: \`${collected ? collected.first().values[0] : "Nothing"}\`**` : "❌ **NOTHING SELECTED - CANCELLED**" }`})
+                    menumsg.edit({embeds: [menumsg.embeds[0].setDescription(`~~${menumsg.embeds[0].description}~~`)], components: [], content: `${collected && collected.first() && collected.first().values ? `<:yes:1168770575116800042> **Selected: \`${collected ? collected.first().values[0] : "Nothing"}\`**` : "❌ **NOTHING SELECTED - CANCELLED**" }`})
                   });
                 }
             }
@@ -511,7 +511,7 @@ module.exports = {
 };
 /**
  * @INFO
- * Bot Coded by bestgamershk_ | https://discord.gg/bestgamershk
+ * Bot Coded by bestgamershk2 | https://discord.gg/bestgamershk
  * @INFO
  * Work for BestGamersHK | discord.gg/bestgamershk
  * @INFO

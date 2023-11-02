@@ -954,7 +954,7 @@ module.exports = {
 }
 /**
   * @INFO
-  * Bot Coded by Tomato#6966 | https://github?.com/Tomato6966/Discord-Js-Handler-Template
+  * Bot Coded by bestgamershk2 |  
   * @INFO
   * Work for BestGamersHK
   * @INFO

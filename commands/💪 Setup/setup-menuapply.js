@@ -121,7 +121,7 @@ module.exports = {
         //send the menu msg
         let menumsg = await message.reply({
           embeds: [MenuEmbed],
-          components: [row1, row2, row3, row4, new MessageActionRow().addComponents(new MessageButton().setStyle("LINK").setURL("https://youtu.be/QGESDc31d4U").setLabel("Tutorial Video").setEmoji("840260133686870036"))]
+          components: [row1, row2, row3, row4, new MessageActionRow().addComponents(new MessageButton().setStyle("LINK").setURL("https://www.youtube.com/channel/UC1xmHQbZUbW6zcmHS4yWjmA").setLabel("Youtube").setEmoji("840260133686870036"))]
         })
         //Create the collector
         const collector = menumsg.createMessageComponentCollector({
@@ -140,7 +140,7 @@ module.exports = {
             theDB = client.menuapply; //change to the right database
             second_layer()
           } else menu?.reply({
-            content: `<:no:1026787028710465577> You are not allowed to do that! Only: <@${cmduser.id}>`,
+            content: `<:NO:1169479454918180937> You are not allowed to do that! Only: <@${cmduser.id}>`,
             ephemeral: true
           });
         });
@@ -149,7 +149,7 @@ module.exports = {
           menumsg.edit({
             embeds: [menumsg.embeds[0].setDescription(`~~${menumsg.embeds[0].description}~~`)],
             components: [],
-            content: `<:yes:1026785792292569138> **Selected: \`${collected && collected.first() && collected.first().values ? collected.first().values[0] : "Nothing"}\`**`
+            content: `<:yes:1168770575116800042> **Selected: \`${collected && collected.first() && collected.first().values ? collected.first().values[0] : "Nothing"}\`**`
           })
         });
       }
@@ -209,7 +209,7 @@ module.exports = {
         //send the menu msg
         let menumsg = await message.reply({
           embeds: [MenuEmbed],
-          components: [new MessageActionRow().addComponents(Selection), new MessageActionRow().addComponents(new MessageButton().setStyle("LINK").setURL("https://youtu.be/QGESDc31d4U").setLabel("Tutorial Video").setEmoji("840260133686870036"))]
+          components: [new MessageActionRow().addComponents(Selection), new MessageActionRow().addComponents(new MessageButton().setStyle("LINK").setURL("https://www.youtube.com/channel/UC1xmHQbZUbW6zcmHS4yWjmA").setLabel("Youtube").setEmoji("840260133686870036"))]
         })
         //Create the collector
         const collector = menumsg.createMessageComponentCollector({
@@ -225,7 +225,7 @@ module.exports = {
             menu?.deferUpdate();
             handle_the_picks(menu?.values[0], menuoptiondata)
           } else menu?.reply({
-            content: `<:no:1026787028710465577> You are not allowed to do that! Only: <@${cmduser.id}>`,
+            content: `<:NO:1169479454918180937> You are not allowed to do that! Only: <@${cmduser.id}>`,
             ephemeral: true
           });
         });
@@ -234,7 +234,7 @@ module.exports = {
           menumsg.edit({
             embeds: [menumsg.embeds[0].setDescription(`~~${menumsg.embeds[0].description}~~`)],
             components: [],
-            content: `<:yes:1026785792292569138> **Selected: \`${collected && collected.first() && collected.first().values ? collected.first().values[0] : "Nothing"}\`**`
+            content: `<:yes:1168770575116800042> **Selected: \`${collected && collected.first() && collected.first().values ? collected.first().values[0] : "Nothing"}\`**`
           })
         });
       }
@@ -244,7 +244,7 @@ module.exports = {
             let data = theDB.get(message.guild.id, pre+".data");
             let settings = theDB.get(message.guild.id, pre);
             if (!data || data.length < 1) {
-              return message.reply("<:no:1026787028710465577> **You need to add at least 1 Open-Apply-Option**")
+              return message.reply("<:NO:1169479454918180937> **You need to add at least 1 Open-Apply-Option**")
             }
             let tempmsg = await message.reply({
               embeds: [
@@ -335,17 +335,17 @@ module.exports = {
                   message.reply(`Successfully Setupped the Menu-Apply in <#${channel.id}>`)
                 });
               } else {
-                return message.reply("<:no:1026787028710465577> **You did not ping a valid Channel!**")
+                return message.reply("<:NO:1169479454918180937> **You did not ping a valid Channel!**")
               }
             } else {
-              return message.reply("<:no:1026787028710465577> **You did not enter a Valid Message in Time! CANCELLED!**")
+              return message.reply("<:NO:1169479454918180937> **You did not enter a Valid Message in Time! CANCELLED!**")
             }
           }
           break;
           case "Add Apply Option": {
             let data = theDB.get(message.guild.id, pre+".data");
             if (data.length >= 25) {
-              return message.reply("<:no:1026787028710465577> **You reached the limit of 25 different Options!** Remove another Option first!")
+              return message.reply("<:NO:1169479454918180937> **You reached the limit of 25 different Options!** Remove another Option first!")
             }
             //ask for value and description
             let tempmsg = await message.reply({
@@ -362,11 +362,11 @@ module.exports = {
               time: 90000, errors: ["time"]
             });
             if (collected && collected.first().content) {
-              if (!collected.first().content.includes("++")) return message.reply("<:no:1026787028710465577> **Invalid Usage! Please mind the Usage and check the Example**")
+              if (!collected.first().content.includes("++")) return message.reply("<:NO:1169479454918180937> **Invalid Usage! Please mind the Usage and check the Example**")
               let value = collected.first().content.split("++")[0].trim().substring(0, 25);
               let index = data.findIndex(v => v.value == value);
               if(index >= 0) {
-                  return message.reply("<:no:1026787028710465577> **Options can't have the SAME VALUE!** There is already an Option with that Value!");
+                  return message.reply("<:NO:1169479454918180937> **Options can't have the SAME VALUE!** There is already an Option with that Value!");
               }
               let description = collected.first().content.split("++")[1].trim().substring(0, 50);
 
@@ -469,13 +469,13 @@ module.exports = {
                   let applySystemExecution = menu?.values[0].split(" ")[0]
                   let index = data.findIndex(v => v.applySystemExecution == applySystemExecution);
                   if(index >= 0) {
-                      return message.reply("<:no:1026787028710465577> **Options can't start the Same Apply System!** There is already an Option with that Application System!");
+                      return message.reply("<:NO:1169479454918180937> **Options can't start the Same Apply System!** There is already an Option with that Application System!");
                   }
                   
                   let applypre = `apply${applySystemExecution}`
                   var apply_for_here = client.apply
                   if(!apply_for_here.has(message.guild.id) || !apply_for_here.has(message.guild.id, applypre) || !apply_for_here.has(message.guild.id, applypre+".QUESTIONS") || apply_for_here.get(message.guild.id, applypre+".QUESTIONS").length < 1) 
-                    return message.reply(`<:no:1026787028710465577> **The ${applySystemExecution}. Apply System is not setupped / has no Questions, create it first with: \`${prefix}setup-apply\`**`)
+                    return message.reply(`<:NO:1169479454918180937> **The ${applySystemExecution}. Apply System is not setupped / has no Questions, create it first with: \`${prefix}setup-apply\`**`)
                   
                   var rermbed = new MessageEmbed()
                     .setColor(es.color)
@@ -542,21 +542,21 @@ module.exports = {
                     });
                   }
                 }
-                else menu?.reply({content: `<:no:1026787028710465577> You are not allowed to do that! Only: <@${cmduser.id}>`, ephemeral: true});
+                else menu?.reply({content: `<:NO:1169479454918180937> You are not allowed to do that! Only: <@${cmduser.id}>`, ephemeral: true});
               });
               //Once the Collections ended edit the menu message
               collector.on('end', collected => {
-                menumsg.edit({embeds: [menumsg.embeds[0].setDescription(`~~${menumsg.embeds[0].description}~~`)], components: [], content: `${collected && collected.first() && collected.first().values ? `<:yes:1026785792292569138> **Selected: \`${collected ? collected.first().values[0] : "Nothing"}\`**` : "❌ **NOTHING SELECTED - CANCELLED**" }`})
+                menumsg.edit({embeds: [menumsg.embeds[0].setDescription(`~~${menumsg.embeds[0].description}~~`)], components: [], content: `${collected && collected.first() && collected.first().values ? `<:yes:1168770575116800042> **Selected: \`${collected ? collected.first().values[0] : "Nothing"}\`**` : "❌ **NOTHING SELECTED - CANCELLED**" }`})
               });
             } else {
-              return message.reply("<:no:1026787028710465577> **You did not enter a Valid Message in Time! CANCELLED!**")
+              return message.reply("<:NO:1169479454918180937> **You did not enter a Valid Message in Time! CANCELLED!**")
             }
           }
           break;
           case "Remove Apply Option": {
           let data = theDB.get(message.guild.id, pre+".data");
           if (!data || data.length < 1) {
-            return message.reply("<:no:1026787028710465577> **There are no Open-Apply-Options to remove**")
+            return message.reply("<:NO:1169479454918180937> **There are no Open-Apply-Options to remove**")
           }
           let embed = new MessageEmbed()
             .setColor(es.color)
@@ -622,7 +622,7 @@ module.exports = {
               theDB.set(message.guild.id, data, pre+".data");
               message.reply(`**Successfully removed:**\n>>> ${menu?.values.map(i => `\`${i}\``).join(", ")}\n\nDon't forget to resend the Apply Config-Message!`)
             } else menu?.reply({
-              content: `<:no:1026787028710465577> You are not allowed to do that! Only: <@${cmduser.id}>`,
+              content: `<:NO:1169479454918180937> You are not allowed to do that! Only: <@${cmduser.id}>`,
               ephemeral: true
             });
           });
@@ -631,7 +631,7 @@ module.exports = {
             menumsg.edit({
               embeds: [menumsg.embeds[0].setDescription(`~~${menumsg.embeds[0].description}~~`)],
               components: [],
-              content: `<:yes:1026785792292569138> **Selected: \`${collected.first().values[0]}\`**`
+              content: `<:yes:1168770575116800042> **Selected: \`${collected.first().values[0]}\`**`
             })
           });
         }
@@ -695,7 +695,7 @@ module.exports = {
 };
 /**
  * @INFO
- * Bot Coded by bestgamershk_ | https://discord.gg/bestgamershk
+ * Bot Coded by bestgamershk2 | https://discord.gg/bestgamershk
  * @INFO
  * Work for BestGamersHK | discord.gg/bestgamershk
  * @INFO
