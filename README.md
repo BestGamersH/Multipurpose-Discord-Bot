@@ -151,6 +151,8 @@ If you have downloaded the source code and met the system requirements, you can 
   
 </details>
 
+## ✨ Commands List
+
 <details>
   <summary>Click to expand</summary> 
 ## Commands
