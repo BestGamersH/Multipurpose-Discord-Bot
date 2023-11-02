@@ -14,10 +14,15 @@ If you find any errors please create a issue from <a href="https://github.com/Be
 <details>
   <summary>Click to expand</summary>
 
-  * [nodejs](https://nodejs.org) version 18
-  * [python](https://python.org) version 3.10 or higher, to install the database `enmap` (better-sqlite3)
+  * [Nodejs](https://nodejs.org) version 18
+  * [Python](https://python.org) version 3.10 or higher, to install the database `enmap` (better-sqlite3)
   * a VPS would be adviced, so you don't need to keep your pc/laptop/raspi 24/7 online! [click here for a debian setup](https://github.com/Tomato6966/Debian-Cheat-Sheet-Setup/wiki/)
-  * [visual studio code](https://visualstudio.microsoft.com/downloads/) latest version, Make sure to select "Desktop development with C++" which should install the necessary components for Node.js native modules.
+  * [Visual studio code](https://visualstudio.microsoft.com/downloads/) latest version, Make sure to select "Desktop development with C++" which should install the necessary components for Node.js native modules.
+  * A Text/Code editor
+    * [Notpad++](https://notepad-plus-plus.org/)
+    * [Sublime Text](https://www.sublimetext.com/)
+    * [IntelliJ IDEA](https://www.jetbrains.com/idea/)
+
 
 </details>
 
@@ -126,6 +131,8 @@ If you find any errors please create a issue from <a href="https://github.com/Be
      * `consumer_secret` you can get from: [twitter Developers](https://developer.twitter.com)
      * `access_token` you can get from: [twitter Developers](https://developer.twitter.com)
      * `access_token_secret` you can get from: [twitter Developers](https://developer.twitter.com)
+
+  4. Optionally, you can change the API key for AIChat by creating your own url at Brainshop.ai: https://brainshop.ai/. This lets you set the name and other details of your AI.
   
 </details>
 
@@ -133,8 +140,6 @@ If you find any errors please create a issue from <a href="https://github.com/Be
 ## SUPPORT me AND MILRATO DEVELOPMENT
 
 > You can always Support me by inviting one of me **own Discord Bots**
-
-
 
 # Credits
 
