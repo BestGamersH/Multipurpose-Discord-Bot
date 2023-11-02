@@ -16,7 +16,10 @@ If you find any errors please create a issue from <a href="https://github.com/Be
 
   * [Nodejs](https://nodejs.org) version 18
   * [Python](https://python.org) version 3.10 or higher, to install the database `enmap` (better-sqlite3)
-  * a VPS would be adviced, so you don't need to keep your pc/laptop/raspi 24/7 online! [click here for a debian setup](https://github.com/Tomato6966/Debian-Cheat-Sheet-Setup/wiki/)
+  * A VPS would be adviced, so you don't need to keep your pc/laptop/raspi 24/7 online! [click here for a debian setup](https://github.com/Tomato6966/Debian-Cheat-Sheet-Setup/wiki/)
+  * A VM Would also take up less resourceses.
+    *[Virtualbox/](https://www.virtualbox.org/)
+    *[Workstation Player Evaluation](https://www.vmware.com/products/workstation-player/workstation-player-evaluation.html)
   * [Visual studio code](https://visualstudio.microsoft.com/downloads/) latest version, Make sure to select "Desktop development with C++" which should install the necessary components for Node.js native modules.
   * A Text/Code editor
     * [Notpad++](https://notepad-plus-plus.org/)
@@ -29,12 +32,21 @@ If you find any errors please create a issue from <a href="https://github.com/Be
 ## 🤖 Bot Requirements
 
 <details>
-  <summary>Click to expand</summary>
+<summary>Click to expand</summary>
+To install the Multipurpose Discord Bot:
 
-   1. Download the [Source Code]()
-     * either by: `git clone https://github.com/BestGamersH/Multipurpose-Discord-Bot.git`
-     * or by downloading it as a zip from the releases or a branch
-  
+Download the source code from [GitHub](https://github.com/BestGamersH/Multipurpose-Discord-Bot.git). You can either clone the repository with the following command:
+
+git clone https://github.com/BestGamersH/Multipurpose-Discord-Bot.git
+
+Or, you can download the ZIP archive from the latest release or a specific branch.
+
+Make sure your system meets the following requirements:
+
+* At least 2GB of RAM
+* At least 700MB of free disk space (1GB is recommended)
+
+If you have downloaded the source code and met the system requirements, you can install and start the bot.
 </details>
 
 ## 🎶 Music Requirements
