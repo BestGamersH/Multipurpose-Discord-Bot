@@ -15,9 +15,12 @@ If you find any errors please create a issue from <a href="https://github.com/Be
   <summary>Click to expand</summary>
 
   * [Nodejs](https://nodejs.org) version 18
+  * [Discord.js](https://discord.js.org/) version 13.6.0 or higher
+    *Latest version `npm install discord.js@latest`
+    * Version 13 `npm install discord.js@13`
   * [Python](https://python.org) version 3.10 or higher, to install the database `enmap` (better-sqlite3)
   * A VPS would be adviced, so you don't need to keep your pc/laptop/raspi 24/7 online! [click here for a debian setup](https://github.com/Tomato6966/Debian-Cheat-Sheet-Setup/wiki/)
-  * A VM Would also take up less resourceses.
+  * A VM Would also take up less resourceses on your computer
     * [Virtualbox](https://www.virtualbox.org/)
     * [Workstation Player Evaluation](https://www.vmware.com/products/workstation-player/workstation-player-evaluation.html)
   * [Visual studio code](https://visualstudio.microsoft.com/downloads/) latest version, Make sure to select "Desktop development with C++" which should install the necessary components for Node.js native modules.
