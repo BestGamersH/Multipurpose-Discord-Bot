@@ -18,8 +18,8 @@ If you find any errors please create a issue from <a href="https://github.com/Be
   * [Python](https://python.org) version 3.10 or higher, to install the database `enmap` (better-sqlite3)
   * A VPS would be adviced, so you don't need to keep your pc/laptop/raspi 24/7 online! [click here for a debian setup](https://github.com/Tomato6966/Debian-Cheat-Sheet-Setup/wiki/)
   * A VM Would also take up less resourceses.
-    *[Virtualbox/](https://www.virtualbox.org/)
-    *[Workstation Player Evaluation](https://www.vmware.com/products/workstation-player/workstation-player-evaluation.html)
+    * [Virtualbox](https://www.virtualbox.org/)
+    * [Workstation Player Evaluation](https://www.vmware.com/products/workstation-player/workstation-player-evaluation.html)
   * [Visual studio code](https://visualstudio.microsoft.com/downloads/) latest version, Make sure to select "Desktop development with C++" which should install the necessary components for Node.js native modules.
   * A Text/Code editor
     * [Notpad++](https://notepad-plus-plus.org/)
