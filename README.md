@@ -37,7 +37,7 @@ To install the Multipurpose Discord Bot:
 
 Download the source code from [GitHub](https://github.com/BestGamersH/Multipurpose-Discord-Bot.git). You can either clone the repository with the following command:
 
-git clone https://github.com/BestGamersH/Multipurpose-Discord-Bot.git
+`git clone https://github.com/BestGamersH/Multipurpose-Discord-Bot.git`
 
 Or, you can download the ZIP archive from the latest release or a specific branch.
 
