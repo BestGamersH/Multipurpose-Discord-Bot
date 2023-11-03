@@ -159,7 +159,7 @@ If you have downloaded the source code and met the system requirements, you can 
 
 This is a list of some of the commands that you can use with the Multipurpose Discord Bot.
 
-| Command | Description | Image |
+| Command | Description |
 |---|---|---|
 | `!help` | Displays a list of all the available commands. |
 | `!ping` | Pings the bot and returns its response time. |
