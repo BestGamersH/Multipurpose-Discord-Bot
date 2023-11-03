@@ -155,8 +155,6 @@ If you have downloaded the source code and met the system requirements, you can 
 
 <details>
   <summary>Click to expand</summary> 
-## Commands
-
 This is a list of some of the commands that you can use with the Multipurpose Discord Bot.
 
 | Command | Description |
