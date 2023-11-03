@@ -157,27 +157,15 @@ If you have downloaded the source code and met the system requirements, you can 
   <summary>Click to expand</summary> 
 ## Commands
 
-This is a list of Some the commands that you can use with the Multipurpose Discord Bot.
+This is a list of some of the commands that you can use with the Multipurpose Discord Bot.
 
-| Command | Description |
+| Command | Description | Image |
 |---|---|---|
 | `!help` | Displays a list of all the available commands. |
 | `!ping` | Pings the bot and returns its response time. |
-| `!play` |  |
-| `!pause` | Pauses the currently playing song. |
-| `!stop` | Stops the currently playing song. |
-|---|---|---|
-| `!help` | Displays a list of all the available commands. | [Image of the help command output] |
-| `!ping` | Pings the bot and returns its response time. | [Image of the ping command output] |
-| `!play` | Plays a song from YouTube or Spotify. | [Image of the play command output] |
-| `!pause` | Pauses the currently playing song. | [Image of the pause command output] |
-| `!stop` | Stops the currently playing song. | [Image of the stop command output] |
-|---|---|---|
-| `!help` | Displays a list of all the available commands. | [Image of the help command output] |
-| `!ping` | Pings the bot and returns its response time. | [Image of the ping command output] |
-| `!play` | Plays a song from YouTube or Spotify. | [Image of the play command output] |
-| `!pause` | Pauses the currently playing song. | [Image of the pause command output] |
-| `!stop` | Stops the currently playing song. | [Image of the stop command output] |
+| `!daily` | Gives you your daily money. |
+| `!setup-aichat` | Setup the AI chat modual. |
+| `!setup-welcome` | Setup the welcome message. |
 
 
 ## SUPPORT me AND MILRATO DEVELOPMENT
