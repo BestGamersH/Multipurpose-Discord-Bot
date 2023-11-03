@@ -120,6 +120,8 @@ If you have downloaded the source code and met the system requirements, you can 
    4. You can adjust some settings in the other `./botconfig/*.json` Files, **BUT PLEASE __KEEP__ MY CREDITS & ADS!** This is the only way on how my hard work is "revenued"
    5. Now start the bot by typing opening a cmd in that folder and type: `node index.js` or `npm start`
      * If you don't want to keep the terminal open or if you're on linux, check out [pm2 (and my tutorial)](https://github.com/Tomato6966/Debian-Cheat-Sheet-Setup/wiki/4-pm2-tutorial) and type: `pm2 start --name Bot_Name index.js`
+        * [PM2](https://www.npmjs.com/package/pm2) - Npm Package
+        * [PM2 Offical site](https://pm2.keymetrics.io/)
   
 </details>
 
