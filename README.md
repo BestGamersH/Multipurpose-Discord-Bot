@@ -1,6 +1,6 @@
 ﻿﻿# Public Bot and Support Server!
 
-<a href="[https://discord.gg/milratoshop"><img src="https://discord.com/api/guilds/773668217163218944/widget.png?style=banner2"></a>
+<a href="[https://discord.gg/milratoshop"><img src="https://discord.com/api/guilds/931434125829738516/widget.png?style=banner2"></a>
  
 
 # Important notes and thank ❤️
@@ -156,6 +156,7 @@ If you have downloaded the source code and met the system requirements, you can 
 ## ✨ Commands Examples
 
 <details>
+
   <summary>Click to expand</summary> 
 This is a list of some of the commands that you can use with the Multipurpose Discord Bot.
 
@@ -166,13 +167,16 @@ This is a list of some of the commands that you can use with the Multipurpose Di
 | `!daily` | Gives you your daily money. |
 | `!setup-aichat` | Setup the AI chat modual. |
 | `!setup-welcome` | Setup the welcome message. |
+=======
+
+<details>
 
 
 ## SUPPORT me AND MILRATO DEVELOPMENT
 
 > You can always Support me by inviting one of me **own Discord Bots**
 
-# Credits
+## Credits
 
 > If consider using this Bot, make sure to credit me
 > This bot was made by https://github.com/Tomato6966 All credits to him, I just fixed the errors in it didn't code it fully.
