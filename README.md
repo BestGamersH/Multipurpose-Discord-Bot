@@ -167,7 +167,7 @@ This is a list of some of the commands that you can use with the Multipurpose Di
 | `!daily` | Gives you your daily money. |
 | `!setup-aichat` | Setup the AI chat modual. |
 | `!setup-welcome` | Setup the welcome message. |
-=======
+
 
 <details>
 
