@@ -169,7 +169,7 @@ This is a list of some of the commands that you can use with the Multipurpose Di
 | `!setup-welcome` | Setup the welcome message. |
 
 
-<details>
+</details>
 
 
 ## SUPPORT me AND MILRATO DEVELOPMENT
