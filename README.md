@@ -152,9 +152,9 @@ If you have downloaded the source code and met the system requirements, you can 
 </details>
 
 <details>
-  <summary>Click to expand</summary> 
-## Commands
 
+  <summary>Click to expand</summary> 
+## Commands 
 This is a list of all the commands that you can use with the Multipurpose Discord Bot.
 
 | Command | Description | Image |
@@ -169,7 +169,7 @@ This is a list of all the commands that you can use with the Multipurpose Discor
 
 > You can always Support me by inviting one of me **own Discord Bots**
 
-# Credits
+## Credits
 
 > If consider using this Bot, make sure to credit me
 > This bot was made by https://github.com/Tomato6966 All credits to him, I just fixed the errors in it didn't code it fully.
