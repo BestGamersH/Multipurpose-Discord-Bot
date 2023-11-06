@@ -5,7 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "@discordjs/builders": "^0.16.0",
-    "@discordjs/opus": "^0.7.0",
+    "@discordjs/opus": "^0.9.0",
     "@discordjs/voice": "^0.16.0",
     "anime-actions": "^1.0.6",
     "axios": "^1.6.0",
