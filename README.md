@@ -1,6 +1,6 @@
 ﻿﻿# Public Bot and Support Server!
 
-<a href="[https://discord.gg/milratoshop"><img src="https://discord.com/api/guilds/931434125829738516/widget.png?style=banner2"></a>
+<a href="https://discord.gg/hsmU2c7mVa"><img src="https://discord.com/api/guilds/773668217163218944/widget.png?style=banner2"></a>
  
 
 # Important notes and thank ❤️
