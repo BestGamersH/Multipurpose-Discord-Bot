@@ -41,7 +41,7 @@ module.exports = client => {
                             "c.tenor.com",
                             "tenor.com/view",
                             "milrato.dev",
-                            "indocraft.club",
+                            "discord.gg/bestgamershk",
                             "github?.com",
                             "mozilla.org",
                             "w3schools.com",

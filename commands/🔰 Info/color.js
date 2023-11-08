@@ -42,10 +42,10 @@ module.exports = {
       })
       const embed = new Discord.MessageEmbed()
         .setTitle(eval(client.la[ls]["cmds"]["info"]["color"]["variable1"]))
-        .addField('<:arrow:832598861813776394> **Name**', "```"+json.name+"```", true)
-        .addField("<:arrow:832598861813776394> **Hex**",  "```"+json.hex+"```", true)
-        .addField("<:arrow:832598861813776394> **RGB**",  "```"+json.rgb+"```", true)
-        .addField(`<:arrow:832598861813776394> **${client.la[ls].cmds.info.color.brightershade}**`,  "```"+json.brightened +"```", true)
+        .addField('<a:arrow:1168762387067846687> **Name**', "```"+json.name+"```", true)
+        .addField("<a:arrow:1168762387067846687> **Hex**",  "```"+json.hex+"```", true)
+        .addField("<a:arrow:1168762387067846687> **RGB**",  "```"+json.rgb+"```", true)
+        .addField(`<a:arrow:1168762387067846687> **${client.la[ls].cmds.info.color.brightershade}**`,  "```"+json.brightened +"```", true)
         .setThumbnail(json.color_image)
         .setColor(json.hex)
       if(userinfo) embed.addField("Color ==  your Highest Role!", `> Usage: \`${prefix}color ${args[0]}\``);
@@ -65,7 +65,7 @@ module.exports = {
 }
 /**
  * @INFO
- * Bot Coded by bestgamershk_ | https://discord.gg/bestgamershk
+ * Bot Coded by bestgamershk2 | https://discord.gg/bestgamershk
  * @INFO
  * Work for BestGamersHK | discord.gg/bestgamershk
  * @INFO

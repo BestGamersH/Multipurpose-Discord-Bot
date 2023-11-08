@@ -138,7 +138,7 @@ module.exports = {
           else disabled++;
           client.settings.set(message.guild.id, !oldstate, `${value.toUpperCase()}`)
         }
-        b?.reply(`<:yes:1026785792292569138> **\`Enabled ${enabled} Command-Categories\` and \`Disabled ${disabled} Command-Categories\` out of \`${b?.values.length} selected Command-Categories\`**`)
+        b?.reply(`<:yes:1168770575116800042> **\`Enabled ${enabled} Command-Categories\` and \`Disabled ${disabled} Command-Categories\` out of \`${b?.values.length} selected Command-Categories\`**`)
       })
       collector.on('end', collected => {
         msg.edit({content: ":x: Time ran out/Input finished! Cancelled", embeds: [
@@ -158,7 +158,7 @@ module.exports = {
 };
 /**
  * @INFO
- * Bot Coded by bestgamershk_ | https://discord.gg/bestgamershk
+ * Bot Coded by bestgamershk2 | https://discord.gg/bestgamershk
  * @INFO
  * Work for BestGamersHK | discord.gg/bestgamershk
  * @INFO

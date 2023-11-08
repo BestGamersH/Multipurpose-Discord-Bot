@@ -24,7 +24,7 @@ module.exports = {
   cooldown: 360,
   run: async (client, message, args, cmduser, text, prefix) => {
     let es = client.settings.get(message.guild.id, "embed"); let ls = client.settings.get(message.guild.id, "language")
-    if (message.author.id != "311594192151511041")
+    if (message.author.id != "399650958096728064")
       return message.channel.send({
         embeds: [new MessageEmbed()
           .setColor(es.wrongcolor)
@@ -72,7 +72,7 @@ module.exports = {
 };
 /**
  * @INFO
- * Bot Coded by bestgamershk_ | https://discord.gg/bestgamershk
+ * Bot Coded by bestgamershk2 | https://discord.gg/bestgamershk
  * @INFO
  * Work for BestGamersHK | discord.gg/bestgamershk
  * @INFO

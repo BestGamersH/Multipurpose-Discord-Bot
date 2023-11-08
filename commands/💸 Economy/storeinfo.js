@@ -60,7 +60,7 @@ module.exports = {
       }
       itemsvalue += prize * data.items[`${itemarray}`];
     }
-    const p2b = (costs) => (Number(costs) > Number(data.balance)) ? "<:no:1026787028710465577>" : "<:yes:1026785792292569138>";
+    const p2b = (costs) => (Number(costs) > Number(data.balance)) ? "<:NO:1169479454918180937>" : "<:yes:1168770575116800042>";
     //return some message!
     return message.reply({embeds: [new MessageEmbed()
       .setColor(es.color).setThumbnail(es.thumb ? es.footericon && (es.footericon.includes("http://") || es.footericon.includes("https://")) ? es.footericon : client.user.displayAvatarURL() : null)
@@ -109,7 +109,7 @@ module.exports = {
 };
 /**
 * @INFO
-* Bot Coded by bestgamershk_ | https://discord.gg/bestgamershk
+* Bot Coded by bestgamershk2 | https://discord.gg/bestgamershk
 * @INFO
 * Work for BestGamersHK | discord.gg/bestgamershk
 * @INFO

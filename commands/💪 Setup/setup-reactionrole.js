@@ -158,7 +158,7 @@ module.exports = {
         .setFooter(client.getFooter(es))
         .setTitle(eval(client.la[ls]["cmds"]["setup"]["setup-reactionrole"]["variable12"]))
         .setDescription(eval(client.la[ls]["cmds"]["setup"]["setup-reactionrole"]["variable13"]))]}).then(msg => {
-        var emojis2 = ["1168774094351765524, "1168774123946774590]
+        var emojis2 = ["1168774094351765524", "1168774123946774590"]
         for (var emoji of emojis2) msg.react(emoji)
         msg.awaitReactions({ filter: (reaction, user) => user.id === message.author.id && emojis2.includes(reaction.emoji?.name),
           max: 1,
@@ -166,9 +166,9 @@ module.exports = {
           erros: ["time"]
         }).then(collected => {
           switch (collected.first().emoji?.name) {
-            case "1168774094351765524:
+            case "1168774094351765524":
               break;
-            case "1168774123946774590:
+            case "1168774123946774590":
               objet.remove_others = true;
               break;
             default:
@@ -256,7 +256,7 @@ module.exports = {
 };
 /**
  * @INFO
- * Bot Coded by bestgamershk_ | https://discord.gg/bestgamershk
+ * Bot Coded by bestgamershk2 | https://discord.gg/bestgamershk
  * @INFO
  * Work for BestGamersHK | discord.gg/bestgamershk
  * @INFO

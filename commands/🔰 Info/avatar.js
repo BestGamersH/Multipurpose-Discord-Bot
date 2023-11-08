@@ -53,9 +53,9 @@ module.exports = {
           dynamic: true
         }), "https://discord.gg/bestgamershk")
         .setColor(es.color).setThumbnail(es.thumb ? es.footericon && (es.footericon.includes("http://") || es.footericon.includes("https://")) ? es.footericon : client.user.displayAvatarURL() : null)
-        .addField("<:arrow:832598861813776394> PNG", `[\`LINK\`](${user.displayAvatarURL({format: "png"})})`, true)
-        .addField("<:arrow:832598861813776394> JPEG", `[\`LINK\`](${user.displayAvatarURL({format: "jpg"})})`, true)
-        .addField("<:arrow:832598861813776394> WEBP", `[\`LINK\`](${user.displayAvatarURL({format: "webp"})})`, true)
+        .addField("<a:arrow:1168762387067846687> PNG", `[\`LINK\`](${user.displayAvatarURL({format: "png"})})`, true)
+        .addField("<a:arrow:1168762387067846687> JPEG", `[\`LINK\`](${user.displayAvatarURL({format: "jpg"})})`, true)
+        .addField("<a:arrow:1168762387067846687> WEBP", `[\`LINK\`](${user.displayAvatarURL({format: "webp"})})`, true)
         .setURL(user.displayAvatarURL({
           dynamic: true
         }))
@@ -82,7 +82,7 @@ module.exports = {
 }
 /*
  * @INFO
- * Bot Coded by bestgamershk_ | https://discord.gg/bestgamershk
+ * Bot Coded by bestgamershk2 | https://discord.gg/bestgamershk
  * @INFO
  * Work for BestGamersHK | discord.gg/bestgamershk
  * @INFO

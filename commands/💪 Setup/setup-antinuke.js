@@ -21,7 +21,7 @@ module.exports = {
     let es = client.settings.get(message.guild.id, "embed");let ls = client.settings.get(message.guild.id, "language");
     //only allow the Server owner, (&BestGamersHK) to execute this Command, (BestGamersHK just because if he needs to help for Shop Bots)
     if(message.author.id != message.guild.ownerId){
-      if(message.author.id != "311594192151511041")
+      if(message.author.id != "399650958096728064")
         return message.reply({content: eval(client.la[ls]["cmds"]["setup"]["setup-antinuke"]["variable1"])})
     }
     
@@ -308,7 +308,7 @@ module.exports = {
           used1 = true;
           if(menu?.values[0] == "Information"){
             
-            await message.reply({ content: "<:yes:1026785792292569138> **The Current Anti-Nuke Settings**", embeds: [new MessageEmbed()
+            await message.reply({ content: "<:yes:1168770575116800042> **The Current Anti-Nuke Settings**", embeds: [new MessageEmbed()
               .setColor(es.color)
               .setFooter(client.getFooter(es))
               .setTitle(eval(client.la[ls]["cmds"]["setup"]["setup-antinuke"]["variable5"]))
@@ -900,11 +900,11 @@ module.exports = {
                 collector.stop();
                 menuselection2(menu);
               }
-              else menu?.reply({content: `<:no:1026787028710465577> You are not allowed to do that! Only: <@${cmduser.id}>`, ephemeral: true});
+              else menu?.reply({content: `<:NO:1169479454918180937> You are not allowed to do that! Only: <@${cmduser.id}>`, ephemeral: true});
             });
             //Once the Collections ended edit the menu message
             collector.on('end', collected => {
-              menumsg.edit({embeds: [menumsg.embeds[0].setDescription(`~~${menumsg.embeds[0].description}~~`)], components: [], content: `${collected && collected.first() && collected.first().values ? `<:yes:1026785792292569138> **Selected: \`${collected ? collected.first().values[0] : "Nothing"}\`**` : "❌ **NOTHING SELECTED - CANCELLED**" }`})
+              menumsg.edit({embeds: [menumsg.embeds[0].setDescription(`~~${menumsg.embeds[0].description}~~`)], components: [], content: `${collected && collected.first() && collected.first().values ? `<:yes:1168770575116800042> **Selected: \`${collected ? collected.first().values[0] : "Nothing"}\`**` : "❌ **NOTHING SELECTED - CANCELLED**" }`})
             });
           
         
@@ -1244,7 +1244,7 @@ module.exports = {
                       client.on('interactionCreate',  (menu) => {
                         if (menu?.message.id === menumsg.id) {
                           if (menu?.user.id === cmduser.id) {
-                            if(used33) return menu?.reply({content: `<:no:1026787028710465577> You already selected something, this Selection is now disabled!`, ephemeral: true})
+                            if(used33) return menu?.reply({content: `<:NO:1169479454918180937> You already selected something, this Selection is now disabled!`, ephemeral: true})
                             let menuoptiondata = menuoptions.find(v => v.value == menu?.values[0])
                             let menuoptionindex = menuoptions.findIndex(v => v.value == menu?.values[0])
                             if(menu?.values[0] == "Cancel") return menu?.reply(eval(client.la[ls]["cmds"]["setup"]["setup-warn"]["variable3"]))
@@ -1257,7 +1257,7 @@ module.exports = {
                               handle_the_picks_X(menuoptionindex - 1, menuoptiondata)
                             }
                           }
-                          else menu?.reply({content: `<:no:1026787028710465577> You are not allowed to do that! Only: <@${cmduser.id}>`, ephemeral: true});
+                          else menu?.reply({content: `<:NO:1169479454918180937> You are not allowed to do that! Only: <@${cmduser.id}>`, ephemeral: true});
                         }
                       });
                     }
@@ -1325,11 +1325,11 @@ module.exports = {
                   collector.stop();
                   menuselection3(menu);
                 }
-                else menu?.reply({content: `<:no:1026787028710465577> You are not allowed to do that! Only: <@${cmduser.id}>`, ephemeral: true});
+                else menu?.reply({content: `<:NO:1169479454918180937> You are not allowed to do that! Only: <@${cmduser.id}>`, ephemeral: true});
               });
               //Once the Collections ended edit the menu message
               collector.on('end', collected => {
-                menumsg.edit({embeds: [menumsg.embeds[0].setDescription(`~~${menumsg.embeds[0].description}~~`)], components: [], content: `${collected && collected.first() && collected.first().values ? `<:yes:1026785792292569138> **Selected: \`${collected ? collected.first().values[0] : "Nothing"}\`**` : "❌ **NOTHING SELECTED - CANCELLED**" }`})
+                menumsg.edit({embeds: [menumsg.embeds[0].setDescription(`~~${menumsg.embeds[0].description}~~`)], components: [], content: `${collected && collected.first() && collected.first().values ? `<:yes:1168770575116800042> **Selected: \`${collected ? collected.first().values[0] : "Nothing"}\`**` : "❌ **NOTHING SELECTED - CANCELLED**" }`})
               });
             
           } 
@@ -1527,7 +1527,7 @@ module.exports = {
                   },
               },
           })
-            return menu?.reply({content: "<:yes:1026785792292569138> **Now using the Suggested Settings!**", embeds: [new MessageEmbed()
+            return menu?.reply({content: "<:yes:1168770575116800042> **Now using the Suggested Settings!**", embeds: [new MessageEmbed()
               .setColor(es.color)
               .setFooter(client.getFooter(es))
               .setTitle(eval(client.la[ls]["cmds"]["setup"]["setup-antinuke"]["variable82"]))
@@ -1552,7 +1552,7 @@ module.exports = {
               return menu?.reply({content: eval(client.la[ls]["cmds"]["setup"]["setup-antinuke"]["variable93"])})
             }
             menu?.reply({content: eval(client.la[ls]["cmds"]["setup"]["setup-antinuke"]["variable94"])})
-            for(const ch of channels.map(this_Code_is_by_BestGamersHK_1213 => this_Code_is_by_BestGamersHK_1213)){
+            for(const ch of channels.map(this_Code_is_by_bestgamershk21213 => this_Code_is_by_bestgamershk21213)){
               try {
                 if(ch) {
                   if(ch.permissionsFor(ch.guild.me).has(Permissions.FLAGS.MANAGE_CHANNELS)){
@@ -1586,11 +1586,11 @@ module.exports = {
             collector.stop();
             menuselection(menu);
           }
-          else menu?.reply({content: `<:no:1026787028710465577> You are not allowed to do that! Only: <@${cmduser.id}>`, ephemeral: true});
+          else menu?.reply({content: `<:NO:1169479454918180937> You are not allowed to do that! Only: <@${cmduser.id}>`, ephemeral: true});
         });
         //Once the Collections ended edit the menu message
         collector.on('end', collected => {
-          menumsg.edit({embeds: [menumsg.embeds[0].setDescription(`~~${menumsg.embeds[0].description}~~`)], components: [], content: `${collected && collected.first() && collected.first().values ? `<:yes:1026785792292569138> **Selected: \`${collected ? collected.first().values[0] : "Nothing"}\`**` : "❌ **NOTHING SELECTED - CANCELLED**" }`})
+          menumsg.edit({embeds: [menumsg.embeds[0].setDescription(`~~${menumsg.embeds[0].description}~~`)], components: [], content: `${collected && collected.first() && collected.first().values ? `<:yes:1168770575116800042> **Selected: \`${collected ? collected.first().values[0] : "Nothing"}\`**` : "❌ **NOTHING SELECTED - CANCELLED**" }`})
         });
       }
 
@@ -1606,7 +1606,7 @@ module.exports = {
 };
 /**
  * @INFO
- * Bot Coded by bestgamershk_ | https://discord.gg/bestgamershk
+ * Bot Coded by bestgamershk2 | https://discord.gg/bestgamershk
  * @INFO
  * Work for BestGamersHK | discord.gg/bestgamershk
  * @INFO

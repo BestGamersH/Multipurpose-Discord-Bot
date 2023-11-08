@@ -25,7 +25,7 @@ module.exports = {
           .setColor(ee.color)
           .setTitle(client.la[ls].cmds.info.support.title)
           .setDescription(eval(client.la[ls]["cmds"]["info"]["support"]["variable1"]))
-          .setFooter('Clan Bot | powered by indocraft.club', 'https://imgur.com/jPItIw0.gif')
+          .setFooter('Clan Bot | powered by discord.gg/bestgamershk', 'https://imgur.com/jPItIw0.gif')
           .setURL("https://discord.com/api/oauth2/authorize?client_id=1168734693492006973&permissions=8&scope=bot%20applications.commands")],
         components: allbuttons
       });
@@ -42,7 +42,7 @@ module.exports = {
 }
 /**
  * @INFO
- * Bot Coded by bestgamershk_ | https://discord.gg/bestgamershk
+ * Bot Coded by bestgamershk2 | https://discord.gg/bestgamershk
  * @INFO
  * Work for BestGamersHK | discord.gg/bestgamershk
  * @INFO

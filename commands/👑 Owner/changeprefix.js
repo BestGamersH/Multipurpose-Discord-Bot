@@ -48,14 +48,14 @@ module.exports = {
         return message.channel.send({embeds: [new MessageEmbed()
           .setFooter(client.getFooter(es))
           .setColor(es.wrongcolor)
-          .setTitle(`<:no:1026787028710465577> Something went wrong`)
+          .setTitle(`<:NO:1169479454918180937> Something went wrong`)
           .setDescription(`\`\`\`${String(e.message ? e.message : e).substring(0, 2000)}\`\`\``)
         ]})
       }
       return message.channel.send({embeds: [new MessageEmbed()
         .setFooter(client.getFooter(es))
         .setColor(es.color)
-        .setTitle(`<:yes:1026785792292569138> Successfully changed the Prefix`)
+        .setTitle(`<:yes:1168770575116800042> Successfully changed the Prefix`)
         .setDescription(`**To change it in this Server use the: \`${prefix}prefix <newprefix>\` Command!**`)
         ]})
     });
@@ -72,7 +72,7 @@ module.exports = {
 };
 /**
   * @INFO
-  * Bot Coded by bestgamershk_ | https://discord.gg/bestgamershk
+  * Bot Coded by bestgamershk2 | https://discord.gg/bestgamershk
   * @INFO
   * Work for BestGamersHK | discord.gg/bestgamershk
   * @INFO

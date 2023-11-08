@@ -39,7 +39,7 @@ module.exports = {
         return message.reply({embeds: [new MessageEmbed()
           .setColor(es.wrongcolor)
           .setFooter(client.getFooter(es))
-          .setTitle(`<:no:1026787028710465577> **This Role is not a DJ-Role!**`)
+          .setTitle(`<:NO:1169479454918180937> **This Role is not a DJ-Role!**`)
         ]});
       //remove it from the Database
       client.settings.remove(message.guild.id, role.id, `djroles`);
@@ -67,7 +67,7 @@ module.exports = {
 };
 /**
   * @INFO
-  * Bot Coded by bestgamershk_ | https://discord.gg/bestgamershk
+  * Bot Coded by bestgamershk2 | https://discord.gg/bestgamershk
   * @INFO
   * Work for BestGamersHK | discord.gg/bestgamershk
   * @INFO

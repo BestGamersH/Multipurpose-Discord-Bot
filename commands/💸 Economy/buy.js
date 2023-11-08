@@ -63,7 +63,7 @@ module.exports = {
         itemsvalue += prize * data.items[`${itemarray}`];
       }
       //function for yes or no, if its buyable!
-      const p2b = (costs) => (Number(costs) > Number(data.balance)) ? "<:no:1026787028710465577>" : "<:yes:1026785792292569138>";
+      const p2b = (costs) => (Number(costs) > Number(data.balance)) ? "<:NO:1169479454918180937>" : "<:yes:1168770575116800042>";
       //return some message!
       if (!args[0])
         return message.reply({embeds: [new MessageEmbed()
@@ -197,7 +197,7 @@ module.exports = {
 };
 /**
 * @INFO
-* Bot Coded by bestgamershk_ | https://discord.gg/bestgamershk
+* Bot Coded by bestgamershk2 | https://discord.gg/bestgamershk
 * @INFO
 * Work for BestGamersHK | discord.gg/bestgamershk
 * @INFO

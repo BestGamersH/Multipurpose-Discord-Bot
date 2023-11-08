@@ -30,7 +30,7 @@ module.exports = client => {
                   message.channel.send({content: data.cnt}).catch(() => {})
                 });
               }catch (e){
-                message.channel.send({content: "<:no:1026787028710465577> AI CHAT API IS DOWN"}).catch(() => {})
+                message.channel.send({content: "<:NO:1169479454918180937> AI CHAT API IS DOWN"}).catch(() => {})
               }
             }
         }catch(e){console.log(String(e).grey)}

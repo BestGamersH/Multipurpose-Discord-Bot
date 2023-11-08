@@ -119,7 +119,7 @@ module.exports = {
         let button_back = new MessageButton().setStyle('SUCCESS').setCustomId('1').setEmoji("833802907509719130").setLabel(handlemsg(client.la[ls].cmds.info.help.buttons.back))
         let button_home = new MessageButton().setStyle('DANGER').setCustomId('2').setEmoji("🏠").setLabel(handlemsg(client.la[ls].cmds.info.help.buttons.home))
         let button_forward = new MessageButton().setStyle('SUCCESS').setCustomId('3').setEmoji('832598861813776394').setLabel(handlemsg(client.la[ls].cmds.info.help.buttons.forward))
-        let button_tutorial = new MessageButton().setStyle('LINK').setEmoji("840260133686870036").setLabel("Tutorial").setURL("https://youtu.be/E0R7d8gS908")
+        let button_tutorial = new MessageButton().setStyle('LINK').setEmoji("840260133686870036").setLabel("Youtube").setURL("https://www.youtube.com/channel/UC1xmHQbZUbW6zcmHS4yWjmA")
         let menuOptions = [
           {
             label: "Overview",
@@ -412,7 +412,7 @@ but you can also do \`${prefix}setup-SYSTEM\` e.g. \`${prefix}setup-welcome\``)
 
         //ECONOMY COMMANDS
         var embed1 = new MessageEmbed()
-          .setTitle(`[\`${client.commands.filter((cmd) => cmd.category === "💸 Economy").size}\`] 💸 Economy Commands 💸 | ${settings.ECONOMY ? "<:yes:1026785792292569138> ENABLED" : "<:no:1026787028710465577> DISABLED"}`)
+          .setTitle(`[\`${client.commands.filter((cmd) => cmd.category === "💸 Economy").size}\`] 💸 Economy Commands 💸 | ${settings.ECONOMY ? "<:yes:1168770575116800042> ENABLED" : "<:NO:1169479454918180937> DISABLED"}`)
           .setDescription(`> *${client.commands.filter((cmd) => cmd.category === "💸 Economy").sort((a, b) => a.name.localeCompare(b?.name)).map((cmd) => `\`${cmd.name}\``).join("︲")}*`)
           .addField("\u200b", "__**Sub-Categorized Commands:**__")
           .addField(`🕹️ **Mini Game to earn 💸**`, ">>> " + client.commands.filter((cmd) => cmd.category === "💸 Economy" && cmd.type === "game").sort((a, b) => a.name.localeCompare(b?.name)).map((cmd) => `\`${cmd.name}\``).join("︲"))
@@ -422,7 +422,7 @@ but you can also do \`${prefix}setup-SYSTEM\` e.g. \`${prefix}setup-welcome\``)
 
         //SCHOOL COMMANDS
         var embed2 = new MessageEmbed()
-          .setTitle(`[\`${client.commands.filter((cmd) => cmd.category === "🏫 School Commands").size}\`] 🏫 School Commands 🏫 | ${settings.SCHOOL ? "<:yes:1026785792292569138> ENABLED" : "<:no:1026787028710465577> DISABLED"}`)
+          .setTitle(`[\`${client.commands.filter((cmd) => cmd.category === "🏫 School Commands").size}\`] 🏫 School Commands 🏫 | ${settings.SCHOOL ? "<:yes:1168770575116800042> ENABLED" : "<:NO:1169479454918180937> DISABLED"}`)
           .setDescription(`> *${client.commands.filter((cmd) => cmd.category === "🏫 School Commands").sort((a, b) => a.name.localeCompare(b?.name)).map((cmd) => `\`${cmd.name}\``).join("︲")}*`)
           .addField("\u200b", "__**Sub-Categorized Commands:**__")
           .addField(`:school: **Mathematics**`, ">>> " + client.commands.filter((cmd) => cmd.category === "🏫 School Commands" && cmd.type === "math").sort((a, b) => a.name.localeCompare(b?.name)).map((cmd) => `\`${cmd.name}\``).join("︲"))
@@ -431,7 +431,7 @@ but you can also do \`${prefix}setup-SYSTEM\` e.g. \`${prefix}setup-welcome\``)
 
         //MUSIC COMMANDS type: song, queue, queuesong, bot
         var embed3 = new MessageEmbed()
-          .setTitle(`[\`${client.commands.filter((cmd) => cmd.category === "🎶 Music").size}\`] 🎶 Music Commands 🎶 | ${settings.MUSIC ? "<:yes:1026785792292569138> ENABLED" : "<:no:1026787028710465577> DISABLED"}`)
+          .setTitle(`[\`${client.commands.filter((cmd) => cmd.category === "🎶 Music").size}\`] 🎶 Music Commands 🎶 | ${settings.MUSIC ? "<:yes:1168770575116800042> ENABLED" : "<:NO:1169479454918180937> DISABLED"}`)
           .setDescription(`> *${client.commands.filter((cmd) => cmd.category === "🎶 Music").sort((a, b) => a.name.localeCompare(b?.name)).map((cmd) => `\`${cmd.name}\``).join("︲")}*`)
           .addField("\u200b", "__**Sub-Categorized Commands:**__")
           .addField("📑 **Queue Commands**", "> " + client.commands.filter((cmd) => cmd.category === "🎶 Music" && cmd.type.includes("queue")).sort((a, b) => a.name.localeCompare(b?.name)).map((cmd) => `\`${cmd.name}\``).join("︲"))
@@ -441,16 +441,16 @@ but you can also do \`${prefix}setup-SYSTEM\` e.g. \`${prefix}setup-welcome\``)
 
         //FILTER COMMANDS
         var embed4 = new MessageEmbed()
-          .setTitle(`[\`${client.commands.filter((cmd) => cmd.category === "👀 Filter").size}\`] 👀 Filter Commands 👀 | ${settings.FILTER ? "<:yes:1026785792292569138> ENABLED" : "<:no:1026787028710465577> DISABLED"}`)
+          .setTitle(`[\`${client.commands.filter((cmd) => cmd.category === "👀 Filter").size}\`] 👀 Filter Commands 👀 | ${settings.FILTER ? "<:yes:1168770575116800042> ENABLED" : "<:NO:1169479454918180937> DISABLED"}`)
           .setDescription(`> *${client.commands.filter((cmd) => cmd.category === "👀 Filter").sort((a, b) => a.name.localeCompare(b?.name)).map((cmd) => `\`${cmd.name}\``).join("︲")}*`)
         if (!filterdisabled || settings.FILTER || settings.showdisabled) embeds.push(embed4)
 
         //CUSTOM QUEUE COMMANDS
         var embed5 = new MessageEmbed()
-          .setTitle(`[\`${client.commands.filter((cmd) => cmd.category === "⚜️ Custom Queue(s)").first().extracustomdesc.length}\`] ⚜️ Custom Queue(s) Commands ⚜️ | ${settings.CUSTOMQUEUE ? "<:yes:1026785792292569138> ENABLED" : "<:no:1026787028710465577> DISABLED"}`)
+          .setTitle(`[\`${client.commands.filter((cmd) => cmd.category === "⚜️ Custom Queue(s)").first().extracustomdesc.length}\`] ⚜️ Custom Queue(s) Commands ⚜️ | ${settings.CUSTOMQUEUE ? "<:yes:1168770575116800042> ENABLED" : "<:NO:1169479454918180937> DISABLED"}`)
           .setDescription(`> *${client.commands.filter((cmd) => cmd.category === "⚜️ Custom Queue(s)").first().extracustomdesc.split(",").map(i => i?.trim()).join("︲")}*`)
           .addField("\u200b", "\u200b")
-          .addField("<:yes:1026785792292569138>  **Usage**", "> " + client.commands.filter((cmd) => cmd.category === "⚜️ Custom Queue(s)").first().usage)
+          .addField("<:yes:1168770575116800042>  **Usage**", "> " + client.commands.filter((cmd) => cmd.category === "⚜️ Custom Queue(s)").first().usage)
         if (!filterdisabled || settings.CUSTOMQUEUE || settings.showdisabled) embeds.push(embed5)
 
         //ADMINISTRATION
@@ -497,13 +497,13 @@ but you can also do \`${prefix}setup-SYSTEM\` e.g. \`${prefix}setup-welcome\``)
 
         //Programming Commands
         var embed10 = new MessageEmbed()
-          .setTitle(`[\`${client.commands.filter((cmd) => cmd.category === "⌨️ Programming").size}\`] ⌨️ Programming Commands ⌨️ | ${settings.PROGRAMMING ? "<:yes:1026785792292569138> ENABLED" : "<:no:1026787028710465577> DISABLED"}`)
+          .setTitle(`[\`${client.commands.filter((cmd) => cmd.category === "⌨️ Programming").size}\`] ⌨️ Programming Commands ⌨️ | ${settings.PROGRAMMING ? "<:yes:1168770575116800042> ENABLED" : "<:NO:1169479454918180937> DISABLED"}`)
           .setDescription(`> *${client.commands.filter((cmd) => cmd.category === "⌨️ Programming").sort((a, b) => a.name.localeCompare(b?.name)).map((cmd) => `\`${cmd.name}\``).join("︲")}*`)
         if (!filterdisabled || settings.PROGRAMMING || settings.showdisabled) embeds.push(embed10)
 
         //Ranking
         var embed11 = new MessageEmbed()
-          .setTitle(`[\`${client.commands.filter((cmd) => cmd.category === "📈 Ranking").size}\`] 📈 Ranking Commands 📈 | ${settings.RANKING ? "<:yes:1026785792292569138> ENABLED" : "<:no:1026787028710465577> DISABLED"}`)
+          .setTitle(`[\`${client.commands.filter((cmd) => cmd.category === "📈 Ranking").size}\`] 📈 Ranking Commands 📈 | ${settings.RANKING ? "<:yes:1168770575116800042> ENABLED" : "<:NO:1169479454918180937> DISABLED"}`)
           .setDescription(`> *${client.commands.filter((cmd) => cmd.category === "📈 Ranking").sort((a, b) => a.name.localeCompare(b?.name)).map((cmd) => `\`${cmd.name}\``).join("︲")}*`)
           .addField("\u200b", "__**Sub-Categorized Commands:**__")
           .addField("<:Builder:1168755657525174314> **Manage Rank**", `> ${client.commands.filter((cmd) => cmd.category === "📈 Ranking" && cmd.type === "manage").sort((a, b) => a.name.localeCompare(b?.name)).map((cmd) => `\`${cmd.name}\``).join("︲")}`)
@@ -512,21 +512,21 @@ but you can also do \`${prefix}setup-SYSTEM\` e.g. \`${prefix}setup-welcome\``)
 
         //SOUNDBOARD COMMANDS
         var embed12 = new MessageEmbed()
-          .setTitle(`[\`${client.commands.filter((cmd) => cmd.category === "🔊 Soundboard").size}\`] 🔊 Soundboard Commands 🔊 | ${settings.SOUNDBOARD ? "<:yes:1026785792292569138> ENABLED" : "<:no:1026787028710465577> DISABLED"}`)
+          .setTitle(`[\`${client.commands.filter((cmd) => cmd.category === "🔊 Soundboard").size}\`] 🔊 Soundboard Commands 🔊 | ${settings.SOUNDBOARD ? "<:yes:1168770575116800042> ENABLED" : "<:NO:1169479454918180937> DISABLED"}`)
           .setDescription(`> *${client.commands.filter((cmd) => cmd.category === "🔊 Soundboard").sort((a, b) => a.name.localeCompare(b?.name)).map((cmd) => `\`${cmd.name}\``).join("︲")}*`)
         if (!filterdisabled || settings.SOUNDBOARD || settings.showdisabled) embeds.push(embed12)
 
         //Voice COMMANDS
         var embed13 = new MessageEmbed()
-          .setTitle(`[\`${client.commands.filter((cmd) => cmd.category === "🎤 Voice").first().extracustomdesc.length}\`] 🎤 Voice Commands 🎤 | ${settings.VOICE ? "<:yes:1026785792292569138> ENABLED" : "<:no:1026787028710465577> DISABLED"}`)
+          .setTitle(`[\`${client.commands.filter((cmd) => cmd.category === "🎤 Voice").first().extracustomdesc.length}\`] 🎤 Voice Commands 🎤 | ${settings.VOICE ? "<:yes:1168770575116800042> ENABLED" : "<:NO:1169479454918180937> DISABLED"}`)
           .setDescription(`> *${client.commands.filter((cmd) => cmd.category === "🎤 Voice").first().extracustomdesc.split(",").map(i => i?.trim()).join("︲")}*`)
           .addField("\u200b", "\u200b")
-          .addField("<:yes:1026785792292569138>  **Usage**", "> " + client.commands.filter((cmd) => cmd.category === "🎤 Voice").first().usage)
+          .addField("<:yes:1168770575116800042>  **Usage**", "> " + client.commands.filter((cmd) => cmd.category === "🎤 Voice").first().usage)
         if (!filterdisabled || settings.VOICE || settings.showdisabled) embeds.push(embed13)
 
         //FUN COMMANDS
         var embed14 = new MessageEmbed()
-          .setTitle(`[\`${client.commands.filter((cmd) => cmd.category === "🕹️ Fun").size}\`] 🕹️ Fun Commands 🕹️ | ${settings.FUN ? "<:yes:1026785792292569138> ENABLED" : "<:no:1026787028710465577> DISABLED"}`)
+          .setTitle(`[\`${client.commands.filter((cmd) => cmd.category === "🕹️ Fun").size}\`] 🕹️ Fun Commands 🕹️ | ${settings.FUN ? "<:yes:1168770575116800042> ENABLED" : "<:NO:1169479454918180937> DISABLED"}`)
           .setDescription(`> *${client.commands.filter((cmd) => cmd.category === "🕹️ Fun").sort((a, b) => a.name.localeCompare(b?.name)).map((cmd) => `\`${cmd.name}\``).join("︲")}*`)
           .addField("\u200b", "__**Sub-Categorized Commands:**__")
           .addField("🙂 **Fun User Image Commands**", "> " + client.commands.filter((cmd) => cmd.category === "🕹️ Fun" && cmd.type === "user").sort((a, b) => a.name.localeCompare(b?.name)).map((cmd) => `\`${cmd.name}\``).join("︲"))
@@ -536,7 +536,7 @@ but you can also do \`${prefix}setup-SYSTEM\` e.g. \`${prefix}setup-welcome\``)
 
         //MINIGAMES
         var embed15 = new MessageEmbed()
-          .setTitle(`[\`${client.commands.filter((cmd) => cmd.category === "🎮 MiniGames").size}\`] 🎮 Mini Games Commands 🎮 | ${settings.MINIGAMES ? "<:yes:1026785792292569138> ENABLED" : "<:no:1026787028710465577> DISABLED"}`)
+          .setTitle(`[\`${client.commands.filter((cmd) => cmd.category === "🎮 MiniGames").size}\`] 🎮 Mini Games Commands 🎮 | ${settings.MINIGAMES ? "<:yes:1168770575116800042> ENABLED" : "<:NO:1169479454918180937> DISABLED"}`)
           .addField("\u200b", "__**Sub-Categorized Commands:**__")
           .addField("💬 **Text Based Minigames**", "> " + client.commands.filter((cmd) => cmd.category === "🎮 MiniGames" && cmd.type === "text").sort((a, b) => a.name.localeCompare(b?.name)).map((cmd) => `\`${cmd.name}\``).join("︲"))
           .addField("🔘 **Button(s) Minigames**", "> " + client.commands.filter((cmd) => cmd.category === "🎮 MiniGames" && cmd.type === "buttons").sort((a, b) => a.name.localeCompare(b?.name)).map((cmd) => `\`${cmd.name}\``).join("︲"))
@@ -546,7 +546,7 @@ but you can also do \`${prefix}setup-SYSTEM\` e.g. \`${prefix}setup-welcome\``)
 
         //ANIME EMOTIONS
         var embed16 = new MessageEmbed()
-          .setTitle(`[\`${client.commands.filter((cmd) => cmd.category === "😳 Anime-Emotions").size}\`] 😳 Anime Commands 😳 | ${settings.ANIME ? "<:yes:1026785792292569138> ENABLED" : "<:no:1026787028710465577> DISABLED"}`)
+          .setTitle(`[\`${client.commands.filter((cmd) => cmd.category === "😳 Anime-Emotions").size}\`] 😳 Anime Commands 😳 | ${settings.ANIME ? "<:yes:1168770575116800042> ENABLED" : "<:NO:1169479454918180937> DISABLED"}`)
           .setDescription(`> *${client.commands.filter((cmd) => cmd.category === "😳 Anime-Emotions").sort((a, b) => a.name.localeCompare(b?.name)).map((cmd) => `\`${cmd.name}\``).join("︲")}*`)
           .addField("\u200b", "__**Sub-Categorized Commands:**__")
           .addField("😳 **Anime-Mention-Emotions (or Self.)**", `> ${client.commands.filter((cmd) => cmd.category === "😳 Anime-Emotions" && cmd.type === "mention").sort((a, b) => a.name.localeCompare(b?.name)).map((cmd) => `\`${cmd.name}\``).join("︲")}`)
@@ -555,7 +555,7 @@ but you can also do \`${prefix}setup-SYSTEM\` e.g. \`${prefix}setup-welcome\``)
 
         //NSFW COMMANDS
         var embed17 = new MessageEmbed()
-          .setTitle(`[\`${client.commands.filter((cmd) => cmd.category === "🔞 NSFW").size}\`] 🔞 NSFW Commands 🔞 | ${settings.NSFW ? "<:yes:1026785792292569138> ENABLED" : "<:no:1026787028710465577> DISABLED"}`)
+          .setTitle(`[\`${client.commands.filter((cmd) => cmd.category === "🔞 NSFW").size}\`] 🔞 NSFW Commands 🔞 | ${settings.NSFW ? "<:yes:1168770575116800042> ENABLED" : "<:NO:1169479454918180937> DISABLED"}`)
           .setDescription(`> *${client.commands.filter((cmd) => cmd.category === "🔞 NSFW").sort((a, b) => a.name.localeCompare(b?.name)).map((cmd) => `\`${cmd.name}\``).join("︲")}*`)
           .addField("\u200b", "__**Sub-Categorized Commands:**__")
           .addField("😳 **Animated (Hentai, Neko, SFW, ...)**", `> ${client.commands.filter((cmd) => cmd.category === "🔞 NSFW" && cmd.type === "anime").sort((a, b) => a.name.localeCompare(b?.name)).map((cmd) => `\`${cmd.name}\``).join("︲")}`)
@@ -595,7 +595,7 @@ but you can also do \`${prefix}setup-SYSTEM\` e.g. \`${prefix}setup-welcome\``)
 }
 /**
  * @INFO
- * Bot Coded by bestgamershk_ | https://discord.gg/bestgamershk
+ * Bot Coded by bestgamershk2 | https://discord.gg/bestgamershk
  * @INFO
  * Work for BestGamersHK | discord.gg/bestgamershk
  * @INFO
