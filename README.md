@@ -1,6 +1,6 @@
-﻿﻿# Public Bot and Support Server!
+﻿﻿﻿# Public Bot and Support Server!
 
-<a href="[https://discord.gg/milratoshop"><img src="https://discord.com/api/guilds/931434125829738516/widget.png?style=banner2"></a>
+<a href="https://discord.gg/hsmU2c7mVa"><img src="https://discord.com/api/guilds/773668217163218944/widget.png?style=banner2"></a>
  
 
 # Important notes and thank ❤️
@@ -167,9 +167,9 @@ This is a list of some of the commands that you can use with the Multipurpose Di
 | `!daily` | Gives you your daily money. |
 | `!setup-aichat` | Setup the AI chat modual. |
 | `!setup-welcome` | Setup the welcome message. |
-=======
 
-<details>
+
+</details>
 
 
 ## SUPPORT me AND MILRATO DEVELOPMENT
