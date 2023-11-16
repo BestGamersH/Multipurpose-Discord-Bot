@@ -128,7 +128,7 @@ module.exports = {
       .setColor(es.color)
       .setAuthor(eval(client.la[ls]["cmds"]["administration"]["manageinvites"]["variable1"]))
       .setDescription(eval(client.la[ls]["cmds"]["administration"]["manageinvites"]["variable2"]))
-      .addField("**CURRENT INVITES:**", `<:Like:857334024087011378> ${user} _**has invited __${realinvites} Member${realinvites != 1 ? "s": ""}__**_!`)
+      .addField("**CURRENT INVITES:**", `<a:HVCablike:1174379040438763690> ${user} _**has invited __${realinvites} Member${realinvites != 1 ? "s": ""}__**_!`)
       .addField(eval(client.la[ls]["cmds"]["administration"]["manageinvites"]["variablex_3"]), eval(client.la[ls]["cmds"]["administration"]["manageinvites"]["variable3"]))
       //send the menu msg
       let menumsg = await message.reply({embeds : [MenuEmbed], components : [new MessageActionRow().addComponents(Selection)]})
@@ -183,7 +183,7 @@ module.exports = {
           message.reply({embeds : [new MessageEmbed()
             .setAuthor(`New Invites of: ${user.tag}`, user.displayAvatarURL({dynamic: true}), "https://discord.gg/bestgamershk")
             .setColor(es.color).setThumbnail(es.thumb ? es.footericon && (es.footericon.includes("http://") || es.footericon.includes("https://")) ? es.footericon : client.user.displayAvatarURL() : null)
-            .addField("\u200b", `<:Like:857334024087011378> ${user} _**has invited __${realinvites} Member${realinvites != 1 ? "s": ""}__**_!`)
+            .addField("\u200b", `<a:HVCablike:1174379040438763690> ${user} _**has invited __${realinvites} Member${realinvites != 1 ? "s": ""}__**_!`)
             .addField(eval(client.la[ls]["cmds"]["administration"]["manageinvites"]["variablex_6"]),eval(client.la[ls]["cmds"]["administration"]["manageinvites"]["variable6"]))
             .setFooter(client.getFooter(es))
           ]});

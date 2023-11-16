@@ -277,7 +277,7 @@ module.exports = client => {
         if(leaves < 0) leaves *= -1;
         if(invites < 0) invites *= -1;
         let realinvites = invites - fake - leaves;
-        invitemessage = `Invited by ${inviter.tag ? `**${inviter.tag}**` : `<@${inviter.id}>`}\n<:Like:857334024087011378> **${realinvites} Invite${realinvites == 1 ? "" : "s"}**\n[<:joines:866356465299488809> ${invites} Joins | <:leaves:1086987051813056575> ${leaves} Leaves | <:NO:1169479454918180937> ${fake} Fakes]`;
+        invitemessage = `Invited by ${inviter.tag ? `**${inviter.tag}**` : `<@${inviter.id}>`}\n<a:HVCablike:1174379040438763690> **${realinvites} Invite${realinvites == 1 ? "" : "s"}**\n[<:joines:866356465299488809> ${invites} Joins | <:leaves:1086987051813056575> ${leaves} Leaves | <:NO:1169479454918180937> ${fake} Fakes]`;
       } 
       else if(invite){
         invitemessage = `Invited by an **Unknown Member**`

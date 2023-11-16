@@ -90,7 +90,7 @@ async function search(client, message, args, type, slashCommand) {
         dynamic: true
       }))))
     ]}).catch(() => {});
-    const emojiarray = ["❌", "1168774094351765524, "1168774123946774590, "1168774143685165066, "1168774160831492097, "1168774179273842738, "6️⃣", "7️⃣", "8️⃣", "9️⃣", "🔟"]
+    const emojiarray = ["❌", ":one:", ":two:, ":three:", ":four:, ":five:, ":six:", ":seven:", ":eight:", ":nine:", ":ten:"]
     for (let i = 0; i < emojiarray.length; i++) {
       try {
         if (i == max + 1) break;

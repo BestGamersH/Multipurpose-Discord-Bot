@@ -223,7 +223,7 @@ module.exports = {
                   return reaction.message.reply({embeds: [new Discord.MessageEmbed()
                     .setTitle(eval(client.la[ls]["cmds"]["setup"]["setup-leave"]["variable13"]))
                     .setColor(es.color)
-                    .setDescription(`If Someone joins this Server, no message will be sent into a Channel!\nSet a Channel with: \`${prefix}setup-leave\` --> Pick 1️⃣ --> Pick ${'1168774094351765524'.substring(0, 2048)}`)
+                    .setDescription(`If Someone joins this Server, no message will be sent into a Channel!\nSet a Channel with: \`${prefix}setup-leave\` --> Pick 1️⃣ --> Pick ${':one:'.substring(0, 2048)}`)
                     .setFooter(client.getFooter(es))
                   ]});
                 }break;

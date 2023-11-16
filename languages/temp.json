@@ -16,7 +16,7 @@
                     {
                         "value": "Creator / Features",
                         "description": "Who is my Creator? / What are my Features?",
-                        "replymsg": "<:MilratoDevelopment:1168761906375446588> **__BestGamersHK__ made me!**\n> <:Like:857334024087011378> **Their Website:** https://milrato.eu\n> <:Discord:787321652345438228> **Their Discord:** https://discord.gg/hsmU2c7mVa\n``` ```***__You can join their Discord Server and get yourself a Bot like me, for FREE/CHEAP!__***\n``` ```:muscle: **__My Features__**\n>>> **68+ Systems**, like: <:twitter:840255600851812393> **Twitter-** & <:Youtube:840260133686870036> **Youtube-Auto-Poster** \n**Application-**, Ticket-, **Welcome-Images-** and Reaction Role-, ... Systems\n:notes: An advanced <:Spotify:846090652231663647> **Music System** with **Audio Filtering**\n:video_game: Many **Minigames** and :joystick: **Fun** Commands (150+)\n:no_entry_sign: **Administration** and **Auto-Moderation** and way much more!\n\n**The Developer is: `bestgamershk2` <:BestGamersHK:858450817665204224>, Contact him if you wanna hire him!**",
+                        "replymsg": "<:MilratoDevelopment:1168761906375446588> **__BestGamersHK__ made me!**\n> <a:HVCablike:1174379040438763690> **Their Website:** https://milrato.eu\n> <:Discord:1168761629882732595> **Their Discord:** https://discord.gg/hsmU2c7mVa\n``` ```***__You can join their Discord Server and get yourself a Bot like me, for FREE/CHEAP!__***\n``` ```:muscle: **__My Features__**\n>>> **68+ Systems**, like: <:twitter:1168755475349778523> **Twitter-** & <:Youtube:1168755503845867520> **Youtube-Auto-Poster** \n**Application-**, Ticket-, **Welcome-Images-** and Reaction Role-, ... Systems\n:notes: An advanced <:Spotify:1168762285729267722> **Music System** with **Audio Filtering**\n:video_game: Many **Minigames** and :joystick: **Fun** Commands (150+)\n:no_entry_sign: **Administration** and **Auto-Moderation** and way much more!\n\n**The Developer is: `bestgamershk2` <:BestGamersHK:858450817665204224>, Contact him if you wanna hire him!**",
                         "emoji": "1168761906375446588"
                     },
                     {
@@ -90,7 +90,7 @@
             "commandcount": {
                 "tempmsg": "GETTING BOT INFORMATION DATA",
                 "title": ":gear: **[`{cmdcount}`] Commands**",
-                "description": ":gear: **[`{catcount}`] Categories**\n:gear: **[`{lines}`] Lines of Code**\n<a:Valid_Code_Developer:858405056238714930> **[`{letters}`] Letters of Code**",
+                "description": ":gear: **[`{catcount}`] Categories**\n:gear: **[`{lines}`] Lines of Code**\n<a:developer:1174380778789015613> **[`{letters}`] Letters of Code**",
                 "variable1": "`\\`\\`\\` ${e.message ? e.message : e.stack ? String(e.stack).substr(0, 2000) : String(e).substr(0, 2000)}\\`\\`\\``"
             },
             "developer": {
@@ -208,7 +208,7 @@
                 "variable23": "\"🦾 Custom Commands\"",
                 "variable24": "`🦾 **Custom Commands [${cuc[0].includes(\"NO\") ? 0 : items.length}]**`",
                 "variable25": "\"<:MilratoDevelopment:1168761906375446588> Bot Creator Company Advertisment\"",
-                "variablex_26": "`<:MilratoDevelopment:1168761906375446588> **__Bot Creator Information__**`", "variable26": "`>>> 💯 This Bot has been made by:\\n[**Milrato Development**](https://milrato.eu)・[Discord](https://discord.com/invite/milrato)<:Discord:787321652345438228> [Click here to order yourself a own one](https://discord.com/invite/milrato)`",
+                "variablex_26": "`<:MilratoDevelopment:1168761906375446588> **__Bot Creator Information__**`", "variable26": "`>>> 💯 This Bot has been made by:\\n[**Milrato Development**](https://milrato.eu)・[Discord](https://discord.com/invite/milrato)<:Discord:1168761629882732595> [Click here to order yourself a own one](https://discord.com/invite/milrato)`",
                 "variable27": "`\\`\\`\\` ${e.message ? e.message : e.stack ? String(e.stack).substr(0, 2000) : String(e).substr(0, 2000)}\\`\\`\\``"
             },
             "invite": {
@@ -223,7 +223,7 @@
             "invites": {
                 "author": "Invites of: {usertag}",
                 "field1": {
-                    "value": "<:Like:857334024087011378> {user} _**has invited __{realinvites} Member(s)__**_!"
+                    "value": "<a:HVCablike:1174379040438763690> {user} _**has invited __{realinvites} Member(s)__**_!"
                 },
                 "field2": {
                     "title": "💡 **That means he/she has:**",

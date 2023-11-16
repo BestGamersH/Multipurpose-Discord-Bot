@@ -158,7 +158,7 @@ module.exports = {
         .setFooter(client.getFooter(es))
         .setTitle(eval(client.la[ls]["cmds"]["setup"]["setup-reactionrole"]["variable12"]))
         .setDescription(eval(client.la[ls]["cmds"]["setup"]["setup-reactionrole"]["variable13"]))]}).then(msg => {
-        var emojis2 = ["1168774094351765524", "1168774123946774590"]
+        var emojis2 = [":one:", ":two:"]
         for (var emoji of emojis2) msg.react(emoji)
         msg.awaitReactions({ filter: (reaction, user) => user.id === message.author.id && emojis2.includes(reaction.emoji?.name),
           max: 1,
@@ -166,9 +166,9 @@ module.exports = {
           erros: ["time"]
         }).then(collected => {
           switch (collected.first().emoji?.name) {
-            case "1168774094351765524":
+            case ":one:":
               break;
-            case "1168774123946774590":
+            case ":two:":
               objet.remove_others = true;
               break;
             default:

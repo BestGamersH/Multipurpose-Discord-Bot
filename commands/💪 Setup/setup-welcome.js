@@ -251,7 +251,7 @@ module.exports = {
                     embeds: [new Discord.MessageEmbed()
                       .setTitle(eval(client.la[ls]["cmds"]["setup"]["setup-welcome"]["variable13"]))
                       .setColor(es.color)
-                      .setDescription(`If Someone joins this Server, no message will be sent into a Channel!\nSet a Channel with: \`${prefix}setup-welcome\` --> Pick 1️⃣ --> Pick ${"1168774094351765524".substring(0, 2048)}`)
+                      .setDescription(`If Someone joins this Server, no message will be sent into a Channel!\nSet a Channel with: \`${prefix}setup-welcome\` --> Pick 1️⃣ --> Pick ${":one:".substring(0, 2048)}`)
                       .setFooter(client.getFooter(es))
                     ]
                   });
@@ -854,7 +854,7 @@ module.exports = {
                     embeds: [new Discord.MessageEmbed()
                       .setTitle(eval(client.la[ls]["cmds"]["setup"]["setup-welcome"]["variable13"]))
                       .setColor(es.color)
-                      .setDescription(`If Someone joins this Server, no message will be sent into a Channel!\nSet a Channel with: \`${prefix}setup-welcome\` --> Pick 1️⃣ --> Pick ${"1168774094351765524".substring(0, 2048)}`)
+                      .setDescription(`If Someone joins this Server, no message will be sent into a Channel!\nSet a Channel with: \`${prefix}setup-welcome\` --> Pick 1️⃣ --> Pick ${":one:".substring(0, 2048)}`)
                       .setFooter(client.getFooter(es))
                     ]
                   });
@@ -1674,7 +1674,7 @@ module.exports = {
           case `Test Welcome`: {
             var { member } = message;
             let welcome = client.settings.get(member.guild.id, "welcome");
-            let invitemessage = `Invited by ${member.user.tag ? `**${member.user.tag}**` : `<@${member.user.id}>`}\n<:Like:857334024087011378> **X Invites**\n[<:joines:866356465299488809> X Joins | <:leaves:1086987051813056575> X Leaves | <:NO:1169479454918180937> X Fakes]`
+            let invitemessage = `Invited by ${member.user.tag ? `**${member.user.tag}**` : `<@${member.user.id}>`}\n<a:HVCablike:1174379040438763690> **X Invites**\n[<:joines:866356465299488809> X Joins | <:leaves:1086987051813056575> X Leaves | <:NO:1169479454918180937> X Fakes]`
             if (welcome) {
               let themessage = String(welcome.secondmsg);
               if (!themessage || themessage.length == 0) themessage = ":wave: {user} **Welcome to our Server!** :v:";

@@ -500,7 +500,7 @@ module.exports = {
               ]
             })
             try{
-              for(const emoji of ["1168774094351765524", "1168774123946774590", "1168774143685165066", "1168774160831492097", "1168774179273842738", "6️⃣", "7️⃣"])
+              for(const emoji of [":one:", ":two:", ":three:", ":four:", ":five:", ":six:", ":seven:"])
                tempmsg.react(emoji)
             }catch(e){
               console.log(e.stack ? String(e.stack).grey : String(e).grey)
@@ -514,7 +514,7 @@ module.exports = {
               .then(collected => {
                 var reaction = collected.first()
                 reaction.users.remove(message.author.id)
-                if (reaction.emoji?.name === "1168774094351765524") {
+                if (reaction.emoji?.name === ":one:") {
                   thedb?.set(message.guild.id, "1", pre+".rosterstyle")
                   edit_Roster_msg(client, message.guild, thedb, pre)
                   return message.reply({
@@ -525,7 +525,7 @@ module.exports = {
                       .setFooter(client.getFooter(es))
                     ]
                   });
-                } else if (reaction.emoji?.name === "1168774123946774590") {
+                } else if (reaction.emoji?.name === ":two:") {
                   thedb?.set(message.guild.id, "2", pre+".rosterstyle")
                   edit_Roster_msg(client, message.guild, thedb, pre)
                   return message.reply({
@@ -536,7 +536,7 @@ module.exports = {
                       .setFooter(client.getFooter(es))
                     ]
                   });
-                } else if (reaction.emoji?.name === "1168774143685165066") {
+                } else if (reaction.emoji?.name === ":three:") {
                   thedb?.set(message.guild.id, "3", pre+".rosterstyle")
                   edit_Roster_msg(client, message.guild, thedb, pre)
                   return message.reply({
@@ -547,7 +547,7 @@ module.exports = {
                       .setFooter(client.getFooter(es))
                     ]
                   });
-                } else if (reaction.emoji?.name === "1168774160831492097") {
+                } else if (reaction.emoji?.name === ":four:") {
                   thedb?.set(message.guild.id, "4", pre+".rosterstyle")
                   edit_Roster_msg(client, message.guild, thedb, pre)
                   return message.reply({
@@ -558,7 +558,7 @@ module.exports = {
                       .setFooter(client.getFooter(es))
                     ]
                   });
-                } else if (reaction.emoji?.name === "1168774179273842738") {
+                } else if (reaction.emoji?.name === ":five:") {
                   thedb?.set(message.guild.id, "5", pre+".rosterstyle")
                   edit_Roster_msg(client, message.guild, thedb, pre)
                   return message.reply({
@@ -569,7 +569,7 @@ module.exports = {
                       .setFooter(client.getFooter(es))
                     ]
                   });
-                } else if (reaction.emoji?.name === "6️⃣") {
+                } else if (reaction.emoji?.name === ":six:") {
                   thedb?.set(message.guild.id, "6", pre+".rosterstyle")
                   edit_Roster_msg(client, message.guild, thedb, pre)
                   return message.reply({
@@ -580,7 +580,7 @@ module.exports = {
                       .setFooter(client.getFooter(es))
                     ]
                   });
-                } else if (reaction.emoji?.name === "7️⃣") {
+                } else if (reaction.emoji?.name === ":seven:") {
                   thedb?.set(message.guild.id, "7", "rosterstyle")
                   edit_Roster_msg(client, message.guild, thedb, pre)
                   return message.reply({

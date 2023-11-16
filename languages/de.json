@@ -16,7 +16,7 @@
                     {
                         "value": "Ersteller / Funktionen",
                         "description": "Wer ist mein Macher? / Was sind meine Funktionen?",
-                        "replymsg": "<:MilratoDevelopment:1168761906375446588> **__Milrato Development__ hat mich gemacht!**\n> <:Like:857334024087011378> **Ihre Internet Seite:** https://milrato.eu\n> <:Discord:787321652345438228> **Ihr Discord:** https://discord.gg/hsmU2c7mVa\n``` ```***__Du kannst ihrem Discord Server beitreten und einen kostenlosen, bzw. günstigen Discord Bot deiner Wahl erhalten, wie mich!__***\n``` ```:muscle: **__Meine Funktionen__**\n>>> **68+ Systeme**, wie z.B: Automatischer <:twitter:840255600851812393> **Twitter-** & <:Youtube:840260133686870036> **Youtube** Upload Poster \n**Bewerbungs-**, Ticket-, **Willkommens-Bilder-** und Reaction Role-, ... Systeme\n:notes: Ein komplexes <:Spotify:846090652231663647> **Music System** mit **Audio Filter**\n:video_game: Viele **Minigames** und :joystick: **Fun** Befehle (150+)\n:no_entry_sign: **Administration** und **Auto-Moderation** und viel mehr!\n\n**Der Programmiere ist: `bestgamershk2` <:BestGamersHK:858450817665204224>, Wenn du ihn anheuern willst, dann kontaktiere ihn!**",
+                        "replymsg": "<:MilratoDevelopment:1168761906375446588> **__Milrato Development__ hat mich gemacht!**\n> <a:HVCablike:1174379040438763690> **Ihre Internet Seite:** https://milrato.eu\n> <:Discord:1168761629882732595> **Ihr Discord:** https://discord.gg/hsmU2c7mVa\n``` ```***__Du kannst ihrem Discord Server beitreten und einen kostenlosen, bzw. günstigen Discord Bot deiner Wahl erhalten, wie mich!__***\n``` ```:muscle: **__Meine Funktionen__**\n>>> **68+ Systeme**, wie z.B: Automatischer <:twitter:1168755475349778523> **Twitter-** & <:Youtube:1168755503845867520> **Youtube** Upload Poster \n**Bewerbungs-**, Ticket-, **Willkommens-Bilder-** und Reaction Role-, ... Systeme\n:notes: Ein komplexes <:Spotify:1168762285729267722> **Music System** mit **Audio Filter**\n:video_game: Viele **Minigames** und :joystick: **Fun** Befehle (150+)\n:no_entry_sign: **Administration** und **Auto-Moderation** und viel mehr!\n\n**Der Programmiere ist: `bestgamershk2` <:BestGamersHK:858450817665204224>, Wenn du ihn anheuern willst, dann kontaktiere ihn!**",
                         "emoji": "1168761906375446588"
                     },
                     {
@@ -40,13 +40,13 @@
                     {
                         "value": "Partner / Sponsoren",
                         "description": "Wir sind sehr stolz auf unsere Partner & Sponsoren",
-                        "replymsg": "<:BeroHost:852970925695041646> Unser erster Sponsor ist **Bero-Host.de** <:BeroHost:852970925695041646>\n> <:Like:857334024087011378> **Ihre Internet Seite:** https://bero-host.de\n> <:Discord:787321652345438228> **Ihr Discord:** https://discord.bero-host.de\n> *Sie geben uns höchst qualtiative __SERVER__ welche wir für das Bot-Hosting verwenden! **BESUCHE SIE**!*\n``` ```<:Bittmax:840370610755862529> Unser zweiter Sponsor ist **Bittmax.de** <:Bittmax:840370610755862529>\n> <:Like:857334024087011378> **Ihre Internet Seite:** https://bittmax.de\n> <:Discord:787321652345438228> **Ihr Discord:** https://discord.gg/GgjJZCyYKD\n> *Sie geben uns höchst qualtiative __SERVER__ welche wir für das Bot-Hosting verwenden! **BESUCHE SIE**!*\n``` ```**__Partner__**\n> ***Wir haben zurzeit `{partnercount} Partner`, welche mindestens 1 OP GRATIS BOT erhalten***\n``` ```Du willst auch ein Partner sein oder uns Sponsorn?\nKontaktiere uns auf unserem Discord Server:\n <:Discord:787321652345438228> **Discord:** https://discord.gg/hsmU2c7mVa und öffne ein Ticket in <#840491251278676008>",
+                        "replymsg": "<:BeroHost:852970925695041646> Unser erster Sponsor ist **Bero-Host.de** <:BeroHost:852970925695041646>\n> <a:HVCablike:1174379040438763690> **Ihre Internet Seite:** https://bero-host.de\n> <:Discord:1168761629882732595> **Ihr Discord:** https://discord.bero-host.de\n> *Sie geben uns höchst qualtiative __SERVER__ welche wir für das Bot-Hosting verwenden! **BESUCHE SIE**!*\n``` ```<:Bittmax:840370610755862529> Unser zweiter Sponsor ist **Bittmax.de** <:Bittmax:840370610755862529>\n> <a:HVCablike:1174379040438763690> **Ihre Internet Seite:** https://bittmax.de\n> <:Discord:1168761629882732595> **Ihr Discord:** https://discord.gg/GgjJZCyYKD\n> *Sie geben uns höchst qualtiative __SERVER__ welche wir für das Bot-Hosting verwenden! **BESUCHE SIE**!*\n``` ```**__Partner__**\n> ***Wir haben zurzeit `{partnercount} Partner`, welche mindestens 1 OP GRATIS BOT erhalten***\n``` ```Du willst auch ein Partner sein oder uns Sponsorn?\nKontaktiere uns auf unserem Discord Server:\n <:Discord:1168761629882732595> **Discord:** https://discord.gg/hsmU2c7mVa und öffne ein Ticket in <#840491251278676008>",
                         "emoji": "1168762110336053309"
                     },
                     {
                         "value": "Mein Bot funktioniert nicht",
                         "description": "Wenn dein Bot nicht funktioniert, dann mach das:",
-                        "replymsg": "Kontaktiere uns in Milrato Development <:Discord:787321652345438228> **Discord:** https://discord.gg/hsmU2c7mVa und öffne ein Ticket in <#840332764603351101>\n\n***Wenn er noch auf Befehle antworten kann, aber nicht richtig funktioniert, dann versuch mal das: `{prefix}reloadbot` / `{prefix}cmdreload [CMDNAME]`***\n\nStell sicher, dass ich genügend Rechte habe, bzw. das meine höchste Rolle soweit oben ist wie es nötig ist!",
+                        "replymsg": "Kontaktiere uns in Milrato Development <:Discord:1168761629882732595> **Discord:** https://discord.gg/hsmU2c7mVa und öffne ein Ticket in <#840332764603351101>\n\n***Wenn er noch auf Befehle antworten kann, aber nicht richtig funktioniert, dann versuch mal das: `{prefix}reloadbot` / `{prefix}cmdreload [CMDNAME]`***\n\nStell sicher, dass ich genügend Rechte habe, bzw. das meine höchste Rolle soweit oben ist wie es nötig ist!",
                         "emoji": "😓"
                     },
                     {
@@ -90,7 +90,7 @@
             "commandcount": {
                 "tempmsg": "Bekomme Bot Informationen...",
                 "title": ":gear: **[`{cmdcount}`] Befehle**",
-                "description": ":gear: **[`{catcount}`] Kategorien**\n:gear: **[`{lines}`] Zeilen von Code**\n<a:Valid_Code_Developer:858405056238714930> **[`{letters}`] Buchstaben von Code**",
+                "description": ":gear: **[`{catcount}`] Kategorien**\n:gear: **[`{lines}`] Zeilen von Code**\n<a:developer:1174380778789015613> **[`{letters}`] Buchstaben von Code**",
                 "variable1": "`\\`\\`\\` ${e.message ? e.message : e.stack ? String(e.stack).substr(0, 2000) : String(e).substr(0, 2000)}\\`\\`\\``"
             },
             "developer": {
@@ -213,7 +213,7 @@
                 "variable24": "`🦾 **Custom Commands [${cuc[0].includes(\"NO\") ? 0 : items.length}]**`",
                 "variable25": "\"<:MilratoDevelopment:1168761906375446588> Bot Creator Company Advertisment\"",
                 "variablex_26": "`<:MilratoDevelopment:1168761906375446588> **__Bot Creator Information__**`",
-                "variable26": "`>>> 💯 This Bot has been made by:\\n[**Milrato Development**](https://milrato.eu)・[Discord](https://discord.com/invite/milrato)<:Discord:787321652345438228> [Click here to order yourself a own one](https://discord.com/invite/milrato)`",
+                "variable26": "`>>> 💯 This Bot has been made by:\\n[**Milrato Development**](https://milrato.eu)・[Discord](https://discord.com/invite/milrato)<:Discord:1168761629882732595> [Click here to order yourself a own one](https://discord.com/invite/milrato)`",
                 "variable27": "`\\`\\`\\` ${e.message ? e.message : e.stack ? String(e.stack).substr(0, 2000) : String(e).substr(0, 2000)}\\`\\`\\``"
             },
             "invite": {
@@ -228,7 +228,7 @@
             "invites": {
                 "author": "Einladungen von: {usertag}",
                 "field1": {
-                    "value": "<:Like:857334024087011378> {user} _**hat __{realinvites} Nutzer__ eingeladen**_!"
+                    "value": "<a:HVCablike:1174379040438763690> {user} _**hat __{realinvites} Nutzer__ eingeladen**_!"
                 },
                 "field2": {
                     "title": "💡 **Das heißt er/sie hat:**",
