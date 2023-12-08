@@ -7,6 +7,8 @@
 First of all, thanks for using this Source Code, it was and is a ton of work to create and maintain it!
 If you find any errors please create a issue from <a href="https://github.com/BestGamersH/Multipurpose-Discord-Bot/issues">Here</a>
 
+also this bot will run better on replit or any luinix vm
+
 # Installation Guide 🔥
 
 ## ✅ Hosting Requirements
@@ -23,7 +25,7 @@ If you find any errors please create a issue from <a href="https://github.com/Be
   * A VM Would also take up less resourceses on your computer
     * [Virtualbox](https://www.virtualbox.org/)
     * [Workstation Player Evaluation](https://www.vmware.com/products/workstation-player/workstation-player-evaluation.html)
-  * [Visual studio code](https://visualstudio.microsoft.com/downloads/) latest version, Make sure to select "Desktop development with C++" which should install the necessary components for Node.js native modules.
+    * [Visual studio code](https://visualstudio.microsoft.com/downloads/) latest version, Make sure to select "Desktop development with C++" which should install the necessary components for Node.js native modules.
   * A Text/Code editor
     * [Notpad++](https://notepad-plus-plus.org/)
     * [Sublime Text](https://www.sublimetext.com/)
