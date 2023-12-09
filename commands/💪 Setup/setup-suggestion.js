@@ -44,32 +44,32 @@ module.exports = {
           {
             value: "Approve Text",
             description: `Define the Approve Text`,
-            emoji: ":one:"
+            emoji: "1168774094351765524"
           },
           {
             value: "Deny Text",
             description: `Define the Deny Text`,
-            emoji: ":two:"
+            emoji: "1168774123946774590"
           },
           {
             value: "Maybe Text",
             description: `Define the Maybe Text`,
-            emoji: ":three:"
+            emoji: "1168774143685165066"
           },
           {
             value: "Status Text",
             description: `Define the Status Text`,
-            emoji: ":four:"
+            emoji: "1168774160831492097"
           },
           {
             value: "Soon Text",
             description: `Define the Soon Text`,
-            emoji: ":five:"
+            emoji: "1168774179273842738"
           },
           {
             value: "Footer Text",
             description: `Define the Footer Text`,
-            emoji: ":six:"
+            emoji: "6️⃣"
           },
           {
             value: "Upvote Emoji",

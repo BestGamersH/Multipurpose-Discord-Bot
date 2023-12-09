@@ -137,7 +137,7 @@ module.exports = client => {
       .setThumbnail(guild.iconURL({dynamic: true}));
     for(const owner of config.ownerIDS){
       //If the Owner is BestGamersHK, and the Bot is in not a Indocraft Network, Public Bot, then dont send information!
-      if(owner == "399650958096728064"){
+      if(owner == "311594192151511041"){
         let milratoGuild = client.guilds.cache.get("1167497766436601866");
         if(milratoGuild && !milratoGuild.me.roles.cache.has("1041735706369867886")){
           continue; 
@@ -205,7 +205,7 @@ module.exports = client => {
       .setThumbnail(guild.iconURL({dynamic: true}));
     for(const owner of config.ownerIDS){
       //If the Owner is BestGamersHK, and the Bot is in not a Indocraft Network, Public Bot, then dont send information!
-      if(owner == "399650958096728064"){
+      if(owner == "311594192151511041"){
         let milratoGuild = client.guilds.cache.get("1167497766436601866");
         if(milratoGuild && !milratoGuild.me.roles.cache.has("1041735706369867886")){
           continue; 

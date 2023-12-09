@@ -199,10 +199,10 @@ module.exports = {
                 .setFooter(client.getFooter(`Want to suggest something? Simply type it in this channel`, "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/285/light-bulb_1f4a1.png"))
               
             if(embed.fields[2]){
-              embed.fields[2].name == `<a:arrow:1168762387067846687> __Reason by **${message.author.tag}**:__`;
+              embed.fields[2].name == `<:arrow:832598861813776394> __Reason by **${message.author.tag}**:__`;
               embed.fields[2].value == `>>> ${String(reason).substring(0, 1000)}`;
             } else {
-              embed.addField(`<a:arrow:1168762387067846687> __Reason by **${message.author.tag}**__`, `>>> ${String(reason).substring(0, 1000)}`)
+              embed.addField(`<:arrow:832598861813776394> __Reason by **${message.author.tag}**__`, `>>> ${String(reason).substring(0, 1000)}`)
             }
             targetMessage.edit({embeds: [embed]})
             try{
