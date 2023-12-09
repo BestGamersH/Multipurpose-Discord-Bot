@@ -344,10 +344,11 @@ https://www.tiktok.com/@milratodev`)
 };
 /**
  * @INFO
- * Bot Coded by bestgamershk2 | https://discord.gg/bestgamershk
+ * Bot Coded by hotsuop and bestgamershk2 | 
  * @INFO
- * Work for BestGamersHK | discord.gg/bestgamershk
+ * 
  * @INFO
  * Please mention him, when using this Code!
  * @INFO
  */
+
