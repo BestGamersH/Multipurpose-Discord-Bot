@@ -43,5 +43,7 @@
          "use_this_instead": true,
          "api_key": "AIzaSyAAg3GHxipuyDz7KsCAv434yoFT56TR9LQ"
       }
-   }
+   },
+   "bitlyAccessToken": "put it here",
+   "pastebinApiKey": "YOUR_PASTEBIN_API_KEY" 
 }
