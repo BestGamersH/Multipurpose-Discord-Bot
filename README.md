@@ -8,7 +8,9 @@ First of all, thanks for using this Source Code, it was and is a ton of work to 
 If you find any errors please create a issue from <a href="https://github.com/BestGamersH/Multipurpose-Discord-Bot/issues">Here</a>
 
 also this bot will run better on replit or any luinix vm
-﻿﻿# Please do not remove credit of our development!
+
+﻿﻿##Please do not remove credit of our development! 
+
 # Installation Guide 🔥
 
 ## ✅ Hosting Requirements
