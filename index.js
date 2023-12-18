@@ -146,6 +146,10 @@ const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Dashboard is running on http://localhost:${PORT}`);
 });
+app.get('/invite', (req, res) => {
+  const inviteURL = 'YOUR_BOT_INVITE_URL'; // Replace with your actual bot's invite URL
+  res.render('invite', { inviteURL });
+});
 /**********************************************************
  * @param {7} Define_the_Client_Advertisments from the Config File
  *********************************************************/
