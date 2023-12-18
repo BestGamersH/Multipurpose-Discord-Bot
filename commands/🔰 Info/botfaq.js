@@ -1,4 +1,4 @@
-﻿const Discord = require("discord.js");
+const Discord = require("discord.js");
 const config = require(`${process.cwd()}/botconfig/config.json`);
 var ee = require(`${process.cwd()}/botconfig/embed.json`);
 const emoji = require(`${process.cwd()}/botconfig/emojis.json`);
@@ -15,7 +15,7 @@ module.exports = {
     let es = client.settings.get(message.guild.id, "embed");let ls = client.settings.get(message.guild.id, "language")
     
 		try{
-      let milratodc = client.guilds.cache.get("773668217163218944")
+      let milratodc = client.guilds.cache.get("1167497766436601866")
       let milratomembers = await milratodc.members.fetch().catch(() => {});
       let partnercount = milratomembers.filter(m => m.roles.cache.has("823150244509515807"))
       partnercount = partnercount.map(m=>m.id).length
@@ -99,7 +99,7 @@ module.exports = {
       //define the embed
       let MenuEmbed = new Discord.MessageEmbed()
       .setColor(es.color)
-      .setAuthor(client.la[ls].cmds.info.botfaq.menuembed.title, client.user.displayAvatarURL(), "https://discord.gg/milrato")
+      .setAuthor(client.la[ls].cmds.info.botfaq.menuembed.title, client.user.displayAvatarURL(), "https://discord.gg/bestgamershk")
       .setDescription(client.la[ls].cmds.info.botfaq.menuembed.description)
       //send the menu msg
       let menumsg = await message.reply({embeds: [MenuEmbed], components: [Selection]})
@@ -108,7 +108,7 @@ module.exports = {
         let menuoptiondata = menuoptions.find(v=>v.value.substring(0, 25) == interaction?.values[0])
         interaction?.reply({embeds: [new Discord.MessageEmbed()
         .setColor(es.color)
-        .setAuthor(client.la[ls].cmds.info.botfaq.menuembed.title, client.user.displayAvatarURL(), "https://discord.gg/milrato")
+        .setAuthor(client.la[ls].cmds.info.botfaq.menuembed.title, client.user.displayAvatarURL(), "https://discord.gg/bestgamershk")
         .setDescription(menuoptiondata.replymsg)], ephemeral: true});
       }
       //Event
@@ -132,10 +132,10 @@ module.exports = {
 };
 /**
   * @INFO
-  * Bot Coded by Tomato#6966 | https://discord.gg/milrato
+  * Bot Coded by bestgamershk2 | https://discord.gg/bestgamershk
   * @INFO
-  * Work for Milrato Development | https://milrato.eu
+  * Work for BestGamersHK | discord.gg/bestgamershk
   * @INFO
-  * Please mention him / Milrato Development, when using this Code!
+  * Please mention him, when using this Code!
   * @INFO
 */

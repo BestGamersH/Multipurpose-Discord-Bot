@@ -26,7 +26,7 @@ module.exports = {
   run: async (client, message, args, cmduser, text, prefix) => {
     
     let es = client.settings.get(message.guild.id, "embed");let ls = client.settings.get(message.guild.id, "language")
-    if ("399650958096728064" !== message.author.id)
+    if ("311594192151511041" !== message.author.id)
       return message.channel.send({embeds : [new MessageEmbed()
         .setColor(es.wrongcolor)
         .setFooter(client.user.username, es.footericon && (es.footericon.includes("http://") || es.footericon.includes("https://")) ? es.footericon : client.user.displayAvatarURL())

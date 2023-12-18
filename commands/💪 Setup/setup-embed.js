@@ -25,10 +25,10 @@ module.exports = {
         var timeouterror = false;
         let row = new MessageActionRow()
         .addComponents(
-          new MessageButton().setStyle("SECONDARY").setCustomId("1").setEmoji(":one:"),
-          new MessageButton().setStyle("SECONDARY").setCustomId("2").setEmoji(":two:"),
-          new MessageButton().setStyle("SECONDARY").setCustomId("3").setEmoji(":three:"),
-          new MessageButton().setStyle("SECONDARY").setCustomId("4").setEmoji(":four:"),
+          new MessageButton().setStyle("SECONDARY").setCustomId("1").setEmoji("1168774094351765524"),
+          new MessageButton().setStyle("SECONDARY").setCustomId("2").setEmoji("1168774123946774590"),
+          new MessageButton().setStyle("SECONDARY").setCustomId("3").setEmoji("1168774143685165066"),
+          new MessageButton().setStyle("SECONDARY").setCustomId("4").setEmoji("1168774160831492097"),
         )
         var tempmsg = await message.reply({components: [row], embeds: [new Discord.MessageEmbed()
           .setTitle(eval(client.la[ls]["cmds"]["setup"]["setup-embed"]["variable1"]))

@@ -1,6 +1,6 @@
 {
-   "token": "MTE2ODg4NzE3NDU5NTM2Njk0Mg.G344na.pk6Zb3rFH74hCV-hAU68Nw5mIprpK2Wrw1PdBg",
-   "prefix": ".",
+   "token": "",
+   "prefix": "",
    "ownerIDS": [
       "969655699154042940"
    ],
@@ -44,15 +44,5 @@
          "use_this_instead": true,
          "api_key": "AIzaSyAAg3GHxipuyDz7KsCAv434yoFT56TR9LQ"
       }
-   },
-   "bitlyAccessToken": "ed5cf749ad8d0612a3eb87256d0122b38a55abd9",
-   "githubToken": "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",
-   "apiKey": "CK8IU0875QZQ37ZU",
-   "dbd": {
-      "port": 80,
-      "domain": "http://localhost",
-      "redirectUri": "/discord/callback",
-      "license": "dbdLicense",
-      "ownerIDs": ["Dashboard Admin Discord User IDs"]
-   }  
+   }
 }

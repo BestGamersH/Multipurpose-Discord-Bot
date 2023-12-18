@@ -26,7 +26,7 @@
     "dotenv": "^16.3.1",
     "ejs": "^3.1.9",
     "enmap": "^5.8.7",
-    "erela.js": "^2.4.0",
+    "erela.js": "^2.3.3",
     "erela.js-deezer": "^1.0.7",
     "erela.js-facebook": "^1.0.4",
     "erela.js-spotify": "^1.2.0",

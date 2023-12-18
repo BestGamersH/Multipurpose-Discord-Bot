@@ -1,4 +1,4 @@
-﻿var {
+var {
   MessageEmbed
 } = require("discord.js");
 var Discord = require("discord.js");
@@ -272,27 +272,27 @@ module.exports = {
           {
             value: "Manage Emoji 1",
             description: `Manage the Emoji Settings for that Emoji`,
-            emoji: ":one:"
+            emoji: "1168774094351765524"
           },
           {
             value: "Manage Emoji 2",
             description: `Manage the Emoji Settings for that Emoji`,
-            emoji: ":two:"
+            emoji: "1168774123946774590"
           },
           {
             value: "Manage Emoji 3",
             description: `Manage the Emoji Settings for that Emoji`,
-            emoji: ":three:"
+            emoji: "1168774143685165066"
           },
           {
             value: "Manage Emoji 4",
             description: `Manage the Emoji Settings for that Emoji`,
-            emoji: ":four:"
+            emoji: "1168774160831492097"
           },
           {
             value: "Manage Emoji 5",
             description: `Manage the Emoji Settings for that Emoji`,
-            emoji: ":five:"
+            emoji: "1168774179273842738"
           },
 
           {
@@ -416,8 +416,8 @@ module.exports = {
             var desc;
             var userid = cmduser.id;
             let row = new MessageActionRow().addComponents([
-              new MessageButton().setStyle("SECONDARY").setCustomId("1").setEmoji(":one:"),
-              new MessageButton().setStyle("SECONDARY").setCustomId("2").setEmoji(":two:")
+              new MessageButton().setStyle("SECONDARY").setCustomId("1").setEmoji("1168774094351765524"),
+              new MessageButton().setStyle("SECONDARY").setCustomId("2").setEmoji("1168774123946774590")
             ])
             var pickmsg = await message.reply({
               components: [row],
@@ -1426,11 +1426,11 @@ module.exports = {
             ]
           })
           try {
-            tempmsg2.react(":one:")
-            tempmsg2.react(":two:")
-            tempmsg2.react(":three:")
-            tempmsg2.react(":four:")
-            tempmsg2.react(":five:")
+            tempmsg2.react("1168774094351765524")
+            tempmsg2.react("1168774123946774590")
+            tempmsg2.react("1168774143685165066")
+            tempmsg2.react("1168774160831492097")
+            tempmsg2.react("1168774179273842738")
           } catch (e) {
             return message.reply({
               embeds: [new Discord.MessageEmbed()
@@ -1450,11 +1450,11 @@ module.exports = {
             .then(collected => {
               var reaction = collected.first()
               reaction.users.remove(cmduser.id)
-              if (reaction.emoji?.name === ":one:") type = "message";
-              else if (reaction.emoji?.name === ":two:") type = "setrole";
-              else if (reaction.emoji?.name === ":three:") type = "delrole";
-              else if (reaction.emoji?.name === ":four:") type = "delimage";
-              else if (reaction.emoji?.name === ":five:") type = "setimage";
+              if (reaction.emoji?.name === "1168774094351765524") type = "message";
+              else if (reaction.emoji?.name === "1168774123946774590") type = "setrole";
+              else if (reaction.emoji?.name === "1168774143685165066") type = "delrole";
+              else if (reaction.emoji?.name === "1168774160831492097") type = "delimage";
+              else if (reaction.emoji?.name === "1168774179273842738") type = "setimage";
               else throw "You reacted with a wrong emoji"
 
             })
@@ -1676,11 +1676,11 @@ module.exports = {
             ]
           })
           try {
-            tempmsg2.react(":one:")
-            tempmsg2.react(":two:")
-            tempmsg2.react(":three:")
-            tempmsg2.react(":four:")
-            tempmsg2.react(":five:")
+            tempmsg2.react("1168774094351765524")
+            tempmsg2.react("1168774123946774590")
+            tempmsg2.react("1168774143685165066")
+            tempmsg2.react("1168774160831492097")
+            tempmsg2.react("1168774179273842738")
           } catch (e) {
             return message.reply({
               embeds: [new Discord.MessageEmbed()
@@ -1700,11 +1700,11 @@ module.exports = {
             .then(collected => {
               var reaction = collected.first()
               reaction.users.remove(cmduser.id)
-              if (reaction.emoji?.name === ":one:") type = "message";
-              else if (reaction.emoji?.name === ":two:") type = "setrole";
-              else if (reaction.emoji?.name === ":three:") type = "delrole";
-              else if (reaction.emoji?.name === ":four:") type = "delimage";
-              else if (reaction.emoji?.name === ":five:") type = "setimage";
+              if (reaction.emoji?.name === "1168774094351765524") type = "message";
+              else if (reaction.emoji?.name === "1168774123946774590") type = "setrole";
+              else if (reaction.emoji?.name === "1168774143685165066") type = "delrole";
+              else if (reaction.emoji?.name === "1168774160831492097") type = "delimage";
+              else if (reaction.emoji?.name === "1168774179273842738") type = "setimage";
               else throw "You reacted with a wrong emoji"
 
             })
@@ -1932,11 +1932,11 @@ module.exports = {
             ]
           })
           try {
-            tempmsg2.react(":one:")
-            tempmsg2.react(":two:")
-            tempmsg2.react(":three:")
-            tempmsg2.react(":four:")
-            tempmsg2.react(":five:")
+            tempmsg2.react("1168774094351765524")
+            tempmsg2.react("1168774123946774590")
+            tempmsg2.react("1168774143685165066")
+            tempmsg2.react("1168774160831492097")
+            tempmsg2.react("1168774179273842738")
           } catch (e) {
             return message.reply({
               embeds: [new Discord.MessageEmbed()
@@ -1956,11 +1956,11 @@ module.exports = {
             .then(collected => {
               var reaction = collected.first()
               reaction.users.remove(cmduser.id)
-              if (reaction.emoji?.name === ":one:") type = "message";
-              else if (reaction.emoji?.name === ":two:") type = "setrole";
-              else if (reaction.emoji?.name === ":three:") type = "delrole";
-              else if (reaction.emoji?.name === ":four:") type = "delimage";
-              else if (reaction.emoji?.name === ":five:") type = "setimage";
+              if (reaction.emoji?.name === "1168774094351765524") type = "message";
+              else if (reaction.emoji?.name === "1168774123946774590") type = "setrole";
+              else if (reaction.emoji?.name === "1168774143685165066") type = "delrole";
+              else if (reaction.emoji?.name === "1168774160831492097") type = "delimage";
+              else if (reaction.emoji?.name === "1168774179273842738") type = "setimage";
               else throw "You reacted with a wrong emoji"
 
             })
@@ -2192,11 +2192,11 @@ module.exports = {
             ]
           })
           try {
-            tempmsg2.react(":one:")
-            tempmsg2.react(":two:")
-            tempmsg2.react(":three:")
-            tempmsg2.react(":four:")
-            tempmsg2.react(":five:")
+            tempmsg2.react("1168774094351765524")
+            tempmsg2.react("1168774123946774590")
+            tempmsg2.react("1168774143685165066")
+            tempmsg2.react("1168774160831492097")
+            tempmsg2.react("1168774179273842738")
           } catch (e) {
             return message.reply({
               embeds: [new Discord.MessageEmbed()
@@ -2216,11 +2216,11 @@ module.exports = {
             .then(collected => {
               var reaction = collected.first()
               reaction.users.remove(cmduser.id)
-              if (reaction.emoji?.name === ":one:") type = "message";
-              else if (reaction.emoji?.name === ":two:") type = "setrole";
-              else if (reaction.emoji?.name === ":three:") type = "delrole";
-              else if (reaction.emoji?.name === ":four:") type = "delimage";
-              else if (reaction.emoji?.name === ":five:") type = "setimage";
+              if (reaction.emoji?.name === "1168774094351765524") type = "message";
+              else if (reaction.emoji?.name === "1168774123946774590") type = "setrole";
+              else if (reaction.emoji?.name === "1168774143685165066") type = "delrole";
+              else if (reaction.emoji?.name === "1168774160831492097") type = "delimage";
+              else if (reaction.emoji?.name === "1168774179273842738") type = "setimage";
               else throw "You reacted with a wrong emoji"
 
             })
@@ -2451,11 +2451,11 @@ module.exports = {
             ]
           })
           try {
-            tempmsg2.react(":one:")
-            tempmsg2.react(":two:")
-            tempmsg2.react(":three:")
-            tempmsg2.react(":four:")
-            tempmsg2.react(":five:")
+            tempmsg2.react("1168774094351765524")
+            tempmsg2.react("1168774123946774590")
+            tempmsg2.react("1168774143685165066")
+            tempmsg2.react("1168774160831492097")
+            tempmsg2.react("1168774179273842738")
           } catch (e) {
             return message.reply({
               embeds: [new Discord.MessageEmbed()
@@ -2475,11 +2475,11 @@ module.exports = {
             .then(collected => {
               var reaction = collected.first()
               reaction.users.remove(cmduser.id)
-              if (reaction.emoji?.name === ":one:") type = "message";
-              else if (reaction.emoji?.name === ":two:") type = "setrole";
-              else if (reaction.emoji?.name === ":three:") type = "delrole";
-              else if (reaction.emoji?.name === ":four:") type = "delimage";
-              else if (reaction.emoji?.name === ":five:") type = "setimage";
+              if (reaction.emoji?.name === "1168774094351765524") type = "message";
+              else if (reaction.emoji?.name === "1168774123946774590") type = "setrole";
+              else if (reaction.emoji?.name === "1168774143685165066") type = "delrole";
+              else if (reaction.emoji?.name === "1168774160831492097") type = "delimage";
+              else if (reaction.emoji?.name === "1168774179273842738") type = "setimage";
               else throw "You reacted with a wrong emoji"
 
             })
@@ -3545,31 +3545,31 @@ module.exports = {
 
 function getNumberEmojis() {
   return [
-    "<:Builder:1168755657525174314>",
-    "<:Builder:1168755657525174314>",
-    "<:Builder:1168755657525174314>",
-    "<:Builder:1168755657525174314>",
-    "<:Builder:1168755657525174314>",
-    "<:Builder:1168755657525174314>",
-    "<:Builder:1168755657525174314>",
-    "<:Builder:1168755657525174314>",
-    "<:Builder:1168755657525174314>",
-    "<:Builder:1168755657525174314>",
-    "<:Builder:1168755657525174314>",
-    "<:Builder:1168755657525174314>",
-    "<:Builder:1168755657525174314>",
-    "<:Builder:1168755657525174314>",
-    "<:Builder:1168755657525174314>",
-    "<:Builder:1168755657525174314>",
-    "<:Builder:1168755657525174314>",
-    "<:Builder:1168755657525174314>",
-    "<:Builder:1168755657525174314>",
-    "<:Builder:1168755657525174314>",
-    "<:Builder:1168755657525174314>",
-    "<:Builder:1168755657525174314>",
-    "<:Builder:1168755657525174314>",
-    "<:Builder:1168755657525174314>",
-    "<:Builder:1168755657525174314>",
-    "<:Builder:1168755657525174314>"
+    "<:Number_0:843943149915078696>",
+    "<:Number_1:843943149902626846>",
+    "<:Number_2:843943149868023808>",
+    "<:Number_3:843943149914554388>",
+    "<:Number_4:843943149919535154>",
+    "<:Number_5:843943149759889439>",
+    "<:Number_6:843943150468857876>",
+    "<:Number_7:843943150179713024>",
+    "<:Number_8:843943150360068137>",
+    "<:Number_9:843943150443036672>",
+    "<:Number_10:843943150594031626>",
+    "<:Number_11:893173642022748230>",
+    "<:Number_12:893173642165383218>",
+    "<:Number_13:893173642274410496>",
+    "<:Number_14:893173642198921296>",
+    "<:Number_15:893173642182139914>",
+    "<:Number_16:893173642530271342>",
+    "<:Number_17:893173642538647612>",
+    "<:Number_18:893173642307977258>",
+    "<:Number_19:893173642588991488>",
+    "<:Number_20:893173642307977266>",
+    "<:Number_21:893173642274430977>",
+    "<:Number_22:893173642702250045>",
+    "<:Number_23:893173642454773782>",
+    "<:Number_24:893173642744201226>",
+    "<:Number_25:893173642727424020>"
   ]
 }

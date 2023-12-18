@@ -11,7 +11,7 @@ const {
 module.exports = {
   name: `unlockchannel`,
   category: `🚫 Administration`,
-  aliases: [`unlockch`, "unlchannel"],
+  aliases: [`unlockch`, "unlchannel","unlock",],
   description: `Unlocks a Channel`,
   usage: `unlockchannel [#channel / Inside of a Channel]`,
   type: "channel",

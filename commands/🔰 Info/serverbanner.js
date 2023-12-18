@@ -18,7 +18,7 @@ module.exports = {
     try {   
       if(message.guild.banner) {
         let embed = new Discord.MessageEmbed()
-          .setTitle(`**<a:arrow:1168762387067846687> SERVER BANNER:**`)
+          .setTitle(`**<:arrow:832598861813776394> SERVER BANNER:**`)
           .setColor(es.color)
           .setFooter(client.getFooter(es))
           .setDescription(`[Download Link](${message.guild.bannerURL({size: 1024})})${message.guild.discoverySplash ? ` | [Link of Discovery Splash Image](${message.guild.discoverySplashURL({size: 4096})})`: ""}\n> This is the Image which is shown on the Top left Corner of this Server, where you see the Channels!`)

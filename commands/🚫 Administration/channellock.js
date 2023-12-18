@@ -10,7 +10,7 @@ const {
 module.exports = {
   name: "channellock",
   category: "🚫 Administration",
-  aliases: ["chlock", "lockchannel", "lockch"],
+  aliases: ["chlock", "lockchannel", "lockch", "lock",],
   cooldown: 2,
   usage: "channellock",
   description: "Locks a Text Channel instantly",

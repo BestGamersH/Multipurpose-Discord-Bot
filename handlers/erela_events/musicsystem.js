@@ -195,7 +195,7 @@ module.exports = client => {
                   embeds: [new MessageEmbed()
                   .setColor(ee.color)
                   .setTimestamp()
-                  .setTitle(`${player.get(`autoplay`) ? `<:yes:1168770575116800042> **Enabled Autoplay**`: `<:NO:1169479454918180937> **Disabled Autoplay**`}`)
+                  .setTitle(`${player.get(`autoplay`) ? `<a:yes:1168770575620128809> **Enabled Autoplay**`: `<:NO:1169479454918180937> **Disabled Autoplay**`}`)
                   .setFooter(client.getFooter(`💢 Action by: ${member.user.tag}`, member.user.displayAvatarURL({dynamic: true})))]
                 })
                 //edit the message so that it's right!
@@ -234,7 +234,7 @@ module.exports = client => {
                   embeds: [new MessageEmbed()
                   .setColor(ee.color)
                   .setTimestamp()
-                  .setTitle(`${player.trackRepeat ? `<:yes:1168770575116800042> **Enabled Song Loop**`: `<:NO:1169479454918180937> **Disabled Song Loop**`}`)
+                  .setTitle(`${player.trackRepeat ? `<a:yes:1168770575620128809> **Enabled Song Loop**`: `<:NO:1169479454918180937> **Disabled Song Loop**`}`)
                   .setFooter(client.getFooter(`💢 Action by: ${member.user.tag}`, member.user.displayAvatarURL({dynamic: true})))]
                 })
                 //edit the message so that it's right!
@@ -254,7 +254,7 @@ module.exports = client => {
                   embeds: [new MessageEmbed()
                   .setColor(ee.color)
                   .setTimestamp()
-                  .setTitle(`${player.queueRepeat ? `<:yes:1168770575116800042> **Enabled Queue Loop**`: `<:NO:1169479454918180937> **Disabled Queue Loop**`}`)
+                  .setTitle(`${player.queueRepeat ? `<a:yes:1168770575620128809> **Enabled Queue Loop**`: `<:NO:1169479454918180937> **Disabled Queue Loop**`}`)
                   .setFooter(client.getFooter(`💢 Action by: ${member.user.tag}`, member.user.displayAvatarURL({dynamic: true})))]
                 })
                 //edit the message so that it's right!

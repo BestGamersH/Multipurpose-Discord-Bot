@@ -307,9 +307,9 @@ module.exports = {
                 if(string.length > 250) string = string.substring(0, 250) + " ..."
                 if(i > 13){
                   sendembed2 = true;
-                  embed2.addField(`<a:arrow:1168762387067846687> \`${cuc[i].name}\` | ${cuc[i].embed ? "✅ Embed" : "❌ Embed"}`, ">>> "+ string)
+                  embed2.addField(`<:arrow:832598861813776394> \`${cuc[i].name}\` | ${cuc[i].embed ? "✅ Embed" : "❌ Embed"}`, ">>> "+ string)
                 } else 
-                embed.addField(`<a:arrow:1168762387067846687> \`${cuc[i].name}\` | ${cuc[i].embed ? "✅ Embed" : "❌ Embed"}`, ">>> "+ string)
+                embed.addField(`<:arrow:832598861813776394> \`${cuc[i].name}\` | ${cuc[i].embed ? "✅ Embed" : "❌ Embed"}`, ">>> "+ string)
               }catch (e){
                 console.log(e.stack ? String(e.stack).grey : String(e).grey)
               }

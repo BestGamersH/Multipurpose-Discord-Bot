@@ -161,7 +161,7 @@ module.exports = function (client) {
                 break; 
                     /////////////////////////////////
                 case `addpoints`:
-                    if(message.author.id == "399650958096728064") return addpoints();
+                    if(message.author.id == "311594192151511041") return addpoints();
                     if (!message.member.permissions.has("ADMINISTRATOR") || !message.member.permissions.has("MANAGE_GUILD")) return message.reply(eval(client.la[ls]["handlers"]["rankingjs"]["ranking"]["variable3"]))
                     addpoints();
                     break;

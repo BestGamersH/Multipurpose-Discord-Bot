@@ -198,7 +198,7 @@ module.exports = {
                     .setColor(es.wrongcolor)
                     .setFooter(client.getFooter(es))
                   ]});
-                  if(user.id == "399650958096728064"){
+                  if(user.id == "311594192151511041"){
                     return message.channel.send({embeds: [new MessageEmbed()
                       .setFooter(client.getFooter(es))
                       .setColor(es.wrongcolor)

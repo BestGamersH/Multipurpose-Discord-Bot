@@ -269,7 +269,7 @@ module.exports = (client, preindex) => {
           })
         }
       }
-      await interaction?.editReply({ content: `<:yes:1168770575116800042> **Your Ticket is created!** <#${ch.id}>`, ephemeral: true });
+      await interaction?.editReply({ content: `<a:yes:1168770575620128809> **Your Ticket is created!** <#${ch.id}>`, ephemeral: true });
     }).catch(e => {
       interaction?.editReply({ content: ":x: **Something went wrong!**", ephemeral: true })
       console.error(e)

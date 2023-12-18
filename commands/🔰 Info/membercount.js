@@ -7,7 +7,7 @@ const moment = require("moment")
 const { handlemsg } = require(`${process.cwd()}/handlers/functions`)
 module.exports = {
   name: "membercount",
-  aliases: ["members"],
+  aliases: ["members","mc"],
   category: "🔰 Info",
   description: "Shows how many Members there are in this Server",
   usage: "membercount",
