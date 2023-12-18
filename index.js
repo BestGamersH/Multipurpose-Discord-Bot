@@ -42,7 +42,7 @@ const client = new Discord.Client({
   failIfNotExists: false,
   shards: "auto",
   allowedMentions: {
-    parse: ["roles", "users"],
+    parse: ["roles", "users" ],
     repliedUser: false,
   },
   partials: ['MESSAGE', 'CHANNEL', 'REACTION', 'GUILD_MEMBER', 'USER'],
@@ -100,8 +100,52 @@ Object.freeze(client.la)
 client.setMaxListeners(0);
 Events.defaultMaxListeners = 0;
 process.env.UV_THREADPOOL_SIZE = OS.cpus().length;
+/**********************************************************
+ * @param {8} Dashboard
+ *********************************************************/
+const express = require('express');
+const session = require('express-session');
 
+const app = express();
 
+app.set('view engine', 'ejs');
+
+app.use(express.static('public'));
+app.use(session({
+  secret: 'your_secret_here',
+  resave: false,
+  saveUninitialized: false
+}));
+
+app.get('/', (req, res) => {
+  res.render('login');
+});
+
+app.get('/dashboard', (req, res) => {
+  const { user } = req.session;
+  if (!user) {
+    return res.redirect('/');
+  }
+  res.render('dashboard', { user });
+});
+
+app.get('/login', (req, res) => {
+  req.session.user = {
+    username: 'JohnDoe' // Simulated user login
+  };
+  res.redirect('/dashboard');
+});
+
+app.get('/invite', (req, res) => {
+  const inviteURL = `YOUR_BOT_INVITE_URL`;
+  res.render('invite', { inviteURL });
+});
+
+const PORT = process.env.PORT || 3000;
+
+app.listen(PORT, () => {
+  console.log(`Dashboard is running on http://localhost:${PORT}`);
+});
 /**********************************************************
  * @param {7} Define_the_Client_Advertisments from the Config File
  *********************************************************/

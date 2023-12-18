@@ -11,7 +11,7 @@ const {
 module.exports = {
   name: `lockchannel`,
   category: `🚫 Administration`,
-  aliases: [`lockch`, "lchannel"],
+  aliases: [`lockch`, "lchannel","lock"],
   description: `Locks a Channel`,
   usage: `lockchannel [#channel / Inside of a a Channel]`,
   type: "channel",
