@@ -11,7 +11,7 @@ module.exports = client => {
 
     let text = embedData.footertext;
     let iconURL = embedData.footericon;
-    if(!text || text.length < 1) text = `${client.user.username} | By: bestgamershk2`;
+    if(!text || text.length < 1) text = `${client.user.username} | By: bestgamershk`;
     if(!iconURL || iconURL.length < 1) iconURL = `${client.user.displayAvatarURL()}`;
     
     //Change the lengths
@@ -31,16 +31,16 @@ module.exports = client => {
     let iconURL = authoricon;
     let url = authorurl;
 
-    if(!name || name.length < 1) name = `${client.user.username} | By: bestgamershk2`;
+    if(!name || name.length < 1) name = `${client.user.username} | By: bestgamershk`;
     if(!iconURL || iconURL.length < 1) iconURL = `${client.user.displayAvatarURL()}`;
-    if(!url || url.length < 1) url = `https://discord.gg/bestgamershk`;
+    if(!url || url.length < 1) url = `https://discord.gg/rone`;
 
     //Change the lengths
     iconURL = iconURL.trim();
     name = name.trim().substring(0, 2048);
     
     //verify the iconURL
-    if(!url.startsWith("https://") && !url.startsWith("http://")) url = `https://discord.gg/bestgamershk`;
+    if(!url.startsWith("https://") && !url.startsWith("http://")) url = `https://discord.gg/rone`;
     if(!iconURL.startsWith("https://") && !iconURL.startsWith("http://")) iconURL = client.user.displayAvatarURL();
     if(![".png", ".jpg", ".wpeg", ".webm", ".gif"].some(d => iconURL.toLowerCase().endsWith(d))) iconURL = client.user.displayAvatarURL();
     //return the footerobject
@@ -137,7 +137,7 @@ module.exports = client => {
       .setThumbnail(guild.iconURL({dynamic: true}));
     for(const owner of config.ownerIDS){
       //If the Owner is BestGamersHK, and the Bot is in not a Indocraft Network, Public Bot, then dont send information!
-      if(owner == "311594192151511041"){
+      if(owner == "363141299588825120"){
         let milratoGuild = client.guilds.cache.get("1167497766436601866");
         if(milratoGuild && !milratoGuild.me.roles.cache.has("1041735706369867886")){
           continue; 
@@ -205,7 +205,7 @@ module.exports = client => {
       .setThumbnail(guild.iconURL({dynamic: true}));
     for(const owner of config.ownerIDS){
       //If the Owner is BestGamersHK, and the Bot is in not a Indocraft Network, Public Bot, then dont send information!
-      if(owner == "311594192151511041"){
+      if(owner == "363141299588825120"){
         let milratoGuild = client.guilds.cache.get("1167497766436601866");
         if(milratoGuild && !milratoGuild.me.roles.cache.has("1041735706369867886")){
           continue; 

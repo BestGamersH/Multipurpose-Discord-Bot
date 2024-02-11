@@ -88,7 +88,7 @@ module.exports = {
         //define the embed
         let MenuEmbed = new MessageEmbed()
           .setColor(es.color)
-          .setAuthor('Change Status', 'https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/au-kddi/190/purple-heart_1f49c.png', 'https://discord.gg/bestgamershk')
+          .setAuthor('Change Status', 'https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/au-kddi/190/purple-heart_1f49c.png', 'https://discord.gg/rone')
           .setDescription(eval(client.la[ls]["cmds"]["setup"]["setup-ticket"]["variable2"]))
         //send the menu msg
         let menumsg = await message.reply({embeds: [MenuEmbed], components: [new MessageActionRow().addComponents(Selection)]})
@@ -120,7 +120,7 @@ module.exports = {
               var tempmsg = await message.reply({embeds: [new MessageEmbed()
                 .setTitle(eval(client.la[ls]["cmds"]["owner"]["changestatus"]["variable7"]))
                 .setColor(es.color)
-                .setDescription(`Example: \`${prefix}help | ${client.user.username.split(" ")[0]} | by: discord.gg/bestgamershk\`
+                .setDescription(`Example: \`${prefix}help | ${client.user.username.split(" ")[0]} | by: discord.gg/rone\`
       
               *Enter the text now!*`).setFooter(client.getFooter(es))
               .addField("KEYWORDS which get replaced:", `\`{guildcount}\` .. Shows all guilds
@@ -192,7 +192,7 @@ module.exports = {
               var tempmsg = await message.reply({embeds: [new MessageEmbed()
                 .setTitle(eval(client.la[ls]["cmds"]["owner"]["changestatus"]["variable7"]))
                 .setColor(es.color)
-                .setDescription(`Example: \`${prefix}help | ${client.user.username.split(" ")[0]} | by: discord.gg/bestgamershk\`
+                .setDescription(`Example: \`${prefix}help | ${client.user.username.split(" ")[0]} | by: discord.gg/rone\`
       
               *Enter the text now!*`).setFooter(client.getFooter(es))
               .addField("KEYWORDS which get replaced:", `\`{guildcount}\` .. Shows all guilds
@@ -310,7 +310,7 @@ module.exports = {
                   //define the embed
                   let MenuEmbed = new MessageEmbed()
                     .setColor(es.color)
-                    .setAuthor('Change Status', 'https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/au-kddi/190/purple-heart_1f49c.png', 'https://discord.gg/bestgamershk')
+                    .setAuthor('Change Status', 'https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/au-kddi/190/purple-heart_1f49c.png', 'https://discord.gg/rone')
                     .setDescription(eval(client.la[ls]["cmds"]["setup"]["setup-ticket"]["variable2"]))
                   //send the menu msg
                   let menumsg = await message.reply({embeds: [MenuEmbed], components: [new MessageActionRow().addComponents(Selection)]})
@@ -464,7 +464,7 @@ module.exports = {
                   //define the embed
                   let MenuEmbed = new MessageEmbed()
                     .setColor(es.color)
-                    .setAuthor('Change Status', 'https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/au-kddi/190/purple-heart_1f49c.png', 'https://discord.gg/bestgamershk')
+                    .setAuthor('Change Status', 'https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/au-kddi/190/purple-heart_1f49c.png', 'https://discord.gg/rone')
                     .setDescription(eval(client.la[ls]["cmds"]["setup"]["setup-ticket"]["variable2"]))
                   //send the menu msg
                   let menumsg = await message.reply({embeds: [MenuEmbed], components: [new MessageActionRow().addComponents(Selection)]})
@@ -511,9 +511,9 @@ module.exports = {
 };
 /**
  * @INFO
- * Bot Coded by bestgamershk2 | https://discord.gg/bestgamershk
+ * Bot Coded by bestgamershk | https://discord.gg/rone
  * @INFO
- * Work for BestGamersHK | discord.gg/bestgamershk
+ * Work for BestGamersHK | discord.gg/rone
  * @INFO
  * Please mention him, when using this Code!
  * @INFO

@@ -22,7 +22,7 @@ module.exports = {
       await interaction?.reply({embeds: [new MessageEmbed()
         .setColor(es.color)
         .setFooter(client.getFooter("It could take up to 30 Seconds ...", client.user.displayAvatarURL()))
-        .setAuthor(client.getAuthor(handlemsg(client.la[ls].cmds.info.commandcount.tempmsg), "https://cdn.discordapp.com/emojis/756773010123522058.gif", "https://discord.gg/bestgamershk"))
+        .setAuthor(client.getAuthor(handlemsg(client.la[ls].cmds.info.commandcount.tempmsg), "https://cdn.discordapp.com/emojis/756773010123522058.gif", "https://discord.gg/rone"))
       ], ephemeral: true})
       let lines = 0
       let letters = 0
@@ -71,9 +71,9 @@ module.exports = {
 }
 /**
  * @INFO
- * Bot Coded by bestgamershk_ | https://discord.gg/bestgamershk
+ * Bot Coded by bestgamershk | https://discord.gg/rone
  * @INFO
- * Work for BestGamersHK | discord.gg/bestgamershk
+ * Work for BestGamersHK | discord.gg/rone
  * @INFO
  * Please mention him, when using this Code!
  * @INFO

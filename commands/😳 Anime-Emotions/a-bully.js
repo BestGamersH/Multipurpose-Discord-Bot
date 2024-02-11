@@ -34,7 +34,7 @@ module.exports = {
 }
 /**
  * @INFO
- * Bot Coded by bestgamershk2 | https://discord.gg/bestgamershk
+ * Bot Coded by bestgamershk | https://discord.gg/rone
  * @INFO
  * Work for BestGamersHK
  * @INFO

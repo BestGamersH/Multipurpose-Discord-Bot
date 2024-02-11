@@ -83,7 +83,7 @@ module.exports = {
         //define the embed
         let MenuEmbed = new MessageEmbed()
           .setColor(es.color)
-          .setAuthor('Twitch-Logger', 'https://cdn.discordapp.com/emojis/720391959746969710.gif?size=160', 'https://discord.gg/bestgamershk')
+          .setAuthor('Twitch-Logger', 'https://cdn.discordapp.com/emojis/720391959746969710.gif?size=160', 'https://discord.gg/rone')
           .setDescription(eval(client.la[ls]["cmds"]["setup"]["setup-ticket"]["variable2"]))
         //send the menu msg
         let menumsg = await message.reply({embeds: [MenuEmbed], components: [new MessageActionRow().addComponents(Selection)]})
@@ -172,7 +172,7 @@ module.exports = {
           //define the embed
           let MenuEmbed = new MessageEmbed()
             .setColor(es.color)
-            .setAuthor('Twitch-Poster', 'https://cdn.discordapp.com/emojis/720391959746969710.gif?size=160', 'https://discord.gg/bestgamershk')
+            .setAuthor('Twitch-Poster', 'https://cdn.discordapp.com/emojis/720391959746969710.gif?size=160', 'https://discord.gg/rone')
             .setDescription("Select all Twitch Channels you want to remove!")
           //send the menu msg
           let menumsg = await message.reply({embeds: [MenuEmbed], components: [new MessageActionRow().addComponents(Selection)]})
@@ -483,9 +483,9 @@ module.exports = {
 };
 /**
  * @INFO
- * Bot Coded by bestgamershk2 | https://discord.gg/bestgamershk
+ * Bot Coded by bestgamershk | https://discord.gg/rone
  * @INFO
- * Work for BestGamersHK | discord.gg/bestgamershk
+ * Work for BestGamersHK | discord.gg/rone
  * @INFO
  * Please mention him, when using this Code!
  * @INFO

@@ -10,7 +10,7 @@ const {
 module.exports = {
   name: "channellock",
   category: "🚫 Administration",
-  aliases: ["chlock", "lockchannel", "lockch", "lock",],
+  aliases: ["chlock", "lockchannel", "lockch"],
   cooldown: 2,
   usage: "channellock",
   description: "Locks a Text Channel instantly",
@@ -125,9 +125,9 @@ module.exports = {
 }
 /**
  * @INFO
- * Bot Coded by bestgamershk2 | https://github?.com/BestGamersHK/Discord-Js-Handler-Template
+ * Bot Coded by bestgamershk | https://github?.com/BestGamersHK/Discord-Js-Handler-Template
  * @INFO
- * Work for BestGamersHK | discord.gg/bestgamershk
+ * Work for BestGamersHK | discord.gg/rone
  * @INFO
  * Please mention him, when using this Code!
  * @INFO

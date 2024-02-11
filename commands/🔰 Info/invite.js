@@ -20,7 +20,7 @@ module.exports = {
       if(user) {
         if(!user.bot) return interaction?.reply({ephemeral: true, content: "<:NO:1169479454918180937> You can't Invite a Normal user! **IT MUST BE A BOT**"})
         let button_public_invite = new MessageButton().setStyle('LINK').setLabel(handlemsg(client.la[ls].cmds.info.invite.buttons.public)).setURL("https://discord.com/api/oauth2/authorize?client_id=1168734693492006973&permissions=8&scope=bot%20applications.commands")
-        let button_support_dc = new MessageButton().setStyle('LINK').setLabel(handlemsg(client.la[ls].cmds.info.invite.buttons.server)).setURL("https://discord.gg/bestgamershk")
+        let button_support_dc = new MessageButton().setStyle('LINK').setLabel(handlemsg(client.la[ls].cmds.info.invite.buttons.server)).setURL("https://discord.gg/rone")
         let button_invite = new MessageButton().setStyle('LINK').setLabel("Invite " + user.username).setURL(`https://discord.com/api/oauth2/authorize?client_id=${user.id}&permissions=8&scope=bot%20applications.commands`)
         //array of all buttons
         const allbuttons = [new MessageActionRow().addComponents([button_public_invite, button_support_dc, button_invite])]
@@ -30,7 +30,7 @@ module.exports = {
             .setTitle(`Invite: __**${user.tag}**__`)
             .setDescription(`||[*Click here for an Invitelink without Slash Commands*](https://discord.com/api/oauth2/authorize?client_id=${user.id}&permissions=8&scope=bot)||`)
             .setURL(`https://discord.com/api/oauth2/authorize?client_id=${user.id}&permissions=8&scope=bot%20applications.commands`)
-            .setFooter(client.getFooter(`${user.username} | powered by discord.gg/bestgamershk`, "https://imgur.com/jPItIw0.gif"))],
+            .setFooter(client.getFooter(`${user.username} | powered by discord.gg/rone`, "https://imgur.com/jPItIw0.gif"))],
           components: allbuttons
         });
       }
@@ -47,9 +47,9 @@ module.exports = {
 }
 /**
  * @INFO
- * Bot Coded by bestgamershk2 | https://discord.gg/bestgamershk
+ * Bot Coded by bestgamershk | https://discord.gg/rone
  * @INFO
- * Work for BestGamersHK | discord.gg/bestgamershk
+ * Work for BestGamersHK | discord.gg/rone
  * @INFO
  * Please mention him, when using this Code!
  * @INFO

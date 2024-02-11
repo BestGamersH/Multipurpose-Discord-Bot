@@ -82,7 +82,7 @@ module.exports = {
         //define the embed
         let MenuEmbed = new MessageEmbed()
           .setColor(es.color)
-          .setAuthor('Twitter Setup', 'https://cdn.discordapp.com/emojis/840255600851812393.png?size=96', 'https://discord.gg/bestgamershk')
+          .setAuthor('Twitter Setup', 'https://cdn.discordapp.com/emojis/840255600851812393.png?size=96', 'https://discord.gg/rone')
           .setDescription(eval(client.la[ls]["cmds"]["setup"]["setup-ticket"]["variable2"]))
         //send the menu msg
         let menumsg = await message.reply({
@@ -451,12 +451,3 @@ module.exports = {
     }
   },
 };
-/**
- * @INFO
- * Bot Coded by bestgamershk2 | https://github?.com/MilratoDev/discord-js-lavalink-Music-Bot-erela-js
- * @INFO
- * Work for BestGamersHK | discord.gg/bestgamershk
- * @INFO
- * Please mention him, when using this Code!
- * @INFO
- */

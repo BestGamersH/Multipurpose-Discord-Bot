@@ -15,9 +15,9 @@ module.exports = {
     
     try {
       function trimArray(arr, maxLen = 25) {
-        if (arr.map(this_Code_is_by_BestGamersHK_1213 => this_Code_is_by_BestGamersHK_1213).length > maxLen) {
-          const len = arr.map(this_Code_is_by_BestGamersHK_1213 => this_Code_is_by_BestGamersHK_1213).length - maxLen;
-          arr = arr.map(this_Code_is_by_BestGamersHK_1213 => this_Code_is_by_BestGamersHK_1213).sort((a, b) => b?.rawPosition - a.rawPosition).slice(0, maxLen);
+        if (arr.map(this_Code_is_by_bestgamershk1213 => this_Code_is_by_bestgamershk1213).length > maxLen) {
+          const len = arr.map(this_Code_is_by_bestgamershk1213 => this_Code_is_by_bestgamershk1213).length - maxLen;
+          arr = arr.map(this_Code_is_by_bestgamershk1213 => this_Code_is_by_bestgamershk1213).sort((a, b) => b?.rawPosition - a.rawPosition).slice(0, maxLen);
           arr.map(role => `<@&${role.id}>`)
           arr.push(`${len} more...`);
         }
@@ -84,9 +84,9 @@ module.exports = {
 }
 /**
  * @INFO
- * Bot Coded by bestgamershk_ | https://discord.gg/bestgamershk
+ * Bot Coded by bestgamershk | https://discord.gg/rone
  * @INFO
- * Work for BestGamersHK | discord.gg/bestgamershk
+ * Work for BestGamersHK | discord.gg/rone
  * @INFO
  * Please mention him, when using this Code!
  * @INFO

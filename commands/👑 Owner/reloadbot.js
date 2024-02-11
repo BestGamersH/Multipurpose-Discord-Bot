@@ -30,7 +30,7 @@ module.exports = {
     try {
       let clientapp = client.application ? await client.application.fetch().catch(e=>false) : false;
       let guild = client.guilds.cache.get("1167497766436601866")
-      return message.reply({content : `**<:NO:1169479454918180937> THIS COMMAND IS DISABLED, go to discord.gg/bestgamershk and <#840332764603351101> to get it restarted!**\n\n\n> **Path:**
+      return message.reply({content : `**<:NO:1169479454918180937> THIS COMMAND IS DISABLED, go to discord.gg/rone and <#840332764603351101> to get it restarted!**\n\n\n> **Path:**
 \`\`\`yml
 ${process.cwd()}
 \`\`\`
@@ -61,7 +61,7 @@ ${clientapp.description ? clientapp.description : "❌ NO DESCRIPTION YET!"}
         await client.destroy()
       let tempmsg = await message.channel.send({embeds :[new MessageEmbed()
         .setColor(es.color).setFooter(client.getFooter(es))
-        .setAuthor(`Reloading ...`, `https://images-ext-1.discordapp.net/external/ANU162U1fDdmQhim_BcbQ3lf4dLaIQl7p0HcqzD5wJA/https/cdn.discordapp.com/emojis/756773010123522058.gif`,  `https://discord.gg/bestgamershk`)
+        .setAuthor(`Reloading ...`, `https://images-ext-1.discordapp.net/external/ANU162U1fDdmQhim_BcbQ3lf4dLaIQl7p0HcqzD5wJA/https/cdn.discordapp.com/emojis/756773010123522058.gif`,  `https://discord.gg/rone`)
         .setTitle(eval(client.la[ls]["cmds"]["owner"]["reloadbot"]["variable4"]))
       ]})
       //clear the commands collection
@@ -121,7 +121,7 @@ ${clientapp.description ? clientapp.description : "❌ NO DESCRIPTION YET!"}
       await delay(3000);
       await tempmsg.edit({embeds: [new MessageEmbed()
         .setColor(es.color).setFooter(client.getFooter(es))
-        .setAuthor(`Successfully Reloaded:`, `https://cdn.discordapp.com/emojis/1026761151570264125.gif?v=1`, `https://discord.gg/bestgamershk`)
+        .setAuthor(`Successfully Reloaded:`, `https://cdn.discordapp.com/emojis/1026761151570264125.gif?v=1`, `https://discord.gg/rone`)
         .setTitle(eval(client.la[ls]["cmds"]["owner"]["reloadbot"]["variable6"]))
       ]})
     } catch (e) {
@@ -136,9 +136,9 @@ ${clientapp.description ? clientapp.description : "❌ NO DESCRIPTION YET!"}
 };
 /**
  * @INFO
- * Bot Coded by bestgamershk2 | https://discord.gg/bestgamershk
+ * Bot Coded by bestgamershk | https://discord.gg/rone
  * @INFO
- * Work for BestGamersHK | discord.gg/bestgamershk
+ * Work for BestGamersHK | discord.gg/rone
  * @INFO
  * Please mention him, when using this Code!
  * @INFO

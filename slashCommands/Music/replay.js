@@ -40,7 +40,7 @@ module.exports = {
 };
 /**
  * @INFO
- * Bot Coded by BestGamersHK | https://discord.gg/bestgamershk
+ * Bot Coded by BestGamersHK | https://discord.gg/rone
  * @INFO
  * Work for BestGamersHK
  * @INFO

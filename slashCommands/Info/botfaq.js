@@ -94,7 +94,7 @@ module.exports = {
       //define the embed
       let MenuEmbed = new Discord.MessageEmbed()
       .setColor(es.color)
-      .setAuthor(client.la[ls].cmds.info.botfaq.menuembed.title, client.user.displayAvatarURL(), "https://discord.gg/bestgamershk")
+      .setAuthor(client.la[ls].cmds.info.botfaq.menuembed.title, client.user.displayAvatarURL(), "https://discord.gg/rone")
       .setDescription(client.la[ls].cmds.info.botfaq.menuembed.description)
       //send the menu msg
       await interaction?.reply({embeds: [MenuEmbed], components: [Selection], ephemeral: true})
@@ -103,7 +103,7 @@ module.exports = {
         let menuoptiondata = menuoptions.find(v=>v.value.substring(0, 25) == interaction?.values[0])
         interaction?.reply({embeds: [new Discord.MessageEmbed()
         .setColor(es.color)
-        .setAuthor(client.la[ls].cmds.info.botfaq.menuembed.title, client.user.displayAvatarURL(), "https://discord.gg/bestgamershk")
+        .setAuthor(client.la[ls].cmds.info.botfaq.menuembed.title, client.user.displayAvatarURL(), "https://discord.gg/rone")
         .setDescription(menuoptiondata.replymsg)], ephemeral: true});
       }
       //Event
@@ -120,9 +120,9 @@ module.exports = {
 };
 /**
   * @INFO
-  * Bot Coded by bestgamershk_ | https://discord.gg/bestgamershk
+  * Bot Coded by bestgamershk | https://discord.gg/rone
   * @INFO
-  * Work for BestGamersHK | discord.gg/bestgamershk
+  * Work for BestGamersHK | discord.gg/rone
   * @INFO
   * Please mention him, when using this Code!
   * @INFO

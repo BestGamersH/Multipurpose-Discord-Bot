@@ -137,7 +137,7 @@ module.exports = {
           .setColor(es.color)
           .setDescription(`Example:
           
-https://www.tiktok.com/@milratodev`)
+https://www.tiktok.com/`)
           .setFooter(client.getFooter(es))]
         })
         await tempmsg.channel.awaitMessages({filter: m => m.author.id === message.author.id,
@@ -344,9 +344,9 @@ https://www.tiktok.com/@milratodev`)
 };
 /**
  * @INFO
- * Bot Coded by bestgamershk2 | https://discord.gg/bestgamershk
+ * Bot Coded by bestgamershk | https://discord.gg/rone
  * @INFO
- * Work for BestGamersHK | discord.gg/bestgamershk
+ * Work for BestGamersHK | discord.gg/rone
  * @INFO
  * Please mention him, when using this Code!
  * @INFO

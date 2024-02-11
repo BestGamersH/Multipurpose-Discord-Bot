@@ -82,7 +82,7 @@ module.exports = {
         //define the embed
         let MenuEmbed = new Discord.MessageEmbed()
           .setColor(es.color)
-          .setAuthor('Join VC System', 'https://cdn.discordapp.com/emojis/834052497492410388.gif?size=96', 'https://discord.gg/bestgamershk')
+          .setAuthor('Join VC System', 'https://cdn.discordapp.com/emojis/834052497492410388.gif?size=96', 'https://discord.gg/rone')
           .setDescription(eval(client.la[ls]["cmds"]["setup"]["setup-ticket"]["variable2"]))
           .addField("Send Message in a Channel", `If a User joins a specific Channel, it will send a define able Message (e.g. Ping for Role(s)) in a defined Channel.\nThis is useful if you have a Waitingroomchannel, and it's needed to check if a user joins it or not with pings!\n*After leaving the Channel, the sent message get's edited and removes the ping*`)
           .addField("Add / Remove Role", `If a User joins a VC he/she will get a specific Role, this Role will get removed again, if he/she leaves the vc again!`)        
@@ -155,7 +155,7 @@ module.exports = {
               //define the embed
               let MenuEmbed = new Discord.MessageEmbed()
                 .setColor(es.color)
-                .setAuthor('Join VC System', 'https://cdn.discordapp.com/emojis/834052497492410388.gif?size=96', 'https://discord.gg/bestgamershk')
+                .setAuthor('Join VC System', 'https://cdn.discordapp.com/emojis/834052497492410388.gif?size=96', 'https://discord.gg/rone')
                 .setDescription(eval(client.la[ls]["cmds"]["setup"]["setup-ticket"]["variable2"]))
               //send the menu msg
               let menumsg = await message.reply({embeds: [MenuEmbed], components: [new MessageActionRow().addComponents(Selection)]})
@@ -374,7 +374,7 @@ module.exports = {
               //define the embed
               let MenuEmbed = new Discord.MessageEmbed()
                 .setColor(es.color)
-                .setAuthor('Join VC System', 'https://cdn.discordapp.com/emojis/834052497492410388.gif?size=96', 'https://discord.gg/bestgamershk')
+                .setAuthor('Join VC System', 'https://cdn.discordapp.com/emojis/834052497492410388.gif?size=96', 'https://discord.gg/rone')
                 .setDescription(eval(client.la[ls]["cmds"]["setup"]["setup-ticket"]["variable2"]))
               //send the menu msg
               let menumsg = await message.reply({embeds: [MenuEmbed], components: [new MessageActionRow().addComponents(Selection)]})
@@ -569,9 +569,9 @@ module.exports = {
 };
 /**
  * @INFO
- * Bot Coded by bestgamershk2 | https://discord.gg/bestgamershk
+ * Bot Coded by bestgamershk | https://discord.gg/rone
  * @INFO
- * Work for BestGamersHK | discord.gg/bestgamershk
+ * Work for BestGamersHK | discord.gg/rone
  * @INFO
  * Please mention him, when using this Code!
  * @INFO

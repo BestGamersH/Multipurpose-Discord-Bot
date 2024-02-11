@@ -16,4 +16,4 @@ module.exports = {
 
 	}
 }
-//-CODED-BY-bestgamershk2-//
+//-CODED-BY-bestgamershk-//

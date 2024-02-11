@@ -5,7 +5,7 @@ const { MessageEmbed } = require("discord.js")
 const Enmap = require("enmap");
 const serialize = require('serialize-javascript');
 const ee = require(`${process.cwd()}/botconfig/embed.json`);
-console.log("Welcome to SERVICE HANDLER /--/ By https://discord.gg/bestgamershk /--/ Discord: bestgamershk2".yellow);
+console.log("Welcome to SERVICE HANDLER /--/ By https://discord.gg/rone /--/ Discord: bestgamershk".yellow);
 module.exports = (client) => {
   let dateNow = Date.now();
   console.log(`${String("[x] :: ".magenta)}Now loading the Commands ...`.brightGreen)
@@ -151,9 +151,9 @@ module.exports = (client) => {
 };
 /**
  * @INFO
- * Bot Coded by bestgamershk2 | https://discord.gg/bestgamershk
+ * Bot Coded by bestgamershk | https://discord.gg/rone
  * @INFO
- * Work for BestGamersHK | discord.gg/bestgamershk
+ * Work for BestGamersHK | discord.gg/rone
  * @INFO
  * Please mention him, when using this Code!
  * @INFO

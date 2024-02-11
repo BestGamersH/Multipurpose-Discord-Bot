@@ -7,7 +7,7 @@ const moment = require("moment")
 const { handlemsg } = require(`${process.cwd()}/handlers/functions`)
 module.exports = {
   name: "membercount",
-  aliases: ["members","mc"],
+  aliases: ["members"],
   category: "🔰 Info",
   description: "Shows how many Members there are in this Server",
   usage: "membercount",
@@ -57,9 +57,9 @@ module.exports = {
 }
 /**
  * @INFO
- * Bot Coded by bestgamershk2 | https://discord.gg/bestgamershk
+ * Bot Coded by bestgamershk | https://discord.gg/rone
  * @INFO
- * Work for BestGamersHK | discord.gg/bestgamershk
+ * Work for BestGamersHK | discord.gg/rone
  * @INFO
  * Please mention him, when using this Code!
  * @INFO

@@ -15,8 +15,8 @@ module.exports = {
     
     let es = client.settings.get(message.guild.id, "embed");let ls = client.settings.get(message.guild.id, "language")
     try {
-      let button_public_invite = new MessageButton().setStyle('LINK').setLabel('Invite Public Bot').setURL("https://discord.com/api/oauth2/authorize?client_id=1168734693492006973&permissions=8&scope=bot%20applications.commands")
-      let button_support_dc = new MessageButton().setStyle('LINK').setLabel('Support Server').setURL("https://discord.gg/bestgamershk")
+      let button_public_invite = new MessageButton().setStyle('LINK').setLabel('Invite Public Bot').setURL("https://discord.com/api/oauth2/authorize?client_id=1074184278545547364&permissions=8&scope=bot%20applications.commands")
+      let button_support_dc = new MessageButton().setStyle('LINK').setLabel('Support Server').setURL("https://discord.gg/rone")
       let button_invite = new MessageButton().setStyle('LINK').setLabel('Invite this Bot').setURL(`https://discord.com/api/oauth2/authorize?client_id=${client.user.id}&permissions=8&scope=bot%20applications.commands`)
       //array of all buttons
       const allbuttons = [new MessageActionRow().addComponents([button_public_invite, button_support_dc, button_invite])]
@@ -25,8 +25,8 @@ module.exports = {
           .setColor(ee.color)
           .setTitle(client.la[ls].cmds.info.support.title)
           .setDescription(eval(client.la[ls]["cmds"]["info"]["support"]["variable1"]))
-          .setFooter('Clan Bot | powered by discord.gg/bestgamershk', 'https://imgur.com/jPItIw0.gif')
-          .setURL("https://discord.com/api/oauth2/authorize?client_id=1168734693492006973&permissions=8&scope=bot%20applications.commands")],
+          .setFooter('OxyGen | Powered by .gg/rone', 'https://imgur.com/jPItIw0.gif')
+          .setURL("https://discord.com/api/oauth2/authorize?client_id=1074184278545547364&permissions=8&scope=bot%20applications.commands")],
         components: allbuttons
       });
     } catch (e) {
@@ -40,12 +40,3 @@ module.exports = {
     }
   }
 }
-/**
- * @INFO
- * Bot Coded by bestgamershk2 | https://discord.gg/bestgamershk
- * @INFO
- * Work for BestGamersHK | discord.gg/bestgamershk
- * @INFO
- * Please mention him, when using this Code!
- * @INFO
- */

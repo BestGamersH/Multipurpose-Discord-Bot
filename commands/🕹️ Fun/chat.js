@@ -53,9 +53,9 @@ module.exports = {
 }
 /**
  * @INFO
- * Bot Coded by bestgamershk2 | https://discord.gg/bestgamershke
+ * Bot Coded by bestgamershk | https://discord.gg/ronee
  * @INFO
- * Work for Indocraft Network | https://discord.gg/bestgamershk
+ * Work for Indocraft Network | https://discord.gg/rone
  * @INFO
  * Please mention him, when using this Code!
  * @INFO

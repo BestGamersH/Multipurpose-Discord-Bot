@@ -954,7 +954,7 @@ module.exports = {
 }
 /**
   * @INFO
-  * Bot Coded by bestgamershk2 |  
+  * Bot Coded by bestgamershk |  
   * @INFO
   * Work for BestGamersHK
   * @INFO

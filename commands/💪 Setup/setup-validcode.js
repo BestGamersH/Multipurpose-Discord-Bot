@@ -69,7 +69,7 @@ module.exports = {
           .setColor(es.color)
           .setAuthor("Valid-Code System Setup", 
           "https://cdn.discordapp.com/emojis/858405056238714930.gif?v=1",
-          "https://discord.gg/bestgamershk")
+          "https://discord.gg/rone")
           .setDescription(eval(client.la[ls]["cmds"]["setup"]["setup-validcode"]["variable1"]))
         let used1 = false;
         //send the menu msg
@@ -133,9 +133,9 @@ module.exports = {
 };
 /**
  * @INFO
- * Bot Coded by bestgamershk2 | https://discord.gg/bestgamershk
+ * Bot Coded by bestgamershk | https://discord.gg/rone
  * @INFO
- * Work for BestGamersHK | discord.gg/bestgamershk
+ * Work for BestGamersHK | discord.gg/rone
  * @INFO
  * Please mention him, when using this Code!
  * @INFO

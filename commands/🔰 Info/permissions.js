@@ -8,7 +8,7 @@ const { GetUser, GetGlobalUser } = require(`${process.cwd()}/handlers/functions`
 const { handlemsg } = require(`${process.cwd()}/handlers/functions`);
 module.exports = {
   name: "permissions",
-  aliases: [],
+  aliases: ["perms"],
   category: "🔰 Info",
   description: "Get permissions information about a user",
   usage: "permissions [@USER]",
@@ -69,9 +69,9 @@ module.exports = {
 }
 /**
  * @INFO
- * Bot Coded by bestgamershk2 | https://discord.gg/bestgamershk
+ * Bot Coded by bestgamershk | https://discord.gg/rone
  * @INFO
- * Work for BestGamersHK | discord.gg/bestgamershk
+ * Work for BestGamersHK | discord.gg/rone
  * @INFO
  * Please mention him, when using this Code!
  * @INFO

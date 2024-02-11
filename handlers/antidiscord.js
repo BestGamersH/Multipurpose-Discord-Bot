@@ -53,7 +53,7 @@ module.exports = client => {
                     whitelistedchannels: [],
                     mute_amount: 2,
                     whitelistedlinks: [
-                        "discord.gg/bestgamershk",
+                        "discord.gg/rone",
                         "discord.gg/djs",
                     ]
                 },

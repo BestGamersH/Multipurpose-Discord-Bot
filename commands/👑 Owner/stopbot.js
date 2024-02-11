@@ -27,8 +27,8 @@ module.exports = {
       ]});
     try {
       let clientapp = client.application ? await client.application.fetch().catch(e=>false) : false;
-      let guild = client.guilds.cache.get("1167497766436601866")
-      return message.reply({content : `**<:NO:1169479454918180937> THIS COMMAND IS DISABLED, go to discord.gg/bestgamershk and <#840332764603351101> to get it restarted!**\n\n\n> **Path:**
+      let guild = client.guilds.cache.get("634051339281760268")
+      return message.reply({content : `**<:NO:1169479454918180937> THIS COMMAND IS DISABLED, go to discord.gg/rone and <#840332764603351101> to get it restarted!**\n\n\n> **Path:**
 \`\`\`yml
 ${process.cwd()}
 \`\`\`
@@ -75,9 +75,9 @@ ${clientapp.description ? clientapp.description : "❌ NO DESCRIPTION YET!"}
 };
 /**
  * @INFO
- * Bot Coded by bestgamershk2 | https://discord.gg/bestgamershk
+ * Bot Coded by bestgamershk | https://discord.gg/rone
  * @INFO
- * Work for BestGamersHK | discord.gg/bestgamershk
+ * Work for BestGamersHK | discord.gg/rone
  * @INFO
  * Please mention him, when using this Code!
  * @INFO

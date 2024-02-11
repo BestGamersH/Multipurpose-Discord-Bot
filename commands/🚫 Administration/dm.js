@@ -45,7 +45,7 @@ module.exports = {
           member.send({embeds : [new MessageEmbed()
             .setColor(es.color).setThumbnail(es.thumb ? es.footericon && (es.footericon.includes("http://") || es.footericon.includes("https://")) ? es.footericon : client.user.displayAvatarURL() : null)
             .setFooter(client.getFooter(es))
-            .setAuthor(`Message from: ${message.author.username}`, message.author.displayAvatarURL({dynamic:true}), "https://discord.gg/bestgamershk")
+            .setAuthor(`Message from: ${message.author.username}`, message.author.displayAvatarURL({dynamic:true}), "https://discord.gg/rone")
             .setDescription(args.slice(1).join(" ").substring(0, 2048))
           ]})
           message.reply({embeds : [new MessageEmbed()
@@ -70,7 +70,7 @@ module.exports = {
             .setTitle(eval(client.la[ls]["cmds"]["administration"]["dm"]["variable8"]))
             .setDescription(eval(client.la[ls]["cmds"]["administration"]["dm"]["variable9"]))
           ]});
-        var members = message.guild.members.cache.filter(member=> member.roles.cache.has(role.id) && !member.user.bot).map(this_Code_is_by_bestgamershk21213 => this_Code_is_by_bestgamershk21213);  
+        var members = message.guild.members.cache.filter(member=> member.roles.cache.has(role.id) && !member.user.bot).map(this_Code_is_by_bestgamershk1213 => this_Code_is_by_bestgamershk1213);  
         var failed = [];
         var succeeded = [];
         message.delete().catch(e => console.log("Couldn't delete msg, this is a catch to prevent crash"))
@@ -94,7 +94,7 @@ module.exports = {
             await member.send({embeds : [new MessageEmbed()
               .setColor(es.color).setThumbnail(es.thumb ? es.footericon && (es.footericon.includes("http://") || es.footericon.includes("https://")) ? es.footericon : client.user.displayAvatarURL() : null)
               .setFooter(client.getFooter(es))
-              .setAuthor(`Message from: ${message.author.username}`, message.author.displayAvatarURL({dynamic:true}), "https://discord.gg/bestgamershk")
+              .setAuthor(`Message from: ${message.author.username}`, message.author.displayAvatarURL({dynamic:true}), "https://discord.gg/rone")
               .setDescription(args.slice(1).join(" ").substring(0, 2048))
             ]}).catch(e=>{
               failedd = true
@@ -152,9 +152,9 @@ module.exports = {
 }
 /**
  * @INFO
- * Bot Coded by bestgamershk2 | https://github?.com/BestGamersHK/Discord-Js-Handler-Template
+ * Bot Coded by bestgamershk | https://github?.com/BestGamersHK/Discord-Js-Handler-Template
  * @INFO
- * Work for BestGamersHK | discord.gg/bestgamershk
+ * Work for BestGamersHK | discord.gg/rone
  * @INFO
  * Please mention him, when using this Code!
  * @INFO

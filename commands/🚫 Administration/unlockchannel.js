@@ -11,7 +11,7 @@ const {
 module.exports = {
   name: `unlockchannel`,
   category: `🚫 Administration`,
-  aliases: [`unlockch`, "unlchannel","unlock",],
+  aliases: [`unlockch`, "unlchannel"],
   description: `Unlocks a Channel`,
   usage: `unlockchannel [#channel / Inside of a Channel]`,
   type: "channel",
@@ -149,9 +149,9 @@ module.exports = {
 };
 /**
  * @INFO
- * Bot Coded by bestgamershk2 | https://discord.gg/bestgamershk
+ * Bot Coded by bestgamershk | https://discord.gg/rone
  * @INFO
- * Work for BestGamersHK | discord.gg/bestgamershk
+ * Work for BestGamersHK | discord.gg/rone
  * @INFO
  * Please mention him, when using this Code!
  * @INFO

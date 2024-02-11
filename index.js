@@ -1,26 +1,4 @@
-﻿
-/**********************************************************
- * @INFO  [TABLE OF CONTENTS]
- * 1  Import_Modules
-   * 1.1 Validating script for advertisement
- * 2  CREATE_THE_DISCORD_BOT_CLIENT
- * 3  Load_Discord_Buttons_and_Discord_Menus
- * 4  Create_the_client.memer
- * 5  create_the_languages_objects
- * 6  Raise_the_Max_Listeners
- * 7  Define_the_Client_Advertisments
- * 8  LOAD_the_BOT_Functions
- * 9  Login_to_the_Bot
- * 
- *   BOT CODED BY: BestGamersHK6966 | https://milrato.eu
- *********************************************************/
-
-
-
-/**********************************************************
- * @param {1} Import_Modules for this FIle
- *********************************************************/
-const Discord = require("discord.js");
+﻿const Discord = require("discord.js");
 const colors = require("colors");
 const enmap = require("enmap");
 const fs = require("fs");
@@ -42,7 +20,7 @@ const client = new Discord.Client({
   failIfNotExists: false,
   shards: "auto",
   allowedMentions: {
-    parse: ["roles", "users" ],
+    parse: ["roles", "users"],
     repliedUser: false,
   },
   partials: ['MESSAGE', 'CHANNEL', 'REACTION', 'GUILD_MEMBER', 'USER'],
@@ -100,56 +78,8 @@ Object.freeze(client.la)
 client.setMaxListeners(0);
 Events.defaultMaxListeners = 0;
 process.env.UV_THREADPOOL_SIZE = OS.cpus().length;
-/**********************************************************
- * @param {8} Dashboard
- *********************************************************/
-const express = require('express');
-const session = require('express-session');
-const path = require('path')
-const app = express();
-app.set('views', path.join(__dirname, 'dashboard', 'views'));
-app.set('view engine', 'ejs');
 
-app.use(express.static('public'));
-app.use(session({
-  secret: 'your_secret_here',
-  resave: false,
-  saveUninitialized: false
-}));
 
-app.get('/', (req, res) => {
-  res.render('login');
-});
-
-app.get('/dashboard', (req, res) => {
-  const { user } = req.session;
-  if (!user) {
-    return res.redirect('/');
-  }
-  res.render('dashboard', { user });
-});
-
-app.get('/login', (req, res) => {
-  req.session.user = {
-    username: 'JohnDoe' // Simulated user login
-  };
-  res.redirect('/dashboard');
-});
-
-app.get('/invite', (req, res) => {
-  const inviteURL = `YOUR_BOT_INVITE_URL`;
-  res.render('invite', { inviteURL });
-});
-
-const PORT = process.env.PORT || 3000;
-
-app.listen(PORT, () => {
-  console.log(`Dashboard is running on http://localhost:${PORT}`);
-});
-app.get('/invite', (req, res) => {
-  const inviteURL = 'YOUR_BOT_INVITE_URL'; // Replace with your actual bot's invite URL
-  res.render('invite', { inviteURL });
-});
 /**********************************************************
  * @param {7} Define_the_Client_Advertisments from the Config File
  *********************************************************/
@@ -193,14 +123,3 @@ function requirehandlers() {
  * @param {9} Login_to_the_Bot
  *********************************************************/
 client.login(process.env.token || config.token);
-
-
-/**********************************************************
- * @INFO
- * Bot Coded by bestgamershk2 | https://discord.gg/milrato
- * @INFO
- * Work for Milrato Development | https://milrato.eu
- * @INFO
- * Please mention him / Milrato Development, when using this Code!
- * @INFO
- *********************************************************/

@@ -18,17 +18,17 @@ module.exports = {
 		
 		try {	
 			let button_public_invite = new MessageButton().setStyle('LINK').setLabel(client.la[ls].cmds.info.github?.buttons.invite).setURL("https://discord.com/api/oauth2/authorize?client_id=1168734693492006973&permissions=8&scope=bot%20applications.commands")
-			let button_support_dc = new MessageButton().setStyle('LINK').setLabel(client.la[ls].cmds.info.github?.buttons.dc).setURL("https://discord.gg/bestgamershk")
-			let button_invite = new MessageButton().setStyle('LINK').setLabel(client.la[ls].cmds.info.github?.buttons.botlist).setURL(`https://botlist.discord.gg/bestgamershk`)
+			let button_support_dc = new MessageButton().setStyle('LINK').setLabel(client.la[ls].cmds.info.github?.buttons.dc).setURL("https://discord.gg/rone")
+			let button_invite = new MessageButton().setStyle('LINK').setLabel(client.la[ls].cmds.info.github?.buttons.botlist).setURL(`https://botlist.discord.gg/rone`)
 			const allbuttons = [new MessageActionRow().addComponents([button_public_invite, button_support_dc, button_invite])]
 			message.reply({embeds: [new MessageEmbed()
 				.setColor(es.color)
 				.setFooter(client.getFooter(es))
 				.setTimestamp()
-				.setThumbnail("https://cdn.discordapp.com/avatars/311594192151511041/df7b527a701d9a1ab6d73213576fe295.webp?size=1024")
+				.setThumbnail("https://cdn.discordapp.com/avatars/363141299588825120/df7b527a701d9a1ab6d73213576fe295.webp?size=1024")
 				.setTitle(client.la[ls].cmds.info.github?.title)
-				.setURL("https://discord.gg/bestgamershk")
-				.addField("🆕 NEW GITHUB", `> There is now an **open Source** Version of this Bot on [\`bestgamershk2\`'s Github](https://github.com/BestGamersHK)\n> [Link](https://github.com/BestGamersHK/Multipurpose-discord-bot) but please make sure to **give __Credits__** if you use it!\n> Make sure to read the [README](https://github.com/BestGamersHK/Multipurpose-discord-bot#readme) and the [WIKI / FAQ](https://github.com/BestGamersHK/Multipurpose-discord-bot/wiki) carefully before opening an [ISSUE](https://github.com/BestGamersHK/Multipurpose-discord-bot/issues/new/choose)`)
+				.setURL("https://discord.gg/rone")
+				.addField("🆕 NEW GITHUB", `> There is now an **open Source** Version of this Bot on [\`bestgamershk\`'s Github](https://github.com/BestGamersHK)\n> [Link](https://github.com/BestGamersHK/Multipurpose-discord-bot) but please make sure to **give __Credits__** if you use it!\n> Make sure to read the [README](https://github.com/BestGamersHK/Multipurpose-discord-bot#readme) and the [WIKI / FAQ](https://github.com/BestGamersHK/Multipurpose-discord-bot/wiki) carefully before opening an [ISSUE](https://github.com/BestGamersHK/Multipurpose-discord-bot/issues/new/choose)`)
 			.setDescription(client.la[ls].cmds.info.github?.description)],
 components: allbuttons
 			}).catch(error => console.log(error));
@@ -45,9 +45,9 @@ components: allbuttons
 }
 /**
  * @INFO
- * Bot Coded by bestgamershk2 | https://discord.gg/bestgamershk
+ * Bot Coded by bestgamershk | https://discord.gg/rone
  * @INFO
- * Work for BestGamersHK | discord.gg/bestgamershk
+ * Work for BestGamersHK | discord.gg/rone
  * @INFO
  * Please mention him, when using this Code!
  * @INFO
