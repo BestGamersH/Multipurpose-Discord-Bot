@@ -9,7 +9,7 @@
     "@discordjs/voice": "^0.16.0",
     "anime-actions": "^1.0.6",
     "axios": "^1.6.0",
-    "better-sqlite3": "^9.3.0",
+    "better-sqlite3": "^9.4.0",
     "booru": "^2.5.3",
     "bufferutil": "^4.0.6",
     "canvacord": "^5.2.3",
