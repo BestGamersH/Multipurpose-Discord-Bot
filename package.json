@@ -13,7 +13,7 @@
     "booru": "^2.5.3",
     "bufferutil": "^4.0.6",
     "canvacord": "^5.2.3",
-    "canvas": "^2.9.0",
+    "canvas": "^3.0.0",
     "captcha-canvas": "^3.1.0",
     "cheerio": "^1.0.0-rc.10",
     "colors": "^1.4.0",
