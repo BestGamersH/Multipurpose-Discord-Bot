@@ -20,7 +20,7 @@
     "common-tags": "^1.8.2",
     "cpu-stat": "^2.0.1",
     "cron": "^1.8.2",
-    "discord-backup": "^3.0.1",
+    "discord-backup": "^3.4.0",
     "discord-canvas": "^1.4.1",
     "discord-giveaways": "^5.1.0",
     "discord.js": "^13.17.1",
